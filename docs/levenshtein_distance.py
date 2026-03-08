@@ -63,3 +63,6 @@ def show():
         
         col2.write('Distances:')
         col2.write(sorted_distences)
+        
+    with st.expander("View Code"):
+        st.code("https://github.com/dtkienIT/Python_Code_Libraries/blob/main/docs/levenshtein_distance.py", language="python")
