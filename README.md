@@ -24,7 +24,7 @@ The repository will continue to grow as I learn new technologies and build more 
 ### 1. Install dependencies
 
 ```bash
-pip install streamlit
+pip install -r requirements.txt
 ```
 
 ### 2. Run the application

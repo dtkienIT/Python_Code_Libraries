@@ -4,6 +4,9 @@ __pycache__/
 *.pyo
 *.pyd
 
+# Python venv
+myenv/
+
 # Streamlit
 .streamlit/
 
