@@ -30,7 +30,7 @@ def show():
     lessons_data = {
         "1. Streamlit Introduction": "https://www.youtube.com/watch?v=RjiqbTLW9_E&list=PLa6CNrvKM5QU7AjAS90zCMIwi9RTFNIIW&index=1",
         "2. Setting Up the Environment": "https://www.youtube.com/watch?v=6uZYMvsTeBs&list=PLa6CNrvKM5QU7AjAS90zCMIwi9RTFNIIW&index=2",
-        "3. Basic Text Elements": "https://www.youtube.com/watch?v=6uZYMvsTeBs&list=PLa6CNrvKM5QU7AjAS90zCMIwi9RTFNIIW&index=3",
+        "3. Basic Text Elements": "https://www.youtube.com/watch?v=EiA4fRfLuCk&list=PLa6CNrvKM5QU7AjAS90zCMIwi9RTFNIIW&index=3",
         # Add more lessons here following the same format:
         # "Lesson Name": "Full YouTube URL",
     }
@@ -49,7 +49,7 @@ def show():
         st.video(full_url)
         
         # --- LEARNING NOTES ---
-        st.info(f"🔗 **Original Link:** [Click here to watch on YouTube]({full_url})")
+        st.info(f"🔗 **Original Link:** [Click here to watch on YouTube]({"https://www.youtube.com/watch?v=RjiqbTLW9_E&list=PLa6CNrvKM5QU7AjAS90zCMIwi9RTFNIIW&index=1"})")
 
     # --- COURSE OVERVIEW ---
     st.markdown("---")
@@ -65,5 +65,3 @@ def show():
     st.divider()
     st.caption("Streamlit Education Series | Learning Repository")
 
-if __name__ == "__main__":
-    show()
