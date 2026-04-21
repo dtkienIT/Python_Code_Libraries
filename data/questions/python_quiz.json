@@ -1,0 +1,552 @@
+[
+  {
+    "question": "Câu 1: Tại sao Python là ngôn ngữ được ưu tiên cho khoa học dữ liệu?",
+    "options": [
+      "A. Vì Python có tốc độ thực thi nhanh nhất.",
+      "B. Vì nó có cú pháp đơn giản và nhiều thư viện tái sử dụng cho machine learning.",
+      "C. Vì nó là ngôn ngữ duy nhất chạy được trên đám mây.",
+      "D. Vì nó không tốn bộ nhớ."
+    ],
+    "answer": "B. Vì nó có cú pháp đơn giản và nhiều thư viện tái sử dụng cho machine learning.",
+    "explanation": "Cú pháp dễ học và hệ sinh thái thư viện (NumPy, Pandas...) là thế mạnh lớn nhất của Python."
+  },
+  {
+    "question": "Câu 2: Quy tắc nào ĐÚNG khi đặt tên biến trong Python?",
+    "options": [
+      "A. Có thể bắt đầu bằng số.",
+      "B. Chỉ chứa chữ cái, số và dấu gạch dưới (_).",
+      "C. Được dùng ký tự đặc biệt như @, $.",
+      "D. Không phân biệt chữ hoa và chữ thường."
+    ],
+    "answer": "B. Chỉ chứa chữ cái, số và dấu gạch dưới (_).",
+    "explanation": "Tên biến phải bắt đầu bằng chữ hoặc dấu gạch dưới và không được chứa ký tự lạ."
+  },
+  {
+    "question": "Câu 3: Kết quả in ra của đoạn mã sau là gì?\n\nx = 10\ny = 3\nprint(x % y + 2)",
+    "options": [
+      "A. 3",
+      "B. 5",
+      "C. 5.33",
+      "D. 1"
+    ],
+    "answer": "A. 3",
+    "explanation": "Phép chia lấy dư x % y (10 chia 3) bằng 1. Sau đó thực hiện phép cộng 1 + 2 = 3."
+  },
+  {
+    "question": "Câu 4: Kết quả của phép toán 10 % 3 là bao nhiêu?",
+    "options": [
+      "A. 3",
+      "B. 3.33",
+      "C. 1",
+      "D. 0"
+    ],
+    "answer": "C. 1",
+    "explanation": "Toán tử % là phép chia lấy dư. 10 chia 3 dư 1."
+  },
+  {
+    "question": "Câu 5: Kiểu dữ liệu nào là 'immutable' (không thể thay đổi)?",
+    "options": [
+      "A. List",
+      "B. Dictionary",
+      "C. Tuple",
+      "D. Set"
+    ],
+    "answer": "C. Tuple",
+    "explanation": "Tuple dùng dấu ngoặc đơn () và không cho phép sửa đổi sau khi tạo."
+  },
+  {
+    "question": "Câu 6: Toán tử dùng để kiểm tra một phần tử có nằm trong danh sách không?",
+    "options": [
+      "A. in",
+      "B. exists",
+      "C. has",
+      "D. contain"
+    ],
+    "answer": "A. in",
+    "explanation": "Toán tử 'in' dùng để kiểm tra sự tồn tại của một giá trị trong một đối tượng iterable."
+  },
+  {
+    "question": "Câu 7: Cấu trúc if-elif-else hoạt động thế nào?",
+    "options": [
+      "A. Chạy tất cả các nhánh đúng.",
+      "B. Chỉ chạy nhánh đầu tiên thỏa mãn điều kiện.",
+      "C. Luôn yêu cầu phải có nhánh else.",
+      "D. Kiểm tra từ dưới lên trên."
+    ],
+    "answer": "B. Chỉ chạy nhánh đầu tiên thỏa mãn điều kiện.",
+    "explanation": "Khi một điều kiện đúng, các phần elif và else phía sau sẽ bị bỏ qua."
+  },
+  {
+    "question": "Câu 8: Đoạn mã sau sẽ in ra kết quả nào?\n\ntext = 'Python'\nprint(text[1:4])",
+    "options": [
+      "A. Pyt",
+      "B. yth",
+      "C. ytho",
+      "D. thon"
+    ],
+    "answer": "B. yth",
+    "explanation": "Chỉ số trong Python bắt đầu từ 0. [1:4] lấy ký tự từ index 1 (y) đến sát index 4 (nhưng không bao gồm index 4 là o)."
+  },
+  {
+    "question": "Câu 9: Ưu điểm của vòng lặp for khi duyệt danh sách?",
+    "options": [
+      "A. Chạy nhanh gấp đôi while.",
+      "B. Tự động dừng khi hết phần tử, tránh lặp vô hạn.",
+      "C. Chỉ dùng được với số.",
+      "D. Không cần thụt đầu dòng."
+    ],
+    "answer": "B. Tự động dừng khi hết phần tử, tránh lặp vô hạn.",
+    "explanation": "Vòng lặp for duyệt trực tiếp qua các đối tượng nên rất an toàn và sạch sẽ."
+  },
+  {
+    "question": "Câu 10: Hàm range(5) tạo ra dãy số nào?",
+    "options": [
+      "A. 1, 2, 3, 4, 5",
+      "B. 0, 1, 2, 3, 4, 5",
+      "C. 0, 1, 2, 3, 4",
+      "D. 5, 4, 3, 2, 1"
+    ],
+    "answer": "C. 0, 1, 2, 3, 4",
+    "explanation": "Range bắt đầu từ 0 và dừng trước giá trị chỉ định (n-1)."
+  },
+  {
+    "question": "Câu 11: Từ khóa định nghĩa hàm là gì?",
+    "options": [
+      "A. function",
+      "B. define",
+      "C. def",
+      "D. func"
+    ],
+    "answer": "C. def",
+    "explanation": "'def' là từ khóa dùng để bắt đầu khai báo một hàm trong Python."
+  },
+  {
+    "question": "Câu 12: Biến cục bộ (Local variable) có đặc điểm gì?",
+    "options": [
+      "A. Dùng được ở mọi nơi.",
+      "B. Chỉ dùng được bên trong hàm định nghĩa nó.",
+      "C. Là biến hằng số.",
+      "D. Tự xóa sau 1 phút."
+    ],
+    "answer": "B. Chỉ dùng được bên trong hàm định nghĩa nó.",
+    "explanation": "Phạm vi của biến cục bộ bị giới hạn trong khối mã chứa nó."
+  },
+  {
+    "question": "Câu 13: Danh sách `my_list` sẽ trông như thế nào sau khi chạy đoạn mã này?\n\nmy_list = [1, 2, 3]\nmy_list.append(4)\nmy_list.pop(0)\nprint(my_list)",
+    "options": [
+      "A. [1, 2, 3, 4]",
+      "B. [1, 3, 4]",
+      "C. [2, 3, 4]",
+      "D. [1, 2, 3]"
+    ],
+    "answer": "C. [2, 3, 4]",
+    "explanation": "append(4) thêm 4 vào cuối thành [1, 2, 3, 4]. pop(0) xóa phần tử ở vị trí 0 (số 1). Kết quả còn [2, 3, 4]."
+  },
+  {
+    "question": "Câu 14: Hàm Lambda còn được gọi là gì?",
+    "options": [
+      "A. Hàm ẩn danh (Anonymous function).",
+      "B. Hàm vĩnh viễn.",
+      "C. Hàm hệ thống.",
+      "D. Hàm không có tham số."
+    ],
+    "answer": "A. Hàm ẩn danh (Anonymous function).",
+    "explanation": "Lambda được gọi là hàm ẩn danh vì chúng không cần tên định danh cụ thể."
+  },
+  {
+    "question": "Câu 15: Cú pháp Lambda đúng để tính bình phương x?",
+    "options": [
+      "A. lambda x: x**2",
+      "B. lambda(x) -> x^2",
+      "C. def lambda x: x*x",
+      "D. x: lambda x**2"
+    ],
+    "answer": "A. lambda x: x**2",
+    "explanation": "Cấu trúc đúng là: lambda [tham số]: [biểu thức]."
+  },
+  {
+    "question": "Câu 16: Lợi ích của 'from module import feature'?",
+    "options": [
+      "A. Tải module nhanh hơn.",
+      "B. Dùng trực tiếp tên tính năng mà không cần tiền tố module.",
+      "C. Bảo mật mã nguồn tốt hơn.",
+      "D. Không có lợi ích gì."
+    ],
+    "answer": "B. Dùng trực tiếp tên tính năng mà không cần tiền tố module.",
+    "explanation": "Giúp mã nguồn ngắn gọn hơn vì không phải viết lại tên module khi gọi hàm."
+  },
+  {
+    "question": "Câu 17: Thư viện nào quan trọng cho tính toán số học được nhắc tới trong tài liệu?",
+    "options": [
+      "A. Django",
+      "B. NumPy",
+      "C. Requests",
+      "D. Pytest"
+    ],
+    "answer": "B. NumPy",
+    "explanation": "NumPy cung cấp mảng đa chiều và các hàm toán học tối ưu cho khoa học dữ liệu."
+  },
+  {
+    "question": "Câu 18: Kết quả của đoạn mã sau là gì?\n\ninfo = {'name': 'Alice', 'age': 25}\ninfo['age'] = 26\nprint(info['age'])",
+    "options": [
+      "A. 25",
+      "B. Báo lỗi",
+      "C. 26",
+      "D. {'age': 26}"
+    ],
+    "answer": "C. 26",
+    "explanation": "Khi gán giá trị cho một 'key' đã tồn tại trong Dictionary, giá trị cũ sẽ bị ghi đè bằng giá trị mới."
+  },
+  {
+    "question": "Câu 19: Câu lệnh thoát vòng lặp ngay lập tức?",
+    "options": [
+      "A. stop",
+      "B. exit",
+      "C. break",
+      "D. continue"
+    ],
+    "answer": "C. break",
+    "explanation": "'break' dùng để ngắt hoàn toàn vòng lặp hiện tại."
+  },
+  {
+    "question": "Câu 20: Cách thêm phần tử vào cuối List?",
+    "options": [
+      "A. list.add()",
+      "B. list.append()",
+      "C. list.insert_end()",
+      "D. list.push()"
+    ],
+    "answer": "B. list.append()",
+    "explanation": "'append' là phương thức chuẩn để nối thêm dữ liệu vào vị trí cuối cùng của danh sách."
+  },
+  {
+    "question": "Câu 21: Kết quả của 3 == '3'?",
+    "options": [
+      "A. True",
+      "B. False",
+      "C. Error",
+      "D. None"
+    ],
+    "answer": "B. False",
+    "explanation": "Số nguyên (int) và chuỗi (str) là hai kiểu dữ liệu khác nhau nên không bằng nhau."
+  },
+  {
+    "question": "Câu 22: Lấy tất cả các từ khóa trong Dictionary?",
+    "options": [
+      "A. dict.values()",
+      "B. dict.items()",
+      "C. dict.keys()",
+      "D. dict.all()"
+    ],
+    "answer": "C. dict.keys()",
+    "explanation": "Phương thức .keys() trả về danh sách (view object) chứa tất cả các key của từ điển."
+  },
+  {
+    "question": "Câu 23: Màn hình sẽ hiển thị ký tự nào khi chạy lệnh rẽ nhánh sau?\n\nx = 5\nif x > 10:\n    print('A')\nelif x == 5:\n    print('B')\nelse:\n    print('C')",
+    "options": [
+      "A. A",
+      "B. B",
+      "C. C",
+      "D. B và C"
+    ],
+    "answer": "B. B",
+    "explanation": "Điều kiện đầu tiên (5 > 10) là Sai. Python kiểm tra tiếp điều kiện elif (5 == 5) là Đúng, nên nó in ra 'B' và bỏ qua else."
+  },
+  {
+    "question": "Câu 24: Toán tử and trả về True khi nào?",
+    "options": [
+      "A. Chỉ cần một bên đúng.",
+      "B. Cả hai bên đều đúng.",
+      "C. Cả hai bên đều sai.",
+      "D. Luôn trả về True."
+    ],
+    "answer": "B. Cả hai bên đều đúng.",
+    "explanation": "Toán tử logic 'and' yêu cầu mọi điều kiện phải đúng để cho kết quả True."
+  },
+  {
+    "question": "Câu 25: Ký tự chú thích (comment) một dòng trong Python?",
+    "options": [
+      "A. //",
+      "B. /*",
+      "C. #",
+      "D. --"
+    ],
+    "answer": "C. #",
+    "explanation": "Mọi nội dung sau dấu # trên cùng một dòng đều được coi là chú thích."
+  },
+  {
+    "question": "Câu 26: Kết quả của phép toán 10 // 3 là gì?",
+    "options": [
+      "A. 3.333",
+      "B. 3",
+      "C. 1",
+      "D. 4"
+    ],
+    "answer": "B. 3",
+    "explanation": "Toán tử // thực hiện phép chia lấy phần nguyên (floor division)."
+  },
+  {
+    "question": "Câu 27: Biểu thức logic nào dùng để đảo ngược giá trị Boolean?",
+    "options": [
+      "A. not",
+      "B. reverse",
+      "C. !",
+      "D. negative"
+    ],
+    "answer": "A. not",
+    "explanation": "'not True' sẽ thành False và 'not False' sẽ thành True."
+  },
+  {
+    "question": "Câu 28: Tính toán cẩn thận vòng lặp này. Kết quả in ra là?\n\ntotal = 0\nfor i in range(3):\n    total = total + i\nprint(total)",
+    "options": [
+      "A. 6",
+      "B. 0",
+      "C. 3",
+      "D. 2"
+    ],
+    "answer": "C. 3",
+    "explanation": "Hàm range(3) tạo ra dãy 0, 1, 2. Các vòng lặp cộng dồn: 0+0=0, sau đó 0+1=1, sau đó 1+2=3."
+  },
+  {
+    "question": "Câu 29: Làm thế nào để tạo một tập hợp (Set) trống?",
+    "options": [
+      "A. set = {}",
+      "B. set = []",
+      "C. set = set()",
+      "D. set = ()"
+    ],
+    "answer": "C. set = set()",
+    "explanation": "{} dùng để tạo Dictionary trống, nên phải dùng hàm set() để tạo Set trống."
+  },
+  {
+    "question": "Câu 30: Phương thức nào loại bỏ phần tử cuối cùng của danh sách?",
+    "options": [
+      "A. delete()",
+      "B. remove()",
+      "C. pop()",
+      "D. discard()"
+    ],
+    "answer": "C. pop()",
+    "explanation": "pop() mặc định xóa và trả về phần tử cuối cùng của danh sách."
+  },
+  {
+    "question": "Câu 31: Kết quả của biểu thức 'Python'[0] là gì?",
+    "options": [
+      "A. P",
+      "B. y",
+      "C. n",
+      "D. Error"
+    ],
+    "answer": "A. P",
+    "explanation": "Chỉ số trong Python bắt đầu từ 0, nên 'P' là phần tử đầu tiên."
+  },
+  {
+    "question": "Câu 32: Vòng lặp while này sẽ in ra số mấy?\n\ncount = 0\nwhile count < 5:\n    if count == 2:\n        break\n    count += 1\nprint(count)",
+    "options": [
+      "A. 5",
+      "B. 3",
+      "C. 0",
+      "D. 2"
+    ],
+    "answer": "D. 2",
+    "explanation": "Vòng lặp tăng count lên 1, rồi 2. Khi count = 2, lệnh break ngắt vòng lặp ngay lập tức và in ra 2."
+  },
+  {
+    "question": "Câu 33: Kiểu dữ liệu nào lưu trữ các cặp key-value?",
+    "options": [
+      "A. List",
+      "B. Set",
+      "C. Dictionary",
+      "D. Tuple"
+    ],
+    "answer": "C. Dictionary",
+    "explanation": "Dictionary được thiết kế để ánh xạ giữa khóa (key) và giá trị (value)."
+  },
+  {
+    "question": "Câu 34: Cú pháp đúng để tạo vòng lặp chạy 10 lần?",
+    "options": [
+      "A. for i in 10:",
+      "B. for i in range(10):",
+      "C. for i range(10):",
+      "D. for i in list(10):"
+    ],
+    "answer": "B. for i in range(10):",
+    "explanation": "Hàm range(10) tạo ra dãy số từ 0 đến 9, giúp vòng lặp thực hiện 10 lần."
+  },
+  {
+    "question": "Câu 35: Quan sát định nghĩa hàm sau, output sẽ có mấy dòng và chứa chữ gì?\n\ndef my_func():\n    print('Hello')\n\nresult = my_func()\nprint(result)",
+    "options": [
+      "A. Một dòng: 'Hello'",
+      "B. Hai dòng: Dòng đầu là 'Hello', dòng hai là 'None'",
+      "C. Một dòng: 'None'",
+      "D. Báo lỗi Error"
+    ],
+    "answer": "B. Hai dòng: Dòng đầu là 'Hello', dòng hai là 'None'",
+    "explanation": "my_func() in ra 'Hello'. Vì hàm không có từ khóa 'return', nó trả về None và in ra ở dòng thứ hai."
+  },
+  {
+    "question": "Câu 36: Câu lệnh nào dùng để giữ chỗ khi chưa muốn viết code cho hàm?",
+    "options": [
+      "A. continue",
+      "B. break",
+      "C. pass",
+      "D. return"
+    ],
+    "answer": "C. pass",
+    "explanation": "'pass' là một câu lệnh rỗng dùng để tránh lỗi cú pháp khi khối lệnh trống."
+  },
+  {
+    "question": "Câu 37: Để truy cập phần tử cuối cùng của list 'x' dùng chỉ số âm nào?",
+    "options": [
+      "A. x[0]",
+      "B. x[-1]",
+      "C. x[last]",
+      "D. x[-0]"
+    ],
+    "answer": "B. x[-1]",
+    "explanation": "Trong Python, chỉ số -1 đại diện cho phần tử cuối cùng."
+  },
+  {
+    "question": "Câu 38: Hàm lambda ẩn danh dưới đây tính ra kết quả là bao nhiêu?\n\nmultiply = lambda a, b: a * b\nprint(multiply(3, 4))",
+    "options": [
+      "A. 7",
+      "B. multiply(3, 4)",
+      "C. Báo lỗi",
+      "D. 12"
+    ],
+    "answer": "D. 12",
+    "explanation": "Biến multiply trở thành hàm nhận 2 tham số. Truyền 3 và 4 vào, hàm thực hiện 3 * 4 và trả về 12."
+  },
+  {
+    "question": "Câu 39: Phương thức nào chuyển chuỗi thành chữ thường?",
+    "options": [
+      "A. string.small()",
+      "B. string.lower()",
+      "C. string.down()",
+      "D. string.upper()"
+    ],
+    "answer": "B. string.lower()",
+    "explanation": ".lower() chuyển đổi toàn bộ ký tự trong chuỗi sang dạng in thường."
+  },
+  {
+    "question": "Câu 40: Toán tử nào thực hiện phép tính lũy thừa?",
+    "options": [
+      "A. ^",
+      "B. **",
+      "C. *",
+      "D. //"
+    ],
+    "answer": "B. **",
+    "explanation": "Ví dụ: 2**3 kết quả là 8."
+  },
+  {
+    "question": "Câu 41: Kết quả của biểu thức logic này là True hay False?\n\na = True\nb = False\nprint(a and not b)",
+    "options": [
+      "A. False",
+      "B. True",
+      "C. None",
+      "D. Báo lỗi Error"
+    ],
+    "answer": "B. True",
+    "explanation": "'not b' (not False) trở thành True. Sau đó tính 'True and True' cho kết quả là True."
+  },
+  {
+    "question": "Câu 42: Làm thế nào để lấy độ dài của một chuỗi hoặc danh sách?",
+    "options": [
+      "A. len()",
+      "B. length()",
+      "C. size()",
+      "D. count()"
+    ],
+    "answer": "A. len()",
+    "explanation": "Hàm len() trả về số lượng phần tử trong một đối tượng."
+  },
+  {
+    "question": "Câu 43: Thứ tự ưu tiên toán tử nào đúng?",
+    "options": [
+      "A. Cộng trừ trước, nhân chia sau.",
+      "B. Trong ngoặc trước, ngoài ngoặc sau.",
+      "C. Luôn tính từ phải sang trái.",
+      "D. Phép so sánh trước phép toán số học."
+    ],
+    "answer": "B. Trong ngoặc trước, ngoài ngoặc sau.",
+    "explanation": "Dấu ngoặc đơn () có độ ưu tiên cao nhất trong mọi biểu thức."
+  },
+  {
+    "question": "Câu 44: Từ khóa nào dùng để nhập một thư viện vào chương trình?",
+    "options": [
+      "A. include",
+      "B. import",
+      "C. using",
+      "D. require"
+    ],
+    "answer": "B. import",
+    "explanation": "Sử dụng 'import' để nạp các module hoặc package vào không gian làm việc."
+  },
+  {
+    "question": "Câu 45: Kết quả của biểu thức 'not True or False' là gì?",
+    "options": [
+      "A. True",
+      "B. False",
+      "C. None",
+      "D. Error"
+    ],
+    "answer": "B. False",
+    "explanation": "'not True' thành False. 'False or False' kết quả cuối cùng là False."
+  },
+  {
+    "question": "Câu 46: Kiểu dữ liệu 'float' đại diện cho loại số nào?",
+    "options": [
+      "A. Số nguyên.",
+      "B. Số thập phân.",
+      "C. Số phức.",
+      "D. Số hệ nhị phân."
+    ],
+    "answer": "B. Số thập phân.",
+    "explanation": "Float (dấu phẩy động) dùng cho các số có phần lẻ thập phân."
+  },
+  {
+    "question": "Câu 47: Lệnh nào dùng để in dữ liệu ra màn hình?",
+    "options": [
+      "A. echo()",
+      "B. print()",
+      "C. log()",
+      "D. write()"
+    ],
+    "answer": "B. print()",
+    "explanation": "Hàm print() là hàm cơ bản nhất để hiển thị kết quả ra console."
+  },
+  {
+    "question": "Câu 48: Indentation (thụt đầu dòng) trong Python có ý nghĩa gì?",
+    "options": [
+      "A. Chỉ để cho đẹp.",
+      "B. Để phân định các khối mã (blocks).",
+      "C. Không bắt buộc.",
+      "D. Để đánh dấu kết thúc file."
+    ],
+    "answer": "B. Để phân định các khối mã (blocks).",
+    "explanation": "Python dùng khoảng trắng thụt đầu dòng thay vì ngoặc nhọn để quản lý cấu trúc code."
+  },
+  {
+    "question": "Câu 49: Kết quả của 'python'.capitalize() là gì?",
+    "options": [
+      "A. PYTHON",
+      "B. Python",
+      "C. python",
+      "D. PytHoN"
+    ],
+    "answer": "B. Python",
+    "explanation": ".capitalize() chỉ viết hoa ký tự đầu tiên của chuỗi."
+  },
+  {
+    "question": "Câu 50: Theo tài liệu, kỹ năng lập trình đạt được qua đâu?",
+    "options": [
+      "A. Chỉ cần đọc lý thuyết.",
+      "B. Kinh nghiệm và sự lặp lại (thực hành).",
+      "C. Học thuộc lòng các hàm.",
+      "D. Xem video hướng dẫn mà không chạy code."
+    ],
+    "answer": "B. Kinh nghiệm và sự lặp lại (thực hành).",
+    "explanation": "Lập trình là một hoạt động chủ động, cần thực hành thường xuyên để thành thạo."
+  }
+]
