@@ -1,0 +1,376 @@
+[
+  {
+    "question": "Câu 1: Theo tài liệu, mục đích chính của việc trực quan hóa dữ liệu (data visualization) trước khi áp dụng thuật toán học máy là gì?",
+    "options": [
+      "A. Để xóa các dữ liệu bị thiếu.",
+      "B. Để hiểu về dữ liệu, thu thập thông tin chi tiết về cấu trúc cơ bản của tập dữ liệu và quyết định thuật toán phù hợp.",
+      "C. Để tạo giao diện web tương tác.",
+      "D. Để tăng tốc độ thực thi của code."
+    ],
+    "answer": "B. Để hiểu về dữ liệu, thu thập thông tin chi tiết về cấu trúc cơ bản của tập dữ liệu và quyết định thuật toán phù hợp.",
+    "explanation": "Trực quan hóa dữ liệu giúp nhà khoa học dữ liệu hiểu rõ dữ liệu, nhận thông tin chi tiết về cấu trúc cốt lõi để quyết định phép phân tích thống kê hoặc thuật toán học máy nào phù hợp nhất[cite: 76, 77]."
+  },
+  {
+    "question": "Câu 2: Việc vẽ đồ thị cho một biến duy nhất để hiểu về phân phối và cấu trúc của nó được gọi là gì?",
+    "options": [
+      "A. Univariate data visualization (Trực quan hóa dữ liệu đơn biến).",
+      "B. Multivariate data visualization (Trực quan hóa dữ liệu đa biến).",
+      "C. Dimensionality reduction (Giảm chiều dữ liệu).",
+      "D. Data transformation (Biến đổi dữ liệu)."
+    ],
+    "answer": "A. Univariate data visualization (Trực quan hóa dữ liệu đơn biến).",
+    "explanation": "Trực quan hóa dữ liệu đơn biến liên quan đến việc vẽ biểu đồ một biến duy nhất để hiểu rõ hơn về sự phân bố và cấu trúc của nó[cite: 80]."
+  },
+  {
+    "question": "Câu 3: Biểu đồ đa biến (Multivariate plots) dùng để làm gì?",
+    "options": [
+      "A. Chỉ hiển thị phân phối của một biến duy nhất.",
+      "B. Hiển thị mối quan hệ và cấu trúc giữa hai hoặc nhiều biến.",
+      "C. Nén hình ảnh thành định dạng 3D.",
+      "D. Đếm số lượng từ trong một tập tài liệu văn bản."
+    ],
+    "answer": "B. Hiển thị mối quan hệ và cấu trúc giữa hai hoặc nhiều biến.",
+    "explanation": "Biểu đồ đa biến phơi bày mối quan hệ và cấu trúc giữa hai hoặc nhiều biến trong tập dữ liệu[cite: 80]."
+  },
+  {
+    "question": "Câu 4: Thư viện đồ họa Matplotlib được tích hợp rất tốt với các thư viện nào trong hệ sinh thái Python?",
+    "options": [
+      "A. Flask và Django.",
+      "B. NumPy và Pandas.",
+      "C. Requests và BeautifulSoup.",
+      "D. Pygame và Kivy."
+    ],
+    "answer": "B. NumPy và Pandas.",
+    "explanation": "Matplotlib đã trở thành một thành phần chính yếu trong nền tảng khoa học dữ liệu Python và được tích hợp tốt với NumPy và Pandas[cite: 83]."
+  },
+  {
+    "question": "Câu 5: Module `pyplot` của Matplotlib mô phỏng chặt chẽ các lệnh vẽ đồ thị của phần mềm nào, giúp người dùng phần mềm đó dễ dàng chuyển sang dùng Python?",
+    "options": [
+      "A. Excel",
+      "B. SPSS",
+      "C. MATLAB",
+      "D. Tableau"
+    ],
+    "answer": "C. MATLAB",
+    "explanation": "Module pyplot bắt chước chặt chẽ các lệnh vẽ đồ thị của MATLAB, do đó người dùng MATLAB có thể dễ dàng chuyển sang vẽ đồ thị với Python[cite: 84]."
+  },
+  {
+    "question": "Câu 6: Điểm khác biệt chính giữa Seaborn và Matplotlib là gì?",
+    "options": [
+      "A. Seaborn không dùng để vẽ đồ thị mà dùng để tính toán ma trận.",
+      "B. Seaborn mở rộng thư viện Matplotlib để tạo các đồ thị đẹp mắt hơn với một tập hợp các phương thức đơn giản và trực quan hơn.",
+      "C. Seaborn chạy trên nền tảng R, không phải Python.",
+      "D. Seaborn chỉ vẽ được biểu đồ 3D."
+    ],
+    "answer": "B. Seaborn mở rộng thư viện Matplotlib để tạo các đồ thị đẹp mắt hơn với một tập hợp các phương thức đơn giản và trực quan hơn.",
+    "explanation": "Seaborn mở rộng thư viện Matplotlib để tạo ra các đồ họa đẹp mắt bằng Python sử dụng một bộ phương thức đơn giản hơn[cite: 85]."
+  },
+  {
+    "question": "Câu 7: Ngoài Matplotlib và Seaborn, thư viện nào cũng có tập hợp các hàm vẽ đồ thị mạnh mẽ được nhắc đến trong tài liệu?",
+    "options": [
+      "A. Scikit-Learn",
+      "B. TensorFlow",
+      "C. Pandas",
+      "D. Keras"
+    ],
+    "answer": "C. Pandas",
+    "explanation": "Pandas cũng có một tập hợp các hàm vẽ đồ thị (plotting functions) mạnh mẽ trong module plotting[cite: 88, 90]."
+  },
+  {
+    "question": "Câu 8: Cú pháp chuẩn để import Matplotlib và Seaborn là gì?",
+    "options": [
+      "A. import matplotlib.pyplot as plt / import seaborn as sns",
+      "B. import matplotlib as plt / import seaborn.plot as sns",
+      "C. import plt.matplotlib / import sns.seaborn",
+      "D. from matplotlib import pyplot / from seaborn import sns"
+    ],
+    "answer": "A. import matplotlib.pyplot as plt / import seaborn as sns",
+    "explanation": "Tài liệu đưa ra cú pháp chuẩn là `import matplotlib.pyplot as plt` và `import seaborn as sns`[cite: 98, 99]."
+  },
+  {
+    "question": "Câu 9: Những loại biểu đồ nào sau đây được liệt kê vào nhóm biểu đồ đơn biến (Univariate Plots)?",
+    "options": [
+      "A. Scatter plot, Pairwise plot, Correlation matrix.",
+      "B. Line plots, bar plots, histograms, density plots, box and whisker plots.",
+      "C. Heatmaps, 3D surface plots.",
+      "D. Radar charts, tree maps."
+    ],
+    "answer": "B. Line plots, bar plots, histograms, density plots, box and whisker plots.",
+    "explanation": "Tài liệu liệt kê các biểu đồ đơn biến thiết yếu và phổ biến gồm line plots, bar plots, histograms, density plots, và box and whisker plot[cite: 104]."
+  },
+  {
+    "question": "Câu 10: Kết quả của đoạn mã sau sẽ hiển thị đường đồ thị màu gì và kiểu nét như thế nào?\n\nplt.plot(np.cos(data), 'r-.')",
+    "options": [
+      "A. Màu xanh (red) với nét đứt quãng.",
+      "B. Màu đỏ (red) với các điểm chấm (dots).",
+      "C. Màu đỏ (red) với điểm đánh dấu gạch ngang và dấu chấm (dash and dot markers).",
+      "D. Báo lỗi vì 'r-.' không hợp lệ."
+    ],
+    "answer": "C. Màu đỏ (red) với điểm đánh dấu gạch ngang và dấu chấm (dash and dot markers).",
+    "explanation": "Chuỗi định dạng `'r-.'` ra lệnh vẽ một sóng cosine màu đỏ ('r') với các dấu gạch ngang và dấu chấm[cite: 113]."
+  },
+  {
+    "question": "Câu 11: Hàm nào trong Matplotlib được sử dụng để vẽ biểu đồ cột (bar plot)?",
+    "options": [
+      "A. plt.column()",
+      "B. plt.bar()",
+      "C. plt.barplot()",
+      "D. plt.hist()"
+    ],
+    "answer": "B. plt.bar()",
+    "explanation": "Để tạo một biểu đồ cột đơn giản trong Matplotlib, ta sử dụng phương thức `bar` (`plt.bar()`)[cite: 154, 157]."
+  },
+  {
+    "question": "Câu 12: Cú pháp nào là đúng để tạo biểu đồ cột bằng Seaborn từ danh sách `states` và `population`?\n\nstates = ['Cross River', 'Lagos', 'Rivers', 'Kano']\npopulation = [3737517, 17552940, 5198716, 11058300]",
+    "options": [
+      "A. sns.bar(states, population)",
+      "B. sns.barplot(x=states, y=population)",
+      "C. sns.plot_bar(states, population)",
+      "D. sns.barchart(x=states, y=population)"
+    ],
+    "answer": "B. sns.barplot(x=states, y=population)",
+    "explanation": "Trong Seaborn, biểu đồ cột được tạo bằng hàm `sns.barplot(x=..., y=...)`[cite: 159]."
+  },
+  {
+    "question": "Câu 13: Biểu đồ Histogram và biểu đồ mật độ (Density plot) có vai trò thiết yếu trong việc gì?",
+    "options": [
+      "A. Thay thế giá trị NaN trong dữ liệu.",
+      "B. Phân tích văn bản.",
+      "C. Kiểm tra sự phân bố thống kê (statistical distribution) của một biến.",
+      "D. Chuyển đổi dữ liệu 1D thành 2D."
+    ],
+    "answer": "C. Kiểm tra sự phân bố thống kê (statistical distribution) của một biến.",
+    "explanation": "Histogram và Density plot là rất cần thiết để xem xét cấu trúc phân phối thống kê của một biến[cite: 193]."
+  },
+  {
+    "question": "Câu 14: Đoạn mã sau sử dụng hàm nào của Seaborn để vẽ biểu đồ mật độ (density plot) mà không kèm theo biểu đồ cột (histogram)?\n\nsns.distplot(data, hist=False)",
+    "options": [
+      "A. densityplot",
+      "B. kdeplot",
+      "C. distplot",
+      "D. histplot"
+    ],
+    "answer": "C. distplot",
+    "explanation": "Tài liệu sử dụng hàm `sns.distplot(data, hist=False)` của Seaborn để tạo một biểu đồ mật độ (loại bỏ phần histogram)[cite: 204]."
+  },
+  {
+    "question": "Câu 15: Trong biểu đồ Box and Whisker (Boxplot), đường kẻ phía trên và phía dưới của hộp (box) đại diện cho điều gì?",
+    "options": [
+      "A. Đường trên là giá trị cao nhất, đường dưới là giá trị thấp nhất.",
+      "B. Đường trên đại diện cho phân vị thứ 75 (75th percentile), đường dưới đại diện cho phân vị thứ 25 (25th percentile).",
+      "C. Đường trên đại diện cho số lượng mẫu, đường dưới là sai số.",
+      "D. Đường trên là trung bình cộng, đường dưới là phương sai."
+    ],
+    "answer": "B. Đường trên đại diện cho phân vị thứ 75 (75th percentile), đường dưới đại diện cho phân vị thứ 25 (25th percentile).",
+    "explanation": "Trong biểu đồ hộp, đường kẻ trên thể hiện bách phân vị thứ 75 và đường kẻ dưới thể hiện bách phân vị thứ 25[cite: 35]."
+  },
+  {
+    "question": "Câu 16: Đường thẳng nằm ở giữa hộp (box) trong biểu đồ Boxplot chỉ định giá trị nào?",
+    "options": [
+      "A. Giá trị trung bình (Mean).",
+      "B. Giá trị trung vị (Median / 50th percentile).",
+      "C. Mode (Giá trị xuất hiện nhiều nhất).",
+      "D. Standard deviation (Độ lệch chuẩn)."
+    ],
+    "answer": "B. Giá trị trung vị (Median / 50th percentile).",
+    "explanation": "Đường vẽ ở giữa hộp chỉ báo bách phân vị thứ 50, hay còn gọi là giá trị trung vị (median)[cite: 36]."
+  },
+  {
+    "question": "Câu 17: Các râu (whiskers) ở hai đầu của Boxplot đưa ra ước lượng về mức độ phân tán (variance) của dữ liệu. Vậy các dấu chấm ở đuôi các râu này đại diện cho điều gì?",
+    "options": [
+      "A. Giá trị bị thiếu (Missing values).",
+      "B. Các biến mục tiêu (Target variables).",
+      "C. Các giá trị ngoại lệ có thể xảy ra (Possible outlier values).",
+      "D. Giá trị trung bình của tập dữ liệu."
+    ],
+    "answer": "C. Các giá trị ngoại lệ có thể xảy ra (Possible outlier values).",
+    "explanation": "Các chấm ở đầu râu (whiskers) biểu thị các giá trị ngoại lệ (outliers) có khả năng xảy ra trong tập dữ liệu[cite: 37, 38]."
+  },
+  {
+    "question": "Câu 18: Hàm nào sau đây dùng để vẽ biểu đồ phân tán (scatter plot) trong Matplotlib?",
+    "options": [
+      "A. plt.plot_scatter()",
+      "B. plt.points()",
+      "C. plt.scatter()",
+      "D. plt.dot()"
+    ],
+    "answer": "C. plt.scatter()",
+    "explanation": "Cú pháp để tạo một biểu đồ phân tán trong Matplotlib là gọi phương thức `plt.scatter(x, y)`[cite: 45]."
+  },
+  {
+    "question": "Câu 19: Trong Seaborn, hàm nào được dùng để vẽ biểu đồ phân tán (có tùy chọn tắt đường hồi quy bằng tham số `fit_reg=False`)?",
+    "options": [
+      "A. sns.scatter()",
+      "B. sns.regplot()",
+      "C. sns.scatterplot()",
+      "D. sns.pointplot()"
+    ],
+    "answer": "B. sns.regplot()",
+    "explanation": "Tài liệu sử dụng `sns.regplot(x=x, y=y, fit_reg=False)` để vẽ biểu đồ phân tán thông qua Seaborn[cite: 45]."
+  },
+  {
+    "question": "Câu 20: Biểu đồ nào là công cụ hiệu quả để trực quan hóa mối quan hệ giữa nhiều biến cùng lúc trong cùng một đồ thị?",
+    "options": [
+      "A. Line plot",
+      "B. Pairwise scatter plot",
+      "C. Bar plot",
+      "D. Histogram"
+    ],
+    "answer": "B. Pairwise scatter plot",
+    "explanation": "Pairwise scatter plot (biểu đồ phân tán bắt cặp) là một cửa sổ hiệu quả để hình dung mối quan hệ giữa nhiều biến trong cùng một đồ thị[cite: 47]."
+  },
+  {
+    "question": "Câu 21: Hàm `scatter_matrix` thuộc thư viện/module nào?",
+    "options": [
+      "A. matplotlib.pyplot",
+      "B. seaborn",
+      "C. pandas.plotting",
+      "D. numpy.random"
+    ],
+    "answer": "C. pandas.plotting",
+    "explanation": "Hàm `scatter_matrix` là một trong những hàm vẽ đồ thị của thư viện Pandas, được gọi qua `pd.plotting.scatter_matrix`[cite: 50, 52]."
+  },
+  {
+    "question": "Câu 22: Chức năng của đoạn mã sau là gì?\n\nsns.pairplot(pd.DataFrame(data))",
+    "options": [
+      "A. Vẽ biểu đồ phân tán bắt cặp (pairwise scatter plot) bằng thư viện Seaborn.",
+      "B. Vẽ ma trận tương quan.",
+      "C. Ghép cặp hai biểu đồ cột.",
+      "D. Tạo mô hình học máy."
+    ],
+    "answer": "A. Vẽ biểu đồ phân tán bắt cặp (pairwise scatter plot) bằng thư viện Seaborn.",
+    "explanation": "Hàm `sns.pairplot()` của Seaborn dùng để trực quan hóa biểu đồ pairwise scatter[cite: 53]."
+  },
+  {
+    "question": "Câu 23: Biểu đồ ma trận tương quan (Correlation Matrix) giúp chúng ta nhận ra điều gì?",
+    "options": [
+      "A. Loại bỏ các giá trị ngoại lệ.",
+      "B. Nhận diện các biến nào trong tập dữ liệu có độ tương quan cao với nhau.",
+      "C. Hiển thị số lượng phần tử trong mỗi lớp.",
+      "D. Chuyển đổi dữ liệu chữ thành dữ liệu số."
+    ],
+    "answer": "B. Nhận diện các biến nào trong tập dữ liệu có độ tương quan cao với nhau.",
+    "explanation": "Bằng cách vẽ biểu đồ ma trận tương quan, ta có được hình ảnh trực quan về những biến số nào trong tập dữ liệu có sự tương quan cao[cite: 55]."
+  },
+  {
+    "question": "Câu 24: Tại sao việc phát hiện các biến tương quan cao lại quan trọng trước khi áp dụng học máy?",
+    "options": [
+      "A. Vì nó làm hình ảnh đẹp hơn.",
+      "B. Vì các phương pháp học máy tham số (như hồi quy logistic và tuyến tính) có thể bị giảm hiệu suất nếu các biến bị tương quan quá cao.",
+      "C. Vì thuật toán sẽ chạy nhanh hơn.",
+      "D. Vì dữ liệu sẽ bị xóa hoàn toàn."
+    ],
+    "answer": "B. Vì các phương pháp học máy tham số (như hồi quy logistic và tuyến tính) có thể bị giảm hiệu suất nếu các biến bị tương quan quá cao.",
+    "explanation": "Các phương pháp học máy có tham số như hồi quy tuyến tính/logistic có thể bị sụt giảm hiệu năng khi các biến có tính tương quan quá chặt chẽ[cite: 56]."
+  },
+  {
+    "question": "Câu 25: Trong thực tế, các giá trị tương quan lớn hơn mức nào (hoặc nhỏ hơn mức nào) thì được coi là có độ tương quan cao?",
+    "options": [
+      "A. > 0.3 hoặc < -0.3",
+      "B. > 0.5 hoặc < -0.5",
+      "C. > 0.7 hoặc < -0.7",
+      "D. > 0.9 hoặc < -0.9"
+    ],
+    "answer": "C. > 0.7 hoặc < -0.7",
+    "explanation": "Trong thực tế, các giá trị tương quan lớn hơn 0.7 hoặc nhỏ hơn -0.7 đa phần được coi là tương quan cao[cite: 57]."
+  },
+  {
+    "question": "Câu 26: Đoạn mã sau dùng hàm nào của Matplotlib để hiển thị ma trận tương quan (correlation matrix) dưới dạng lưới màu?\n\nmy_plot = ax.matshow(pd.DataFrame(data).corr(), vmin=-1, vmax=1)",
+    "options": [
+      "A. plt.plot()",
+      "B. ax.matshow()",
+      "C. ax.heatmap()",
+      "D. ax.colorgrid()"
+    ],
+    "answer": "B. ax.matshow()",
+    "explanation": "Matplotlib sử dụng hàm `matshow` của đối tượng trục (axis) để vẽ ma trận dưới dạng lưới màu[cite: 59]."
+  },
+  {
+    "question": "Câu 27: Hàm nào của Seaborn được sử dụng trong đoạn mã sau để vẽ ma trận tương quan (covariance/correlation matrix)?\n\nsns.heatmap(pd.DataFrame(data).corr(), vmin=-1, vmax=1)",
+    "options": [
+      "A. sns.matshow()",
+      "B. sns.corrplot()",
+      "C. sns.heatmap()",
+      "D. sns.matrix()"
+    ],
+    "answer": "C. sns.heatmap()",
+    "explanation": "Seaborn sử dụng hàm `heatmap()` để vẽ ma trận hiệp phương sai / ma trận tương quan[cite: 61]."
+  },
+  {
+    "question": "Câu 28: Dữ liệu hình ảnh được lưu trữ trong máy tính dưới dạng gì?",
+    "options": [
+      "A. Một mảng chứa các giá trị văn bản.",
+      "B. Một mảng các giá trị cường độ điểm ảnh (pixel intensity values).",
+      "C. Một mảng các file âm thanh.",
+      "D. Dữ liệu bảng tính Excel."
+    ],
+    "answer": "B. Một mảng các giá trị cường độ điểm ảnh (pixel intensity values).",
+    "explanation": "Dữ liệu hình ảnh được lưu trong máy tính dưới dạng một mảng các giá trị cường độ điểm ảnh (pixel intensity values)[cite: 63]."
+  },
+  {
+    "question": "Câu 29: Theo tài liệu, hình ảnh màu (colored images) thường có bao nhiêu dải màu (bands/channels)?",
+    "options": [
+      "A. 1",
+      "B. 2",
+      "C. 3",
+      "D. 4"
+    ],
+    "answer": "C. 3",
+    "explanation": "Hình ảnh màu phân bổ các cường độ điểm ảnh trải dài qua ba dải màu (ba kênh)[cite: 63, 64]."
+  },
+  {
+    "question": "Câu 30: Kết quả của đoạn mã sau dùng để làm gì?\n\nimg = plt.imread('nigeria-coat-of-arms.png')",
+    "options": [
+      "A. Lọc hình ảnh để loại bỏ nhiễu.",
+      "B. Tải (đọc) hình ảnh từ ổ đĩa vào máy tính dưới dạng mảng dữ liệu.",
+      "C. Vẽ một hình ảnh ngẫu nhiên.",
+      "D. Chuyển đổi định dạng hình ảnh sang PDF."
+    ],
+    "answer": "B. Tải (đọc) hình ảnh từ ổ đĩa vào máy tính dưới dạng mảng dữ liệu.",
+    "explanation": "Phương thức `plt.imread()` được dùng để đọc tập tin hình ảnh và đưa nó vào môi trường lập trình dưới dạng mảng numpy[cite: 64]."
+  },
+  {
+    "question": "Câu 31: Giá trị cường độ điểm ảnh (pixel intensity) thường nằm trong khoảng nào?",
+    "options": [
+      "A. 0 đến 1",
+      "B. 0 đến 100",
+      "C. 0 đến 255",
+      "D. -128 đến 127"
+    ],
+    "answer": "C. 0 đến 255",
+    "explanation": "Các giá trị cường độ điểm ảnh (pixel intensity values) thường trải dài trong khoảng từ 0 đến 255[cite: 63, 66]."
+  },
+  {
+    "question": "Câu 32: Trong thang giá trị cường độ điểm ảnh từ 0 đến 255, giá trị nào gần với màu đen và giá trị nào gần với màu trắng?",
+    "options": [
+      "A. 0 gần với màu trắng, 255 gần với màu đen.",
+      "B. 0 gần với màu đen, 255 gần với màu trắng.",
+      "C. Cả 0 và 255 đều là màu xám.",
+      "D. Màu sắc được chọn ngẫu nhiên."
+    ],
+    "answer": "B. 0 gần với màu đen, 255 gần với màu trắng.",
+    "explanation": "Giá trị gần với 0 mang màu đen, trong khi các giá trị gần với 255 đại diện cho màu trắng[cite: 66]."
+  },
+  {
+    "question": "Câu 33: Lệnh `plt.imshow(img)` dùng để làm gì?",
+    "options": [
+      "A. Lưu hình ảnh vào ổ đĩa.",
+      "B. Resize (thay đổi kích thước) hình ảnh.",
+      "C. Trực quan hóa (hiển thị) dữ liệu mảng dưới dạng hình ảnh đồ họa.",
+      "D. Thay đổi độ tương phản của ảnh."
+    ],
+    "answer": "C. Trực quan hóa (hiển thị) dữ liệu mảng dưới dạng hình ảnh đồ họa.",
+    "explanation": "Lệnh `plt.imshow(img)` dùng để vẽ (trực quan hóa) mảng dữ liệu hình ảnh lên đồ thị cho người dùng xem[cite: 68]."
+  },
+  {
+    "question": "Câu 34: Kết quả in ra của thuộc tính `img.shape` trong đoạn mã sau mang ý nghĩa gì?\n\n# check image dimension\nimg.shape\n'Output': (232, 240, 3)",
+    "options": [
+      "A. Hình ảnh có 232 màu, 240 pixels và dung lượng 3 MB.",
+      "B. Hình ảnh có 232 kênh màu, kích thước 240x3.",
+      "C. Hình ảnh chứa 232 hàng (rows), 240 cột (columns) và 3 kênh màu (RGB).",
+      "D. Kích thước hiển thị trên màn hình là 232x240 ở chế độ 3D."
+    ],
+    "answer": "C. Hình ảnh chứa 232 hàng (rows), 240 cột (columns) và 3 kênh màu (RGB).",
+    "explanation": "Đầu ra (232, 240, 3) có nghĩa là hình ảnh chứa 232 hàng và 240 cột giá trị pixel trên ba kênh màu là đỏ, xanh lục và xanh lam[cite: 64]."
+  }
+]

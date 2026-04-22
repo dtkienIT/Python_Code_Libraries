@@ -1,8 +1,7 @@
-# python_course.py
 import streamlit as st
 from helpers.utils import render_video_section, render_docs, render_quiz
 
-TITLE = "Python fundamental course"
+TITLE = "Chapter 1: Python"
 PDF_FOLDER = "data/documents/python_pdf/python_basic.pdf"
 PYTHON_QUIZ_JSON = "data/questions/python_quiz.json"
 
@@ -29,6 +28,3 @@ def show():
     
     # 3. Render Quiz Section
     render_quiz(quiz_json_path=PYTHON_QUIZ_JSON, course_name="Python", prefix="py")
-
-# if __name__ == "__main__":
-#     show()

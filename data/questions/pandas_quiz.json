@@ -1,0 +1,607 @@
+[
+  {
+    "question": "Câu 1: Pandas là một thư viện Python chuyên dụng để làm gì?",
+    "options": [
+      "A. Xây dựng giao diện web.",
+      "B. Phân tích dữ liệu, đặc biệt là trên các tập dữ liệu cực lớn (humongous datasets).",
+      "C. Xây dựng các mô hình Deep Learning.",
+      "D. Tạo ứng dụng di động."
+    ],
+    "answer": "B. Phân tích dữ liệu, đặc biệt là trên các tập dữ liệu cực lớn (humongous datasets).",
+    "explanation": "Tài liệu mở đầu bằng việc định nghĩa Pandas là công cụ đắc lực để phân tích, làm sạch và xử lý dữ liệu lớn."
+  },
+  {
+    "question": "Câu 2: Đâu KHÔNG phải là một thế mạnh của Pandas theo tài liệu?",
+    "options": [
+      "A. Đọc và ghi dữ liệu dễ dàng.",
+      "B. Xử lý dữ liệu bị thiếu (missing data).",
+      "C. Phát triển trò chơi điện tử.",
+      "D. Làm sạch và phân tích chuỗi thời gian (time series data)."
+    ],
+    "answer": "C. Phát triển trò chơi điện tử.",
+    "explanation": "Pandas chuyên về data, không dùng để phát triển game."
+  },
+  {
+    "question": "Câu 3: Cú pháp chuẩn để import thư viện Pandas là gì?",
+    "options": [
+      "A. import pandas as pnd",
+      "B. import pandas",
+      "C. from pandas import *",
+      "D. import pandas as pd"
+    ],
+    "answer": "D. import pandas as pd",
+    "explanation": "Sử dụng alias `pd` là quy chuẩn chung của cộng đồng khi làm việc với Pandas."
+  },
+  {
+    "question": "Câu 4: Hai cấu trúc dữ liệu cốt lõi (data structures) của Pandas là gì?",
+    "options": [
+      "A. List và Dictionary.",
+      "B. Array và Matrix.",
+      "C. Series và DataFrame.",
+      "D. Tuple và Set."
+    ],
+    "answer": "C. Series và DataFrame.",
+    "explanation": "Series dùng cho mảng 1 chiều (1-D array) và DataFrame dùng cho mảng 2 chiều (2-D array)."
+  },
+  {
+    "question": "Câu 5: Cấu trúc dữ liệu 'Series' trong Pandas được dùng để lưu trữ dạng dữ liệu nào?",
+    "options": [
+      "A. Mảng 2 chiều (bảng dữ liệu).",
+      "B. Mảng 1 chiều (vector) kèm theo nhãn (index).",
+      "C. Đồ thị và hình ảnh.",
+      "D. Khối dữ liệu 3 chiều."
+    ],
+    "answer": "B. Mảng 1 chiều (vector) kèm theo nhãn (index).",
+    "explanation": "Series lưu trữ mảng 1-D (vector) các phần tử và cung cấp nhãn cho các phần tử dưới dạng index."
+  },
+  {
+    "question": "Câu 6: Nếu người dùng không chỉ định tham số 'index' khi tạo Series, Pandas sẽ tự động gán nhãn như thế nào?",
+    "options": [
+      "A. Gán nhãn là các chữ cái A, B, C...",
+      "B. Gán nhãn là các số ngẫu nhiên.",
+      "C. Gán mặc định từ 0 đến n-1 (với n là số lượng phần tử).",
+      "D. Báo lỗi vì index là bắt buộc."
+    ],
+    "answer": "C. Gán mặc định từ 0 đến n-1 (với n là số lượng phần tử).",
+    "explanation": "Nếu index bị bỏ trống, Pandas gán nhãn mặc định từ 0 đến kích thước dữ liệu trừ đi 1."
+  },
+  {
+    "question": "Câu 7: Thuộc tính nào được dùng để trả về các phần tử (elements) bên trong một Series?",
+    "options": [
+      "A. series.values",
+      "B. series.elements",
+      "C. series.data",
+      "D. series.items"
+    ],
+    "answer": "A. series.values",
+    "explanation": "Thuộc tính `.values` trả về các giá trị của Series dưới dạng một numpy ndarray."
+  },
+  {
+    "question": "Câu 8: Trong Pandas Series, điều gì xảy ra nếu bạn gán cùng một index (nhãn) cho nhiều phần tử khác nhau?",
+    "options": [
+      "A. Báo lỗi SyntaxError.",
+      "B. Phần tử cũ sẽ bị ghi đè.",
+      "C. Các phần tử có thể chia sẻ chung một index mà không gặp lỗi.",
+      "D. Pandas tự động đổi tên index trùng lặp."
+    ],
+    "answer": "C. Các phần tử có thể chia sẻ chung một index mà không gặp lỗi.",
+    "explanation": "Tài liệu minh họa việc tạo một Series với index=['e1', 'e2', 'e1', 'e2']. Khi truy xuất 'e1', nó trả về cả 2 giá trị."
+  },
+  {
+    "question": "Câu 9: DataFrame trong Pandas là cấu trúc dữ liệu dùng để lưu trữ cái gì?",
+    "options": [
+      "A. Chuỗi ký tự đơn giản.",
+      "B. Mảng dữ liệu 2 chiều (2-D array).",
+      "C. Mảng 1 chiều (1-D array).",
+      "D. Dữ liệu âm thanh."
+    ],
+    "answer": "B. Mảng dữ liệu 2 chiều (2-D array).",
+    "explanation": "DataFrame thao tác trên các mảng 2-D (giống như bảng tính Excel hay bảng trong cơ sở dữ liệu quan hệ)."
+  },
+  {
+    "question": "Câu 10: Theo tài liệu, DataFrame cấu thành từ cái gì?",
+    "options": [
+      "A. Một dictionary trong đó mỗi giá trị (value) là một Series.",
+      "B. Một tập hợp các Tuples.",
+      "C. Một mảng 1 chiều.",
+      "D. Các biến boolean."
+    ],
+    "answer": "A. Một dictionary trong đó mỗi giá trị (value) là một Series.",
+    "explanation": "Mỗi cột trong DataFrame bản chất là một Series."
+  },
+  {
+    "question": "Câu 11: Kiểu dữ liệu (data type) của thuộc tính `DF.columns` là gì?",
+    "options": [
+      "A. list",
+      "B. dictionary",
+      "C. pandas.core.indexes.base.Index",
+      "D. numpy.ndarray"
+    ],
+    "answer": "C. pandas.core.indexes.base.Index",
+    "explanation": "Khi gọi type(my_DF.columns), kết quả trả về là đối tượng Index của Pandas."
+  },
+  {
+    "question": "Câu 12: Kiểu dữ liệu trả về khi gọi thuộc tính `DF.values` là gì?",
+    "options": [
+      "A. pandas.DataFrame",
+      "B. numpy.ndarray",
+      "C. tuple",
+      "D. string"
+    ],
+    "answer": "B. numpy.ndarray",
+    "explanation": "Thuộc tính `.values` chuyển đổi cấu trúc DataFrame thành một mảng đa chiều của NumPy (ndarray)."
+  },
+  {
+    "question": "Câu 13: Trong Pandas, kiểu dữ liệu 'object' thường đại diện cho loại dữ liệu nào?",
+    "options": [
+      "A. Số nguyên (Integer).",
+      "B. Số thực (Float).",
+      "C. Chuỗi ký tự (Strings).",
+      "D. Boolean (True/False)."
+    ],
+    "answer": "C. Chuỗi ký tự (Strings).",
+    "explanation": "Tài liệu ghi rõ: \"An object data type in Pandas represents Strings.\""
+  },
+  {
+    "question": "Câu 14: Khi thực hiện phép chỉ mục (indexing) hoặc cắt mảng (subset) trên DataFrame, điều gì xảy ra với bộ dữ liệu gốc?",
+    "options": [
+      "A. Bộ dữ liệu gốc bị thay đổi ngay lập tức.",
+      "B. Bộ dữ liệu gốc bị xóa bỏ.",
+      "C. Nó trả về một DataFrame/Series mới và KHÔNG làm thay đổi dữ liệu gốc.",
+      "D. Nó gây lỗi nếu không lưu vào một biến mới."
+    ],
+    "answer": "C. Nó trả về một DataFrame/Series mới và KHÔNG làm thay đổi dữ liệu gốc.",
+    "explanation": "Pandas luôn trả về dữ liệu mới để tránh làm hỏng dữ liệu gốc (trừ khi dùng tham số inplace=True)."
+  },
+  {
+    "question": "Câu 15: Khi bạn trích xuất một cột duy nhất từ DataFrame (ví dụ: `my_DF['age']`), kiểu dữ liệu trả về là gì?",
+    "options": [
+      "A. DataFrame",
+      "B. List",
+      "C. Dictionary",
+      "D. Series"
+    ],
+    "answer": "D. Series",
+    "explanation": "Mỗi cột đơn lẻ trong DataFrame là một Series."
+  },
+  {
+    "question": "Câu 16: Để trích xuất nhiều cột cùng lúc từ DataFrame, bạn phải dùng cú pháp nào?",
+    "options": [
+      "A. my_DF['age', 'state']",
+      "B. my_DF[['age', 'state']]",
+      "C. my_DF('age', 'state')",
+      "D. my_DF.get('age', 'state')"
+    ],
+    "answer": "B. my_DF[['age', 'state']]",
+    "explanation": "Bạn phải truyền một list các tên cột vào bên trong ngoặc vuông, nên cú pháp là dấu ngoặc vuông kép `[[]]`."
+  },
+  {
+    "question": "Câu 17: Thuộc tính `iloc` trong Pandas được sử dụng để làm gì?",
+    "options": [
+      "A. Truy xuất dòng/cột bằng nhãn (label) cụ thể.",
+      "B. Lọc dữ liệu theo điều kiện True/False.",
+      "C. Truy xuất hoặc cắt dòng/cột sử dụng chỉ số vị trí dạng số nguyên (integer index).",
+      "D. Tìm kiếm và thay thế chuỗi."
+    ],
+    "answer": "C. Truy xuất hoặc cắt dòng/cột sử dụng chỉ số vị trí dạng số nguyên (integer index).",
+    "explanation": "`iloc` (integer location) dùng định dạng index tự nhiên của Python (0, 1, 2...)."
+  },
+  {
+    "question": "Câu 18: Sự khác biệt chính giữa `loc` và `iloc` là gì?",
+    "options": [
+      "A. `loc` dùng cho số nguyên, `iloc` dùng cho nhãn (labels).",
+      "B. `iloc` dùng cho số nguyên, `loc` dùng cho nhãn (explicit labels) hoặc điều kiện logic.",
+      "C. Không có sự khác biệt.",
+      "D. `loc` dùng cho Series, `iloc` dùng cho DataFrame."
+    ],
+    "answer": "B. `iloc` dùng cho số nguyên, `loc` dùng cho nhãn (explicit labels) hoặc điều kiện logic.",
+    "explanation": "`loc` (location) rất mạnh mẽ trong việc lọc dữ liệu dựa trên tên cột/hàng hoặc biểu thức boolean."
+  },
+  {
+    "question": "Câu 19: Theo tài liệu, việc thêm một bản ghi (row) mới vào Pandas DataFrame bằng phương thức `append()` có đặc điểm gì?",
+    "options": [
+      "A. Rất hiệu quả về mặt điện toán (computationally efficient).",
+      "B. Gây lỗi dữ liệu lập tức.",
+      "C. Có thể làm được nhưng KHÔNG hiệu quả về mặt điện toán.",
+      "D. Pandas không hỗ trợ hàm append()."
+    ],
+    "answer": "C. Có thể làm được nhưng KHÔNG hiệu quả về mặt điện toán.",
+    "explanation": "Tài liệu ghi rõ: \"However, it may not be a computationally efficient action.\" Việc thêm dữ liệu thủ công vào Pandas ít khi được khuyến khích."
+  },
+  {
+    "question": "Câu 20: Phương thức nào được sử dụng để loại bỏ (drop) các dòng chứa dữ liệu bị thiếu (NaN)?",
+    "options": [
+      "A. drop()",
+      "B. remove_nan()",
+      "C. dropna()",
+      "D. clear()"
+    ],
+    "answer": "C. dropna()",
+    "explanation": "Phương thức `dropna()` tự động loại bỏ mọi hàng (row) có chứa bất kỳ giá trị NaN (Not a Number) nào."
+  },
+  {
+    "question": "Câu 21: Phương thức nào được dùng để thay thế dữ liệu bị thiếu (NaN) bằng một giá trị cụ thể?",
+    "options": [
+      "A. replace_nan()",
+      "B. fillna()",
+      "C. insert()",
+      "D. update()"
+    ],
+    "answer": "B. fillna()",
+    "explanation": "Hàm `fillna(value)` giúp lấp đầy các khoảng trống dữ liệu bằng giá trị được chỉ định."
+  },
+  {
+    "question": "Câu 22: Nếu bạn muốn một câu trả lời duy nhất (True/False) xem liệu DataFrame CÓ BẤT KỲ giá trị bị thiếu nào không, bạn làm cách nào?",
+    "options": [
+      "A. Gọi hàm my_DF.has_missing()",
+      "B. Chuyển DataFrame thành NumPy array rồi gọi hàm any().",
+      "C. Gọi hàm my_DF.check()",
+      "D. Gọi hàm my_DF.empty()"
+    ],
+    "answer": "B. Chuyển DataFrame thành NumPy array rồi gọi hàm any().",
+    "explanation": "Chuyển thành numpy array rồi dùng hàm `.any()` sẽ trả về một giá trị boolean duy nhất thay vì ma trận boolean."
+  },
+  {
+    "question": "Câu 23: Nhóm dữ liệu (Data Aggregation/Grouping) thường được sử dụng cho mục đích gì?",
+    "options": [
+      "A. Tạo các giao diện đồ họa đẹp mắt.",
+      "B. Lấy các thống kê theo nhóm hoặc áp dụng hàm cho nhóm để hiểu sâu hơn về tập dữ liệu.",
+      "C. Nén kích thước file dữ liệu.",
+      "D. Sao lưu dữ liệu lên đám mây."
+    ],
+    "answer": "B. Lấy các thống kê theo nhóm hoặc áp dụng hàm cho nhóm để hiểu sâu hơn về tập dữ liệu.",
+    "explanation": "Grouping là chức năng thiết yếu để gộp nhóm dữ liệu (ví dụ: tính trung bình doanh thu theo từng tháng)."
+  },
+  {
+    "question": "Câu 24: Khi thực hiện phép nhóm dữ liệu (Grouping) trong Pandas, các dữ liệu bị thiếu (NaN) sẽ được xử lý ra sao?",
+    "options": [
+      "A. Bị báo lỗi.",
+      "B. Tự động được điền số 0.",
+      "C. Tự động bị loại bỏ (excluded) khỏi quá trình nhóm.",
+      "D. Sẽ tạo thành một nhóm có tên 'Missing'."
+    ],
+    "answer": "C. Tự động bị loại bỏ (excluded) khỏi quá trình nhóm.",
+    "explanation": "Tài liệu nêu rõ: \"Missing data are automatically excluded in a grouping operation.\""
+  },
+  {
+    "question": "Câu 25: Hàm nào trong Pandas cung cấp ngay lập tức các số liệu thống kê tóm tắt (summary statistics) của một tập dữ liệu?",
+    "options": [
+      "A. summary()",
+      "B. describe()",
+      "C. stats()",
+      "D. info()"
+    ],
+    "answer": "B. describe()",
+    "explanation": "Hàm `.describe()` tạo ra một bảng tóm tắt rất hữu ích về xu hướng trung tâm và độ phân tán của dữ liệu."
+  },
+  {
+    "question": "Câu 26: Hàm `describe()` trả về tổng cộng bao nhiêu thước đo thống kê?",
+    "options": [
+      "A. 4",
+      "B. 6",
+      "C. 8",
+      "D. 10"
+    ],
+    "answer": "C. 8",
+    "explanation": "Có 8 thước đo: count, mean, std, min, 25%, 50%, 75%, và max."
+  },
+  {
+    "question": "Câu 27: Thước đo nào KHÔNG nằm trong kết quả trả về của hàm `describe()`?",
+    "options": [
+      "A. count (đếm)",
+      "B. mean (trung bình)",
+      "C. std (độ lệch chuẩn)",
+      "D. variance (phương sai)"
+    ],
+    "answer": "D. variance (phương sai)",
+    "explanation": "Phương sai không được in ra mặc định, thay vào đó là độ lệch chuẩn (std)."
+  },
+  {
+    "question": "Câu 28: Hàm nào dùng để tính toán độ lệch phân phối (skewness) của dữ liệu?",
+    "options": [
+      "A. asym()",
+      "B. skew()",
+      "C. kurtosis()",
+      "D. tilt()"
+    ],
+    "answer": "B. skew()",
+    "explanation": "Skewness là một số liệu quan trọng để biết dữ liệu bị lệch trái hay lệch phải, thực hiện bằng hàm `.skew()`."
+  },
+  {
+    "question": "Câu 29: Trong thực tế, dữ liệu thường được đưa vào môi trường lập trình dưới định dạng file nào phổ biến nhất?",
+    "options": [
+      "A. .exe",
+      "B. .mp4",
+      "C. .csv (Comma-separated values)",
+      "D. .pdf"
+    ],
+    "answer": "C. .csv (Comma-separated values)",
+    "explanation": "Tài liệu nhắc đến việc đọc file CSV thông qua hàm `pd.read_csv()`."
+  },
+  {
+    "question": "Câu 30: Phương thức nào dùng để xuất (export) một DataFrame trở lại thành file CSV lưu vào máy tính?",
+    "options": [
+      "A. save_csv()",
+      "B. write_csv()",
+      "C. export_csv()",
+      "D. to_csv()"
+    ],
+    "answer": "D. to_csv()",
+    "explanation": "Cú pháp chuẩn là `my_DF.to_csv('file_name.csv')`."
+  },
+  {
+    "question": "Câu 31: Khả năng mạnh mẽ khác của Pandas được đề cập trong việc xử lý dữ liệu tài chính/chuỗi thời gian là gì?",
+    "options": [
+      "A. Mã hóa dữ liệu.",
+      "B. Sắp xếp lại (re-ordering) và làm sạch dữ liệu chuỗi thời gian (time series data).",
+      "C. Dự đoán tương lai.",
+      "D. Tự động mua bán chứng khoán."
+    ],
+    "answer": "B. Sắp xếp lại (re-ordering) và làm sạch dữ liệu chuỗi thời gian (time series data).",
+    "explanation": "Pandas cực kỳ nổi tiếng trong mảng phân tích tài chính nhờ khả năng xử lý Time Series data."
+  },
+  {
+    "question": "Câu 32: Hàm nào được dùng để tính các số liệu thống kê trượt (rolling statistics), ví dụ như trung bình giá trong 30 ngày qua?",
+    "options": [
+      "A. sliding()",
+      "B. moving()",
+      "C. rolling()",
+      "D. window()"
+    ],
+    "answer": "C. rolling()",
+    "explanation": "Cú pháp ví dụ: `.rolling(window=30).mean()`."
+  },
+  {
+    "question": "Câu 33: Tại sao những giá trị đầu tiên của một biến số khi áp dụng `rolling(window=30).mean()` lại chứa toàn giá trị NaN?",
+    "options": [
+      "A. Do Pandas bị lỗi bộ nhớ.",
+      "B. Do phương thức cần tính toán từ thời điểm sớm nhất đến muộn nhất, và những ngày đầu chưa đủ 30 ngày dữ liệu để tính trung bình.",
+      "C. Do cột đó vốn chứa dữ liệu bị lỗi.",
+      "D. Do cửa sổ dữ liệu bị đóng."
+    ],
+    "answer": "B. Do phương thức cần tính toán từ thời điểm sớm nhất đến muộn nhất, và những ngày đầu chưa đủ 30 ngày dữ liệu để tính trung bình.",
+    "explanation": "Cần đủ lượng dữ liệu bằng với kích thước window mới bắt đầu tính ra kết quả."
+  },
+  {
+    "question": "Câu 34: Phương thức nào dùng để hiển thị nhanh 5 dòng đầu tiên của một DataFrame?",
+    "options": [
+      "A. start()",
+      "B. first()",
+      "C. top()",
+      "D. head()"
+    ],
+    "answer": "D. head()",
+    "explanation": "`head()` là hàm cơ bản để xem trước (preview) dữ liệu ở đầu mảng."
+  },
+  {
+    "question": "Câu 35: Ngược lại với câu trên, phương thức nào hiển thị 5 dòng cuối cùng của DataFrame?",
+    "options": [
+      "A. tail()",
+      "B. bottom()",
+      "C. last()",
+      "D. end()"
+    ],
+    "answer": "A. tail()",
+    "explanation": "`tail()` hiển thị phần đuôi của dữ liệu."
+  },
+  {
+    "question": "Câu 36: Kết quả in ra màn hình của đoạn code sau là gì?\n\nimport pandas as pd\nmy_series = pd.Series([10, 20, 30], index=['a', 'b', 'c'])\nprint(my_series['b'])",
+    "options": [
+      "A. 10",
+      "B. 20",
+      "C. 30",
+      "D. Báo lỗi Index"
+    ],
+    "answer": "B. 20",
+    "explanation": "Phần tử có index 'b' chứa giá trị 20."
+  },
+  {
+    "question": "Câu 37: Lệnh in `df.shape` trong đoạn code sau sẽ trả về dạng dữ liệu gì?\n\nimport pandas as pd\ndf = pd.DataFrame({'X': [1, 2], 'Y': [3, 4]})\nprint(df.shape)",
+    "options": [
+      "A. 4",
+      "B. [2, 2]",
+      "C. (2, 2)",
+      "D. '2x2'"
+    ],
+    "answer": "C. (2, 2)",
+    "explanation": "Thuộc tính `shape` luôn trả về một Tuple thể hiện (số hàng, số cột)."
+  },
+  {
+    "question": "Câu 38: Kết quả in ra kiểu dữ liệu của đoạn code dưới đây là gì?\n\nimport pandas as pd\nimport numpy as np\ndf = pd.DataFrame(np.random.randn(3,3))\nprint(type(df.values))",
+    "options": [
+      "A. <class 'pandas.core.frame.DataFrame'>",
+      "B. <class 'numpy.ndarray'>",
+      "C. <class 'list'>",
+      "D. <class 'dict'>"
+    ],
+    "answer": "B. <class 'numpy.ndarray'>",
+    "explanation": "Gốc của `df.values` chính là mảng numpy đa chiều."
+  },
+  {
+    "question": "Câu 39: Đoạn mã sau dùng để lọc dữ liệu. Nó sẽ trả về kết quả gì?\n\nimport pandas as pd\ndf = pd.DataFrame({'A': [5, 10, 15]})\nprint(df.loc[df.A > 5])",
+    "options": [
+      "A. Chỉ trả về dòng chứa số 5.",
+      "B. Trả về dòng chứa số 10 và 15.",
+      "C. Báo lỗi cú pháp.",
+      "D. Trả về True/False."
+    ],
+    "answer": "B. Trả về dòng chứa số 10 và 15.",
+    "explanation": "Sử dụng `loc` với điều kiện boolean sẽ lọc ra các dòng thỏa mãn biểu thức `df.A > 5`."
+  },
+  {
+    "question": "Câu 40: Kiểu dữ liệu in ra từ đoạn code sau là gì?\n\nimport pandas as pd\ndf = pd.DataFrame({'age': [15, 17, 21]})\nprint(type(df['age']))",
+    "options": [
+      "A. <class 'numpy.ndarray'>",
+      "B. <class 'pandas.core.frame.DataFrame'>",
+      "C. <class 'pandas.core.series.Series'>",
+      "D. <class 'list'>"
+    ],
+    "answer": "C. <class 'pandas.core.series.Series'>",
+    "explanation": "Việc trích xuất một cột duy nhất từ DataFrame sẽ trả về cấu trúc Series."
+  },
+  {
+    "question": "Câu 41: Lệnh `df.columns` trong đoạn code sau trả về đối tượng nào?\n\nimport pandas as pd\ndf = pd.DataFrame({'A': [1, 2], 'B': [3, 4]})\nprint(df.columns)",
+    "options": [
+      "A. Index(['A', 'B'], dtype='object')",
+      "B. ['A', 'B']",
+      "C. (1, 2, 3, 4)",
+      "D. Column(['A', 'B'])"
+    ],
+    "answer": "A. Index(['A', 'B'], dtype='object')",
+    "explanation": "`columns` trả về đối tượng Index chứa danh sách tên các cột."
+  },
+  {
+    "question": "Câu 42: Tham số `header = None` trong đoạn lệnh sau có nghĩa là gì?\n\ndf = pd.read_csv('data.csv', header = None)",
+    "options": [
+      "A. File CSV không tồn tại.",
+      "B. Bỏ qua việc đọc hàng đầu tiên.",
+      "C. Báo cho Pandas biết file CSV này không có hàng tiêu đề (column names) và tự động tạo tên cột là các số nguyên.",
+      "D. Đọc dữ liệu từ dưới lên."
+    ],
+    "answer": "C. Báo cho Pandas biết file CSV này không có hàng tiêu đề (column names) và tự động tạo tên cột là các số nguyên.",
+    "explanation": "Khi `header=None`, Pandas sẽ tự gán cột là 0, 1, 2..."
+  },
+  {
+    "question": "Câu 43: Khi gọi lệnh `df.dropna()` trên một DataFrame, điều gì sẽ xảy ra?",
+    "options": [
+      "A. Xóa toàn bộ DataFrame.",
+      "B. Trả về một DataFrame mới mà các hàng chứa ít nhất 1 giá trị NaN đã bị loại bỏ.",
+      "C. Trả về DataFrame mới thay thế NaN bằng 0.",
+      "D. In ra danh sách các vị trí bị lỗi."
+    ],
+    "answer": "B. Trả về một DataFrame mới mà các hàng chứa ít nhất 1 giá trị NaN đã bị loại bỏ.",
+    "explanation": "Hành vi mặc định của `dropna` là bỏ đi các axis (mặc định là hàng/row) có chứa bất kỳ giá trị missing nào."
+  },
+  {
+    "question": "Câu 44: Kết quả trả về của đoạn code sau là gì nếu cột 'Name' không có giá trị nào là NaN?\n\nimport pandas as pd\ndf = pd.DataFrame({'Name': ['Alice', 'Bob']})\nprint(df['Name'].isnull().any())",
+    "options": [
+      "A. True",
+      "B. False",
+      "C. Báo lỗi",
+      "D. 0"
+    ],
+    "answer": "B. False",
+    "explanation": "Hàm `isnull()` kiểm tra khoảng trống, trả về mảng False. `any()` duyệt qua mảng xem có phần tử nào True không, kết quả là False."
+  },
+  {
+    "question": "Câu 45: Phương thức nào được sử dụng sau `groupby` để tính trung bình của các nhóm?\n\nimport pandas as pd\ndf = pd.DataFrame({'Team': ['A', 'A', 'B'], 'Score': [10, 20, 30]})\nprint(df.groupby('Team').mean())",
+    "options": [
+      "A. .sum()",
+      "B. .average()",
+      "C. .mean()",
+      "D. .median()"
+    ],
+    "answer": "C. .mean()",
+    "explanation": "`mean()` là hàm thống kê dùng để tính trung bình cộng của các dữ liệu đã được gộp nhóm."
+  },
+  {
+    "question": "Câu 46: Cú pháp tạo một Series có 4 phần tử với index mặc định:\n\nimport pandas as pd\ns = pd.Series([5, 10, 15, 20])\nprint(s.index)",
+    "options": [
+      "A. RangeIndex(start=0, stop=4, step=1)",
+      "B. Index([1, 2, 3, 4])",
+      "C. RangeIndex(start=1, stop=5, step=1)",
+      "D. Không có Index"
+    ],
+    "answer": "A. RangeIndex(start=0, stop=4, step=1)",
+    "explanation": "Nếu không cấp index, Pandas tạo RangeIndex bắt đầu từ 0 đến n-1."
+  },
+  {
+    "question": "Câu 47: Để truy cập dữ liệu của một hàng (row) có số thứ tự index là 2, ta dùng lệnh gì?\n\nimport pandas as pd\ndf = pd.DataFrame({'A': [10, 20, 30]})\n# Lệnh lấy hàng thứ 3 (index=2)",
+    "options": [
+      "A. df.loc[2]",
+      "B. df.iloc[2]",
+      "C. Cả A và B đều đúng trong trường hợp index là số nguyên mặc định.",
+      "D. df.row(2)"
+    ],
+    "answer": "C. Cả A và B đều đúng trong trường hợp index là số nguyên mặc định.",
+    "explanation": "Vì index mặc định là số nguyên, `loc` (tìm nhãn '2') và `iloc` (tìm vị trí thứ 2) sẽ trỏ về cùng một hàng."
+  },
+  {
+    "question": "Câu 48: Làm cách nào để in ra 3 dòng cuối của DataFrame `df`?\n\nimport pandas as pd\ndf = pd.DataFrame({'A': range(10)})\nprint( ______ )",
+    "options": [
+      "A. df.tail(3)",
+      "B. df.last(3)",
+      "C. df.bottom(3)",
+      "D. df.head(-3)"
+    ],
+    "answer": "A. df.tail(3)",
+    "explanation": "Hàm `tail(n)` hiển thị n dòng tính từ dưới cùng lên."
+  },
+  {
+    "question": "Câu 49: Dòng mã dưới đây sẽ thay đổi giá trị NaN thành chữ 'Unknown'. Tham số inplace=True có tác dụng gì?\n\ndf.fillna('Unknown', inplace=True)",
+    "options": [
+      "A. Tạo ra một DataFrame mới.",
+      "B. Thay đổi trực tiếp trên DataFrame hiện tại mà không cần gán lại (reassignment).",
+      "C. Báo lỗi dữ liệu.",
+      "D. Chỉ hiển thị tạm thời."
+    ],
+    "answer": "B. Thay đổi trực tiếp trên DataFrame hiện tại mà không cần gán lại (reassignment).",
+    "explanation": "Thuộc tính `inplace=True` cho phép Pandas can thiệp và sửa đổi thẳng vào bộ nhớ của biến hiện tại."
+  },
+  {
+    "question": "Câu 50: Theo định nghĩa từ tài liệu, câu lệnh dưới đây lấy ra thông tin gì?\n\nmy_DF.loc[my_DF.age >= 25, 'state_of_origin']",
+    "options": [
+      "A. Tìm tuổi của những người có state_of_origin là 25.",
+      "B. Cập nhật tất cả các cột thành 25.",
+      "C. Trích xuất cột 'state_of_origin' cho những hàng có giá trị cột 'age' lớn hơn hoặc bằng 25.",
+      "D. Cắt bảng dữ liệu làm đôi."
+    ],
+    "answer": "C. Trích xuất cột 'state_of_origin' cho những hàng có giá trị cột 'age' lớn hơn hoặc bằng 25.",
+    "explanation": "Cú pháp `loc[điều kiện_hàng, tên_cột]` cho phép lọc dữ liệu theo hàng và chỉ trả về các cột mong muốn."
+  },
+  {
+    "question": "Câu 51: Lệnh nào sau đây được sử dụng để xóa vĩnh viễn một cột (ví dụ: cột 'age') khỏi DataFrame `my_DF`?",
+    "options": [
+      "A. remove my_DF['age']",
+      "B. del my_DF['age']",
+      "C. my_DF.delete('age')",
+      "D. my_DF.drop_column('age')"
+    ],
+    "answer": "B. del my_DF['age']",
+    "explanation": "Lệnh `del` là cú pháp cơ bản và trực tiếp trong Python và Pandas để xóa hoàn toàn một cột (Series) khỏi bộ nhớ của DataFrame."
+  },
+  {
+    "question": "Câu 52: Cú pháp `pd.concat([df1, df2], axis=1)` thực hiện thao tác gì trên hai DataFrame?",
+    "options": [
+      "A. Nối df1 và df2 theo chiều dọc (thêm hàng).",
+      "B. Nối df1 và df2 theo chiều ngang (thêm cột).",
+      "C. Tính tổng các phần tử của df1 và df2.",
+      "D. Trộn lẫn ngẫu nhiên các hàng của hai bảng."
+    ],
+    "answer": "B. Nối df1 và df2 theo chiều ngang (thêm cột).",
+    "explanation": "Hàm `pd.concat()` dùng để gộp các bảng dữ liệu. Tham số `axis=1` chỉ định việc nối dữ liệu theo chiều ngang (tăng số lượng cột). Mặc định `axis=0` là nối theo chiều dọc (tăng số lượng hàng)."
+  },
+  {
+    "question": "Câu 53: Khi dùng `pd.concat()`, điều gì xảy ra nếu hai DataFrame có các index (nhãn hàng) khác nhau nhưng được nối theo cột (`axis=1`)?",
+    "options": [
+      "A. Pandas sẽ báo lỗi và dừng chương trình.",
+      "B. Pandas tự động căn chỉnh (align) dữ liệu theo index, điền NaN vào những vị trí không khớp.",
+      "C. Pandas tự động xóa các index không khớp.",
+      "D. Chỉ những hàng có chung index mới được giữ lại."
+    ],
+    "answer": "B. Pandas tự động căn chỉnh (align) dữ liệu theo index, điền NaN vào những vị trí không khớp.",
+    "explanation": "Đây là một trong những tính năng mạnh mẽ nhất của Pandas: Tự động căn chỉnh dữ liệu (Auto-alignment). Những chỗ bị khuyết dữ liệu sẽ tự động được gán là NaN."
+  },
+  {
+    "question": "Câu 54: Trong phân tích chuỗi thời gian (Time Series), phương thức nào được dùng để dịch chuyển dữ liệu (lag/lead) lên hoặc xuống một số bậc nhất định?",
+    "options": [
+      "A. .move()",
+      "B. .push()",
+      "C. .shift()",
+      "D. .slide()"
+    ],
+    "answer": "C. .shift()",
+    "explanation": "Hàm `.shift()` thường được dùng để tạo các cột trễ (lagged features), ví dụ dịch chuyển giá đóng cửa ngày hôm trước xuống một hàng để so sánh với ngày hôm nay."
+  },
+  {
+    "question": "Câu 55: Đoạn mã sau nhằm mục đích gì trong phần phân tích dữ liệu tài chính của tài liệu?\n\ndf['close_4_ahead'] = df['close'].shift(-4)",
+    "options": [
+      "A. Lấy giá trị đóng cửa (close) của 4 ngày trước đó.",
+      "B. Kéo giá trị đóng cửa của 4 ngày tiếp theo (tương lai) ngược về hiện tại.",
+      "C. Nhân giá trị đóng cửa với -4.",
+      "D. Xóa 4 dòng đầu tiên của cột 'close'."
+    ],
+    "answer": "B. Kéo giá trị đóng cửa của 4 ngày tiếp theo (tương lai) ngược về hiện tại.",
+    "explanation": "Sử dụng tham số âm trong `.shift(-n)` sẽ kéo dữ liệu từ dưới lên trên (lấy dữ liệu của tương lai kéo về hàng hiện tại). Đây là bước chuẩn bị cực kỳ quan trọng để tạo ra biến mục tiêu (target variable) cho các mô hình dự đoán Machine Learning."
+  }
+]

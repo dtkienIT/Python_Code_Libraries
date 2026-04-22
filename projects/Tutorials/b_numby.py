@@ -1,8 +1,7 @@
-# numpy_course.py
 import streamlit as st
 from helpers.utils import render_video_section, render_docs, render_quiz
 
-TITLE = "NumPy fundamental course"
+TITLE = "Chapter 2: NumPy "
 PDF_FOLDER = "data/documents/python_pdf/numby.pdf"
 NUMPY_QUIZ_JSON = "data/questions/numpy_quiz.json"
 
