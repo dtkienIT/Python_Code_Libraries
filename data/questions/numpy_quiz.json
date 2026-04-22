@@ -1,0 +1,662 @@
+[
+  {
+    "question": "Câu 1: NumPy là thư viện Python được tối ưu hóa cho mục đích gì?",
+    "options": [
+      "A. Lập trình giao diện người dùng (UI).",
+      "B. Tính toán số học (Numerical computing).",
+      "C. Xây dựng và quản trị cơ sở dữ liệu.",
+      "D. Phát triển ứng dụng Web."
+    ],
+    "answer": "B. Tính toán số học (Numerical computing).",
+    "explanation": "Tài liệu mở đầu bằng định nghĩa NumPy là thư viện tối ưu hóa cho tính toán số học, rất quan trọng trong Khoa học Dữ liệu."
+  },
+  {
+    "question": "Câu 2: Thư viện NumPy có sự tương đồng và sức mạnh ngang hàng với phần mềm nào?",
+    "options": [
+      "A. Microsoft Excel",
+      "B. AutoCAD",
+      "C. MATLAB",
+      "D. SPSS"
+    ],
+    "answer": "C. MATLAB",
+    "explanation": "NumPy mang sự tương đồng gần gũi với MATLAB và mạnh mẽ tương đương khi kết hợp với SciPy, Pandas."
+  },
+  {
+    "question": "Câu 3: NumPy là từ viết tắt của cụm từ nào?",
+    "options": [
+      "A. Number Python",
+      "B. Numerical Python",
+      "C. Numeric Program",
+      "D. None-type Python"
+    ],
+    "answer": "B. Numerical Python",
+    "explanation": "NumPy là dạng viết tắt của 'numerical python'."
+  },
+  {
+    "question": "Câu 4: Sức mạnh cốt lõi (core strength) của NumPy nằm ở đâu?",
+    "options": [
+      "A. Khả năng thiết kế đồ họa 3D.",
+      "B. Tạo và thao tác trên mảng n-chiều (n-dimensional arrays).",
+      "C. Xử lý văn bản và ngôn ngữ tự nhiên.",
+      "D. Thu thập dữ liệu web (Web scraping)."
+    ],
+    "answer": "B. Tạo và thao tác trên mảng n-chiều (n-dimensional arrays).",
+    "explanation": "Sức mạnh cốt lõi của thư viện này là làm việc với các mảng (arrays) đa chiều một cách tối ưu."
+  },
+  {
+    "question": "Câu 5: Trong một bộ dữ liệu dạng lưới (grid), các hàng (rows) và cột (columns) thường đại diện cho điều gì?",
+    "options": [
+      "A. Hàng đại diện cho đặc trưng (feature), cột đại diện cho biến số.",
+      "B. Hàng đại diện cho quan sát (observation), cột đại diện cho biến số/đặc trưng (feature).",
+      "C. Cả hàng và cột đều là các quan sát.",
+      "D. Hàng là dữ liệu dạng số, cột là dữ liệu dạng chữ."
+    ],
+    "answer": "B. Hàng đại diện cho quan sát (observation), cột đại diện cho biến số/đặc trưng (feature).",
+    "explanation": "Dữ liệu thường được biểu diễn dưới dạng ma trận: mỗi hàng là 1 quan sát, mỗi cột là 1 biến số/tính năng."
+  },
+  {
+    "question": "Câu 6: Hàm nào được sử dụng để chuyển đổi một Python list thành một mảng NumPy 1 chiều?",
+    "options": [
+      "A. np.matrix()",
+      "B. np.list()",
+      "C. np.convert()",
+      "D. np.array()"
+    ],
+    "answer": "D. np.array()",
+    "explanation": "Cú pháp `np.array(my_list)` được dùng để tạo một NumPy array từ một danh sách."
+  },
+  {
+    "question": "Câu 7: Kiểu dữ liệu gốc (data-type object) của một mảng NumPy là gì?",
+    "options": [
+      "A. numpy.list",
+      "B. numpy.vector",
+      "C. numpy.ndarray",
+      "D. numpy.array"
+    ],
+    "answer": "C. numpy.ndarray",
+    "explanation": "Kiểu dữ liệu cốt lõi khi kiểm tra bằng hàm `type()` đối với mảng NumPy là `numpy.ndarray` (n-dimensional array)."
+  },
+  {
+    "question": "Câu 8: Thuộc tính `ndim` của một mảng NumPy trả về thông tin gì?",
+    "options": [
+      "A. Tổng số phần tử trong mảng.",
+      "B. Số chiều (dimensions) của mảng.",
+      "C. Kích thước byte của mảng.",
+      "D. Số hàng của mảng."
+    ],
+    "answer": "B. Số chiều (dimensions) của mảng.",
+    "explanation": "Thuộc tính `ndim` (number of dimensions) trả về mảng đó là 1-D, 2-D hay 3-D."
+  },
+  {
+    "question": "Câu 9: Thuộc tính `shape` của mảng NumPy trả về dạng dữ liệu nào?",
+    "options": [
+      "A. Một số nguyên duy nhất.",
+      "B. Một List chứa số phần tử.",
+      "C. Một Tuple chứa số hàng và số cột (rows, columns).",
+      "D. Một String mô tả kích thước."
+    ],
+    "answer": "C. Một Tuple chứa số hàng và số cột (rows, columns).",
+    "explanation": "Thuộc tính `shape` trả về một tuple mô tả kích thước dọc theo mỗi chiều của mảng, ví dụ (2, 3)."
+  },
+  {
+    "question": "Câu 10: Hàm `np.arange(start, stop, step)` dùng để làm gì?",
+    "options": [
+      "A. Tạo mảng chứa các số ngẫu nhiên.",
+      "B. Tạo một mảng từ điểm bắt đầu đến điểm kết thúc với một bước nhảy (step) chỉ định.",
+      "C. Sắp xếp mảng theo thứ tự tăng dần.",
+      "D. Tính giá trị trung bình của mảng."
+    ],
+    "answer": "B. Tạo một mảng từ điểm bắt đầu đến điểm kết thúc với một bước nhảy (step) chỉ định.",
+    "explanation": "Nó tương tự như hàm `range()` của Python nhưng trả về một NumPy array thay vì một dãy số thông thường."
+  },
+  {
+    "question": "Câu 11: Hàm nào trong NumPy dùng để tạo một mảng gồm các giá trị cách đều nhau trong một khoảng xác định?",
+    "options": [
+      "A. np.linspace()",
+      "B. np.arange()",
+      "C. np.interval()",
+      "D. np.spaces()"
+    ],
+    "answer": "A. np.linspace()",
+    "explanation": "Hàm `np.linspace(start, stop, num)` tạo một mảng với `num` điểm dữ liệu có khoảng cách đều nhau."
+  },
+  {
+    "question": "Câu 12: Lệnh `np.ones(5)` tạo ra kết quả gì?",
+    "options": [
+      "A. Một mảng 5 chiều chứa toàn số 1.",
+      "B. Một mảng chứa số 1 và số 5.",
+      "C. Một mảng 1 chiều chứa 5 phần tử có giá trị đều là 1.",
+      "D. Số 1 được lặp lại 5 lần dưới dạng chuỗi."
+    ],
+    "answer": "C. Một mảng 1 chiều chứa 5 phần tử có giá trị đều là 1.",
+    "explanation": "Lệnh `np.ones()` khởi tạo mảng và điền toàn bộ các phần tử bằng giá trị 1."
+  },
+  {
+    "question": "Câu 13: Kiểu dữ liệu (datatype) mặc định của NumPy khi tạo mảng (nếu không khai báo) là gì?",
+    "options": [
+      "A. int32",
+      "B. bool",
+      "C. float_ (hoặc float64)",
+      "D. string"
+    ],
+    "answer": "C. float_ (hoặc float64)",
+    "explanation": "Theo tài liệu, kiểu mặc định của NumPy function là `float_` (thường là số thập phân 64-bit)."
+  },
+  {
+    "question": "Câu 14: Tham số nào được dùng để gán thủ công một kiểu dữ liệu cho hàm NumPy?",
+    "options": [
+      "A. type=",
+      "B. as=",
+      "C. datatype=",
+      "D. dtype="
+    ],
+    "answer": "D. dtype=",
+    "explanation": "Dùng tham số `dtype` (data type) để ép kiểu mảng, ví dụ: `dtype=\"float64\"`."
+  },
+  {
+    "question": "Câu 15: Fancy indexing (hay Masking) trong NumPy là kỹ thuật gì?",
+    "options": [
+      "A. Kỹ thuật tạo hiệu ứng màu sắc cho mảng.",
+      "B. Cơ chế chỉ mục các phần tử của mảng dựa trên mảng số nguyên hoặc mảng Boolean.",
+      "C. Định dạng dữ liệu thành chuỗi HTML.",
+      "D. Che giấu mã nguồn NumPy khỏi người dùng."
+    ],
+    "answer": "B. Cơ chế chỉ mục các phần tử của mảng dựa trên mảng số nguyên hoặc mảng Boolean.",
+    "explanation": "Đây là cơ chế nâng cao giúp lọc (filter) hoặc lấy ra các phần tử cụ thể thỏa mãn một điều kiện."
+  },
+  {
+    "question": "Câu 16: Biểu thức `my_array % 2 == 0` sẽ tạo ra loại mảng gì để dùng làm Mask (mặt nạ)?",
+    "options": [
+      "A. Mảng chứa số 0 và 1.",
+      "B. Mảng chứa các số chẵn.",
+      "C. Mảng chứa các giá trị Boolean (True / False).",
+      "D. Một giá trị Boolean duy nhất."
+    ],
+    "answer": "C. Mảng chứa các giá trị Boolean (True / False).",
+    "explanation": "Biểu thức điều kiện được áp dụng lên toàn mảng, trả về mảng các giá trị True/False tương ứng."
+  },
+  {
+    "question": "Câu 17: \"Universal functions\" trong NumPy là gì?",
+    "options": [
+      "A. Các hàm dùng được trên mọi ngôn ngữ lập trình.",
+      "B. Các hàm có thể tính toán dữ liệu văn bản thành số.",
+      "C. Các hàm có khả năng kết nối Internet.",
+      "D. Các hàm được tối ưu hóa (vectorized) cho phép toán số học và chuỗi."
+    ],
+    "answer": "D. Các hàm được tối ưu hóa (vectorized) cho phép toán số học và chuỗi.",
+    "explanation": "Đó là cốt lõi của NumPy, giúp tính toán cực nhanh trên toàn bộ mảng mà không cần dùng vòng lặp for."
+  },
+  {
+    "question": "Câu 18: Để tính căn bậc hai của tất cả các phần tử trong mảng, dùng hàm NumPy nào?",
+    "options": [
+      "A. np.power()",
+      "B. np.sqrt()",
+      "C. np.square()",
+      "D. np.root()"
+    ],
+    "answer": "B. np.sqrt()",
+    "explanation": "`sqrt` là viết tắt của 'square root' (căn bậc hai)."
+  },
+  {
+    "question": "Câu 19: Hàm `np.exp(my_array)` thực hiện phép toán nào?",
+    "options": [
+      "A. Tính hàm số mũ (exponent) cơ số e cho từng phần tử.",
+      "B. Xuất (export) mảng thành file.",
+      "C. Mở rộng (expand) kích thước mảng.",
+      "D. Trả về giá trị ngoại lệ (exception)."
+    ],
+    "answer": "A. Tính hàm số mũ (exponent) cơ số e cho từng phần tử.",
+    "explanation": "`exp` là hàm tính e^x cho mỗi phần tử x trong mảng."
+  },
+  {
+    "question": "Câu 20: Dữ liệu cấu trúc dạng lưới phân tích (phân tích bảng) thường lý tưởng nhất khi được lưu trữ trong mảng bao nhiêu chiều?",
+    "options": [
+      "A. 1-D",
+      "B. 2-D",
+      "C. 3-D",
+      "D. 4-D"
+    ],
+    "answer": "B. 2-D",
+    "explanation": "Mảng 2-D (ma trận) cực kỳ phù hợp cho cấu trúc gồm các hàng và cột."
+  },
+  {
+    "question": "Câu 21: Dữ liệu hình ảnh màu thường được biểu diễn tốt nhất bằng loại mảng nào?",
+    "options": [
+      "A. 1-D array",
+      "B. 2-D array",
+      "C. 3-D array",
+      "D. Boolean array"
+    ],
+    "answer": "C. 3-D array",
+    "explanation": "Hình ảnh màu cấu thành từ cường độ pixel n x n và độ sâu màu là 3 (Kênh R, G, B), do đó cần mảng 3-D."
+  },
+  {
+    "question": "Câu 22: Để tạo một mảng 3x3 chứa toàn bộ giá trị cụ thể là số 2, ta dùng hàm nào?",
+    "options": [
+      "A. np.fill([3, 3], 2)",
+      "B. np.array([3, 3], 2)",
+      "C. np.zeros([3, 3]) + 2",
+      "D. np.full([3, 3], 2)"
+    ],
+    "answer": "D. np.full([3, 3], 2)",
+    "explanation": "Hàm `np.full(shape, fill_value)` tạo ra mảng với kích thước tùy ý và lấp đầy bằng một giá trị cho trước."
+  },
+  {
+    "question": "Câu 23: Lệnh `np.empty([3,3])` tạo ra một mảng như thế nào?",
+    "options": [
+      "A. Mảng 3x3 chứa toàn số 0.",
+      "B. Mảng 3x3 rỗng chưa được khởi tạo giá trị (chứa dữ liệu rác ngẫu nhiên).",
+      "C. Mảng 3x3 tự động bị xóa khỏi bộ nhớ.",
+      "D. Gây ra lỗi vì không có dữ liệu."
+    ],
+    "answer": "B. Mảng 3x3 rỗng chưa được khởi tạo giá trị (chứa dữ liệu rác ngẫu nhiên).",
+    "explanation": "Hàm `np.empty` phân bổ vùng nhớ nhưng không gán giá trị khởi tạo, nên nó sẽ hiển thị bất cứ giá trị nào đang tồn tại ở ô nhớ đó."
+  },
+  {
+    "question": "Câu 24: Ma trận đơn vị (Identity matrix) là gì?",
+    "options": [
+      "A. Ma trận có số 1 trên đường chéo chính và số 0 ở các vị trí khác.",
+      "B. Ma trận chỉ chứa toàn số 1.",
+      "C. Ma trận có 1 hàng và nhiều cột.",
+      "D. Ma trận có tổng các phần tử bằng 1."
+    ],
+    "answer": "A. Ma trận có số 1 trên đường chéo chính và số 0 ở các vị trí khác.",
+    "explanation": "Trong đại số tuyến tính, ma trận đơn vị có các đường chéo (diagonal) mang giá trị 1."
+  },
+  {
+    "question": "Câu 25: Hàm nào trong NumPy dùng để tạo ra ma trận đơn vị (Identity matrix)?",
+    "options": [
+      "A. np.one_diagonal()",
+      "B. np.eye() (hoặc np.identity())",
+      "C. np.diag()",
+      "D. np.matrix()"
+    ],
+    "answer": "B. np.eye() (hoặc np.identity())",
+    "explanation": "Cả hai hàm `np.eye` và `np.identity` đều được cung cấp để tạo ma trận đơn vị."
+  },
+  {
+    "question": "Câu 26: Cấu hình tham số cho mảng 3-D array trong hàm tạo mảng (ví dụ: `np.zeros([2, 3, 3])`) có thứ tự là gì?",
+    "options": [
+      "A. [row, column, page]",
+      "B. [column, row, page]",
+      "C. [page, row, column]",
+      "D. [depth, width, length]"
+    ],
+    "answer": "C. [page, row, column]",
+    "explanation": "Tài liệu chú thích hình thái mảng 3 chiều có dạng [page, row, column], trong đó ví dụ [2, 3, 3] nghĩa là 2 trang, mỗi trang 3 hàng 3 cột."
+  },
+  {
+    "question": "Câu 27: Đại số tuyến tính (Linear algebra) đóng vai trò gì theo như tài liệu?",
+    "options": [
+      "A. Là môn học bắt buộc không áp dụng vào thực tế.",
+      "B. Dùng để tạo giao diện đồ họa.",
+      "C. Hệ thống mạnh mẽ để thao tác dữ liệu, thành phần cốt lõi của machine learning.",
+      "D. Cách để lưu trữ dữ liệu an toàn."
+    ],
+    "answer": "C. Hệ thống mạnh mẽ để thao tác dữ liệu, thành phần cốt lõi của machine learning.",
+    "explanation": "Nó cung cấp các phép toán thao tác với ma trận cực kỳ quan trọng cho các thuật toán học máy."
+  },
+  {
+    "question": "Câu 28: Toán tử nào trong Python 3.6+ được dùng trực tiếp cho phép nhân ma trận (Dot Product)?",
+    "options": [
+      "A. *",
+      "B. @",
+      "C. x",
+      "D. &"
+    ],
+    "answer": "B. @",
+    "explanation": "Từ Python 3.6, bạn có thể dùng `A @ B` để nhân hai ma trận (hoặc dùng hàm `np.matmul(A, B)`)."
+  },
+  {
+    "question": "Câu 29: Quy tắc bắt buộc về kích thước (shape) khi thực hiện phép nhân ma trận (Dot product) giữa A và B là gì?",
+    "options": [
+      "A. Chúng phải có số hàng bằng nhau.",
+      "B. Chúng phải là ma trận vuông.",
+      "C. Kích thước bên trong (inner dimensions) của chúng phải khớp nhau.",
+      "D. Chúng phải có kích thước hoàn toàn giống nhau."
+    ],
+    "answer": "C. Kích thước bên trong (inner dimensions) của chúng phải khớp nhau.",
+    "explanation": "Nếu A có kích thước m x n, thì B phải có kích thước n x p. Số cột của A phải bằng số hàng của B."
+  },
+  {
+    "question": "Câu 30: Phép toán nhân từng phần tử tương ứng của hai ma trận cùng kích thước (Element-wise multiplication) có tên gọi học thuật là gì?",
+    "options": [
+      "A. Dot Product",
+      "B. Cross Product",
+      "C. Hadamard Product",
+      "D. Scalar Product"
+    ],
+    "answer": "C. Hadamard Product",
+    "explanation": "Phép nhân ma trận phần tử theo phần tử (thường dùng toán tử `*`) được gọi là tích Hadamard."
+  },
+  {
+    "question": "Câu 31: Toán tử nào sau đây dùng để thực hiện tích Hadamard (Element-wise multiplication)?",
+    "options": [
+      "A. @",
+      "B. *",
+      "C. %",
+      "D. //"
+    ],
+    "answer": "B. *",
+    "explanation": "Toán tử `*` trong NumPy tự động thực hiện phép nhân tương ứng từng phần tử."
+  },
+  {
+    "question": "Câu 32: Phép toán vô hướng (Scalar Operation) áp dụng lên ma trận diễn ra như thế nào?",
+    "options": [
+      "A. Giá trị vô hướng chỉ nhân với dòng đầu tiên.",
+      "B. Giá trị vô hướng tác động lên từng phần tử (mọi ô) của ma trận.",
+      "C. Giá trị vô hướng sẽ thay thế toàn bộ ma trận.",
+      "D. Nó chỉ tác động lên đường chéo chính."
+    ],
+    "answer": "B. Giá trị vô hướng tác động lên từng phần tử (mọi ô) của ma trận.",
+    "explanation": "Ví dụ A * 0.5 sẽ lấy từng giá trị trong ma trận A nhân với 0.5."
+  },
+  {
+    "question": "Câu 33: Phép chuyển vị ma trận (Matrix Transposition) làm thay đổi cấu trúc ma trận như thế nào?",
+    "options": [
+      "A. Lật ngược thứ tự các hàng (hàng cuối thành hàng đầu).",
+      "B. Chuyển đổi hàng thành cột và cột thành hàng.",
+      "C. Đảo dấu các phần tử (âm thành dương).",
+      "D. Quay ma trận 180 độ."
+    ],
+    "answer": "B. Chuyển đổi hàng thành cột và cột thành hàng.",
+    "explanation": "Phép chuyển vị lật chỉ số hàng thành chỉ số cột, ký hiệu là A^T."
+  },
+  {
+    "question": "Câu 34: Khi chuyển vị một ma trận, phần tử nào không bị thay đổi vị trí?",
+    "options": [
+      "A. Các phần tử trên cột đầu tiên.",
+      "B. Các phần tử ở góc ma trận.",
+      "C. Các phần tử trên đường chéo chính (diagonal elements).",
+      "D. Toàn bộ ma trận đều thay đổi."
+    ],
+    "answer": "C. Các phần tử trên đường chéo chính (diagonal elements).",
+    "explanation": "Chỉ số hàng và cột trên đường chéo chính giống nhau (ví dụ: 1,1; 2,2) nên khi lật lại vị trí vẫn không đổi."
+  },
+  {
+    "question": "Câu 35: Cú pháp nào sau đây lấy ma trận chuyển vị của mảng NumPy A?",
+    "options": [
+      "A. A.T (hoặc A.transpose())",
+      "B. np.transpose_matrix(A)",
+      "C. A.transform()",
+      "D. A.inverse()"
+    ],
+    "answer": "A. A.T (hoặc A.transpose())",
+    "explanation": "Cách ngắn gọn và phổ biến nhất trong NumPy là gọi thuộc tính `.T`."
+  },
+  {
+    "question": "Câu 36: Một ma trận được gọi là ma trận vuông (Square matrix) khi nào?",
+    "options": [
+      "A. Khi tổng các góc bằng 360 độ.",
+      "B. Khi số hàng và số cột bằng nhau.",
+      "C. Khi toàn bộ các phần tử lớn hơn 0.",
+      "D. Khi nó có nghịch đảo."
+    ],
+    "answer": "B. Khi số hàng và số cột bằng nhau.",
+    "explanation": "Khái niệm toán học cơ bản: kích thước ma trận là m x m."
+  },
+  {
+    "question": "Câu 37: Ma trận có tồn tại ma trận nghịch đảo (inverse) được gọi là gì?",
+    "options": [
+      "A. Ma trận suy biến (Singular / Degenerate).",
+      "B. Ma trận vuông (Square matrix).",
+      "C. Ma trận khả nghịch (Nonsingular / Invertible).",
+      "D. Ma trận đơn vị (Identity matrix)."
+    ],
+    "answer": "C. Ma trận khả nghịch (Nonsingular / Invertible).",
+    "explanation": "Trong toán học, ma trận có nghịch đảo được gọi là ma trận không suy biến (nonsingular/invertible)."
+  },
+  {
+    "question": "Câu 38: Kết quả khi nhân ma trận A với ma trận nghịch đảo của chính nó (A * A^-1) là gì?",
+    "options": [
+      "A. Ma trận không (Zeros matrix).",
+      "B. Ma trận chứa toàn số 1.",
+      "C. Chính ma trận A.",
+      "D. Ma trận đơn vị (Identity matrix, I)."
+    ],
+    "answer": "D. Ma trận đơn vị (Identity matrix, I).",
+    "explanation": "Định lý toán học: Tích của một ma trận với nghịch đảo của nó luôn cho kết quả là ma trận đơn vị."
+  },
+  {
+    "question": "Câu 39: Lệnh nào trong NumPy dùng để tính ma trận nghịch đảo?",
+    "options": [
+      "A. np.inverse(A)",
+      "B. np.linalg.inv(A)",
+      "C. np.math.inverse(A)",
+      "D. A.inv()"
+    ],
+    "answer": "B. np.linalg.inv(A)",
+    "explanation": "Hàm tính nghịch đảo nằm trong module Linear Algebra (linalg) của thư viện NumPy."
+  },
+  {
+    "question": "Câu 40: Điều gì xảy ra nếu cố gắng cộng hoặc nhân (element-wise) hai mảng có kích thước (shape) không tương thích và không thể broadcast?",
+    "options": [
+      "A. Mảng nhỏ hơn sẽ tự động điền số 0.",
+      "B. Mảng lớn hơn sẽ bị cắt bớt cho bằng nhau.",
+      "C. Trả về lỗi ValueError (operands could not be broadcast together).",
+      "D. Trả về kết quả NaN."
+    ],
+    "answer": "C. Trả về lỗi ValueError (operands could not be broadcast together).",
+    "explanation": "Ví dụ trong tài liệu chỉ ra lỗi ValueError rõ ràng khi kích thước mảng không khớp quy tắc broadcasting."
+  },
+  {
+    "question": "Câu 41: Kết quả in ra của đoạn mã sau là gì?\n\nimport numpy as np\narr = np.arange(2, 10, 2)\nprint(arr)",
+    "options": [
+      "A. [2 4 6 8 10]",
+      "B. [2 4 6 8]",
+      "C. [0 2 4 6 8]",
+      "D. [2 3 4 5 6 7 8 9]"
+    ],
+    "answer": "B. [2 4 6 8]",
+    "explanation": "Hàm np.arange(start, stop, step) dừng lại TRƯỚC giá trị stop (exclusive). Do đó mảng dừng ở 8."
+  },
+  {
+    "question": "Câu 42: Kết quả của đoạn mã sau là gì?\n\nimport numpy as np\narr = np.array([14, 9, 3, 19, 16])\nprint(arr[arr % 2 == 0])",
+    "options": [
+      "A. [14 16]",
+      "B. [14 16 16]",
+      "C. [9 3 19]",
+      "D. [False False False False False]"
+    ],
+    "answer": "A. [14 16]",
+    "explanation": "Phép toán điều kiện tạo ra boolean mask. Nó sẽ lấy ra các số chẵn (chia hết cho 2) trong mảng là 14 và 16."
+  },
+  {
+    "question": "Câu 43: Kết quả của đoạn mã sau là gì?\n\nimport numpy as np\nmy_array = np.array([1, 18, 8, 12, 10])\nprint(my_array[np.arange(1, 5, 2)])",
+    "options": [
+      "A. [1 8 10]",
+      "B. [18 12]",
+      "C. [18 8 12]",
+      "D. Lỗi Index"
+    ],
+    "answer": "B. [18 12]",
+    "explanation": "np.arange(1, 5, 2) tạo ra mảng index [1, 3]. Phép chỉ mục sẽ lấy phần tử ở vị trí index 1 (là 18) và index 3 (là 12)."
+  },
+  {
+    "question": "Câu 44: Đoạn mã sau in ra kết quả (shape) là bao nhiêu?\n\nimport numpy as np\nmy_2D = np.array([[2, 4, 6], [8, 10, 12]])\nprint(my_2D.shape)",
+    "options": [
+      "A. (2, 3)",
+      "B. (3, 2)",
+      "C. (6,)",
+      "D. 2"
+    ],
+    "answer": "A. (2, 3)",
+    "explanation": "Đây là mảng 2 chiều gồm 2 hàng và mỗi hàng có 3 cột. Do đó shape là (2, 3)."
+  },
+  {
+    "question": "Câu 45: Kết quả của phép cắt mảng (slicing) này là gì?\n\nimport numpy as np\nmy_array = np.array([14, 9, 3, 19, 16, 1])\nprint(my_array[-3:])",
+    "options": [
+      "A. [19 16 1]",
+      "B. [14 9 3]",
+      "C. [3 19 16]",
+      "D. [16 1]"
+    ],
+    "answer": "A. [19 16 1]",
+    "explanation": "Chỉ mục âm `-3:` nghĩa là cắt mảng bắt đầu từ phần tử thứ 3 tính từ cuối đếm ngược lên và lấy đến hết mảng."
+  },
+  {
+    "question": "Câu 46: Đoạn mã sau in ra kết quả nào?\n\nimport numpy as np\nmy_3D = np.ones([2, 3, 3])\nprint(my_3D.ndim)",
+    "options": [
+      "A. 2",
+      "B. 3",
+      "C. 18",
+      "D. (2, 3, 3)"
+    ],
+    "answer": "B. 3",
+    "explanation": "Thuộc tính `ndim` trả về số lượng chiều của mảng. Hàm zeros nhận mảng có 3 tham số [page, row, col] nên đây là mảng 3 chiều."
+  },
+  {
+    "question": "Câu 47: Kết quả của phép toán vô hướng này là gì?\n\nimport numpy as np\nA = np.array([[1, 2], [3, 4]])\nprint(A * 0.5)",
+    "options": [
+      "A. [[0.5, 1.0], [1.5, 2.0]]",
+      "B. [[2, 4], [6, 8]]",
+      "C. [[1.5, 2.5], [3.5, 4.5]]",
+      "D. Lỗi do không cùng kích thước"
+    ],
+    "answer": "A. [[0.5, 1.0], [1.5, 2.0]]",
+    "explanation": "Phép toán vô hướng trong NumPy tác động lên từng phần tử của mảng. Mọi giá trị đều được nhân với 0.5."
+  },
+  {
+    "question": "Câu 48: Đoạn mã sau sẽ in ra mảng nào?\n\nimport numpy as np\nprint(np.linspace(2, 10, 5))",
+    "options": [
+      "A. [2. 4. 6. 8. 10.]",
+      "B. [2 4 6 8]",
+      "C. [2. 3. 5. 7. 10.]",
+      "D. [2 10 5]"
+    ],
+    "answer": "A. [2. 4. 6. 8. 10.]",
+    "explanation": "Hàm tạo mảng tuyến tính sinh ra 5 phần tử nằm phân bố cách đều nhau từ giá trị bắt đầu (2) đến giá trị kết thúc (10)."
+  },
+  {
+    "question": "Câu 49: Kết quả in ra của phương thức chuyển vị là gì?\n\nimport numpy as np\nA = np.array([[1, 2], [3, 4]])\nprint(A.T)",
+    "options": [
+      "A. [[1, 3], [2, 4]]",
+      "B. [[4, 3], [2, 1]]",
+      "C. [[3, 4], [1, 2]]",
+      "D. [[2, 1], [4, 3]]"
+    ],
+    "answer": "A. [[1, 3], [2, 4]]",
+    "explanation": "Hàng biến thành cột và ngược lại. Hàng 1 là [1, 2] trở thành cột 1. Hàng 2 là [3, 4] trở thành cột 2."
+  },
+  {
+    "question": "Câu 50: Kích thước (shape) của ma trận C sinh ra sau phép toán sau là bao nhiêu?\n\nimport numpy as np\nA = np.ones([3, 2])\nB = np.ones([2, 4])\nC = A @ B\nprint(C.shape)",
+    "options": [
+      "A. (3, 4)",
+      "B. (3, 2)",
+      "C. (2, 4)",
+      "D. (2, 2)"
+    ],
+    "answer": "A. (3, 4)",
+    "explanation": "Khi thực hiện Dot Product giữa ma trận A(m x n) và B(n x p), kết quả trả về sẽ là ma trận có kích thước m x p. Ở đây là (3, 4)."
+  },
+  {
+    "question": "Câu 51: Theo tài liệu, quy tắc 'Broadcasting' trong NumPy yêu cầu các trục cuối cùng (trailing axes) của mảng phải thỏa mãn điều kiện gì để có thể tính toán với nhau?",
+    "options": [
+      "A. Phải luôn luôn bằng nhau.",
+      "B. Phải có cùng kích thước (same size) hoặc bằng 1.",
+      "C. Phải là số chẵn để có thể chia đều.",
+      "D. Trục cuối cùng phải luôn là 0."
+    ],
+    "answer": "B. Phải có cùng kích thước (same size) hoặc bằng 1.",
+    "explanation": "Quy tắc Broadcasting: NumPy so sánh các chiều (dimensions) từ phải sang trái (trailing axes). Chúng tương thích nếu chúng bằng nhau hoặc một trong số đó bằng 1."
+  },
+  {
+    "question": "Câu 52: Lệnh `np.random.randint(1, 10, [4, 3])` được sử dụng trong tài liệu sẽ tạo ra kết quả gì?",
+    "options": [
+      "A. Một mảng 1 chiều chứa các số từ 1 đến 10.",
+      "B. Một ma trận 4x3 chứa các số nguyên ngẫu nhiên từ 1 đến 9.",
+      "C. Một ma trận 4x3 chứa toàn số 1 và số 10.",
+      "D. Báo lỗi vì thiếu tham số."
+    ],
+    "answer": "B. Một ma trận 4x3 chứa các số nguyên ngẫu nhiên từ 1 đến 9.",
+    "explanation": "Hàm randint(low, high, size) tạo ra các số nguyên ngẫu nhiên từ low (bao gồm) đến high (không bao gồm). Ở đây là từ 1 đến 9 với kích thước 4 hàng 3 cột."
+  },
+  {
+    "question": "Câu 53: Đoạn mã sau sẽ trả về kết quả gì trên cửa sổ console?\n\nimport numpy as np\nA = np.ones((4, 3))\nB = np.ones((4, 2))\nprint(A + B)",
+    "options": [
+      "A. Một ma trận 4x5 chứa toàn số 2.",
+      "B. Một ma trận 4x3 chứa toàn số 1.",
+      "C. Báo lỗi ValueError: operands could not be broadcast together.",
+      "D. Một ma trận chứa toàn số 0."
+    ],
+    "answer": "C. Báo lỗi ValueError: operands could not be broadcast together.",
+    "explanation": "Giống hệt ví dụ lỗi trong file: ma trận (4, 3) và (4, 2) có số cột khác nhau và không có số nào bằng 1 ở trục cuối, nên quy tắc broadcasting không được thỏa mãn."
+  },
+  {
+    "question": "Câu 54: Theo đoạn cuối của tài liệu, sau khi hoàn tất các thao tác với mảng NumPy, bước quan trọng tiếp theo trong quy trình phân tích dữ liệu (Machine Learning pipeline) được giới thiệu là gì?",
+    "options": [
+      "A. Làm sạch dữ liệu (Data Cleaning).",
+      "B. Vẽ đồ thị 3D (3D Visualization).",
+      "C. Tải dữ liệu (Loading Data).",
+      "D. Đưa mô hình lên Cloud."
+    ],
+    "answer": "C. Tải dữ liệu (Loading Data).",
+    "explanation": "Tài liệu mở ra phần 'Loading Data', nhấn mạnh rằng việc tải dữ liệu là một quy trình quan trọng trong Data Analysis / Machine Learning pipeline."
+  },
+  {
+    "question": "Câu 55: Dựa vào thông tin bản quyền và chú thích trong file, tài liệu NumPy này được trích từ cuốn sách của tác giả nào vào năm 2019?",
+    "options": [
+      "A. Andrew Ng",
+      "B. Guido van Rossum",
+      "C. Ekaba Bisong",
+      "D. Wes McKinney"
+    ],
+    "answer": "C. Ekaba Bisong",
+    "explanation": "Phần footer của các trang tài liệu có ghi rõ 'Ekaba Bisong 2019' và tên cuốn sách 'Building Machine Learning and Deep Learning Models on Google Cloud Platform'."
+  },
+  {
+    "question": "Câu 56: Khi in một ma trận cột 2 chiều (ví dụ có 4 hàng, 1 cột) ra console, kết quả hiển thị sẽ được nhận diện bằng đặc điểm nào về dấu ngoặc?",
+    "options": [
+      "A. Được bao quanh bởi 1 cặp ngoặc vuông `[ ]`.",
+      "B. Bắt đầu bằng 2 dấu ngoặc vuông `[[` và kết thúc bằng `]]`.",
+      "C. Được bao quanh bởi ngoặc đơn `( )`.",
+      "D. Không có dấu ngoặc, chỉ có các con số."
+    ],
+    "answer": "B. Bắt đầu bằng 2 dấu ngoặc vuông `[[` và kết thúc bằng `]]`.",
+    "explanation": "Mảng 2 chiều (2-D array) trong NumPy luôn hiển thị cấu trúc danh sách lồng nhau, bắt đầu bằng `[[`."
+  },
+  {
+    "question": "Câu 57: Trong Machine Learning, khi dữ liệu được biểu diễn dưới dạng ma trận (grid), một biến số hoặc đặc trưng (variable / feature) sẽ tương ứng với phần nào?",
+    "options": [
+      "A. Một ô ngẫu nhiên.",
+      "B. Một cột (Column).",
+      "C. Một hàng (Row).",
+      "D. Một đường chéo (Diagonal)."
+    ],
+    "answer": "B. Một cột (Column).",
+    "explanation": "Như tài liệu đề cập, mỗi hàng (row) đại diện cho một quan sát (observation), còn mỗi cột (column) đại diện cho một tính năng (feature)."
+  },
+  {
+    "question": "Câu 58: Kết quả của đoạn lệnh sau sẽ in ra thông tin gì?\n\nimport numpy as np\nA = np.array([2, 4, 6, 8, 10])\nprint(type(A))",
+    "options": [
+      "A. <class 'list'>",
+      "B. <class 'array'>",
+      "C. <class 'numpy.ndarray'>",
+      "D. <class 'matrix'>"
+    ],
+    "answer": "C. <class 'numpy.ndarray'>",
+    "explanation": "Dù ta gọi là 'array', nhưng kiểu dữ liệu thực tế (data-type object) cốt lõi của NumPy luôn là `numpy.ndarray` (n-dimensional array)."
+  },
+  {
+    "question": "Câu 59: Để tạo ra một số nguyên ngẫu nhiên, tài liệu NumPy đã sử dụng module con (sub-module) nào?",
+    "options": [
+      "A. np.math",
+      "B. np.random",
+      "C. np.linalg",
+      "D. np.calc"
+    ],
+    "answer": "B. np.random",
+    "explanation": "Module `np.random` chứa rất nhiều hàm mạnh mẽ để tạo dữ liệu ngẫu nhiên, ví dụ như `np.random.randint`."
+  },
+  {
+    "question": "Câu 60: Cú pháp import nào được coi là tiêu chuẩn cộng đồng (và được tài liệu hướng dẫn) khi sử dụng thư viện NumPy?",
+    "options": [
+      "A. import numpy as np",
+      "B. from numpy import *",
+      "C. import numpy",
+      "D. include numpy as np"
+    ],
+    "answer": "A. import numpy as np",
+    "explanation": "Sử dụng alias `np` là quy chuẩn chung giúp mã nguồn ngắn gọn, đồng nhất và dễ đọc hơn khi gọi các hàm như `np.array`, `np.zeros`."
+  }
+]
