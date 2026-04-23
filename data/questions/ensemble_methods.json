@@ -1,0 +1,200 @@
+[
+  {
+    "question": "Câu 1: Kỹ thuật 'Học kết hợp' (Ensemble learning) hoạt động dựa trên nguyên lý nào?",
+    "options": [
+      "A. Sử dụng duy nhất một siêu máy tính để giải quyết bài toán.",
+      "B. Phân tách dữ liệu thành nhiều mảnh nhỏ để lưu trữ.",
+      "C. Kết hợp đầu ra của nhiều bộ phân loại yếu (weak learners) để xây dựng một mô hình dự đoán mạnh mẽ và mạnh dạn hơn (robust).",
+      "D. Chuyển đổi bài toán phân loại thành bài toán hồi quy."
+    ],
+    "answer": "C. Kết hợp đầu ra của nhiều bộ phân loại yếu (weak learners) để xây dựng một mô hình dự đoán mạnh mẽ và mạnh dạn hơn (robust).",
+    "explanation": "Tài liệu mở đầu bằng định nghĩa: Ensemble learning kết hợp đầu ra của nhiều bộ phân loại (còn gọi là weak learners) để xây dựng một mô hình dự đoán mạnh mẽ hơn."
+  },
+  {
+    "question": "Câu 2: Ý tưởng cốt lõi (idea) khiến các thuật toán Ensemble thường đạt hiệu suất rất cao là gì?",
+    "options": [
+      "A. Nó chạy nhanh hơn tất cả các thuật toán khác.",
+      "B. Nó loại bỏ hoàn toàn các dữ liệu bị thiếu.",
+      "C. Hiệu suất từ trung bình cộng của một nhóm các bộ phân loại sẽ tốt hơn hiệu suất của từng bộ phân loại riêng lẻ.",
+      "D. Nó có khả năng tự động viết code."
+    ],
+    "answer": "C. Hiệu suất từ trung bình cộng của một nhóm các bộ phân loại sẽ tốt hơn hiệu suất của từng bộ phân loại riêng lẻ.",
+    "explanation": "Giống như sức mạnh tập thể, ý tưởng của 'ensemble' là hiệu suất trung bình của một nhóm sẽ đánh bại bất kỳ cá nhân 'weak learner' nào."
+  },
+  {
+    "question": "Câu 3: Trong Cây quyết định (Decision Trees - CART), thuật ngữ nào dùng để chỉ nút nằm ở vị trí trên cùng của đồ thị?",
+    "options": [
+      "A. Terminal node",
+      "B. Root node (Nút rễ)",
+      "C. Branch (Nhánh)",
+      "D. Leaf (Lá)"
+    ],
+    "answer": "B. Root node (Nút rễ)",
+    "explanation": "Theo Figure 23-1 và mô tả, nút cuối cùng gọi là 'terminal node', còn nút trên cùng được gọi là 'root' (rễ)."
+  },
+  {
+    "question": "Câu 4: Thuật toán Random Forest (Rừng ngẫu nhiên) sử dụng kỹ thuật nào để tạo ra một 'rừng' gồm nhiều cây quyết định?",
+    "options": [
+      "A. K-Means Clustering.",
+      "B. Bagging (hoặc Bootstrap Aggregation).",
+      "C. Principal Component Analysis (PCA).",
+      "D. Gradient Descent."
+    ],
+    "answer": "B. Bagging (hoặc Bootstrap Aggregation).",
+    "explanation": "Tài liệu ghi rõ: Random Forest sử dụng một khái niệm gọi là bagging (bootstrap aggregation) để xây dựng nhiều cây quyết định."
+  },
+  {
+    "question": "Câu 5: Trong kỹ thuật Bagging của Random Forest, các tập con dữ liệu (subsets of data) được chọn như thế nào?",
+    "options": [
+      "A. Được chọn ngẫu nhiên có hoàn lại (with replacement).",
+      "B. Được chọn theo thứ tự từ trên xuống dưới.",
+      "C. Được chọn theo bảng chữ cái.",
+      "D. Chỉ chọn các dữ liệu có giá trị lớn nhất."
+    ],
+    "answer": "A. Được chọn ngẫu nhiên có hoàn lại (with replacement).",
+    "explanation": "Quá trình lấy mẫu bootstrap hoạt động bằng cách chọn ngẫu nhiên các tập con dữ liệu 'with replacement' (có hoàn lại) từ tập huấn luyện."
+  },
+  {
+    "question": "Câu 6: Mục đích của việc đưa tính ngẫu nhiên (randomness) vào cả việc chọn mẫu dữ liệu lẫn chọn đặc trưng (features) trong Random Forest là gì?",
+    "options": [
+      "A. Để giảm dung lượng mô hình.",
+      "B. Để tăng thời gian chạy của thuật toán.",
+      "C. Để giảm phương sai (reduce variance) và do đó ngăn ngừa hiện tượng quá khớp (overfitting).",
+      "D. Để biến đổi dữ liệu chữ thành dữ liệu số."
+    ],
+    "answer": "C. Để giảm phương sai (reduce variance) và do đó ngăn ngừa hiện tượng quá khớp (overfitting).",
+    "explanation": "Việc thêm tính ngẫu nhiên nhằm làm giảm phương sai (variance) của mô hình, từ đó là một biện pháp tuyệt vời để chống lại Overfitting."
+  },
+  {
+    "question": "Câu 7: Đối với bài toán Phân loại (Classification), mô hình Random Forest đưa ra dự đoán cuối cùng (final prediction) dựa trên cơ chế nào?",
+    "options": [
+      "A. Tính trung bình cộng kết quả của tất cả các cây.",
+      "B. Lựa chọn lớp nhận được nhiều phiếu bầu nhất / xuất hiện nhiều nhất (majority vote / mode).",
+      "C. Chọn ngẫu nhiên kết quả của 1 cây bất kỳ.",
+      "D. Chọn kết quả của cây sâu nhất."
+    ],
+    "answer": "B. Lựa chọn lớp nhận được nhiều phiếu bầu nhất / xuất hiện nhiều nhất (majority vote / mode).",
+    "explanation": "Đối với hồi quy (regression) thì lấy trung bình, còn đối với phân loại (classification) thì kết quả cuối cùng là giá trị mode (majority vote - bầu chọn theo đa số) của các lớp."
+  },
+  {
+    "question": "Câu 8: Khác với Random Forest tạo ra các cây độc lập song song, Gradient Boosting xây dựng các cây quyết định theo cơ chế nào?",
+    "options": [
+      "A. Tuần tự (sequentially), mỗi cây mới được thêm vào để sửa chữa các lỗi (errors/residuals) của các cây trước đó.",
+      "B. Ngẫu nhiên hoàn toàn.",
+      "C. Chỉ xây dựng duy nhất 1 cây cực lớn.",
+      "D. Kết hợp với mạng nơ-ron nhân tạo."
+    ],
+    "answer": "A. Tuần tự (sequentially), mỗi cây mới được thêm vào để sửa chữa các lỗi (errors/residuals) của các cây trước đó.",
+    "explanation": "Gradient boosting xây dựng các cây một cách tuần tự. Mỗi cây mới cố gắng sửa lỗi (residuals) của các cây trước nó."
+  },
+  {
+    "question": "Câu 9: Gradient Boosting sử dụng thuật toán nào để tối ưu hóa (giảm thiểu) hàm mất mát (loss function)?",
+    "options": [
+      "A. Random Search",
+      "B. Grid Search",
+      "C. Gradient Descent",
+      "D. K-Nearest Neighbors"
+    ],
+    "answer": "C. Gradient Descent",
+    "explanation": "Đúng như tên gọi của nó, thuật toán này sử dụng Gradient Descent để tối ưu hóa hàm mất mát bằng cách đi theo hướng ngược lại của gradient."
+  },
+  {
+    "question": "Câu 10: Trong Gradient Boosting, tham số Tỷ lệ học (Learning rate / Shrinkage) dùng để làm gì?",
+    "options": [
+      "A. Để xóa dữ liệu.",
+      "B. Kiểm soát mức độ đóng góp (contribution) của từng cây quyết định mới vào mô hình tổng thể.",
+      "C. Chuyển đổi bài toán từ hồi quy sang phân loại.",
+      "D. Tạo ra giao diện trực quan cho cây."
+    ],
+    "answer": "B. Kiểm soát mức độ đóng góp (contribution) của từng cây quyết định mới vào mô hình tổng thể.",
+    "explanation": "Một siêu tham số gọi là shrinkage hay learning rate được áp dụng để kiểm soát đóng góp của mỗi cây vào tổng thể."
+  },
+  {
+    "question": "Câu 11: Biến thể Stochastic Gradient Boosting (SGB) cải tiến Gradient Boosting thông thường bằng cách nào để giảm overfitting?",
+    "options": [
+      "A. Bổ sung tính ngẫu nhiên bằng cách lấy mẫu phụ (subsampling) một phần dữ liệu huấn luyện và đặc trưng cho mỗi cây.",
+      "B. Chỉ sử dụng 1/2 số cây so với bình thường.",
+      "C. Thay thế cây quyết định bằng thuật toán SVM.",
+      "D. Tăng tỷ lệ học (learning rate) lên mức tối đa."
+    ],
+    "answer": "A. Bổ sung tính ngẫu nhiên bằng cách lấy mẫu phụ (subsampling) một phần dữ liệu huấn luyện và đặc trưng cho mỗi cây.",
+    "explanation": "SGB thêm tính ngẫu nhiên bằng cách subsampling tỷ lệ dữ liệu train và features, qua đó tiếp tục giảm thiểu khả năng overfitting."
+  },
+  {
+    "question": "Câu 12: XGBoost là viết tắt của cụm từ nào?",
+    "options": [
+      "A. X-axis Gradient Boosting",
+      "B. Extreme Gradient Boosting",
+      "C. Extra Gradient Boosting",
+      "D. Exponential Gradient Boosting"
+    ],
+    "answer": "B. Extreme Gradient Boosting",
+    "explanation": "XGBoost stands for Extreme Gradient Boosting."
+  },
+  {
+    "question": "Câu 13: Về mặt toán học, điều gì làm cho XGBoost hội tụ tới giá trị tối thiểu của hàm chi phí nhanh hơn và hiệu quả hơn so với Gradient Boosting truyền thống?",
+    "options": [
+      "A. Nó tính toán trên đám mây.",
+      "B. Nó sử dụng phép xấp xỉ đạo hàm bậc hai (second-order derivative approximation).",
+      "C. Nó bỏ qua hàm chi phí.",
+      "D. Nó dùng độ đo MAE thay vì MSE."
+    ],
+    "answer": "B. Nó sử dụng phép xấp xỉ đạo hàm bậc hai (second-order derivative approximation).",
+    "explanation": "Khác với GBM truyền thống chỉ dùng đạo hàm bậc 1, XGBoost sử dụng đạo hàm bậc 2 để xấp xỉ hàm chi phí, giúp nó tối ưu nhanh và hiệu quả hơn."
+  },
+  {
+    "question": "Câu 14: Thuật toán XGBoost tích hợp sẵn kỹ thuật nào để trực tiếp ngăn chặn hiện tượng quá khớp (overfitting)?",
+    "options": [
+      "A. Thuật toán Drop-out.",
+      "B. Điều chuẩn L1 và L2 (L1 and L2 regularization).",
+      "C. Xóa ngẫu nhiên các hàng dữ liệu.",
+      "D. Thay thế NaN bằng giá trị trung bình."
+    ],
+    "answer": "B. Điều chuẩn L1 và L2 (L1 and L2 regularization).",
+    "explanation": "XGBoost áp dụng L1 and L2 regularization trực tiếp vào quá trình đào tạo để ngăn overfitting."
+  },
+  {
+    "question": "Câu 15: Cơ chế cắt tỉa cây (Tree pruning) của XGBoost được thực hiện theo chiến lược nào?",
+    "options": [
+      "A. Leaf-wise (Ưu tiên lá).",
+      "B. Depth-first (Ưu tiên chiều sâu).",
+      "C. Random-pruning (Cắt ngẫu nhiên).",
+      "D. Breadth-first (Ưu tiên chiều rộng)."
+    ],
+    "answer": "B. Depth-first (Ưu tiên chiều sâu).",
+    "explanation": "XGBoost sử dụng phương pháp cắt tỉa cây ưu tiên chiều sâu (depth-first approach) và cắt tỉa ngược (prunes backward)."
+  },
+  {
+    "question": "Câu 16: Để import mô hình Random Forest phân loại trong thư viện Scikit-learn, dòng code chuẩn là gì?\n\nfrom sklearn.______ import RandomForestClassifier",
+    "options": [
+      "A. trees",
+      "B. ensemble",
+      "C. models",
+      "D. boosting"
+    ],
+    "answer": "B. ensemble",
+    "explanation": "Lệnh chuẩn trong mã nguồn: `from sklearn.ensemble import RandomForestClassifier`."
+  },
+  {
+    "question": "Câu 17: Trong đoạn mã ví dụ về bài toán Hồi quy (Regression), hàm nào từ thư viện `math` được import để hỗ trợ tính toán chỉ số RMSE (Root Mean Squared Error)?\n\nfrom math import ______",
+    "options": [
+      "A. pow",
+      "B. log",
+      "C. sqrt",
+      "D. exp"
+    ],
+    "answer": "C. sqrt",
+    "explanation": "RMSE là căn bậc hai của MSE, nên đoạn code đã import hàm `sqrt` từ thư viện `math` (`from math import sqrt`)."
+  },
+  {
+    "question": "Câu 18: Thư viện (package) riêng biệt nào cần được cài đặt và import để sử dụng thuật toán XGBoost cho bài toán hồi quy (Regressor) trong Python?\n\nfrom ______ import XGBRegressor",
+    "options": [
+      "A. sklearn",
+      "B. xgboost",
+      "C. ensemble_extras",
+      "D. scipy"
+    ],
+    "answer": "B. xgboost",
+    "explanation": "XGBoost không nằm trong `sklearn` mặc định. Đoạn mã minh họa lệnh `from xgboost import XGBRegressor`."
+  }
+]

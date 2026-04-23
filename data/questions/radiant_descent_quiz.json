@@ -1,0 +1,200 @@
+[
+  {
+    "question": "Câu 1: Thuật toán Gradient Descent được sử dụng nhằm mục đích gì trong học máy?",
+    "options": [
+      "A. Giảm thiểu hàm chi phí (minimize the cost function).",
+      "B. Tăng số lượng dữ liệu huấn luyện.",
+      "C. Tối đa hóa độ phức tạp của mô hình.",
+      "D. Vẽ biểu đồ dữ liệu 3D."
+    ],
+    "answer": "A. Giảm thiểu hàm chi phí (minimize the cost function).",
+    "explanation": "Tài liệu mở đầu bằng định nghĩa: Gradient descent là một thuật toán tối ưu hóa được sử dụng để giảm thiểu hàm chi phí của một thuật toán học máy."
+  },
+  {
+    "question": "Câu 2: Tại sao Gradient Descent được gọi là một thuật toán \"tối ưu hóa lặp\" (iterative optimization algorithm)?",
+    "options": [
+      "A. Vì nó phải chạy song song trên nhiều máy tính.",
+      "B. Vì nó cố gắng tìm giải pháp xấp xỉ thông qua các bước lặp đi lặp lại cho đến khi đạt điều kiện dừng.",
+      "C. Vì nó luôn trả về kết quả ngay lập tức ở bước đầu tiên.",
+      "D. Vì nó lặp lại việc xóa các dữ liệu bị lỗi."
+    ],
+    "answer": "B. Vì nó cố gắng tìm giải pháp xấp xỉ thông qua các bước lặp đi lặp lại cho đến khi đạt điều kiện dừng.",
+    "explanation": "Thuật toán này liên tục thực hiện các bước nhảy (dựa trên bước hiện tại) theo một vòng lặp cho đến khi chạm đến điểm dừng (minimum)."
+  },
+  {
+    "question": "Câu 3: Trong không gian hàm số (function space), hình dạng đồ thị nào là lý tưởng nhất để Gradient Descent dễ dàng tìm ra điểm cực tiểu?",
+    "options": [
+      "A. Hình răng cưa (Zig-zag).",
+      "B. Hình lượn sóng liên tục (Sine wave).",
+      "C. Hình cái bát (Bowl-shaped) hoặc hàm lồi (Convex function).",
+      "D. Hình bậc thang (Step function)."
+    ],
+    "answer": "C. Hình cái bát (Bowl-shaped) hoặc hàm lồi (Convex function).",
+    "explanation": "Figure 16-1 minh họa một hàm convex (hình cái bát). Đây là dạng lý tưởng nhất vì nó chỉ có một điểm cực tiểu toàn cục duy nhất."
+  },
+  {
+    "question": "Câu 4: Về mặt toán học, tại điểm cực tiểu (minimum point) của hàm số, độ dốc (slope / derivative) có giá trị bằng bao nhiêu?",
+    "options": [
+      "A. Bằng 1.",
+      "B. Bằng vô cực.",
+      "C. Bằng 0.",
+      "D. Bằng số âm lớn nhất."
+    ],
+    "answer": "C. Bằng 0.",
+    "explanation": "Tài liệu giải thích rằng thuật toán cập nhật các tham số cho đến khi độ dốc bằng 0, đó chính là điểm cực tiểu của hàm số."
+  },
+  {
+    "question": "Câu 5: Trong thuật toán Gradient Descent, siêu tham số \"Learning rate\" (Tốc độ học, ký hiệu là α) đóng vai trò gì?",
+    "options": [
+      "A. Xác định số lượng dữ liệu đầu vào.",
+      "B. Kiểm soát kích thước của bước nhảy (step size) trong mỗi lần lặp cập nhật.",
+      "C. Tính toán độ chính xác của mô hình.",
+      "D. Làm sạch các dữ liệu ngoại lệ (outliers)."
+    ],
+    "answer": "B. Kiểm soát kích thước của bước nhảy (step size) trong mỗi lần lặp cập nhật.",
+    "explanation": "Learning rate ($\\alpha$) là hệ số nhân với đạo hàm, quyết định khoảng cách (kích thước bước nhảy) mô hình sẽ di chuyển trong không gian hàm số."
+  },
+  {
+    "question": "Câu 6: Hiện tượng gì sẽ xảy ra nếu Learning rate (α) được thiết lập QUÁ NHỎ?",
+    "options": [
+      "A. Thuật toán sẽ mất rất nhiều thời gian để hội tụ (slow convergence).",
+      "B. Thuật toán sẽ chạy nhanh hơn bình thường.",
+      "C. Thuật toán sẽ nhảy vọt qua điểm cực tiểu.",
+      "D. Máy tính sẽ bị tràn bộ nhớ RAM."
+    ],
+    "answer": "A. Thuật toán sẽ mất rất nhiều thời gian để hội tụ (slow convergence).",
+    "explanation": "Nếu tốc độ học quá nhỏ, các bước nhảy sẽ rất ngắn, khiến thuật toán cần rất nhiều vòng lặp mới chạm được đến đáy, dẫn đến việc hội tụ cực kỳ chậm."
+  },
+  {
+    "question": "Câu 7: Điều gì sẽ xảy ra nếu Learning rate (α) được thiết lập QUÁ LỚN?",
+    "options": [
+      "A. Thuật toán sẽ hội tụ ngay lập tức.",
+      "B. Mô hình sẽ có độ chính xác 100%.",
+      "C. Thuật toán có thể nhảy vượt qua điểm cực tiểu và phân kỳ (diverge / overshoot).",
+      "D. Dữ liệu huấn luyện sẽ bị xóa."
+    ],
+    "answer": "C. Thuật toán có thể nhảy vượt qua điểm cực tiểu và phân kỳ (diverge / overshoot).",
+    "explanation": "Tốc độ học quá lớn sẽ khiến bước nhảy quá dài, thuật toán có thể văng qua lại hai bên sườn dốc (overshoot) và tiến xa dần khỏi điểm cực tiểu (phân kỳ)."
+  },
+  {
+    "question": "Câu 8: Feature Scaling (Chuẩn hóa đặc trưng) là một kỹ thuật tiền xử lý dữ liệu. Tác dụng của nó đối với Gradient Descent là gì?",
+    "options": [
+      "A. Thay đổi định dạng dữ liệu từ chữ sang số.",
+      "B. Đảm bảo các đặc trưng (features) nằm trên một thang đo (scale) tương đồng, giúp thuật toán hội tụ nhanh hơn nhiều.",
+      "C. Xóa các cột dữ liệu không cần thiết.",
+      "D. Nén dung lượng file dữ liệu."
+    ],
+    "answer": "B. Đảm bảo các đặc trưng (features) nằm trên một thang đo (scale) tương đồng, giúp thuật toán hội tụ nhanh hơn nhiều.",
+    "explanation": "Nếu các feature có thang đo chênh lệch quá lớn (ví dụ: giá nhà tỷ đồng vs số phòng ngủ từ 1-5), thuật toán sẽ rất khó khăn để hội tụ. Việc chuẩn hóa giúp gradient descent chạy mượt và nhanh hơn."
+  },
+  {
+    "question": "Câu 9: Quan sát biểu đồ đường đồng mức (contour plots) trong Figure 16-3, hình dáng đồ thị thay đổi thế nào SAU KHI áp dụng Feature Scaling?",
+    "options": [
+      "A. Từ hình tròn chuyển sang hình tam giác.",
+      "B. Từ những hình elip dẹt và kéo dài chuyển thành những hình tròn (spherical / circular contours).",
+      "C. Đồ thị bị chia thành 2 nửa tách biệt.",
+      "D. Không có gì thay đổi."
+    ],
+    "answer": "B. Từ những hình elip dẹt và kéo dài chuyển thành những hình tròn (spherical / circular contours).",
+    "explanation": "Khi chưa chuẩn hóa, các đường đồng mức có hình elip kéo dài khiến thuật toán đi ngoằn ngoèo. Sau khi chuẩn hóa, chúng trở nên tròn trịa, giúp thuật toán đi thẳng tới tâm."
+  },
+  {
+    "question": "Câu 10: Theo tài liệu, công thức \"Mean Normalization\" (Chuẩn hóa trung bình) thực hiện phép chia cho Khoảng dữ liệu (Range) được viết như thế nào?",
+    "options": [
+      "A. x_i = (x_i + mean) * range",
+      "B. x_i = (x_i - mean) / (max - min)",
+      "C. x_i = (x_i - min) / max",
+      "D. x_i = (mean - x_i) / 2"
+    ],
+    "answer": "B. x_i = (x_i - mean) / (max - min)",
+    "explanation": "Công thức là lấy giá trị hiện tại trừ đi giá trị trung bình (mean), sau đó chia cho (max - min), tức là Range."
+  },
+  {
+    "question": "Câu 11: Cũng trong \"Mean Normalization\", một cách chia khác là chia cho đại lượng nào thay vì Range?",
+    "options": [
+      "A. Số lượng mẫu (n)",
+      "B. Độ lệch chuẩn (Standard deviation, σ)",
+      "C. Phương sai (Variance)",
+      "D. Giá trị trung vị (Median)"
+    ],
+    "answer": "B. Độ lệch chuẩn (Standard deviation, σ)",
+    "explanation": "Công thức thứ hai được cung cấp là $x_i = (x_i - \\mu) / \\sigma$ (chia cho độ lệch chuẩn)."
+  },
+  {
+    "question": "Câu 12: Dựa vào bảng tính ví dụ (Figure 16-4), nếu giá trị ban đầu x1 = 40, giá trị trung bình của cột là 49.83, và Range (max-min) là 58. Giá trị chuẩn hóa của x1 theo Range sẽ xấp xỉ bao nhiêu?",
+    "options": [
+      "A. -0.17",
+      "B. 0.54",
+      "C. -0.44",
+      "D. 1.40"
+    ],
+    "answer": "A. -0.17",
+    "explanation": "Áp dụng công thức: (40 - 49.83) / 58 = -0.169 (làm tròn là -0.17)."
+  },
+  {
+    "question": "Câu 13: Đâu là 3 biến thể (variants) chính của thuật toán Gradient Descent được đề cập trong tài liệu?",
+    "options": [
+      "A. Fast, Slow, và Medium Gradient Descent.",
+      "B. Batch, Stochastic, và Mini-batch Gradient Descent.",
+      "C. Linear, Polynomial, và Exponential Gradient Descent.",
+      "D. Supervised, Unsupervised, và Reinforcement Gradient Descent."
+    ],
+    "answer": "B. Batch, Stochastic, và Mini-batch Gradient Descent.",
+    "explanation": "Tài liệu liệt kê rõ 3 loại là Batch (lô), Stochastic (ngẫu nhiên), và Mini-batch (lô nhỏ)."
+  },
+  {
+    "question": "Câu 14: Thuật toán \"Batch Gradient Descent\" (BGD) tính toán lỗi và cập nhật tham số dựa trên lượng dữ liệu nào cho mỗi bước?",
+    "options": [
+      "A. Toàn bộ tập dữ liệu huấn luyện (entire dataset) cho một bước duy nhất.",
+      "B. Một nửa tập dữ liệu.",
+      "C. Một mẫu dữ liệu ngẫu nhiên duy nhất.",
+      "D. Dữ liệu từ internet."
+    ],
+    "answer": "A. Toàn bộ tập dữ liệu huấn luyện (entire dataset) cho một bước duy nhất.",
+    "explanation": "Trong BGD, nó phải duyệt qua toàn bộ dữ liệu chỉ để thực hiện một bước đi duy nhất."
+  },
+  {
+    "question": "Câu 15: Nhược điểm lớn nhất của Batch Gradient Descent là gì?",
+    "options": [
+      "A. Mức độ chính xác rất thấp.",
+      "B. Quá trình tính toán cực kỳ chậm và tốn bộ nhớ khi làm việc với các tập dữ liệu khổng lồ.",
+      "C. Không thể sử dụng với ngôn ngữ Python.",
+      "D. Chỉ dùng được cho bài toán phân loại."
+    ],
+    "answer": "B. Quá trình tính toán cực kỳ chậm và tốn bộ nhớ khi làm việc với các tập dữ liệu khổng lồ.",
+    "explanation": "Vì phải nạp toàn bộ dataset vào bộ nhớ chỉ để đi 1 bước, nó trở nên bất khả thi với dữ liệu hàng triệu dòng."
+  },
+  {
+    "question": "Câu 16: Trái ngược với Batch, thuật toán \"Stochastic Gradient Descent\" (SGD) sử dụng bao nhiêu dữ liệu cho mỗi bước cập nhật?",
+    "options": [
+      "A. Sử dụng 100 mẫu dữ liệu đầu tiên.",
+      "B. Sử dụng đúng 1 mẫu dữ liệu ngẫu nhiên (a single random instance) cho mỗi bước.",
+      "C. Sử dụng toàn bộ dữ liệu ngoại trừ 1 mẫu.",
+      "D. Không sử dụng dữ liệu nào."
+    ],
+    "answer": "B. Sử dụng đúng 1 mẫu dữ liệu ngẫu nhiên (a single random instance) cho mỗi bước.",
+    "explanation": "SGD chọn ngẫu nhiên 1 điểm dữ liệu, tính lỗi và cập nhật ngay lập tức. Điều này làm nó rất nhanh."
+  },
+  {
+    "question": "Câu 17: Ưu điểm của tính chất di chuyển \"thất thường\" (erratic nature) trong Stochastic Gradient Descent (SGD) là gì?",
+    "options": [
+      "A. Làm giao diện đẹp hơn.",
+      "B. Giúp thuật toán dễ dàng nhảy thoát khỏi các điểm cực tiểu cục bộ (local minima) để tìm đến cực tiểu toàn cục.",
+      "C. Tự động sửa lỗi sai của dữ liệu.",
+      "D. Biến hàm số thành hình elip."
+    ],
+    "answer": "B. Giúp thuật toán dễ dàng nhảy thoát khỏi các điểm cực tiểu cục bộ (local minima) để tìm đến cực tiểu toàn cục.",
+    "explanation": "Sự nhiễu loạn do việc chỉ dựa vào 1 mẫu giúp thuật toán có động lượng văng ra khỏi những cái \"hố\" cực tiểu cục bộ (local minima) tồi tệ."
+  },
+  {
+    "question": "Câu 18: Tại sao biến thể \"Mini-batch Gradient Descent\" lại được sử dụng rộng rãi và cực kỳ phổ biến trong Deep Learning?",
+    "options": [
+      "A. Vì nó hoàn toàn miễn phí.",
+      "B. Vì kích thước tập con (mini-batch) có thể được thiết lập vừa vặn với bộ nhớ GPU, cho phép thực hiện các phép toán ma trận siêu nhanh.",
+      "C. Vì nó không cần dữ liệu đầu vào.",
+      "D. Vì nó có thể dự đoán tương lai."
+    ],
+    "answer": "B. Vì kích thước tập con (mini-batch) có thể được thiết lập vừa vặn với bộ nhớ GPU, cho phép thực hiện các phép toán ma trận siêu nhanh.",
+    "explanation": "Mini-batch là sự lai tạo hoàn hảo: ổn định hơn SGD, nhanh hơn BGD, và tận dụng tối đa khả năng tính toán song song của phần cứng GPU."
+  }
+]

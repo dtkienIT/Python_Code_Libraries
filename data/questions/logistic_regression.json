@@ -1,0 +1,222 @@
+[
+  {
+    "question": "Câu 1: Thuật toán Logistic Regression (Hồi quy Logistic) là một thuật toán học máy có giám sát được phát triển chủ yếu để giải quyết loại bài toán nào?",
+    "options": [
+      "A. Bài toán phân cụm (Clustering problems).",
+      "B. Bài toán dự đoán giá trị thực (Regression problems).",
+      "C. Bài toán phân loại (Classification learning problems) khi biến mục tiêu là dữ liệu phân loại (categorical).",
+      "D. Bài toán giảm chiều dữ liệu (Dimensionality reduction)."
+    ],
+    "answer": "C. Bài toán phân loại (Classification learning problems) khi biến mục tiêu là dữ liệu phân loại (categorical).",
+    "explanation": "Tài liệu khẳng định rõ ở câu đầu tiên: Logistic regression được phát triển để học các bài toán phân loại, khi biến mục tiêu là các danh mục (categorical)."
+  },
+  {
+    "question": "Câu 2: Theo tài liệu, tại sao thuật toán Linear Regression (Hồi quy tuyến tính) lại KHÔNG phù hợp để giải quyết các bài toán phân loại?",
+    "options": [
+      "A. Vì nó chạy quá chậm trên dữ liệu lớn.",
+      "B. Vì các giá trị dự đoán có thể lớn hơn 1 hoặc nhỏ hơn 0 (không mang ý nghĩa xác suất) và nó rất nhạy cảm với các giá trị ngoại lệ (outliers).",
+      "C. Vì nó không thể xử lý dữ liệu số.",
+      "D. Vì nó chỉ dự đoán được duy nhất 2 lớp."
+    ],
+    "answer": "B. Vì các giá trị dự đoán có thể lớn hơn 1 hoặc nhỏ hơn 0 (không mang ý nghĩa xác suất) và nó rất nhạy cảm với các giá trị ngoại lệ (outliers).",
+    "explanation": "Tài liệu đưa ra 2 lý do: 1 là output có thể >1 hoặc <0. 2 là outliers sẽ làm thay đổi đường best-fit, kéo theo sự thay đổi sai lệch của đường ranh giới quyết định (decision boundary)."
+  },
+  {
+    "question": "Câu 3: Logistic Regression sử dụng hàm số nào để \"nén\" (squash) các giá trị đầu ra sao cho chúng luôn nằm trong khoảng từ 0 đến 1?",
+    "options": [
+      "A. Hàm ReLU (Rectified Linear Unit).",
+      "B. Hàm Tanh (Hyperbolic Tangent).",
+      "C. Hàm Sigmoid (hoặc hàm Logistic).",
+      "D. Hàm Softmax."
+    ],
+    "answer": "C. Hàm Sigmoid (hoặc hàm Logistic).",
+    "explanation": "Để giới hạn output giữa 0 và 1, một hàm Sigmoid (còn gọi là hàm logistic) được áp dụng."
+  },
+  {
+    "question": "Câu 4: Công thức toán học của hàm Sigmoid $g(z)$ được viết như thế nào?",
+    "options": [
+      "A. $g(z) = \\frac{1}{1 + e^{-z}}$",
+      "B. $g(z) = \\frac{e^z}{1 - e^{-z}}$",
+      "C. $g(z) = 1 + e^{-z}$",
+      "D. $g(z) = \\frac{1}{1 + z^2}$"
+    ],
+    "answer": "A. $g(z) = \\frac{1}{1 + e^{-z}}$",
+    "explanation": "Công thức chuẩn của hàm Sigmoid được cung cấp trong phương trình 20-2 là $g(z) = 1 / (1 + e^{-z})$."
+  },
+  {
+    "question": "Câu 5: Phương trình Giả thuyết (Hypothesis representation) của Logistic Regression $h_\\theta(x)$ được biểu diễn dưới dạng vector hóa như thế nào?",
+    "options": [
+      "A. $h_\\theta(x) = \\theta^T x$",
+      "B. $h_\\theta(x) = \\frac{1}{1 + e^{-\\theta^T x}}$",
+      "C. $h_\\theta(x) = e^{\\theta^T x}$",
+      "D. $h_\\theta(x) = 1 - \\theta^T x$"
+    ],
+    "answer": "B. $h_\\theta(x) = \\frac{1}{1 + e^{-\\theta^T x}}$",
+    "explanation": "Ta thay $z = \\theta^T x$ vào hàm Sigmoid, ta được phương trình giả thuyết hoàn chỉnh (Equation 20-3)."
+  },
+  {
+    "question": "Câu 6: Đầu ra của hàm giả thuyết $h_\\theta(x)$ trong Logistic Regression thực chất mang ý nghĩa gì?",
+    "options": [
+      "A. Ước tính xác suất (estimated probability) để $y = 1$ với đầu vào $x$ nhất định.",
+      "B. Là giá trị thực tế của biến mục tiêu.",
+      "C. Là sai số của mô hình.",
+      "D. Ước tính số lượng các lớp (classes) trong dữ liệu."
+    ],
+    "answer": "A. Ước tính xác suất (estimated probability) để $y = 1$ với đầu vào $x$ nhất định.",
+    "explanation": "Đầu ra của $h_\\theta(x)$ là xác suất ước tính rằng target y = 1, với một feature x cho trước được tham số hóa bởi $\\theta$."
+  },
+  {
+    "question": "Câu 7: Khái niệm \"Đường ranh giới quyết định\" (Decision Boundary) trong phân loại nhị phân (Binary Classification) có nghĩa là gì?",
+    "options": [
+      "A. Là giới hạn bộ nhớ của máy tính.",
+      "B. Là đường phân chia giữa tập train và tập test.",
+      "C. Là một ngưỡng (threshold) được thiết lập để phân loại kết quả xác suất thành các danh mục tương ứng (ví dụ: >= 0.5 là lớp 1, < 0.5 là lớp 0).",
+      "D. Là số lượng tham số tối đa của mô hình."
+    ],
+    "answer": "C. Là một ngưỡng (threshold) được thiết lập để phân loại kết quả xác suất thành các danh mục tương ứng (ví dụ: >= 0.5 là lớp 1, < 0.5 là lớp 0).",
+    "explanation": "Để xuất ra các danh mục, ta thiết lập một ngưỡng (threshold). Mặc định thường là 0.5 để phân loại lớp 1 và lớp 0."
+  },
+  {
+    "question": "Câu 8: Tại sao Hàm chi phí MSE (Mean Squared Error) của Hồi quy tuyến tính lại KHÔNG được sử dụng cho Logistic Regression?",
+    "options": [
+      "A. Vì nó tính toán quá chậm.",
+      "B. Vì khi đưa hàm Sigmoid vào MSE, nó tạo ra một hàm \"không lồi\" (non-convex) có nhiều cực tiểu cục bộ (local minima), khiến thuật toán tối ưu hóa rất khó tìm được cực tiểu toàn cục.",
+      "C. Vì MSE chỉ dùng cho văn bản.",
+      "D. Vì MSE luôn trả về kết quả bằng 0 với bài toán phân loại."
+    ],
+    "answer": "B. Vì khi đưa hàm Sigmoid vào MSE, nó tạo ra một hàm \"không lồi\" (non-convex) có nhiều cực tiểu cục bộ (local minima), khiến thuật toán tối ưu hóa rất khó tìm được cực tiểu toàn cục.",
+    "explanation": "Tài liệu giải thích rất rõ: Hàm MSE với Sigmoid tạo ra một hàm có hình gợn sóng (non-convex) với nhiều local minima, làm thuật toán tối ưu dễ bị mắc kẹt."
+  },
+  {
+    "question": "Câu 9: Thay vì MSE, Logistic Regression sử dụng Hàm chi phí (Cost Function) nào để đảm bảo luôn có hình dạng lồi (convex)?",
+    "options": [
+      "A. Hinge Loss.",
+      "B. Cross-Entropy (hoặc Log Loss).",
+      "C. Absolute Error.",
+      "D. Exponential Loss."
+    ],
+    "answer": "B. Cross-Entropy (hoặc Log Loss).",
+    "explanation": "Hàm chi phí của Logistic Regression là Cross-Entropy (Log loss), một hàm được thiết kế để phạt nặng các dự đoán sai với độ tự tin cao."
+  },
+  {
+    "question": "Câu 10: Theo phương trình Log Loss, nếu giá trị thực tế $y = 1$, hàm chi phí (Cost) sẽ được tính bằng công thức nào?",
+    "options": [
+      "A. $-\\log(1 - h_\\theta(x))$",
+      "B. $\\log(h_\\theta(x))$",
+      "C. $-\\log(h_\\theta(x))$",
+      "D. $1 - \\log(x)$"
+    ],
+    "answer": "C. $-\\log(h_\\theta(x))$",
+    "explanation": "Nếu $y = 1$, Cost = $-\\log(h_\\theta(x))$. Nếu dự đoán là 1 thì chi phí bằng 0, nếu dự đoán là 0 thì chi phí tiến tới vô cực (phạt rất nặng)."
+  },
+  {
+    "question": "Câu 11: Nếu giá trị thực tế $y = 0$, hàm chi phí (Cost) sẽ được tính bằng công thức nào?",
+    "options": [
+      "A. $-\\log(h_\\theta(x))$",
+      "B. $-\\log(1 - h_\\theta(x))$",
+      "C. $\\log(1 + h_\\theta(x))$",
+      "D. $1 + \\log(x)$"
+    ],
+    "answer": "B. $-\\log(1 - h_\\theta(x))$",
+    "explanation": "Nếu $y = 0$, Cost = $-\\log(1 - h_\\theta(x))$. Điều này đảm bảo phạt nặng nếu mô hình cố tình dự đoán xác suất gần bằng 1."
+  },
+  {
+    "question": "Câu 12: Khi xử lý bài toán Phân loại đa lớp (Multiclass Classification), Logistic Regression sử dụng cơ chế nào để mở rộng khả năng từ phân loại nhị phân (2 lớp)?",
+    "options": [
+      "A. Multi-layer Neural Network.",
+      "B. K-Means Clustering.",
+      "C. One-vs.-All (hoặc One-vs.-Rest).",
+      "D. Support Vector Machines."
+    ],
+    "answer": "C. One-vs.-All (hoặc One-vs.-Rest).",
+    "explanation": "Tài liệu gọi kỹ thuật này là One-vs.-all (OvA) hay One-vs.-rest (OvR)."
+  },
+  {
+    "question": "Câu 13: Nguyên lý hoạt động của cơ chế One-vs.-All (OvA) là gì?",
+    "options": [
+      "A. So sánh từng cặp lớp với nhau (1 đối 1).",
+      "B. Đào tạo một bộ phân loại nhị phân duy nhất cho từng lớp, bằng cách coi mẫu của lớp đó là dương (positive) và TẤT CẢ các lớp còn lại là âm (negative).",
+      "C. Gộp tất cả các lớp lại thành 1 lớp duy nhất.",
+      "D. Bỏ qua các lớp có ít dữ liệu nhất."
+    ],
+    "answer": "B. Đào tạo một bộ phân loại nhị phân duy nhất cho từng lớp, bằng cách coi mẫu của lớp đó là dương (positive) và TẤT CẢ các lớp còn lại là âm (negative).",
+    "explanation": "Trong OvA, nếu có N lớp, ta huấn luyện N mô hình phân loại riêng biệt. Mô hình nào cho ra xác suất cao nhất sẽ được chọn làm lớp dự đoán cuối cùng."
+  },
+  {
+    "question": "Câu 14: Để import thuật toán Logistic Regression trong thư viện Scikit-learn, bạn sẽ dùng dòng code nào dưới đây?\n\n# Code import",
+    "options": [
+      "A. from sklearn.regression import LogisticRegression",
+      "B. from sklearn.linear_model import LogisticRegression",
+      "C. from sklearn.models import LogisticRegression",
+      "D. from sklearn.classification import LogisticRegression"
+    ],
+    "answer": "B. from sklearn.linear_model import LogisticRegression",
+    "explanation": "Vì Logistic Regression bản chất vẫn là một mô hình tuyến tính (chỉ là được nén bằng Sigmoid), nó nằm trong module `sklearn.linear_model`."
+  },
+  {
+    "question": "Câu 15: Trong phần code thực hành của chương, tập dữ liệu (dataset) nào từ Scikit-learn đã được sử dụng để phân loại bệnh?\n\n# load dataset\ndataset = datasets.load_???()",
+    "options": [
+      "A. load_iris()",
+      "B. load_diabetes()",
+      "C. load_breast_cancer()",
+      "D. load_wine()"
+    ],
+    "answer": "C. load_breast_cancer()",
+    "explanation": "Tài liệu minh họa việc sử dụng tập dữ liệu về ung thư vú (`load_breast_cancer()`) cho bài toán dự đoán phân loại."
+  },
+  {
+    "question": "Câu 16: Hai thước đo (metrics) nào được thư viện Scikit-learn sử dụng để đánh giá hiệu suất mô hình trong đoạn mã thực hành?\n\nfrom sklearn.metrics import ______, ______",
+    "options": [
+      "A. mean_squared_error, r2_score",
+      "B. accuracy_score, confusion_matrix",
+      "C. f1_score, roc_auc_score",
+      "D. mean_absolute_error, precision_score"
+    ],
+    "answer": "B. accuracy_score, confusion_matrix",
+    "explanation": "Code import `from sklearn.metrics import accuracy_score, confusion_matrix` để in ra độ chính xác và ma trận nhầm lẫn."
+  },
+  {
+    "question": "Câu 17: Trong bài toán đa lớp (multi-class problem), Ma trận nhầm lẫn (Confusion matrix) xuất ra kết quả được diễn giải như thế nào theo tài liệu?",
+    "options": [
+      "A. Nó sẽ báo lỗi vì không hỗ trợ đa lớp.",
+      "B. Nó tính trung bình cộng của tất cả các lớp.",
+      "C. Các nhãn được gom lại theo kiểu One-vs.-Rest. Ví dụ ma trận đầu tiên thể hiện sự khác biệt giữa mục tiêu thực tế và dự đoán của Lớp 1 so với phần CÒN LẠI (other classes).",
+      "D. Nó in ra một danh sách các đồ thị 3D."
+    ],
+    "answer": "C. Các nhãn được gom lại theo kiểu One-vs.-Rest. Ví dụ ma trận đầu tiên thể hiện sự khác biệt giữa mục tiêu thực tế và dự đoán của Lớp 1 so với phần CÒN LẠI (other classes).",
+    "explanation": "Tài liệu chú thích rõ: \"For a multi-class problem, the labels are binned in a one-vs.-rest manner.\""
+  },
+  {
+    "question": "Câu 18: Nếu mô hình Logistic Regression của bạn gặp hiện tượng Bias cao (Độ chính xác rất kém trên tập huấn luyện), tài liệu đề xuất KHÔNG NÊN làm gì?",
+    "options": [
+      "A. Loại bỏ các đặc trưng có độ tương quan cao (Remove highly correlated features).",
+      "B. Áp dụng chuẩn hóa dữ liệu (Feature scaling / Standardizing).",
+      "C. Tạo thêm đặc trưng mới (Feature engineering) hoặc áp dụng biến đổi logarit (Log transforms).",
+      "D. Áp dụng kỹ thuật điều chuẩn (Regularization)."
+    ],
+    "answer": "D. Áp dụng kỹ thuật điều chuẩn (Regularization).",
+    "explanation": "Regularization được đề xuất ở phần sau dành riêng cho trường hợp Variance (Overfitting). Khi bị Bias (Underfitting), mô hình đang quá yếu, nếu thêm Regularization mô hình sẽ càng yếu hơn."
+  },
+  {
+    "question": "Câu 19: Theo tài liệu, tại sao chúng ta nên xóa bỏ các đặc trưng có độ tương quan cao (highly correlated features) khi tối ưu hóa mô hình?",
+    "options": [
+      "A. Vì nó làm tăng dung lượng ổ cứng.",
+      "B. Vì Logistic regression rất dễ bị suy giảm hiệu suất (degraded performance) khi có mặt các đặc trưng tương quan quá cao trong tập dữ liệu.",
+      "C. Vì nó làm thay đổi màu sắc của đồ thị.",
+      "D. Vì nó chuyển bài toán thành Hồi quy tuyến tính."
+    ],
+    "answer": "B. Vì Logistic regression rất dễ bị suy giảm hiệu suất (degraded performance) khi có mặt các đặc trưng tương quan quá cao trong tập dữ liệu.",
+    "explanation": "Đặc trưng tương quan cao (đa cộng tuyến) gây nhiễu cho các trọng số của thuật toán Logistic Regression, làm giảm độ chính xác."
+  },
+  {
+    "question": "Câu 20: Nếu mô hình có độ chính xác rất tốt trên tập huấn luyện, nhưng lại cực kỳ kém trên tập kiểm thử (Hiện tượng Variance / Overfitting), kỹ thuật nào được đề xuất để giải quyết?",
+    "options": [
+      "A. Tạo thêm dữ liệu giả.",
+      "B. Xóa bớt các lớp trong tập dữ liệu.",
+      "C. Đổi sang dùng thuật toán Hồi quy tuyến tính.",
+      "D. Áp dụng kỹ thuật Điều chuẩn (Applying Regularization)."
+    ],
+    "answer": "D. Áp dụng kỹ thuật Điều chuẩn (Applying Regularization).",
+    "explanation": "Tài liệu chốt lại: \"Applying regularization (more on this in Chapter 21) is a good technique to prevent overfitting\" trong trường hợp Variance cao."
+  }
+]

@@ -1,0 +1,420 @@
+[
+  {
+    "question": "Câu 1: Machine Learning phần lớn được chia thành ba thành phần chính nào dựa trên phương pháp tiếp cận?",
+    "options": [
+      "A. Deep Learning, Neural Networks, AI.",
+      "B. Supervised learning, Unsupervised learning, và Reinforcement learning.",
+      "C. Clustering, Regression, Classification.",
+      "D. Batch learning, Online learning, Mini-batch learning."
+    ],
+    "answer": "B. Supervised learning, Unsupervised learning, và Reinforcement learning.",
+    "explanation": "Theo tài liệu, ba danh mục học máy thống trị là học có giám sát, học không giám sát và học tăng cường."
+  },
+  {
+    "question": "Câu 2: Tại sao học có giám sát (Supervised Learning) lại được tập trung nhiều nhất trong thực tế?",
+    "options": [
+      "A. Vì nó là kỹ thuật duy nhất tồn tại.",
+      "B. Vì nó chạy nhanh nhất trên mọi máy tính.",
+      "C. Vì nó là kỹ thuật chiếm ưu thế trong công nghiệp và dễ dàng đánh giá hiệu suất trước khi đưa vào sản xuất.",
+      "D. Vì nó không cần dữ liệu để học."
+    ],
+    "answer": "C. Vì nó là kỹ thuật chiếm ưu thế trong công nghiệp và dễ dàng đánh giá hiệu suất trước khi đưa vào sản xuất.",
+    "explanation": "Tài liệu chỉ rõ 2 lý do: nó được dùng chủ yếu trong các sản phẩm công nghiệp và dễ dàng đánh giá (ground truth) hiệu suất mô hình."
+  },
+  {
+    "question": "Câu 3: Trong biểu diễn dạng bảng (tabular format) của một dataset, các cột (columns) được gọi là gì?",
+    "options": [
+      "A. Samples (Mẫu)",
+      "B. Observations (Quan sát)",
+      "C. Features (Đặc trưng)",
+      "D. Targets (Mục tiêu)"
+    ],
+    "answer": "C. Features (Đặc trưng)",
+    "explanation": "Các cột của dataset được gọi là features (hoặc variables, attributes)."
+  },
+  {
+    "question": "Câu 4: Các hàng (rows) trong một dataset đại diện cho điều gì?",
+    "options": [
+      "A. Features",
+      "B. Samples (hoặc data points, observations)",
+      "C. Targets",
+      "D. Labels"
+    ],
+    "answer": "B. Samples (hoặc data points, observations)",
+    "explanation": "Các hàng của dataset đại diện cho các mẫu dữ liệu riêng biệt."
+  },
+  {
+    "question": "Câu 5: Khái niệm cốt lõi đằng sau Supervised Machine Learning là gì?",
+    "options": [
+      "A. Gom nhóm các dữ liệu giống nhau mà không cần biết nhãn của chúng.",
+      "B. Máy tính tự học bằng cách thử và sai trong môi trường.",
+      "C. Mỗi mẫu dữ liệu được liên kết với một biến mục tiêu (target variable), và máy tính học các quy luật từ features để dự đoán target.",
+      "D. Tìm ra các quy tắc áp dụng cho mọi dữ liệu trên thế giới."
+    ],
+    "answer": "C. Mỗi mẫu dữ liệu được liên kết với một biến mục tiêu (target variable), và máy tính học các quy luật từ features để dự đoán target.",
+    "explanation": "Học có giám sát bắt buộc phải có biến mục tiêu (target) đi kèm với từng mẫu dữ liệu."
+  },
+  {
+    "question": "Câu 6: Hai loại bài toán mô hình hóa (modeling tasks) điển hình trong Supervised Learning là gì?",
+    "options": [
+      "A. Clustering và Dimensionality Reduction.",
+      "B. Regression và Classification.",
+      "C. PCA và Neural Networks.",
+      "D. Memorization và Generalization."
+    ],
+    "answer": "B. Regression và Classification.",
+    "explanation": "Học có giám sát thường chia làm 2 loại: Hồi quy (Regression) và Phân loại (Classification)."
+  },
+  {
+    "question": "Câu 7: Bài toán được phân loại là Regression (Hồi quy) khi nào?",
+    "options": [
+      "A. Khi biến mục tiêu (target variable) là một nhãn văn bản.",
+      "B. Khi biến mục tiêu là True/False.",
+      "C. Khi biến mục tiêu (target variable) là một số thực (real-valued number).",
+      "D. Khi tập dữ liệu có chứa hình ảnh."
+    ],
+    "answer": "C. Khi biến mục tiêu (target variable) là một số thực (real-valued number).",
+    "explanation": "Ví dụ như dự đoán giá nhà (18.3, 15.2, v.v.), kết quả dự đoán là các con số thực."
+  },
+  {
+    "question": "Câu 8: Bài toán được phân loại là Classification (Phân loại) khi nào?",
+    "options": [
+      "A. Khi biến mục tiêu là một nhãn (label) thể hiện sự thuộc về một lớp nào đó (class membership).",
+      "B. Khi biến mục tiêu là một số âm.",
+      "C. Khi biến mục tiêu là ngày tháng năm.",
+      "D. Khi biến mục tiêu đo lường trọng lượng."
+    ],
+    "answer": "A. Khi biến mục tiêu là một nhãn (label) thể hiện sự thuộc về một lớp nào đó (class membership).",
+    "explanation": "Trong Classification, biến mục tiêu đại diện cho danh mục (categories), ví dụ như 'có bệnh tim' hoặc 'không có bệnh tim'."
+  },
+  {
+    "question": "Câu 9: Trong Machine Learning, việc mô hình \"học thuộc lòng\" các mẫu dữ liệu (thay vì học quy luật) được gọi là gì?",
+    "options": [
+      "A. Generalization",
+      "B. Memorization (Data snooping)",
+      "C. Hyper-parameter tuning",
+      "D. Validation"
+    ],
+    "answer": "B. Memorization (Data snooping)",
+    "explanation": "Memorization là khi mô hình ghi nhớ chính xác bản sao của mẫu dữ liệu (data snooping), dẫn đến việc không thể dự đoán đúng dữ liệu mới."
+  },
+  {
+    "question": "Câu 10: Khả năng sử dụng các nguyên lý đã học để giải quyết các mẫu dữ liệu CHƯA TỪNG THẤY (unseen samples) được gọi là gì?",
+    "options": [
+      "A. Generalization (Khái quát hóa)",
+      "B. Memorization (Ghi nhớ)",
+      "C. Classification (Phân loại)",
+      "D. Clustering (Phân cụm)"
+    ],
+    "answer": "A. Generalization (Khái quát hóa)",
+    "explanation": "Mục tiêu cuối cùng của mọi mô hình học máy là Generalization – khả năng suy rộng và áp dụng tốt trên dữ liệu mới."
+  },
+  {
+    "question": "Câu 11: Quy tắc 60/20/20 phổ biến trong việc chia tập dữ liệu đề cập đến tỷ lệ của những phần nào?",
+    "options": [
+      "A. 60% Training, 20% Validation, 20% Test.",
+      "B. 60% Test, 20% Training, 20% Validation.",
+      "C. 60% Validation, 20% Training, 20% Test.",
+      "D. 60% Database, 20% Cloud, 20% Local."
+    ],
+    "answer": "A. 60% Training, 20% Validation, 20% Test.",
+    "explanation": "Tài liệu nêu rõ chiến lược đơn giản nhất là 60% để huấn luyện, 20% để xác thực và 20% để kiểm thử."
+  },
+  {
+    "question": "Câu 12: Hiện tượng \"High bias\" (Thiên kiến cao) xảy ra khi nào?",
+    "options": [
+      "A. Mô hình hoạt động quá tốt trên dữ liệu huấn luyện.",
+      "B. Mô hình hoạt động kém ngay cả trên dữ liệu đã được huấn luyện (Underfitting).",
+      "C. Mô hình tốn quá nhiều bộ nhớ.",
+      "D. Dữ liệu bị thiếu quá nhiều."
+    ],
+    "answer": "B. Mô hình hoạt động kém ngay cả trên dữ liệu đã được huấn luyện (Underfitting).",
+    "explanation": "High bias tương đương với Underfit, mô hình quá đơn giản nên không học được quy luật của cả tập huấn luyện."
+  },
+  {
+    "question": "Câu 13: Hiện tượng \"High variance\" (Phương sai cao) mô tả tình trạng gì của mô hình?",
+    "options": [
+      "A. Mô hình học quá tốt dữ liệu huấn luyện nhưng lại hoạt động rất tệ trên dữ liệu mới (Overfitting).",
+      "B. Mô hình không dự đoán được gì trên cả tập huấn luyện và kiểm thử.",
+      "C. Mô hình trả về kết quả quá nhanh.",
+      "D. Dữ liệu bị nhiễu do lỗi đường truyền."
+    ],
+    "answer": "A. Mô hình học quá tốt dữ liệu huấn luyện nhưng lại hoạt động rất tệ trên dữ liệu mới (Overfitting).",
+    "explanation": "High variance tương đương với Overfit, mô hình học thuộc lòng từng chi tiết nhỏ của tập huấn luyện (kể cả nhiễu) nên không tổng quát hóa được."
+  },
+  {
+    "question": "Câu 14: Đâu là \"điểm ngọt ngào\" (sweet spot) trong sự đánh đổi giữa Bias và Variance?",
+    "options": [
+      "A. Nơi có High Bias và Low Variance.",
+      "B. Nơi có Low Bias và High Variance.",
+      "C. Một điểm ở giữa nơi mô hình có hiệu suất tốt trên cả tập huấn luyện và tập kiểm thử.",
+      "D. Nơi mô hình có độ phức tạp bằng 0."
+    ],
+    "answer": "C. Một điểm ở giữa nơi mô hình có hiệu suất tốt trên cả tập huấn luyện và tập kiểm thử.",
+    "explanation": "Mục tiêu là tìm ra sự cân bằng để mô hình không quá đơn giản (underfit) cũng không quá phức tạp (overfit)."
+  },
+  {
+    "question": "Câu 15: Trong bài toán Hồi quy (Regression), thước đo (metric) nào thường được sử dụng để đánh giá độ lớn của sai số?",
+    "options": [
+      "A. Confusion Matrix",
+      "B. ROC Curve",
+      "C. Accuracy",
+      "D. RMSE (Root Mean Squared Error)"
+    ],
+    "answer": "D. RMSE (Root Mean Squared Error)",
+    "explanation": "RMSE tính toán sự khác biệt bình phương trung bình giữa giá trị thực tế và giá trị dự đoán."
+  },
+  {
+    "question": "Câu 16: Trong bài toán Phân loại (Classification), công cụ cơ bản nào giúp ta có bức tranh toàn cảnh về số lượng mẫu được dự đoán đúng hoặc sai?",
+    "options": [
+      "A. Confusion Matrix (Ma trận nhầm lẫn)",
+      "B. R-squared",
+      "C. TSS (Total Sum of Squares)",
+      "D. Line plot"
+    ],
+    "answer": "A. Confusion Matrix (Ma trận nhầm lẫn)",
+    "explanation": "Confusion Matrix hiển thị các giá trị True Positive, False Positive, True Negative, và False Negative."
+  },
+  {
+    "question": "Câu 17: \"True Positive\" (TP) trong Confusion Matrix có nghĩa là gì?",
+    "options": [
+      "A. Số lượng mẫu được dự đoán là positive và thực tế đúng là positive.",
+      "B. Số lượng mẫu dự đoán là positive nhưng thực tế là negative.",
+      "C. Số lượng mẫu thực tế là negative và dự đoán cũng là negative.",
+      "D. Số lượng mẫu dự đoán sai hoàn toàn."
+    ],
+    "answer": "A. Số lượng mẫu được dự đoán là positive và thực tế đúng là positive.",
+    "explanation": "Đúng (True) với những gì đã dự đoán (Positive)."
+  },
+  {
+    "question": "Câu 18: \"False Positive\" (FP) trong Confusion Matrix có nghĩa là gì?",
+    "options": [
+      "A. Dự đoán là positive và thực tế là positive.",
+      "B. Dự đoán là positive nhưng thực tế lại là negative.",
+      "C. Dự đoán là negative nhưng thực tế là positive.",
+      "D. Dự đoán là negative và thực tế là negative."
+    ],
+    "answer": "B. Dự đoán là positive nhưng thực tế lại là negative.",
+    "explanation": "Sai (False) khi dự đoán là (Positive). Hay còn gọi là Báo động giả (False-alarm)."
+  },
+  {
+    "question": "Câu 19: \"False Negative\" (FN) có nghĩa là gì?",
+    "options": [
+      "A. Dự đoán là positive nhưng thực tế là negative.",
+      "B. Dự đoán là negative nhưng thực tế lại là positive.",
+      "C. Dự đoán đúng là negative.",
+      "D. Dữ liệu bị mất mát."
+    ],
+    "answer": "B. Dự đoán là negative nhưng thực tế lại là positive.",
+    "explanation": "Sai (False) khi dự đoán là (Negative). Ví dụ: Bệnh nhân có bệnh nhưng mô hình bảo không."
+  },
+  {
+    "question": "Câu 20: Công thức tính Độ chính xác tổng thể (Accuracy) là gì?",
+    "options": [
+      "A. TP / (TP + FP)",
+      "B. TP / (TP + FN)",
+      "C. (TP + TN) / (TP + FP + TN + FN)",
+      "D. TN / (FP + TN)"
+    ],
+    "answer": "C. (TP + TN) / (TP + FP + TN + FN)",
+    "explanation": "Accuracy là tỷ lệ số lần đoán ĐÚNG (cả positive và negative) trên tổng TẤT CẢ các mẫu."
+  },
+  {
+    "question": "Câu 21: Precision (Độ chuẩn xác / Positive predictive value) được tính như thế nào?",
+    "options": [
+      "A. TP / (TP + TN)",
+      "B. TP / (TP + FN)",
+      "C. TP / (TP + FP)",
+      "D. TN / (TN + FP)"
+    ],
+    "answer": "C. TP / (TP + FP)",
+    "explanation": "Precision trả lời câu hỏi: Trong tất cả các mẫu mô hình dự đoán là Positive (TP + FP), có bao nhiêu mẫu THỰC SỰ là Positive (TP)."
+  },
+  {
+    "question": "Câu 22: Recall (Độ bao phủ / Sensitivity / True Positive Rate) được tính như thế nào?",
+    "options": [
+      "A. TP / (TP + FN)",
+      "B. TP / (TP + FP)",
+      "C. TN / (TN + FP)",
+      "D. FN / (TP + FN)"
+    ],
+    "answer": "A. TP / (TP + FN)",
+    "explanation": "Recall trả lời câu hỏi: Trong tất cả các mẫu THỰC SỰ là Positive (TP + FN), mô hình đã tìm ra được bao nhiêu phần trăm (TP)."
+  },
+  {
+    "question": "Câu 23: Specificity (True Negative Rate) được định nghĩa bằng công thức nào?",
+    "options": [
+      "A. TP / (TP + FP)",
+      "B. TN / (FP + TN)",
+      "C. FN / (TP + FN)",
+      "D. TN / (TP + TN)"
+    ],
+    "answer": "B. TN / (FP + TN)",
+    "explanation": "Specificity là tỷ lệ các mẫu thực sự là Negative được dự đoán đúng là Negative."
+  },
+  {
+    "question": "Câu 24: Chỉ số Fall-out (False-alarm / False Positive Rate) có mối quan hệ toán học thế nào với Specificity?",
+    "options": [
+      "A. Fall-out = Specificity",
+      "B. Fall-out = 1 + Specificity",
+      "C. Fall-out = 1 - Specificity",
+      "D. Fall-out = Specificity * 100"
+    ],
+    "answer": "C. Fall-out = 1 - Specificity",
+    "explanation": "Fall-out (Tỷ lệ báo động giả) bằng 1 trừ đi Tỷ lệ Negative thật (Specificity)."
+  },
+  {
+    "question": "Câu 25: Trục x và trục y của đồ thị không gian ROC (ROC Space) biểu diễn những giá trị nào?",
+    "options": [
+      "A. Trục y là Accuracy, trục x là Precision.",
+      "B. Trục y là Sensitivity (True positive rate), trục x là Fall-out (False positive rate).",
+      "C. Trục y là Loss, trục x là Epochs.",
+      "D. Trục y là TP, trục x là TN."
+    ],
+    "answer": "B. Trục y là Sensitivity (True positive rate), trục x là Fall-out (False positive rate).",
+    "explanation": "ROC plot ánh xạ xác suất dự đoán đúng Positive (Sensitivity) so với xác suất Báo động giả (Fall-out)."
+  },
+  {
+    "question": "Câu 26: Một mô hình phân loại tốt sẽ có đường cong ROC nằm ở vị trí nào trong không gian ROC?",
+    "options": [
+      "A. Gần với góc dưới cùng bên phải.",
+      "B. Bám sát đường chéo trung tâm.",
+      "C. Gần với góc trên cùng bên trái (chỉ số AUC gần 1).",
+      "D. Nằm hoàn toàn ở trục x."
+    ],
+    "answer": "C. Gần với góc trên cùng bên trái (chỉ số AUC gần 1).",
+    "explanation": "Điểm top-left lý tưởng có Sensitivity = 1 (bắt được 100% người bệnh) và Fall-out = 0 (không có báo động giả nào)."
+  },
+  {
+    "question": "Câu 27: Đường chéo (diagonal line) trong đồ thị ROC đại diện cho điều gì?",
+    "options": [
+      "A. Mô hình hoàn hảo.",
+      "B. Mô hình dự đoán hoàn toàn sai.",
+      "C. Mô hình đoán ngẫu nhiên (pure chance) với diện tích AUC = 0.5.",
+      "D. Dữ liệu bị thiếu."
+    ],
+    "answer": "C. Mô hình đoán ngẫu nhiên (pure chance) với diện tích AUC = 0.5.",
+    "explanation": "Đường thẳng chéo biểu thị một bộ phân loại không có khả năng phân biệt, việc đoán kết quả cũng giống như tung đồng xu."
+  },
+  {
+    "question": "Câu 28: Đối với chỉ số RMSE trong bài toán hồi quy, kết quả như thế nào là dấu hiệu của một mô hình tốt?",
+    "options": [
+      "A. RMSE càng lớn càng tốt.",
+      "B. RMSE luôn luôn phải bằng 1.",
+      "C. RMSE càng gần 0 càng tốt.",
+      "D. RMSE phải là số âm."
+    ],
+    "answer": "C. RMSE càng gần 0 càng tốt.",
+    "explanation": "Vì RMSE đo lường 'sai số' giữa dự đoán và thực tế, nên sai số càng nhỏ (gần 0) thì mô hình càng chuẩn xác."
+  },
+  {
+    "question": "Câu 29: Chỉ số R-squared (R2) trong bài toán hồi quy mang ý nghĩa gì?",
+    "options": [
+      "A. Cho biết tỷ lệ phần trăm dữ liệu bị lỗi.",
+      "B. Cho biết tỷ lệ sự biến thiên của biến mục tiêu (target) CÓ THỂ được giải thích bởi mô hình.",
+      "C. Cho biết thời gian chạy của thuật toán.",
+      "D. Là số lượng tham số của mô hình."
+    ],
+    "answer": "B. Cho biết tỷ lệ sự biến thiên của biến mục tiêu (target) CÓ THỂ được giải thích bởi mô hình.",
+    "explanation": "Công thức R2 = 1 - (RSS/TSS). R2 càng gần 1, mô hình giải thích được càng nhiều sự thay đổi của dữ liệu."
+  },
+  {
+    "question": "Câu 30: Phương pháp Resampling nào sử dụng chiến lược: tách dữ liệu thành k tập con bằng nhau, dùng k-1 tập để huấn luyện và 1 tập còn lại để kiểm tra (lặp lại k lần)?",
+    "options": [
+      "A. Validation set approach",
+      "B. LOOCV (Leave-One-Out Cross-Validation)",
+      "C. k-Fold Cross-Validation",
+      "D. Random Forest"
+    ],
+    "answer": "C. k-Fold Cross-Validation",
+    "explanation": "k-Fold là phương pháp phổ biến nhất giúp giảm chi phí tính toán mà vẫn ước lượng tốt hiệu suất của mô hình."
+  },
+  {
+    "question": "Câu 31: Nhược điểm lớn nhất của phương pháp LOOCV (Leave-One-Out Cross-Validation) là gì?",
+    "options": [
+      "A. Quá trình chia dữ liệu phức tạp.",
+      "B. Rất tốn kém về mặt tài nguyên tính toán (computationally expensive) vì phải lặp lại n lần.",
+      "C. Kết quả luôn bị sai lệch cao.",
+      "D. Không áp dụng được cho Classification."
+    ],
+    "answer": "B. Rất tốn kém về mặt tài nguyên tính toán (computationally expensive) vì phải lặp lại n lần.",
+    "explanation": "Với LOOCV, nếu có 10,000 mẫu, bạn phải huấn luyện mô hình 10,000 lần. Rất tốn thời gian."
+  },
+  {
+    "question": "Câu 32: Trong thuật toán k-Fold Cross-Validation, LOOCV được coi là một trường hợp đặc biệt khi k bằng bao nhiêu?",
+    "options": [
+      "A. k = 1",
+      "B. k = 10",
+      "C. k = n (với n là tổng số mẫu trong dataset)",
+      "D. k = 0"
+    ],
+    "answer": "C. k = n (với n là tổng số mẫu trong dataset)",
+    "explanation": "Nếu tập dữ liệu chia thành k phần mà k bằng tổng số mẫu n, thì mỗi phần kiểm tra chính là 1 mẫu duy nhất, tương đương LOOCV."
+  },
+  {
+    "question": "Câu 33: Các kỹ thuật nào sau đây được tài liệu đề xuất để cải thiện hiệu suất của mô hình (Improving Model Performance)?",
+    "options": [
+      "A. Mua máy tính mạnh hơn.",
+      "B. Feature engineering, Ensemble methods, và Hyper-parameter tuning.",
+      "C. Thêm nhiều màu sắc cho biểu đồ.",
+      "D. Xóa bớt dữ liệu để máy học nhanh hơn."
+    ],
+    "answer": "B. Feature engineering, Ensemble methods, và Hyper-parameter tuning.",
+    "explanation": "Đây là 3 hướng chính: Cải thiện dữ liệu đặc trưng (Feature), Kết hợp mô hình (Ensemble), và Tinh chỉnh siêu tham số (Tuning)."
+  },
+  {
+    "question": "Câu 34: Feature Engineering (Trích xuất đặc trưng) là quá trình gì?",
+    "options": [
+      "A. Vẽ đồ thị tự động.",
+      "B. Khảo sát một cách có hệ thống các đặc trưng và thông minh tạo ra các đặc trưng mới để cải thiện độ chính xác.",
+      "C. Ép kiểu dữ liệu từ chữ sang số.",
+      "D. Lưu trữ file dữ liệu lên Cloud."
+    ],
+    "answer": "B. Khảo sát một cách có hệ thống các đặc trưng và thông minh tạo ra các đặc trưng mới để cải thiện độ chính xác.",
+    "explanation": "Tài liệu nhấn mạnh việc tạo ra đặc trưng mới có thể là sự khác biệt giữa một mô hình bình thường và một mô hình vô địch cuộc thi."
+  },
+  {
+    "question": "Câu 35: Kỹ thuật Học kết hợp (Ensemble Methods) có nguyên lý hoạt động ra sao?",
+    "options": [
+      "A. Chỉ sử dụng duy nhất một mô hình phức tạp nhất.",
+      "B. Kết hợp đầu ra của nhiều mô hình yếu hơn để tạo ra một mô hình hoạt động tốt hơn.",
+      "C. Chia nhỏ dữ liệu ra thành nhiều mảnh để lưu trữ.",
+      "D. Bỏ qua các dữ liệu lỗi."
+    ],
+    "answer": "B. Kết hợp đầu ra của nhiều mô hình yếu hơn để tạo ra một mô hình hoạt động tốt hơn.",
+    "explanation": "Đúng như tên gọi 'Ensemble' (Tập hợp/Hợp xướng), nhiều mô hình nhỏ hợp lại sẽ mạnh hơn 1 mô hình độc lập."
+  },
+  {
+    "question": "Câu 36: Học không giám sát (Unsupervised Learning) khác biệt thế nào so với Supervised Learning?",
+    "options": [
+      "A. Nó không cần sử dụng máy tính.",
+      "B. Tập dữ liệu hoàn toàn KHÔNG CÓ biến mục tiêu (target variable), máy học cách nhóm các mẫu tương tự lại với nhau.",
+      "C. Nó cần chuyên gia ngồi giám sát 24/24.",
+      "D. Nó chỉ xử lý dữ liệu dạng hình ảnh."
+    ],
+    "answer": "B. Tập dữ liệu hoàn toàn KHÔNG CÓ biến mục tiêu (target variable), máy học cách nhóm các mẫu tương tự lại với nhau.",
+    "explanation": "Mục tiêu là tìm ra cấu trúc ẩn bên trong dữ liệu (ví dụ: tìm các nhóm khách hàng có hành vi giống nhau) mà không biết trước kết quả."
+  },
+  {
+    "question": "Câu 37: Clustering (Phân cụm) và PCA (Principal Component Analysis - Phân tích thành phần chính) thuộc danh mục học máy nào?",
+    "options": [
+      "A. Supervised Learning",
+      "B. Unsupervised Learning",
+      "C. Reinforcement Learning",
+      "D. Transfer Learning"
+    ],
+    "answer": "B. Unsupervised Learning",
+    "explanation": "PCA dùng để giảm chiều dữ liệu và Clustering dùng để nhóm dữ liệu, cả hai đều là phương pháp không giám sát."
+  },
+  {
+    "question": "Câu 38: Cơ chế hoạt động của Reinforcement Learning (Học tăng cường) là gì?",
+    "options": [
+      "A. Sao chép dữ liệu từ môi trường internet.",
+      "B. Dự đoán giá trị bằng phương trình tuyến tính.",
+      "C. Một Tác nhân (Agent) tương tác với môi trường và cập nhật chiến lược hành động dựa trên Phản hồi (Responses/Rewards) nhận được.",
+      "D. Chia nhóm dữ liệu ngẫu nhiên."
+    ],
+    "answer": "C. Một Tác nhân (Agent) tương tác với môi trường và cập nhật chiến lược hành động dựa trên Phản hồi (Responses/Rewards) nhận được.",
+    "explanation": "Mô hình này giống với cách học của con người: thử nghiệm, nhận hình phạt/phần thưởng, và rút kinh nghiệm cho lần sau."
+  }
+]

@@ -1,0 +1,222 @@
+[
+  {
+    "question": "Câu 1: Ý tưởng nền tảng cơ bản nhất đằng sau thuật toán Hồi quy tuyến tính (Linear Regression) là gì?",
+    "options": [
+      "A. Giả định rằng dữ liệu luôn có phân phối chuẩn.",
+      "B. Giả định rằng có một mối quan hệ tuyến tính (linear relationship) giữa các đặc trưng (features) của tập dữ liệu.",
+      "C. Phân loại dữ liệu thành các nhóm rời rạc.",
+      "D. Bỏ qua hoàn toàn các dữ liệu ngoại lệ (outliers)."
+    ],
+    "answer": "B. Giả định rằng có một mối quan hệ tuyến tính (linear relationship) giữa các đặc trưng (features) của tập dữ liệu.",
+    "explanation": "Tài liệu mở đầu bằng việc khẳng định ý tưởng nền tảng của thuật toán này là giả định về một mối quan hệ tuyến tính giữa các đặc trưng."
+  },
+  {
+    "question": "Câu 2: Tại sao Linear Regression lại được gọi là một 'thuật toán học tham số' (parametric learning algorithm)?",
+    "options": [
+      "A. Vì nó yêu cầu người dùng phải truyền tham số thủ công.",
+      "B. Vì nó hoạt động dựa trên các tham số siêu việt (hyper-parameters).",
+      "C. Vì nó áp đặt một cấu trúc được xác định trước (pre-defined structure) lên các tham số của mô hình.",
+      "D. Vì nó không sử dụng tham số nào cả."
+    ],
+    "answer": "C. Vì nó áp đặt một cấu trúc được xác định trước (pre-defined structure) lên các tham số của mô hình.",
+    "explanation": "Tài liệu ghi rõ: \"As a result of the pre-defined structure that is imposed on the parameters of the model, it is also called a parametric learning algorithm.\""
+  },
+  {
+    "question": "Câu 3: Thuật toán Linear Regression phù hợp để dự đoán loại biến mục tiêu (target variable) nào?",
+    "options": [
+      "A. Các nhãn phân loại (Categorical labels).",
+      "B. Hình ảnh và video.",
+      "C. Văn bản ngôn ngữ tự nhiên.",
+      "D. Các giá trị thực (Real values)."
+    ],
+    "answer": "D. Các giá trị thực (Real values).",
+    "explanation": "Linear regression được sử dụng để dự đoán các mục tiêu chứa các giá trị thực (real-valued targets). Nó không phù hợp với các bài toán phân loại danh mục (categorical)."
+  },
+  {
+    "question": "Câu 4: Trong Hồi quy tuyến tính, biến mục tiêu (target) được mô hình hóa dưới dạng nào của các đặc trưng (features)?",
+    "options": [
+      "A. Tổ hợp tuyến tính (Linear combination).",
+      "B. Phương trình bậc hai.",
+      "C. Đạo hàm bậc nhất.",
+      "D. Tích chập (Convolution)."
+    ],
+    "answer": "A. Tổ hợp tuyến tính (Linear combination).",
+    "explanation": "Giả định phổ biến trong hồi quy tuyến tính là biến mục tiêu có thể được mô hình hóa như một tổ hợp tuyến tính của các đặc trưng."
+  },
+  {
+    "question": "Câu 5: Trong phương trình $y = mx + c$, $m$ và $c$ đại diện cho điều gì?",
+    "options": [
+      "A. m là biến số, c là kết quả.",
+      "B. m là độ dốc (slope/gradient), c là điểm cắt trục tung (y-intercept).",
+      "C. m là điểm cực tiểu, c là điểm cực đại.",
+      "D. m là ma trận, c là vector."
+    ],
+    "answer": "B. m là độ dốc (slope/gradient), c là điểm cắt trục tung (y-intercept).",
+    "explanation": "Phương trình đường thẳng 1 chiều cơ bản có m là hệ số góc (độ dốc) và c là điểm cắt trục y."
+  },
+  {
+    "question": "Câu 6: Ký hiệu $h_\\theta(x)$ trong các công thức toán học của Machine Learning được gọi là gì?",
+    "options": [
+      "A. Hàm chi phí (Cost function).",
+      "B. Độ dốc (Gradient).",
+      "C. Giả thuyết (Hypothesis).",
+      "D. Lỗi bình phương (Squared error)."
+    ],
+    "answer": "C. Giả thuyết (Hypothesis).",
+    "explanation": "Phương trình đại diện cho dự đoán của mô hình (Model representation) được ký hiệu là $h_\\theta(x)$, gọi là Hypothesis."
+  },
+  {
+    "question": "Câu 7: Dạng vector hóa (vectorized form) của phương trình giả thuyết $h_\\theta(x)$ được viết như thế nào?",
+    "options": [
+      "A. $h_\\theta(x) = \\theta / x$",
+      "B. $h_\\theta(x) = \\theta^T x$",
+      "C. $h_\\theta(x) = \\theta + x$",
+      "D. $h_\\theta(x) = x^T \\theta^T$"
+    ],
+    "answer": "B. $h_\\theta(x) = \\theta^T x$",
+    "explanation": "Phương trình có thể được biểu diễn ngắn gọn dưới dạng tích vô hướng của hai vector: ma trận chuyển vị của $\\theta$ nhân với $x$ (Equation 19-1)."
+  },
+  {
+    "question": "Câu 8: Tên gọi của Hàm chi phí (Cost Function) tiêu chuẩn được sử dụng trong Hồi quy tuyến tính là gì?",
+    "options": [
+      "A. Cross-Entropy Loss.",
+      "B. Mean Absolute Error (MAE).",
+      "C. Mean Squared Error (MSE).",
+      "D. Hinge Loss."
+    ],
+    "answer": "C. Mean Squared Error (MSE).",
+    "explanation": "Hàm chi phí đo lường độ chính xác của hàm giả thuyết là Error (Lỗi) hoặc Mean Squared Error (MSE)."
+  },
+  {
+    "question": "Câu 9: Trong công thức của hàm chi phí MSE ($J(\\theta)$), tại sao người ta lại nhân thêm hằng số $\\frac{1}{2}$ ở phía trước?",
+    "options": [
+      "A. Để giảm một nửa thời gian tính toán.",
+      "B. Để chia đều dữ liệu thành 2 tập train và test.",
+      "C. Là một sự tiện lợi về mặt toán học, giúp triệt tiêu số 2 khi lấy đạo hàm của hàm số.",
+      "D. Để giới hạn giá trị của hàm chi phí từ 0 đến 1."
+    ],
+    "answer": "C. Là một sự tiện lợi về mặt toán học, giúp triệt tiêu số 2 khi lấy đạo hàm của hàm số.",
+    "explanation": "Tài liệu chú thích rõ: \"The $1/2$ is for mathematical convenience so that the 2 cancels out when we take the derivative of the function.\""
+  },
+  {
+    "question": "Câu 10: Mục tiêu tối thượng của thuật toán Linear Regression trong quá trình học là gì?",
+    "options": [
+      "A. Tối đa hóa giá trị của $\\theta$.",
+      "B. Tìm các tham số $\\theta$ sao cho hàm chi phí $J(\\theta)$ đạt giá trị nhỏ nhất (minimize).",
+      "C. Loại bỏ tất cả các sai số (error = 0).",
+      "D. Chuyển đổi dữ liệu thành một đường cong parabol."
+    ],
+    "answer": "B. Tìm các tham số $\\theta$ sao cho hàm chi phí $J(\\theta)$ đạt giá trị nhỏ nhất (minimize).",
+    "explanation": "Mục tiêu là tìm ra các trọng số (weights) $\\theta$ sao cho sự chênh lệch (cost function) giữa dự đoán và thực tế là nhỏ nhất."
+  },
+  {
+    "question": "Câu 11: Khi tính đạo hàm riêng (partial derivative) của hàm chi phí MSE, số hạng nào xuất hiện ở cuối biểu thức phản ánh sự đóng góp của đặc trưng thứ $j$?",
+    "options": [
+      "A. $x^{(i)}_j$",
+      "B. $\\alpha$",
+      "C. $y^{(i)}$",
+      "D. $m$"
+    ],
+    "answer": "A. $x^{(i)}_j$",
+    "explanation": "Dựa trên Equation 19-3, sau khi đạo hàm, biểu thức được nhân thêm với giá trị của đặc trưng $x^{(i)}_j$."
+  },
+  {
+    "question": "Câu 12: Tập dữ liệu (dataset) mẫu nào từ thư viện Scikit-learn được sử dụng trong bài thực hành của chương này?",
+    "options": [
+      "A. load_iris()",
+      "B. load_diabetes()",
+      "C. load_wine()",
+      "D. load_boston() (Boston housing dataset)"
+    ],
+    "answer": "D. load_boston() (Boston housing dataset)",
+    "explanation": "Mã nguồn bắt đầu bằng lệnh `from sklearn.datasets import load_boston`."
+  },
+  {
+    "question": "Câu 13: Mục đích của việc vẽ Ma trận tương quan (Correlation Matrix Heatmap) trước khi xây dựng mô hình là gì?",
+    "options": [
+      "A. Để xóa các giá trị rỗng (NaN).",
+      "B. Để chọn ra các đặc trưng (features) có độ tương quan cao với biến mục tiêu để đưa vào huấn luyện.",
+      "C. Để đổi màu giao diện code.",
+      "D. Để biến đổi dữ liệu phân loại thành số nguyên."
+    ],
+    "answer": "B. Để chọn ra các đặc trưng (features) có độ tương quan cao với biến mục tiêu để đưa vào huấn luyện.",
+    "explanation": "Ta dùng ma trận tương quan để xem xét các hệ số tương quan tuyến tính và chọn ra những biến ảnh hưởng mạnh nhất đến mục tiêu (target)."
+  },
+  {
+    "question": "Câu 14: Theo kinh nghiệm thực tế được nhắc đến trong tài liệu, ngưỡng giá trị nào thường được coi là có độ tương quan mạnh (strong correlation)?",
+    "options": [
+      "A. > 0.5 hoặc < -0.5",
+      "B. > 0.7 hoặc < -0.7",
+      "C. Bằng chính xác 1",
+      "D. Nằm trong khoảng từ -0.2 đến 0.2"
+    ],
+    "answer": "B. > 0.7 hoặc < -0.7",
+    "explanation": "Tài liệu ghi: \"In practice, correlation values greater than 0.7 or less than -0.7 is mostly considered as a high correlation.\""
+  },
+  {
+    "question": "Câu 15: Nếu biến 'LSTAT' có hệ số tương quan với biến mục tiêu 'MEDV' là -0.74, điều đó có ý nghĩa thực tế gì?",
+    "options": [
+      "A. Khi LSTAT tăng, MEDV cũng tăng mạnh.",
+      "B. Hai biến này hoàn toàn không liên quan gì đến nhau.",
+      "C. Đây là một sự tương quan nghịch: Khi LSTAT tăng, MEDV sẽ giảm.",
+      "D. LSTAT và MEDV là cùng một biến."
+    ],
+    "answer": "C. Đây là một sự tương quan nghịch: Khi LSTAT tăng, MEDV sẽ giảm.",
+    "explanation": "Tương quan âm (negative correlation) nghĩa là hai biến dịch chuyển ngược chiều nhau."
+  },
+  {
+    "question": "Câu 16: Lớp (Class) nào trong thư viện Scikit-learn được import để khởi tạo mô hình hồi quy tuyến tính?\n\nfrom sklearn.______ import LinearRegression",
+    "options": [
+      "A. preprocessing",
+      "B. linear_model",
+      "C. model_selection",
+      "D. metrics"
+    ],
+    "answer": "B. linear_model",
+    "explanation": "Lệnh chuẩn xác là `from sklearn.linear_model import LinearRegression`."
+  },
+  {
+    "question": "Câu 17: Hai thước đo (metrics) nào được sử dụng trong đoạn mã ví dụ để đánh giá độ chính xác của mô hình Hồi quy tuyến tính?",
+    "options": [
+      "A. Accuracy và F1-Score.",
+      "B. Precision và Recall.",
+      "C. RMSE (Root Mean Squared Error) và R2 (R-squared).",
+      "D. AUC và ROC."
+    ],
+    "answer": "C. RMSE (Root Mean Squared Error) và R2 (R-squared).",
+    "explanation": "Cuối đoạn code, mô hình được đánh giá bằng RMSE (thông qua `np.sqrt(mean_squared_error)`) và `r2_score`."
+  },
+  {
+    "question": "Câu 18: Khi đánh giá mô hình, nếu chỉ số R2 (R-squared) xấp xỉ bằng 0.67, điều đó mang ý nghĩa gì?",
+    "options": [
+      "A. Mô hình chạy mất 0.67 giây.",
+      "B. Mô hình dự đoán sai 67% dữ liệu.",
+      "C. Mô hình có thể giải thích được khoảng 67% sự thay đổi (phương sai) của tập dữ liệu.",
+      "D. Hệ số độ dốc của đường thẳng là 0.67."
+    ],
+    "answer": "C. Mô hình có thể giải thích được khoảng 67% sự thay đổi (phương sai) của tập dữ liệu.",
+    "explanation": "Chỉ số R2 = 0.668 nghĩa là mô hình giải thích được khoảng 67% sự biến thiên của dữ liệu (the model can explain about 67% variance in the dataset)."
+  },
+  {
+    "question": "Câu 19: Khi mô hình gặp hiện tượng High Bias (Underfitting - MSE cao trên cả tập train và test), tài liệu KHUYÊN DÙNG các biện pháp nào sau đây?",
+    "options": [
+      "A. Bổ sung thêm đặc trưng (add more features), dùng đặc trưng bậc cao (higher-order features), và Rescale dữ liệu.",
+      "B. Xóa bớt dữ liệu huấn luyện.",
+      "C. Áp dụng Regularization.",
+      "D. Đổi sang thuật toán học không giám sát."
+    ],
+    "answer": "A. Bổ sung thêm đặc trưng (add more features), dùng đặc trưng bậc cao (higher-order features), và Rescale dữ liệu.",
+    "explanation": "Để chữa Underfitting, ta cần làm mô hình phức tạp hơn bằng cách cung cấp thêm feature, sử dụng polynomial feature, và rescale data để thuật toán tối ưu hoạt động tốt hơn."
+  },
+  {
+    "question": "Câu 20: Khi mô hình gặp hiện tượng High Variance (Overfitting - MSE trên tập train tốt nhưng tập test rất tệ), một phương pháp thực hành tiêu chuẩn (standard practice) được đề xuất là gì?",
+    "options": [
+      "A. Thêm thật nhiều đặc trưng mới vào mô hình.",
+      "B. Áp dụng các kỹ thuật Điều chuẩn (Regularization).",
+      "C. Loại bỏ tập test.",
+      "D. Giảm số vòng lặp của Gradient Descent."
+    ],
+    "answer": "B. Áp dụng các kỹ thuật Điều chuẩn (Regularization).",
+    "explanation": "Tài liệu chốt lại: \"A standard practice, in this case, is to apply regularization to the regression model. This can do a good job at preventing overfitting.\""
+  }
+]

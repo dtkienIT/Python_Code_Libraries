@@ -1,0 +1,123 @@
+[
+  {
+    "question": "Câu 1: Kỹ thuật Regularization (Điều chuẩn) trong học máy có mục đích chính là gì?",
+    "options": [
+      "A. Giảm thời gian huấn luyện mô hình.",
+      "B. Thêm một tham số (λ) vào hàm mất mát (loss function) để cải thiện khả năng tổng quát hóa (generalize) trên dữ liệu mới bằng cách giảm hiện tượng quá khớp (overfitting).",
+      "C. Xóa bỏ các giá trị ngoại lệ (outliers) khỏi tập dữ liệu.",
+      "D. Tự động sinh ra các đặc trưng đa thức bậc cao."
+    ],
+    "answer": "B. Thêm một tham số (λ) vào hàm mất mát (loss function) để cải thiện khả năng tổng quát hóa (generalize) trên dữ liệu mới bằng cách giảm hiện tượng quá khớp (overfitting).",
+    "explanation": "Regularization là kỹ thuật thêm tham số λ vào hàm mất mát để cải thiện khả năng khái quát hóa với dữ liệu mới bằng cách giảm overfitting[cite: 3]."
+  },
+  {
+    "question": "Câu 2: Vai trò của tham số Regularization bổ sung đối với các đặc trưng (features) trong mô hình là gì?",
+    "options": [
+      "A. Nhân đôi giá trị của các đặc trưng.",
+      "B. Xóa bỏ hoàn toàn các đặc trưng không cần thiết.",
+      "C. Thu hẹp (shrink) hoặc giảm thiểu thước đo của các trọng số (weights / parameters) của các đặc trưng trong mô hình.",
+      "D. Đổi tên các biến thành định dạng số."
+    ],
+    "answer": "C. Thu hẹp (shrink) hoặc giảm thiểu thước đo của các trọng số (weights / parameters) của các đặc trưng trong mô hình.",
+    "explanation": "Vai trò của tham số điều chuẩn phụ thêm là để thu hẹp hoặc giảm thiểu thước đo của các trọng số (hoặc tham số) của các đặc trưng khác trong mô hình[cite: 4]."
+  },
+  {
+    "question": "Câu 3: Theo tài liệu, kỹ thuật Regularization đặc biệt quan trọng và nên được sử dụng khi nào?",
+    "options": [
+      "A. Khi làm việc với dữ liệu hình ảnh (Images).",
+      "B. Khi áp dụng các thuật toán không giám sát như K-Means.",
+      "C. Khi đưa thêm các đặc trưng đa thức (polynomial features) vào các mô hình tuyến tính (như linear hoặc logistic regression) để học các mối quan hệ phi tuyến tính.",
+      "D. Khi dữ liệu có chứa quá nhiều văn bản."
+    ],
+    "answer": "C. Khi đưa thêm các đặc trưng đa thức (polynomial features) vào các mô hình tuyến tính (như linear hoặc logistic regression) để học các mối quan hệ phi tuyến tính.",
+    "explanation": "Regularization nên được sử dụng khi chèn các đặc trưng đa thức vào các bộ phân loại tuyến tính hoặc hồi quy logistic để học các mối quan hệ phi tuyến tính, vì chúng rất dễ bị overfitting[cite: 5, 19]."
+  },
+  {
+    "question": "Câu 4: Điều gì sẽ xảy ra với các trọng số (weights) nếu ta thiết lập giá trị của tham số Regularization càng cao?",
+    "options": [
+      "A. Các trọng số sẽ tăng lên theo cấp số nhân.",
+      "B. Không có sự thay đổi nào đối với trọng số.",
+      "C. Mức độ (magnitude) của các trọng số đặc trưng sẽ bị giảm càng nhiều.",
+      "D. Các trọng số sẽ tự động trở thành số âm."
+    ],
+    "answer": "C. Mức độ (magnitude) của các trọng số đặc trưng sẽ bị giảm càng nhiều.",
+    "explanation": "Giá trị của regularization càng cao, thì độ lớn của các trọng số đặc trưng càng bị giảm[cite: 8]."
+  },
+  {
+    "question": "Câu 5: Nếu giá trị của tham số Regularization được đặt ở mức QUÁ CAO, mô hình sẽ gặp phải hiện tượng gì?",
+    "options": [
+      "A. Learning bias (Underfitting - Mô hình học quá kém).",
+      "B. High variance (Overfitting - Mô hình quá khớp).",
+      "C. Thuật toán chạy nhanh gấp đôi.",
+      "D. Báo lỗi tràn bộ nhớ (Out of memory)."
+    ],
+    "answer": "A. Learning bias (Underfitting - Mô hình học quá kém).",
+    "explanation": "Nếu giá trị càng cao, các hệ số (trọng số) của hàm chi phí càng bị hạn chế, điều này có thể dẫn đến thiên kiến học tập (learning bias), tức là mô hình sẽ bị underfit với tập dữ liệu[cite: 12, 13]."
+  },
+  {
+    "question": "Câu 6: Nếu giá trị của tham số Regularization tiến gần đến 0, tác động của nó lên mô hình sẽ như thế nào?",
+    "options": [
+      "A. Mô hình sẽ học được tất cả các quy luật một cách hoàn hảo.",
+      "B. Tác động của nó gần như không tồn tại (negligible effects), dẫn đến việc mô hình có thể bị Overfitting.",
+      "C. Thuật toán sẽ dừng lại ngay lập tức.",
+      "D. Tất cả dữ liệu sẽ bị chia cho 0 và gây ra lỗi."
+    ],
+    "answer": "B. Tác động của nó gần như không tồn tại (negligible effects), dẫn đến việc mô hình có thể bị Overfitting.",
+    "explanation": "Nếu giá trị tiến gần đến 0, tham số regularization có tác động không đáng kể lên mô hình, dẫn đến việc mô hình bị quá khớp (overfitting) do hình phạt (penalty) gần như không tồn tại[cite: 10, 18]."
+  },
+  {
+    "question": "Câu 7: Kỹ thuật thêm một hình phạt (penalty) để kiềm chế các giá trị tham số của mô hình tuyến tính còn được gọi bằng thuật ngữ gì?",
+    "options": [
+      "A. K-Nearest Neighbors (KNN).",
+      "B. Principal Component Analysis (PCA).",
+      "C. Ridge regression hoặc Tikhonov regularization.",
+      "D. Random Forest Regularization."
+    ],
+    "answer": "C. Ridge regression hoặc Tikhonov regularization.",
+    "explanation": "Kỹ thuật thêm hình phạt để hạn chế các giá trị tham số của mô hình còn được gọi là Ridge regression hoặc Tikhonov regularization[cite: 21]."
+  },
+  {
+    "question": "Câu 8: Để triển khai mô hình Linear Regression có áp dụng Regularization trong Scikit-learn, thư viện nào được import?\n\nfrom sklearn.linear_model import ______",
+    "options": [
+      "A. LinearRegression",
+      "B. Ridge",
+      "C. RegularizationModel",
+      "D. Lasso"
+    ],
+    "answer": "B. Ridge",
+    "explanation": "Để xây dựng mô hình Linear Regression với regularization, tài liệu sử dụng `Ridge` từ `sklearn.linear_model`[cite: 27]."
+  },
+  {
+    "question": "Câu 9: Trong đoạn mã `linear_reg = Ridge(alpha=1.0)`, thuộc tính `alpha` có chức năng gì?",
+    "options": [
+      "A. Thay đổi tốc độ học (learning rate).",
+      "B. Kiểm soát độ lớn (magnitude) của tham số regularization.",
+      "C. Xác định số vòng lặp tối đa của thuật toán.",
+      "D. Chuyển đổi dữ liệu sang dạng đa thức."
+    ],
+    "answer": "B. Kiểm soát độ lớn (magnitude) của tham số regularization.",
+    "explanation": "Thuộc tính `alpha` kiểm soát mức độ (magnitude) của tham số regularization[cite: 56]."
+  },
+  {
+    "question": "Câu 10: Để áp dụng Regularization cho bài toán phân loại (Logistic Regression), lớp (class) nào được sử dụng trong Scikit-learn?\n\n# create the logistic regression model\nlogistic_reg = ______()",
+    "options": [
+      "A. LogisticRegression()",
+      "B. ClassificationRidge()",
+      "C. RidgeClassifier()",
+      "D. RegularizedLogistic()"
+    ],
+    "answer": "C. RidgeClassifier()",
+    "explanation": "Hồi quy logistic với regularization được triển khai bằng phương thức `RidgeClassifier()`[cite: 62, 82]."
+  },
+  {
+    "question": "Câu 11: Theo tài liệu, tại sao việc áp dụng Regularization lên tập dữ liệu Iris bằng `RidgeClassifier` lại khiến độ chính xác (accuracy) bị giảm so với mô hình thông thường?",
+    "options": [
+      "A. Vì tập dữ liệu Iris bị thiếu quá nhiều dữ liệu (missing values).",
+      "B. Vì thuật toán hạn chế các giá trị tham số để ngăn chặn variance cao trên một tập dữ liệu vốn dĩ đã khá đơn giản và đã có độ chính xác cao sẵn rồi.",
+      "C. Vì tham số `alpha` mặc định bị thiết lập là 0.",
+      "D. Vì RidgeClassifier không hỗ trợ bài toán đa lớp."
+    ],
+    "answer": "B. Vì thuật toán hạn chế các giá trị tham số để ngăn chặn variance cao trên một tập dữ liệu vốn dĩ đã khá đơn giản và đã có độ chính xác cao sẵn rồi.",
+    "explanation": "Độ chính xác bị giảm vì thuật toán đang gò ép các tham số mô hình để ngăn chặn high variance trên một tập dữ liệu vốn dĩ đã khá đơn giản và đã có độ chính xác cao ngay cả khi không có regularization[cite: 83]."
+  }
+]

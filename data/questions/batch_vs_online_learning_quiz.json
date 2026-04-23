@@ -1,0 +1,112 @@
+[
+  {
+    "question": "Câu 1: Hai lựa chọn thiết kế chính về cách sử dụng dữ liệu trong quy trình mô hình hóa (modeling pipeline) là gì?",
+    "options": [
+      "A. Học máy (Machine Learning) và Học sâu (Deep Learning).",
+      "B. Học theo lô (Batch learning) và Học trực tuyến (Online learning).",
+      "C. Học có giám sát (Supervised) và Học không giám sát (Unsupervised).",
+      "D. Dữ liệu tĩnh (Static data) và Dữ liệu động (Dynamic data)."
+    ],
+    "answer": "B. Học theo lô (Batch learning) và Học trực tuyến (Online learning).",
+    "explanation": "Tài liệu mở đầu bằng việc chỉ ra 2 lựa chọn: xây dựng mô hình với dữ liệu tĩnh (Batch learning) hoặc dữ liệu chảy liên tục thành luồng (Online learning)."
+  },
+  {
+    "question": "Câu 2: Trong Batch Learning (Học theo lô), mô hình học máy được huấn luyện như thế nào?",
+    "options": [
+      "A. Huấn luyện bằng cách sử dụng từng mẫu dữ liệu một.",
+      "B. Huấn luyện sử dụng toàn bộ tập dữ liệu có sẵn tại một thời điểm nhất định.",
+      "C. Chỉ sử dụng 20% dữ liệu để huấn luyện.",
+      "D. Không cần huấn luyện, mô hình tự học khi đưa vào sử dụng."
+    ],
+    "answer": "B. Huấn luyện sử dụng toàn bộ tập dữ liệu có sẵn tại một thời điểm nhất định.",
+    "explanation": "Đặc trưng của Batch learning là nó gom toàn bộ dữ liệu có sẵn lại thành một 'lô' lớn để huấn luyện cùng một lúc."
+  },
+  {
+    "question": "Câu 3: Quá trình Batch Learning còn được gọi bằng một tên khác là gì?",
+    "options": [
+      "A. Offline learning (Học ngoại tuyến).",
+      "B. Inline learning.",
+      "C. Sequential learning.",
+      "D. Real-time learning."
+    ],
+    "answer": "A. Offline learning (Học ngoại tuyến).",
+    "explanation": "Tài liệu ghi rõ: \"This process is also called offline learning.\" vì nó học xong rồi mới được đưa ra môi trường thực tế."
+  },
+  {
+    "question": "Câu 4: Trong Batch Learning, điều gì sẽ xảy ra nếu có dữ liệu mới và ta cần cập nhật mô hình?",
+    "options": [
+      "A. Mô hình sẽ tự động cập nhật chỉ với dữ liệu mới đó.",
+      "B. Dữ liệu mới sẽ bị bỏ qua hoàn toàn.",
+      "C. Mô hình phải được huấn luyện lại từ đầu (from scratch) bằng cách sử dụng CẢ dữ liệu cũ và dữ liệu mới.",
+      "D. Mô hình cũ sẽ bị xóa và thay thế bằng một mô hình trống."
+    ],
+    "answer": "C. Mô hình phải được huấn luyện lại từ đầu (from scratch) bằng cách sử dụng CẢ dữ liệu cũ và dữ liệu mới.",
+    "explanation": "Nhược điểm lớn của Batch learning là không thể học thêm. Nó phải gộp dữ liệu mới vào dữ liệu cũ và chạy lại quá trình huấn luyện từ con số 0."
+  },
+  {
+    "question": "Câu 5: Dựa trên lưu đồ của Batch Learning (Figure 15-1), sau bước Đánh giá Hiệu suất (Evaluate Performance), câu hỏi quyết định nào được đưa ra trước khi đưa vào sản xuất (Go to production)?",
+    "options": [
+      "A. Is performance good? (Hiệu suất có tốt không?)",
+      "B. Is data enough? (Dữ liệu đã đủ chưa?)",
+      "C. Is model fast? (Mô hình có nhanh không?)",
+      "D. Are there any errors? (Có lỗi nào không?)"
+    ],
+    "answer": "A. Is performance good? (Hiệu suất có tốt không?)",
+    "explanation": "Theo sơ đồ, nếu hiệu suất tốt (Yes) thì đưa vào production, nếu không (No) thì quay lại bước cải thiện hiệu suất."
+  },
+  {
+    "question": "Câu 6: Phương pháp Batch Learning trở nên KHÔNG phù hợp (inappropriate) trong hoàn cảnh nào?",
+    "options": [
+      "A. Khi dữ liệu có kích thước quá nhỏ.",
+      "B. Khi dữ liệu được tạo ra liên tục từ nguồn và mô hình cần được cập nhật trực tiếp (on the go).",
+      "C. Khi cần đánh giá hiệu suất mô hình trước khi sản xuất.",
+      "D. Khi dữ liệu không có nhãn (unlabeled data)."
+    ],
+    "answer": "B. Khi dữ liệu được tạo ra liên tục từ nguồn và mô hình cần được cập nhật trực tiếp (on the go).",
+    "explanation": "Việc phải huấn luyện lại toàn bộ dữ liệu từ đầu khiến Batch learning trở nên vô dụng ở các hệ thống tạo dữ liệu nhanh và liên tục."
+  },
+  {
+    "question": "Câu 7: Trong Online Learning (Học trực tuyến), dữ liệu được đưa vào thuật toán theo hình thức nào?",
+    "options": [
+      "A. Đưa toàn bộ một lần duy nhất.",
+      "B. Đưa vào dạng file nén zip.",
+      "C. Chảy vào theo từng mẫu riêng lẻ (individually) hoặc theo các lô nhỏ (mini-batches).",
+      "D. Chỉ đưa vào các dữ liệu bị lỗi."
+    ],
+    "answer": "C. Chảy vào theo từng mẫu riêng lẻ (individually) hoặc theo các lô nhỏ (mini-batches).",
+    "explanation": "Online learning cho phép dữ liệu chạy vào thành luồng (streams), có thể xử lý từng cái một hoặc xử lý theo từng cụm nhỏ (mini-batch)."
+  },
+  {
+    "question": "Câu 8: Tài liệu đưa ra ví dụ điển hình (typical example) nào là hoàn hảo nhất để áp dụng Online Learning?",
+    "options": [
+      "A. Nhận diện khuôn mặt tội phạm.",
+      "B. Dự đoán thị trường chứng khoán (Stock market prediction).",
+      "C. Dịch thuật ngôn ngữ tự nhiên.",
+      "D. Phân loại email rác (Spam classification)."
+    ],
+    "answer": "B. Dự đoán thị trường chứng khoán (Stock market prediction).",
+    "explanation": "Thị trường chứng khoán là môi trường thay đổi tính bằng giây, dữ liệu sinh ra liên tục theo thời gian thực (real-time), do đó Online Learning là giải pháp tối ưu."
+  },
+  {
+    "question": "Câu 9: Theo lưu đồ Online Learning (Figure 15-2), điểm khác biệt so với Batch Learning là gì?",
+    "options": [
+      "A. Không có bước đánh giá hiệu suất (Evaluate Performance).",
+      "B. Nguồn dữ liệu (Humongous data) đi qua các khối 'mini batch' trước khi vào thuật toán học, và có thêm bước 'Update Model' (Cập nhật mô hình).",
+      "C. Không thể đưa mô hình vào sản xuất (production).",
+      "D. Bắt buộc phải có con người giám sát ở giữa."
+    ],
+    "answer": "B. Nguồn dữ liệu (Humongous data) đi qua các khối 'mini batch' trước khi vào thuật toán học, và có thêm bước 'Update Model' (Cập nhật mô hình).",
+    "explanation": "Sơ đồ 15-2 thể hiện rõ sự xuất hiện của các 'mini batch' trích xuất từ dữ liệu khổng lồ, và thuật toán liên tục làm hành động 'Update Model' thay vì phải học lại từ đầu."
+  },
+  {
+    "question": "Câu 10: Sự khác biệt cốt lõi về \"thời điểm kết thúc việc học\" giữa Batch Learning và Online Learning là gì?",
+    "options": [
+      "A. Batch learning không bao giờ kết thúc, Online learning kết thúc sau 1 ngày.",
+      "B. Cả hai đều kết thúc việc học ngay khi được lập trình xong.",
+      "C. Batch learning kết thúc quá trình học ngay sau khi mô hình được đưa vào môi trường sản xuất (production), trong khi Online learning tiếp tục học và cập nhật liên tục trên môi trường sản xuất.",
+      "D. Online learning chỉ học vào ban ngày, Batch learning học vào ban đêm."
+    ],
+    "answer": "C. Batch learning kết thúc quá trình học ngay sau khi mô hình được đưa vào môi trường sản xuất (production), trong khi Online learning tiếp tục học và cập nhật liên tục trên môi trường sản xuất.",
+    "explanation": "Với Batch learning, một khi đã \"ship\" ra production thì nó không học thêm nữa. Với Online learning, việc đưa vào production cũng đồng nghĩa với việc nó đang tiếp nhận luồng dữ liệu thực tế để tự cập nhật."
+  }
+]

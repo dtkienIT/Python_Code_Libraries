@@ -1,0 +1,244 @@
+[
+  {
+    "question": "Câu 1: Thư viện Scikit-learn trong Python được sử dụng với mục đích chính là gì?",
+    "options": [
+      "A. Lập trình giao diện web front-end.",
+      "B. Quản trị cơ sở dữ liệu SQL.",
+      "C. Cung cấp một giao diện tiêu chuẩn để triển khai các thuật toán học máy (machine learning).",
+      "D. Phát triển ứng dụng di động iOS/Android."
+    ],
+    "answer": "C. Cung cấp một giao diện tiêu chuẩn để triển khai các thuật toán học máy (machine learning).",
+    "explanation": "Tài liệu mở đầu bằng định nghĩa: Scikit-learn là thư viện Python cung cấp giao diện chuẩn để xây dựng thuật toán học máy và các chức năng hỗ trợ tiền xử lý dữ liệu."
+  },
+  {
+    "question": "Câu 2: Đâu KHÔNG phải là một trong năm tập dữ liệu mẫu (sample datasets) phổ biến được tích hợp sẵn trong Scikit-learn theo tài liệu?",
+    "options": [
+      "A. Boston house-prices dataset",
+      "B. Titanic passenger dataset",
+      "C. Iris dataset",
+      "D. Wine dataset"
+    ],
+    "answer": "B. Titanic passenger dataset",
+    "explanation": "5 tập dữ liệu được liệt kê trong tài liệu là: Boston house-prices, Diabetes, Iris, Wisconsin breast cancer, và Wine. Tập dữ liệu Titanic không nằm trong danh sách này."
+  },
+  {
+    "question": "Câu 3: Mục đích của việc sử dụng các tập dữ liệu mẫu (sample datasets) có sẵn trong Scikit-learn là gì?",
+    "options": [
+      "A. Để thay thế hoàn toàn dữ liệu thực tế trong các sản phẩm công nghiệp.",
+      "B. Để học cách xây dựng cơ sở dữ liệu đám mây.",
+      "C. Để thử nghiệm nhanh, tạo nguyên mẫu (prototyping) và tiết kiệm thời gian tải/làm sạch dữ liệu khi học.",
+      "D. Để huấn luyện các mô hình Deep Learning khổng lồ."
+    ],
+    "answer": "C. Để thử nghiệm nhanh, tạo nguyên mẫu (prototyping) và tiết kiệm thời gian tải/làm sạch dữ liệu khi học.",
+    "explanation": "Những bộ dữ liệu này nhỏ, được làm sạch sẵn, rất lý tưởng cho mục đích học tập và chạy thử mô hình mới thay vì mất thời gian tìm dữ liệu trên mạng."
+  },
+  {
+    "question": "Câu 4: Cú pháp chính xác để tải tập dữ liệu Iris trong Scikit-learn là gì?",
+    "options": [
+      "A. datasets.get_iris()",
+      "B. datasets.read_iris()",
+      "C. datasets.fetch_iris()",
+      "D. datasets.load_iris()"
+    ],
+    "answer": "D. datasets.load_iris()",
+    "explanation": "Cú pháp chuẩn để tải dữ liệu mẫu là `datasets.load_<tên_dataset>()`, ví dụ `datasets.load_iris()`."
+  },
+  {
+    "question": "Câu 5: Trong học máy, hàm nào của Scikit-learn được sử dụng để chia tập dữ liệu thành tập huấn luyện (training set) và tập kiểm thử (test set)?",
+    "options": [
+      "A. split_data()",
+      "B. train_test_split()",
+      "C. divide_dataset()",
+      "D. model_split()"
+    ],
+    "answer": "B. train_test_split()",
+    "explanation": "Phương thức `train_test_split` nằm trong module `sklearn.model_selection` là công cụ chuẩn để chia tách dữ liệu."
+  },
+  {
+    "question": "Câu 6: Nếu người dùng KHÔNG chỉ định tham số `test_size` trong hàm `train_test_split`, kích thước mặc định của tập kiểm thử sẽ được gán là bao nhiêu?",
+    "options": [
+      "A. 10%",
+      "B. 20%",
+      "C. 25%",
+      "D. 30%"
+    ],
+    "answer": "C. 25%",
+    "explanation": "Tài liệu ghi rõ: \"By default, test_size is set to 25% of the dataset size\" (Mặc định test_size là 25%)."
+  },
+  {
+    "question": "Câu 7: Việc thiết lập tham số `shuffle=True` trong hàm `train_test_split` có tác dụng gì?",
+    "options": [
+      "A. Tự động chuẩn hóa dữ liệu.",
+      "B. Sắp xếp dữ liệu theo thứ tự tăng dần.",
+      "C. Xáo trộn (shuffle) dữ liệu ngẫu nhiên trước khi chia cắt.",
+      "D. Lọc bỏ các dữ liệu trùng lặp."
+    ],
+    "answer": "C. Xáo trộn (shuffle) dữ liệu ngẫu nhiên trước khi chia cắt.",
+    "explanation": "Đây là một tiêu chuẩn thực hành (standard practice) nhằm đảm bảo dữ liệu train/test không bị thiên lệch theo thứ tự ban đầu."
+  },
+  {
+    "question": "Câu 8: Trong quá trình tiền xử lý dữ liệu (preprocessing), phương thức `fit()` được dùng để làm gì?",
+    "options": [
+      "A. Áp dụng các biến đổi trực tiếp lên dữ liệu.",
+      "B. Học (learn) các tham số cần thiết từ tập dữ liệu.",
+      "C. Xóa các dữ liệu bị thiếu.",
+      "D. Đánh giá độ chính xác của mô hình."
+    ],
+    "answer": "B. Học (learn) các tham số cần thiết từ tập dữ liệu.",
+    "explanation": "Phương thức `fit()` có nhiệm vụ tính toán và học các tham số (ví dụ: tìm giá trị min/max, mean/std) từ dữ liệu truyền vào."
+  },
+  {
+    "question": "Câu 9: Phương thức nào kết hợp cả việc học tham số (learn) và áp dụng biến đổi (transform) lên cùng một tập dữ liệu trong một bước duy nhất?",
+    "options": [
+      "A. fit()",
+      "B. transform()",
+      "C. apply()",
+      "D. fit_transform()"
+    ],
+    "answer": "D. fit_transform()",
+    "explanation": "Hàm `fit_transform()` thực hiện cả hai bước fit và transform trong một lần gọi lệnh (one-off fashion)."
+  },
+  {
+    "question": "Câu 10: Quá trình thay đổi tỷ lệ dữ liệu (Data Rescaling) thường đưa các thuộc tính về phạm vi (range) nào?",
+    "options": [
+      "A. Từ -1 đến 1",
+      "B. Từ 0 đến 1",
+      "C. Từ 0 đến 100",
+      "D. Từ -10 đến 10"
+    ],
+    "answer": "B. Từ 0 đến 1",
+    "explanation": "Khi thực hiện data rescaling, thông thường các đặc trưng sẽ được đưa về khoảng giá trị giữa 0 và 1."
+  },
+  {
+    "question": "Câu 11: Module nào trong `sklearn.preprocessing` được sử dụng để thực hiện việc Data Rescaling?",
+    "options": [
+      "A. StandardScaler",
+      "B. Binarizer",
+      "C. MinMaxScaler",
+      "D. Normalizer"
+    ],
+    "answer": "C. MinMaxScaler",
+    "explanation": "Data rescaling được triển khai trong Scikit-learn bằng module `MinMaxScaler`."
+  },
+  {
+    "question": "Câu 12: Tại sao việc các đặc trưng (features) có thang đo (scale) chênh lệch quá lớn lại gây bất lợi cho thuật toán Gradient Descent?",
+    "options": [
+      "A. Nó làm biến dạng hình ảnh đồ thị in ra.",
+      "B. Nó làm mất mát các dữ liệu có giá trị nhỏ.",
+      "C. Nó thu hẹp không gian hàm số và làm cho thuật toán tối ưu hóa (như gradient descent) rất khó tìm thấy điểm cực tiểu toàn cục.",
+      "D. Nó gây ra lỗi tràn bộ nhớ RAM."
+    ],
+    "answer": "C. Nó thu hẹp không gian hàm số và làm cho thuật toán tối ưu hóa (như gradient descent) rất khó tìm thấy điểm cực tiểu toàn cục.",
+    "explanation": "Sự khác biệt về thang đo tạo ra một không gian hàm số phức tạp, cản trở việc hội tụ của Gradient Descent."
+  },
+  {
+    "question": "Câu 13: Các thuật toán học máy tuyến tính (như linear regression và logistic regression) thường giả định dữ liệu có phân phối như thế nào?",
+    "options": [
+      "A. Phân phối đều (Uniform distribution).",
+      "B. Phân phối chuẩn (Normal distribution) với giá trị trung bình (mean) là 0 và độ lệch chuẩn (standard deviation) là 1.",
+      "C. Phân phối nhị thức (Binomial distribution).",
+      "D. Không có quy tắc phân phối nào."
+    ],
+    "answer": "B. Phân phối chuẩn (Normal distribution) với giá trị trung bình (mean) là 0 và độ lệch chuẩn (standard deviation) là 1.",
+    "explanation": "Đây là lý do kỹ thuật Standardization (Chuẩn hóa) ra đời để đưa dữ liệu lệch về lại dạng phân phối chuẩn."
+  },
+  {
+    "question": "Câu 14: Module nào trong Scikit-learn giúp thực hiện Standardization (Chuẩn hóa dữ liệu)?",
+    "options": [
+      "A. MinMaxScaler",
+      "B. StandardScaler",
+      "C. LabelEncoder",
+      "D. PolynomialFeatures"
+    ],
+    "answer": "B. StandardScaler",
+    "explanation": "Module `StandardScaler` được dùng để chuẩn hóa dữ liệu sao cho mean = 0 và variance = 1."
+  },
+  {
+    "question": "Câu 15: Kỹ thuật Binarization (Nhị phân hóa dữ liệu) thực hiện công việc gì?",
+    "options": [
+      "A. Chuyển đổi chữ cái thành số.",
+      "B. Tính giá trị trung bình của dữ liệu.",
+      "C. Chuyển đổi dữ liệu số thành các giá trị 0 và 1 dựa trên một ngưỡng (threshold) được thiết lập.",
+      "D. Nén dung lượng file."
+    ],
+    "answer": "C. Chuyển đổi dữ liệu số thành các giá trị 0 và 1 dựa trên một ngưỡng (threshold) được thiết lập.",
+    "explanation": "Bất kỳ giá trị nào lớn hơn ngưỡng sẽ thành 1, các giá trị nhỏ hơn hoặc bằng ngưỡng sẽ thành 0."
+  },
+  {
+    "question": "Câu 16: Nếu sử dụng đoạn mã `scaler = Binarizer(threshold=1.5).fit(X)`, một giá trị đầu vào là 1.4 sẽ được biến đổi thành giá trị nào?",
+    "options": [
+      "A. 0.0",
+      "B. 1.0",
+      "C. 1.5",
+      "D. -1.0"
+    ],
+    "answer": "A. 0.0",
+    "explanation": "Vì 1.4 nhỏ hơn ngưỡng 1.5, nên module Binarizer sẽ chuyển nó thành 0.0."
+  },
+  {
+    "question": "Câu 17: Tại sao chúng ta cần phải mã hóa các biến phân loại (Encoding Categorical Variables)?",
+    "options": [
+      "A. Vì hầu hết các thuật toán học máy không thể thực hiện tính toán với các biến không phải dạng số (non-numerical).",
+      "B. Để tăng cường bảo mật dữ liệu.",
+      "C. Để làm đẹp định dạng bảng tính.",
+      "D. Để giảm số lượng cột trong dataset."
+    ],
+    "answer": "A. Vì hầu hết các thuật toán học máy không thể thực hiện tính toán với các biến không phải dạng số (non-numerical).",
+    "explanation": "Máy tính chỉ hiểu các con số, nên mọi biến văn bản (chữ) đều phải được mã hóa thành số."
+  },
+  {
+    "question": "Câu 18: Trong Scikit-learn, chức năng của `LabelEncoder` là gì?",
+    "options": [
+      "A. Tạo nhãn cho các đồ thị.",
+      "B. Chuyển đổi các nhãn (labels) dạng văn bản/danh mục thành các số nguyên (integers).",
+      "C. Phân tích ngữ nghĩa của câu.",
+      "D. Xóa các biến phân loại khỏi dữ liệu."
+    ],
+    "answer": "B. Chuyển đổi các nhãn (labels) dạng văn bản/danh mục thành các số nguyên (integers).",
+    "explanation": "LabelEncoder sẽ ánh xạ mỗi chuỗi văn bản thành một con số nguyên định danh (ví dụ: 'efik' -> 0, 'ibibio' -> 1)."
+  },
+  {
+    "question": "Câu 19: Chức năng của `OneHotEncoder` trong quá trình mã hóa dữ liệu là gì?",
+    "options": [
+      "A. Đánh dấu các dữ liệu bị thiếu.",
+      "B. Thay thế các biến phân loại bằng giá trị trung bình.",
+      "C. Biến đổi một đặc trưng phân loại thành một ma trận thưa (sparse matrix) chứa các số nguyên, mỗi cột tương ứng với một giá trị danh mục có thể có.",
+      "D. Sắp xếp lại thứ tự của các cột."
+    ],
+    "answer": "C. Biến đổi một đặc trưng phân loại thành một ma trận thưa (sparse matrix) chứa các số nguyên, mỗi cột tương ứng với một giá trị danh mục có thể có.",
+    "explanation": "Figure 18-2 minh họa OneHotEncoder chuyển 1 cột chứa 3 loại nhãn thành 3 cột riêng biệt, chứa các số 0 và 1."
+  },
+  {
+    "question": "Câu 20: Theo ví dụ trong tài liệu, nếu một tập dữ liệu gốc có hai chiều `[a, b]`, việc biến đổi đa thức bậc hai (second-degree polynomial) sẽ sinh ra một mảng các đặc trưng mới nào?",
+    "options": [
+      "A. [a, b]",
+      "B. [a^2, b^2]",
+      "C. [a, b, a+b, a*b]",
+      "D. [1, a, b, a^2, ab, b^2]"
+    ],
+    "answer": "D. [1, a, b, a^2, ab, b^2]",
+    "explanation": "Tài liệu chỉ rõ việc biến đổi đa thức bậc 2 sẽ tạo ra mảng chứa số 1, các biến gốc, bình phương của chúng, và tích của chúng."
+  },
+  {
+    "question": "Câu 21: Module nào trong Scikit-learn được dùng để tạo ra các đặc trưng đa thức bậc cao (higher-order polynomial features)?",
+    "options": [
+      "A. HighOrderFeatures",
+      "B. PolynomialFeatures",
+      "C. MathFeatures",
+      "D. ComplexGenerator"
+    ],
+    "answer": "B. PolynomialFeatures",
+    "explanation": "Module được import là `from sklearn.preprocessing import PolynomialFeatures`."
+  },
+  {
+    "question": "Câu 22: Trong dòng mã `X_train, X_test, y_train, y_test = train_test_split(iris.data, iris.target)`, thuộc tính `iris.target` đại diện cho phần nào của tập dữ liệu?",
+    "options": [
+      "A. Số lượng mẫu tối đa.",
+      "B. Biến mục tiêu (target variable) hay nhãn cần dự đoán.",
+      "C. Tập hợp các đặc trưng đầu vào (design matrix).",
+      "D. Kích thước tập huấn luyện."
+    ],
+    "answer": "B. Biến mục tiêu (target variable) hay nhãn cần dự đoán.",
+    "explanation": "`iris.data` chứa các đặc trưng đầu vào (X), còn `iris.target` chứa nhãn đầu ra (y) cần dự đoán."
+  }
+]
