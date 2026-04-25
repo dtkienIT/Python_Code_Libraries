@@ -1,123 +1,222 @@
 [
   {
-    "question": "Câu 1: Kỹ thuật Regularization (Điều chuẩn) trong học máy có mục đích chính là gì?",
+    "question": "Câu 1: Thuật toán Support Vector Machine (SVM) có thể được sử dụng để giải quyết loại bài toán nào trong Machine Learning?",
     "options": [
-      "A. Giảm thời gian huấn luyện mô hình.",
-      "B. Thêm một tham số (λ) vào hàm mất mát (loss function) để cải thiện khả năng tổng quát hóa (generalize) trên dữ liệu mới bằng cách giảm hiện tượng quá khớp (overfitting).",
-      "C. Xóa bỏ các giá trị ngoại lệ (outliers) khỏi tập dữ liệu.",
-      "D. Tự động sinh ra các đặc trưng đa thức bậc cao."
+      "A. Chỉ bài toán Phân loại (Classification).",
+      "B. Chỉ bài toán Hồi quy (Regression).",
+      "C. Cả bài toán Phân loại (Classification) và Hồi quy (Regression).",
+      "D. Bài toán Học không giám sát (Unsupervised Learning)."
     ],
-    "answer": "B. Thêm một tham số (λ) vào hàm mất mát (loss function) để cải thiện khả năng tổng quát hóa (generalize) trên dữ liệu mới bằng cách giảm hiện tượng quá khớp (overfitting).",
-    "explanation": "Regularization là kỹ thuật thêm tham số λ vào hàm mất mát để cải thiện khả năng khái quát hóa với dữ liệu mới bằng cách giảm overfitting[cite: 3]."
+    "answer": "C. Cả bài toán Phân loại (Classification) và Hồi quy (Regression).",
+    "explanation": "Tài liệu giới thiệu: Support vector machine (SVM) là một thuật toán học máy dùng để học các mô hình phân loại và hồi quy."
   },
   {
-    "question": "Câu 2: Vai trò của tham số Regularization bổ sung đối với các đặc trưng (features) trong mô hình là gì?",
+    "question": "Câu 2: Với một tập dữ liệu có hai lớp có thể phân tách tuyến tính (linearly separable), có bao nhiêu đường thẳng có thể phân chia chúng?",
     "options": [
-      "A. Nhân đôi giá trị của các đặc trưng.",
-      "B. Xóa bỏ hoàn toàn các đặc trưng không cần thiết.",
-      "C. Thu hẹp (shrink) hoặc giảm thiểu thước đo của các trọng số (weights / parameters) của các đặc trưng trong mô hình.",
-      "D. Đổi tên các biến thành định dạng số."
+      "A. Đúng 1 đường duy nhất.",
+      "B. 2 đường.",
+      "C. Không có đường nào.",
+      "D. Một số lượng vô hạn (infinite number) các đường thẳng."
     ],
-    "answer": "C. Thu hẹp (shrink) hoặc giảm thiểu thước đo của các trọng số (weights / parameters) của các đặc trưng trong mô hình.",
-    "explanation": "Vai trò của tham số điều chuẩn phụ thêm là để thu hẹp hoặc giảm thiểu thước đo của các trọng số (hoặc tham số) của các đặc trưng khác trong mô hình[cite: 4]."
+    "answer": "D. Một số lượng vô hạn (infinite number) các đường thẳng.",
+    "explanation": "Figure 22-1 minh họa rằng có vô số các đường phân cách (hyperplanes) có thể tách biệt hai lớp khi chúng có thể phân tách tuyến tính."
   },
   {
-    "question": "Câu 3: Theo tài liệu, kỹ thuật Regularization đặc biệt quan trọng và nên được sử dụng khi nào?",
+    "question": "Câu 3: Mục tiêu cốt lõi của thuật toán SVM là gì?",
     "options": [
-      "A. Khi làm việc với dữ liệu hình ảnh (Images).",
-      "B. Khi áp dụng các thuật toán không giám sát như K-Means.",
-      "C. Khi đưa thêm các đặc trưng đa thức (polynomial features) vào các mô hình tuyến tính (như linear hoặc logistic regression) để học các mối quan hệ phi tuyến tính.",
-      "D. Khi dữ liệu có chứa quá nhiều văn bản."
+      "A. Chuyển tất cả dữ liệu về cùng một lớp.",
+      "B. Tìm ra đường thẳng (hyperplane) TỐT NHẤT phân chia hai lớp.",
+      "C. Tính trung bình cộng của các điểm dữ liệu.",
+      "D. Giảm số lượng tham số của mô hình xuống 0."
     ],
-    "answer": "C. Khi đưa thêm các đặc trưng đa thức (polynomial features) vào các mô hình tuyến tính (như linear hoặc logistic regression) để học các mối quan hệ phi tuyến tính.",
-    "explanation": "Regularization nên được sử dụng khi chèn các đặc trưng đa thức vào các bộ phân loại tuyến tính hoặc hồi quy logistic để học các mối quan hệ phi tuyến tính, vì chúng rất dễ bị overfitting[cite: 5, 19]."
+    "answer": "B. Tìm ra đường thẳng (hyperplane) TỐT NHẤT phân chia hai lớp.",
+    "explanation": "Trong số vô hạn các đường thẳng, mục tiêu của SVM là tìm ra một đường duy nhất tốt nhất để phân tách hai lớp."
   },
   {
-    "question": "Câu 4: Điều gì sẽ xảy ra với các trọng số (weights) nếu ta thiết lập giá trị của tham số Regularization càng cao?",
+    "question": "Câu 4: Hyperplane (Siêu phẳng) được định nghĩa là gì?",
     "options": [
-      "A. Các trọng số sẽ tăng lên theo cấp số nhân.",
-      "B. Không có sự thay đổi nào đối với trọng số.",
-      "C. Mức độ (magnitude) của các trọng số đặc trưng sẽ bị giảm càng nhiều.",
-      "D. Các trọng số sẽ tự động trở thành số âm."
+      "A. Là giới hạn bộ nhớ của thuật toán.",
+      "B. Là một đường thẳng vô hình bao quanh toàn bộ dữ liệu.",
+      "C. Là một bộ phân biệt (discriminant) phân chia hai lớp trong không gian n-chiều (n-dimensional space).",
+      "D. Là một hàm kích hoạt trong mạng nơ-ron."
     ],
-    "answer": "C. Mức độ (magnitude) của các trọng số đặc trưng sẽ bị giảm càng nhiều.",
-    "explanation": "Giá trị của regularization càng cao, thì độ lớn của các trọng số đặc trưng càng bị giảm[cite: 8]."
+    "answer": "C. Là một bộ phân biệt (discriminant) phân chia hai lớp trong không gian n-chiều (n-dimensional space).",
+    "explanation": "Tài liệu giải thích: Trong không gian 2D nó là một đường thẳng (line), trong 3D là một mặt phẳng (plane), và ở chiều cao hơn gọi là siêu phẳng (hyperplane)."
   },
   {
-    "question": "Câu 5: Nếu giá trị của tham số Regularization được đặt ở mức QUÁ CAO, mô hình sẽ gặp phải hiện tượng gì?",
+    "question": "Câu 5: Khoảng cách giữa hyperplane phân tách và các điểm dữ liệu gần nhất của một trong hai lớp được gọi là gì?",
     "options": [
-      "A. Learning bias (Underfitting - Mô hình học quá kém).",
-      "B. High variance (Overfitting - Mô hình quá khớp).",
-      "C. Thuật toán chạy nhanh gấp đôi.",
-      "D. Báo lỗi tràn bộ nhớ (Out of memory)."
+      "A. Error rate (Tỷ lệ lỗi)",
+      "B. Margin (Biên / Khoảng cách lề)",
+      "C. Loss (Mất mát)",
+      "D. Threshold (Ngưỡng)"
     ],
-    "answer": "A. Learning bias (Underfitting - Mô hình học quá kém).",
-    "explanation": "Nếu giá trị càng cao, các hệ số (trọng số) của hàm chi phí càng bị hạn chế, điều này có thể dẫn đến thiên kiến học tập (learning bias), tức là mô hình sẽ bị underfit với tập dữ liệu[cite: 12, 13]."
+    "answer": "B. Margin (Biên / Khoảng cách lề)",
+    "explanation": "Margin (khoảng cách biên) là khoảng cách nhỏ nhất từ hyperplane tới các điểm dữ liệu gần nó nhất."
   },
   {
-    "question": "Câu 6: Nếu giá trị của tham số Regularization tiến gần đến 0, tác động của nó lên mô hình sẽ như thế nào?",
+    "question": "Câu 6: Các điểm dữ liệu nằm ngay trên đường biên ranh giới (boundary points) của hai lớp có tên gọi là gì?",
     "options": [
-      "A. Mô hình sẽ học được tất cả các quy luật một cách hoàn hảo.",
-      "B. Tác động của nó gần như không tồn tại (negligible effects), dẫn đến việc mô hình có thể bị Overfitting.",
-      "C. Thuật toán sẽ dừng lại ngay lập tức.",
-      "D. Tất cả dữ liệu sẽ bị chia cho 0 và gây ra lỗi."
+      "A. Outliers (Ngoại lệ)",
+      "B. Centroids (Tâm cụm)",
+      "C. Support vectors (Các vector hỗ trợ)",
+      "D. Weak learners (Học giả yếu)"
     ],
-    "answer": "B. Tác động của nó gần như không tồn tại (negligible effects), dẫn đến việc mô hình có thể bị Overfitting.",
-    "explanation": "Nếu giá trị tiến gần đến 0, tham số regularization có tác động không đáng kể lên mô hình, dẫn đến việc mô hình bị quá khớp (overfitting) do hình phạt (penalty) gần như không tồn tại[cite: 10, 18]."
+    "answer": "C. Support vectors (Các vector hỗ trợ)",
+    "explanation": "Chúng được gọi là các support vectors vì chúng 'hỗ trợ' (hay định hình) sự xuất hiện của đường hyperplane."
   },
   {
-    "question": "Câu 7: Kỹ thuật thêm một hình phạt (penalty) để kiềm chế các giá trị tham số của mô hình tuyến tính còn được gọi bằng thuật ngữ gì?",
+    "question": "Câu 7: Bộ phân loại Maximal Margin Classifier (Bộ phân loại biên tối đa) hoạt động tốt nhất trong trường hợp nào?",
     "options": [
-      "A. K-Nearest Neighbors (KNN).",
-      "B. Principal Component Analysis (PCA).",
-      "C. Ridge regression hoặc Tikhonov regularization.",
-      "D. Random Forest Regularization."
+      "A. Khi dữ liệu bị trộn lẫn vào nhau.",
+      "B. Khi dữ liệu hoàn toàn có thể phân tách tuyến tính (perfectly linearly separable) và không có nhiễu.",
+      "C. Khi chỉ có 1 lớp dữ liệu duy nhất.",
+      "D. Khi dữ liệu dạng hình ảnh 3D."
     ],
-    "answer": "C. Ridge regression hoặc Tikhonov regularization.",
-    "explanation": "Kỹ thuật thêm hình phạt để hạn chế các giá trị tham số của mô hình còn được gọi là Ridge regression hoặc Tikhonov regularization[cite: 21]."
+    "answer": "B. Khi dữ liệu hoàn toàn có thể phân tách tuyến tính (perfectly linearly separable) và không có nhiễu.",
+    "explanation": "Nếu dữ liệu không có tính phân tách tuyến tính hoàn hảo (có nhiễu hoặc outliers), Maximal Margin Classifier sẽ thất bại hoặc tạo ra margin cực kỳ hẹp."
   },
   {
-    "question": "Câu 8: Để triển khai mô hình Linear Regression có áp dụng Regularization trong Scikit-learn, thư viện nào được import?\n\nfrom sklearn.linear_model import ______",
+    "question": "Câu 8: Để giải quyết nhược điểm của Maximal Margin Classifier khi dữ liệu có nhiễu, SVM sử dụng khái niệm \"Soft Margin\" (Biên mềm). Soft Margin hoạt động như thế nào?",
     "options": [
-      "A. LinearRegression",
-      "B. Ridge",
-      "C. RegularizationModel",
-      "D. Lasso"
+      "A. Nó xóa bỏ tất cả các điểm dữ liệu bị nhiễu.",
+      "B. Nó cho phép và bỏ qua một mức độ lỗi nhất định (misclassifications) khi tìm đường phân tách để có một margin rộng hơn và mạnh mẽ hơn.",
+      "C. Nó uốn cong đường phân tách thành hình tròn.",
+      "D. Nó chỉ lấy ngẫu nhiên 10 điểm dữ liệu."
     ],
-    "answer": "B. Ridge",
-    "explanation": "Để xây dựng mô hình Linear Regression với regularization, tài liệu sử dụng `Ridge` từ `sklearn.linear_model`[cite: 27]."
+    "answer": "B. Nó cho phép và bỏ qua một mức độ lỗi nhất định (misclassifications) khi tìm đường phân tách để có một margin rộng hơn và mạnh mẽ hơn.",
+    "explanation": "Kỹ thuật Soft Margin cố tình chấp nhận một vài điểm bị phân loại sai (vượt qua biên) để ngăn chặn overfitting."
   },
   {
-    "question": "Câu 9: Trong đoạn mã `linear_reg = Ridge(alpha=1.0)`, thuộc tính `alpha` có chức năng gì?",
+    "question": "Câu 9: Siêu tham số (hyper-parameter) nào trong Support Vector Classifier (Soft Margin) đóng vai trò điều chỉnh sự đánh đổi giữa Bias và Variance?",
     "options": [
-      "A. Thay đổi tốc độ học (learning rate).",
-      "B. Kiểm soát độ lớn (magnitude) của tham số regularization.",
-      "C. Xác định số vòng lặp tối đa của thuật toán.",
-      "D. Chuyển đổi dữ liệu sang dạng đa thức."
+      "A. Tham số K",
+      "B. Tham số C",
+      "C. Tham số Alpha",
+      "D. Tham số Learning Rate"
     ],
-    "answer": "B. Kiểm soát độ lớn (magnitude) của tham số regularization.",
-    "explanation": "Thuộc tính `alpha` kiểm soát mức độ (magnitude) của tham số regularization[cite: 56]."
+    "answer": "B. Tham số C",
+    "explanation": "Tham số C (Cost) đóng vai trò cực kỳ quan trọng trong việc quy định mức độ phạt (penalty) đối với các điểm vi phạm đường biên."
   },
   {
-    "question": "Câu 10: Để áp dụng Regularization cho bài toán phân loại (Logistic Regression), lớp (class) nào được sử dụng trong Scikit-learn?\n\n# create the logistic regression model\nlogistic_reg = ______()",
+    "question": "Câu 10: Nếu giá trị của tham số C được thiết lập ở mức RẤT CAO, SVM sẽ hoạt động như thế nào?",
     "options": [
-      "A. LogisticRegression()",
-      "B. ClassificationRidge()",
-      "C. RidgeClassifier()",
-      "D. RegularizedLogistic()"
+      "A. Mô hình sẽ có bias cao và variance thấp (hẹp nhưng ổn định).",
+      "B. Mô hình sẽ có xu hướng quá khớp (overfit) do bị nhạy cảm với từng điểm dữ liệu, cố gắng không để điểm nào vi phạm, dẫn đến Variance cao.",
+      "C. Mô hình sẽ không dự đoán được gì.",
+      "D. Margin sẽ trở nên vô tận."
     ],
-    "answer": "C. RidgeClassifier()",
-    "explanation": "Hồi quy logistic với regularization được triển khai bằng phương thức `RidgeClassifier()`[cite: 62, 82]."
+    "answer": "B. Mô hình sẽ có xu hướng quá khớp (overfit) do bị nhạy cảm với từng điểm dữ liệu, cố gắng không để điểm nào vi phạm, dẫn đến Variance cao.",
+    "explanation": "C cao tức là hình phạt nặng, mô hình sẽ cố làm Margin hẹp lại để không điểm nào vi phạm -> dễ bị Overfitting (High Variance)."
   },
   {
-    "question": "Câu 11: Theo tài liệu, tại sao việc áp dụng Regularization lên tập dữ liệu Iris bằng `RidgeClassifier` lại khiến độ chính xác (accuracy) bị giảm so với mô hình thông thường?",
+    "question": "Câu 11: Ngược lại, nếu giá trị C được thiết lập THẤP, điều gì xảy ra với Margin?",
     "options": [
-      "A. Vì tập dữ liệu Iris bị thiếu quá nhiều dữ liệu (missing values).",
-      "B. Vì thuật toán hạn chế các giá trị tham số để ngăn chặn variance cao trên một tập dữ liệu vốn dĩ đã khá đơn giản và đã có độ chính xác cao sẵn rồi.",
-      "C. Vì tham số `alpha` mặc định bị thiết lập là 0.",
-      "D. Vì RidgeClassifier không hỗ trợ bài toán đa lớp."
+      "A. Margin biến mất.",
+      "B. Margin trở nên rộng hơn, cho phép nhiều vi phạm hơn, dẫn đến mô hình khái quát hóa tốt hơn (Lower variance, higher bias).",
+      "C. Margin bị bóp nghẹt lại.",
+      "D. Các support vectors sẽ bị xóa."
     ],
-    "answer": "B. Vì thuật toán hạn chế các giá trị tham số để ngăn chặn variance cao trên một tập dữ liệu vốn dĩ đã khá đơn giản và đã có độ chính xác cao sẵn rồi.",
-    "explanation": "Độ chính xác bị giảm vì thuật toán đang gò ép các tham số mô hình để ngăn chặn high variance trên một tập dữ liệu vốn dĩ đã khá đơn giản và đã có độ chính xác cao ngay cả khi không có regularization[cite: 83]."
+    "answer": "B. Margin trở nên rộng hơn, cho phép nhiều vi phạm hơn, dẫn đến mô hình khái quát hóa tốt hơn (Lower variance, higher bias).",
+    "explanation": "C thấp nghĩa là phạt nhẹ, mô hình thoải mái mở rộng margin. Điều này làm giảm variance nhưng tăng bias."
+  },
+  {
+    "question": "Câu 12: Khi đối mặt với bài toán phân loại đa lớp (Multi-class), thuật toán SVM sử dụng cơ chế nào để giải quyết?",
+    "options": [
+      "A. One-vs-All (OvA)",
+      "B. One-vs-One (OvO)",
+      "C. Random Forest",
+      "D. K-Means"
+    ],
+    "answer": "B. One-vs-One (OvO)",
+    "explanation": "Trong khi Logistic Regression thường dùng OvA, SVM sử dụng phương pháp One-vs-One (xây dựng mô hình cho từng CẶP lớp)."
+  },
+  {
+    "question": "Câu 13: Theo cơ chế One-vs-One, nếu một tập dữ liệu có 4 lớp (A, B, C, D), SVM sẽ tạo ra bao nhiêu bộ phân loại riêng biệt?",
+    "options": [
+      "A. 4",
+      "B. 6",
+      "C. 8",
+      "D. 12"
+    ],
+    "answer": "B. 6",
+    "explanation": "Công thức là K(K-1)/2. Với K=4, ta có (4*3)/2 = 6 bộ phân loại (A-B, A-C, A-D, B-C, B-D, C-D)."
+  },
+  {
+    "question": "Câu 14: Khi dữ liệu KHÔNG thể phân tách bằng một đường thẳng tuyến tính (non-linear decision boundaries), giải pháp nào được áp dụng cho SVM?",
+    "options": [
+      "A. Tăng kích thước tập dữ liệu.",
+      "B. Thêm các đặc trưng đa thức bậc cao (higher-order polynomial terms) hoặc đặc trưng tương tác.",
+      "C. Đổi sang dùng Hồi quy tuyến tính.",
+      "D. Giảm tham số C về 0."
+    ],
+    "answer": "B. Thêm các đặc trưng đa thức bậc cao (higher-order polynomial terms) hoặc đặc trưng tương tác.",
+    "explanation": "Tài liệu ghi rõ: Chúng ta có thể mở rộng không gian đặc trưng bằng cách thêm polynomial terms để vẽ các đường ranh giới phi tuyến tính."
+  },
+  {
+    "question": "Câu 15: \"Kernel trick\" (Thủ thuật Kernel) trong SVM là gì?",
+    "options": [
+      "A. Là một cách hack bộ nhớ máy tính.",
+      "B. Là một phép biến đổi toán học tính toán tích vô hướng trong không gian đa chiều mở rộng một cách vô cùng hiệu quả (computationally cheap).",
+      "C. Là kỹ thuật xóa dữ liệu nhiễu.",
+      "D. Là thuật toán nén ảnh."
+    ],
+    "answer": "B. Là một phép biến đổi toán học tính toán tích vô hướng trong không gian đa chiều mở rộng một cách vô cùng hiệu quả (computationally cheap).",
+    "explanation": "Kernel trick giúp SVM mô phỏng việc chiếu dữ liệu lên không gian nhiều chiều để tìm đường phân tách phi tuyến mà không tốn quá nhiều tài nguyên điện toán."
+  },
+  {
+    "question": "Câu 16: Đâu là hàm Kernel phi tuyến tính phổ biến nhất được sử dụng cùng với SVM?",
+    "options": [
+      "A. Linear Kernel",
+      "B. Sigmoid Kernel",
+      "C. Radial Basis Function (RBF) Kernel",
+      "D. Dropout Kernel"
+    ],
+    "answer": "C. Radial Basis Function (RBF) Kernel",
+    "explanation": "Radial Basis Function (RBF) là hàm kernel phổ biến và mạnh mẽ nhất khi dùng SVM phi tuyến."
+  },
+  {
+    "question": "Câu 17: Trong RBF Kernel, tham số Gamma (γ) kiểm soát điều gì?",
+    "options": [
+      "A. Kích thước tập dữ liệu.",
+      "B. Số lượng support vectors.",
+      "C. Mức độ ảnh hưởng / tầm với (influence / reach) của một điểm dữ liệu huấn luyện đơn lẻ.",
+      "D. Độ dài của margin."
+    ],
+    "answer": "C. Mức độ ảnh hưởng / tầm với (influence / reach) của một điểm dữ liệu huấn luyện đơn lẻ.",
+    "explanation": "Tham số Gamma điều chỉnh 'tầm ảnh hưởng' của một mẫu huấn luyện. Gamma thấp = tầm ảnh hưởng xa, Gamma cao = tầm ảnh hưởng gần."
+  },
+  {
+    "question": "Câu 18: Lớp (Class) nào trong thư viện Scikit-learn được import để thực hiện bài toán Phân loại với SVM?\n\nfrom sklearn.svm import ______",
+    "options": [
+      "A. SVR",
+      "B. SVC (Support Vector Classifier)",
+      "C. SVM_Model",
+      "D. LinearSVM"
+    ],
+    "answer": "B. SVC (Support Vector Classifier)",
+    "explanation": "Để phân loại ta dùng `SVC` (Support Vector Classification)."
+  },
+  {
+    "question": "Câu 19: Trong đoạn code thực hành, tham số `kernel` của mô hình phân loại được thiết lập là gì?\n\nsvm_model = SVC(kernel='______', gamma='scale')",
+    "options": [
+      "A. linear",
+      "B. poly",
+      "C. rbf",
+      "D. sigmoid"
+    ],
+    "answer": "C. rbf",
+    "explanation": "Hàm kernel mặc định và phổ biến nhất được sử dụng trong hàm SVC là `rbf` (Radial Basis Function)."
+  },
+  {
+    "question": "Câu 20: Khi muốn sử dụng SVM cho bài toán Hồi quy (dự đoán giá nhà Boston), lớp nào trong thư viện Scikit-learn sẽ được gọi?\n\nfrom sklearn.svm import ______",
+    "options": [
+      "A. SVR (Support Vector Regressor)",
+      "B. SVC",
+      "C. SVM_Regressor",
+      "D. Ridge"
+    ],
+    "answer": "A. SVR (Support Vector Regressor)",
+    "explanation": "Trong đoạn code phần 'SVM for Regression', tài liệu sử dụng lệnh `from sklearn.svm import SVR`."
   }
 ]
