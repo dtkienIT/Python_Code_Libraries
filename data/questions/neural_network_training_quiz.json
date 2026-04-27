@@ -1,0 +1,607 @@
+[
+  {
+    "question": "Câu 1: Thành phần nào KHÔNG thuộc kiến trúc cơ bản cấu thành nên một Mạng nơ-ron nhân tạo (ANN)?",
+    "options": [
+      "A. Input layer (Lớp đầu vào).",
+      "B. Hidden layer(s) (Lớp ẩn).",
+      "C. Output layer (Lớp đầu ra).",
+      "D. Control layer (Lớp điều khiển)."
+    ],
+    "answer": "D. Control layer (Lớp điều khiển).",
+    "explanation": "Theo tài liệu, một kiến trúc ANN tiêu chuẩn chỉ bao gồm: An input layer, Hidden layer(s), và An output layer. Không tồn tại 'Control layer' trong kiến trúc cơ bản."
+  },
+  {
+    "question": "Câu 2: Chức năng chính của \"Hidden layer\" (Lớp ẩn) trong mạng nơ-ron là gì?",
+    "options": [
+      "A. Tiếp nhận trực tiếp dữ liệu thô từ môi trường bên ngoài.",
+      "B. Là nơi diễn ra hoạt động cốt lõi của Deep Learning, thực hiện tính toán và học các đặc trưng phân cấp (hierarchical feature representations) ngày càng phức tạp từ dữ liệu.",
+      "C. Hiển thị kết quả dự đoán cuối cùng cho người dùng.",
+      "D. Chứa đựng toàn bộ các dữ liệu rỗng (Null/NaN)."
+    ],
+    "answer": "B. Là nơi diễn ra hoạt động cốt lõi của Deep Learning, thực hiện tính toán và học các đặc trưng phân cấp (hierarchical feature representations) ngày càng phức tạp từ dữ liệu.",
+    "explanation": "Lớp ẩn là 'ngựa thồ' (workhorse) của Deep Learning, nơi mỗi lớp mạng sẽ học một tập hợp các biểu diễn đặc trưng phức tạp hơn dựa trên lớp trước đó."
+  },
+  {
+    "question": "Câu 3: Quá trình tính toán truyền dữ liệu từ lớp đầu vào (input layer) xuyên qua các lớp ẩn để tạo ra giá trị dự đoán ở lớp đầu ra được gọi là gì?",
+    "options": [
+      "A. Backpropagation (Lan truyền ngược).",
+      "B. Forward propagation (Lan truyền tiến).",
+      "C. Gradient Descent (Giảm độ dốc).",
+      "D. Weight Initialization (Khởi tạo trọng số)."
+    ],
+    "answer": "B. Forward propagation (Lan truyền tiến).",
+    "explanation": "Forward propagation là quá trình tính toán đầu ra của mạng nơ-ron bằng cách đưa dữ liệu đầu vào chạy tiến về phía trước qua các lớp để ra được kết quả dự đoán."
+  },
+  {
+    "question": "Câu 4: Bên trong một nơ-ron nhân tạo, hàm tuyến tính (linear combination) tính toán giá trị Z dựa trên công thức toán học nào? (Với W là trọng số, X là đầu vào, b là độ lệch)",
+    "options": [
+      "A. Z = W + X + b",
+      "B. Z = W / X - b",
+      "C. Z = (W * X) + b (Trọng số nhân với Đầu vào, cộng Độ lệch).",
+      "D. Z = X^W + b"
+    ],
+    "answer": "C. Z = (W * X) + b (Trọng số nhân với Đầu vào, cộng Độ lệch).",
+    "explanation": "Đầu tiên, mỗi nơ-ron tính toán một tổ hợp tuyến tính bằng cách lấy tích vô hướng của đầu vào (X) và trọng số (W), sau đó cộng thêm một hệ số chệch (Bias - b)."
+  },
+  {
+    "question": "Câu 5: Vai trò của thành phần \"Bias\" (Độ lệch / Hệ số chệch - ký hiệu là b) đối với một nơ-ron là gì?",
+    "options": [
+      "A. Nó giúp làm chậm quá trình huấn luyện để tránh Overfitting.",
+      "B. Nó cho phép dịch chuyển (shift) hàm kích hoạt sang trái hoặc phải trên trục tọa độ, giúp mô hình linh hoạt hơn trong việc khớp với các mẫu dữ liệu thực tế.",
+      "C. Nó thay thế hoàn toàn cho trọng số (weights).",
+      "D. Nó dùng để đếm số vòng lặp của thuật toán."
+    ],
+    "answer": "B. Nó cho phép dịch chuyển (shift) hàm kích hoạt sang trái hoặc phải trên trục tọa độ, giúp mô hình linh hoạt hơn trong việc khớp với các mẫu dữ liệu thực tế.",
+    "explanation": "Bias cung cấp cho nơ-ron khả năng tự do tịnh tiến ranh giới quyết định (decision boundary) ra khỏi gốc tọa độ (0,0), mang lại sự linh hoạt tối đa để giải quyết bài toán."
+  },
+  {
+    "question": "Câu 6: Bước tiếp theo NGAY SAU khi tính toán xong giá trị tuyến tính Z = WX + b tại một nơ-ron là gì?",
+    "options": [
+      "A. Đưa Z trực tiếp làm kết quả dự đoán cuối cùng.",
+      "B. Cho Z đi qua một Hàm kích hoạt (Activation Function).",
+      "C. Cập nhật lại tức thì trọng số W.",
+      "D. Xóa giá trị Z nếu nó là số âm."
+    ],
+    "answer": "B. Cho Z đi qua một Hàm kích hoạt (Activation Function).",
+    "explanation": "Sau khi tính tổng tuyến tính Z, nơ-ron sẽ nạp giá trị Z này vào một hàm kích hoạt phi tuyến (f(Z)) để tạo ra đầu ra (Activation) truyền cho lớp tiếp theo."
+  },
+  {
+    "question": "Câu 7: Tại sao Hàm kích hoạt (Activation Function) lại là yếu tố BẮT BUỘC phải có trong các mạng nơ-ron nhiều lớp?",
+    "options": [
+      "A. Để ép mọi giá trị biến thành số 0.",
+      "B. Để đưa tính \"phi tuyến\" (non-linearity) vào mạng. Nếu không có nó, dù mạng có sâu đến đâu, nó cũng chỉ xẹp lại (collapse) tương đương với một mô hình Hồi quy tuyến tính (Linear Regression) đơn giản.",
+      "C. Để làm cho mạng nơ-ron chạy nhanh gấp đôi.",
+      "D. Để tự động chuyển đổi dữ liệu hình ảnh thành văn bản."
+    ],
+    "answer": "B. Để đưa tính \"phi tuyến\" (non-linearity) vào mạng. Nếu không có nó, dù mạng có sâu đến đâu, nó cũng chỉ xẹp lại (collapse) tương đương với một mô hình Hồi quy tuyến tính (Linear Regression) đơn giản.",
+    "explanation": "Các bài toán thực tế (nhận diện ảnh, giọng nói) là phi tuyến tính cực kỳ phức tạp. Hàm kích hoạt bẻ cong không gian tuyến tính, cho phép mạng học được các hàm toán học phức tạp đó."
+  },
+  {
+    "question": "Câu 8: Trong quá trình huấn luyện mạng nơ-ron (Training a Neural Network), Hàm mất mát (Loss/Cost Function) được sử dụng để làm gì?",
+    "options": [
+      "A. Đo lường sai số (error) giữa giá trị do mạng dự đoán ra (prediction) và giá trị thực tế (ground truth) để thuật toán biết mô hình đang hoạt động tốt hay tệ.",
+      "B. Tính toán số lượng nơ-ron cần thiết để dựng mạng.",
+      "C. Tối ưu hóa bộ nhớ RAM của máy tính.",
+      "D. Tự động khởi tạo ngẫu nhiên các trọng số ban đầu."
+    ],
+    "answer": "A. Đo lường sai số (error) giữa giá trị do mạng dự đoán ra (prediction) và giá trị thực tế (ground truth) để thuật toán biết mô hình đang hoạt động tốt hay tệ.",
+    "explanation": "Loss function hoạt động như một thước đo hình phạt. Mục tiêu của toàn bộ quá trình huấn luyện mạng nơ-ron là giảm thiểu (minimize) giá trị của hàm mất mát này."
+  },
+  {
+    "question": "Câu 9: Hàm mất mát (Loss Function) phổ biến nhất được sử dụng cho bài toán Hồi quy (Regression) dự đoán giá trị liên tục trong Deep Learning là gì?",
+    "options": [
+      "A. Cross-Entropy Loss.",
+      "B. Mean Squared Error (MSE).",
+      "C. Hinge Loss.",
+      "D. Binary Cross-Entropy."
+    ],
+    "answer": "B. Mean Squared Error (MSE).",
+    "explanation": "Với các bài toán Hồi quy (như dự đoán giá nhà), Mean Squared Error (MSE) hoặc Mean Absolute Error (MAE) là hàm chi phí tiêu chuẩn."
+  },
+  {
+    "question": "Câu 10: Đối với bài toán Phân loại (Classification) dùng mạng nơ-ron, hàm mất mát (Loss Function) nào là sự lựa chọn tiêu chuẩn?",
+    "options": [
+      "A. Mean Absolute Error (MAE).",
+      "B. Mean Squared Error (MSE).",
+      "C. Cross-Entropy Loss (Log Loss).",
+      "D. R-squared."
+    ],
+    "answer": "C. Cross-Entropy Loss (Log Loss).",
+    "explanation": "Cross-Entropy là hàm mất mát mặc định và tối ưu nhất để xử lý các bài toán phân loại (dự đoán xác suất) trong Mạng nơ-ron."
+  },
+  {
+    "question": "Câu 11: Một thuật toán học sâu (Deep Learning) học hỏi bằng cách tự động điều chỉnh và tối ưu hóa các tham số (parameters) nào?",
+    "options": [
+      "A. Learning rate và Batch size.",
+      "B. Trọng số (Weights) và Độ lệch (Biases).",
+      "C. Số lượng các lớp ẩn và số lượng nơ-ron.",
+      "D. Các thuật toán tối ưu hóa."
+    ],
+    "answer": "B. Trọng số (Weights) và Độ lệch (Biases).",
+    "explanation": "Weights (W) và Biases (b) là những thứ cấu thành nên 'kiến thức' của mạng. Quá trình huấn luyện thực chất là việc tìm ra bộ W và b tối ưu nhất."
+  },
+  {
+    "question": "Câu 12: Thuật toán nào được mạng nơ-ron sử dụng để tính toán đạo hàm (gradients) của hàm mất mát đối với tất cả các trọng số trong mạng, bằng cách truyền ngược sai số từ lớp đầu ra trở về lớp đầu vào?",
+    "options": [
+      "A. K-Means Clustering.",
+      "B. Backpropagation (Lan truyền ngược).",
+      "C. Dropout.",
+      "D. Decision Trees."
+    ],
+    "answer": "B. Backpropagation (Lan truyền ngược).",
+    "explanation": "Backpropagation là trái tim của việc huấn luyện mạng nơ-ron. Nó phân bổ lại phần lỗi (error) cho từng nơ-ron để biết nơ-ron nào cần chỉnh sửa trọng số bao nhiêu."
+  },
+  {
+    "question": "Câu 13: Thuật toán Backpropagation sử dụng quy tắc toán học nền tảng nào của vi tích phân để có thể tính đạo hàm qua mạng lưới hàng ngàn nơ-ron lồng ghép nhau?",
+    "options": [
+      "A. Quy tắc tích (Product rule).",
+      "B. Quy tắc thương (Quotient rule).",
+      "C. Quy tắc chuỗi (Chain rule).",
+      "D. Định lý L'Hôpital."
+    ],
+    "answer": "C. Quy tắc chuỗi (Chain rule).",
+    "explanation": "Backpropagation áp dụng Chain Rule (Quy tắc chuỗi của đạo hàm) để lấy đạo hàm của các hàm hợp lồng nhau, bắt đầu từ Loss Function ngược về từng trọng số gốc."
+  },
+  {
+    "question": "Câu 14: Sau khi Backpropagation tính toán được các đạo hàm (gradients), thuật toán tối ưu hóa nào thường được sử dụng để điều chỉnh (cập nhật) các trọng số đi ngược hướng đạo hàm nhằm tìm cực tiểu?",
+    "options": [
+      "A. Principal Component Analysis (PCA).",
+      "B. Random Forest.",
+      "C. Gradient Descent (Giảm độ dốc).",
+      "D. Support Vector Machines."
+    ],
+    "answer": "C. Gradient Descent (Giảm độ dốc).",
+    "explanation": "Gradient Descent là thuật toán đi tìm điểm đáy của đồ thị hàm mất mát bằng cách lấy Trọng số cũ trừ đi (Đạo hàm * Tốc độ học)."
+  },
+  {
+    "question": "Câu 15: Trong Gradient Descent, siêu tham số (hyper-parameter) nào đóng vai trò kiểm soát KÍCH THƯỚC BƯỚC ĐI (step size) của mạng khi cập nhật trọng số?",
+    "options": [
+      "A. Batch size.",
+      "B. Epoch.",
+      "C. Learning rate (Tốc độ học).",
+      "D. Momentum."
+    ],
+    "answer": "C. Learning rate (Tốc độ học).",
+    "explanation": "Learning rate (ký hiệu là $\\alpha$) quyết định mức độ mạng sẽ thay đổi trọng số ở mỗi vòng lặp. Nó là siêu tham số quan trọng nhất cần phải tuning."
+  },
+  {
+    "question": "Câu 16: Hiện tượng gì có nguy cơ xảy ra nếu Tốc độ học (Learning rate) được thiết lập QUÁ LỚN?",
+    "options": [
+      "A. Mô hình sẽ học cực kỳ chính xác và kết thúc nhanh.",
+      "B. Thuật toán sẽ mất quá nhiều thời gian để hội tụ.",
+      "C. Mô hình có thể \"nhảy vọt\" (overshoot) qua điểm cực tiểu cục bộ, dao động mất kiểm soát và thậm chí không bao giờ hội tụ (phân kỳ - diverge).",
+      "D. Mạng nơ-ron sẽ tự động thu nhỏ số lượng lớp."
+    ],
+    "answer": "C. Mô hình có thể \"nhảy vọt\" (overshoot) qua điểm cực tiểu cục bộ, dao động mất kiểm soát và thậm chí không bao giờ hội tụ (phân kỳ - diverge).",
+    "explanation": "Nếu bước đi quá dài, Gradient Descent sẽ nhảy qua lại hai bên thung lũng (overshoot) và hàm mất mát sẽ bị đẩy lên vô cực thay vì giảm xuống."
+  },
+  {
+    "question": "Câu 17: Hiện tượng gì sẽ xảy ra nếu Tốc độ học (Learning rate) được thiết lập QUÁ NHỎ?",
+    "options": [
+      "A. Mô hình sẽ chạy rất nhanh.",
+      "B. Thuật toán mất rất nhiều thời gian (chạy rất chậm) để tiến tới điểm tối ưu, và dễ bị mắc kẹt ở các điểm saddle point.",
+      "C. Trọng số sẽ tự động biến thành 0 và báo lỗi.",
+      "D. Mạng sẽ bị quá khớp (overfit) ngay ở epoch đầu tiên."
+    ],
+    "answer": "B. Thuật toán mất rất nhiều thời gian (chạy rất chậm) để tiến tới điểm tối ưu, và dễ bị mắc kẹt ở các điểm saddle point.",
+    "explanation": "Những bước đi rùa bò khiến quá trình training kéo dài lê thê và tiêu tốn một lượng tài nguyên tính toán không cần thiết."
+  },
+  {
+    "question": "Câu 18: Khái niệm \"Epoch\" (Kỷ nguyên) trong quy trình huấn luyện mạng nơ-ron có nghĩa là gì?",
+    "options": [
+      "A. Một lần cập nhật trọng số duy nhất.",
+      "B. Quá trình chia dữ liệu ra làm 10 phần.",
+      "C. Là một chu kỳ hoàn chỉnh khi thuật toán truyền TOÀN BỘ tập dữ liệu huấn luyện (tất cả các mẫu) qua mạng nơ-ron (cả tiến và ngược) đúng 1 lần.",
+      "D. Là tổng thời gian khởi động mô hình."
+    ],
+    "answer": "C. Là một chu kỳ hoàn chỉnh khi thuật toán truyền TOÀN BỘ tập dữ liệu huấn luyện (tất cả các mẫu) qua mạng nơ-ron (cả tiến và ngược) đúng 1 lần.",
+    "explanation": "Để học tốt, mạng nơ-ron thường phải trải qua hàng chục hoặc hàng trăm Epochs (lặp đi lặp lại việc nhìn toàn bộ dữ liệu nhiều lần)."
+  },
+  {
+    "question": "Câu 19: Khái niệm \"Batch Size\" (Kích thước lô) mang ý nghĩa gì?",
+    "options": [
+      "A. Số lượng epoch tối đa mạng được phép chạy.",
+      "B. Số lượng mẫu dữ liệu (samples) được gom lại đẩy qua mạng cùng lúc để tính toán sai số và cập nhật trọng số 1 lần, thay vì đẩy toàn bộ dữ liệu cùng lúc.",
+      "C. Kích thước (MB) của file dữ liệu.",
+      "D. Tổng số lượng nơ-ron trong mô hình."
+    ],
+    "answer": "B. Số lượng mẫu dữ liệu (samples) được gom lại đẩy qua mạng cùng lúc để tính toán sai số và cập nhật trọng số 1 lần, thay vì đẩy toàn bộ dữ liệu cùng lúc.",
+    "explanation": "Do giới hạn bộ nhớ RAM/VRAM, ta không thể nhồi hàng triệu bức ảnh vào mạng cùng lúc. Ta chia chúng thành các Mini-batches (ví dụ 32 hoặc 64 ảnh/lô)."
+  },
+  {
+    "question": "Câu 20: Giả sử tập dữ liệu của bạn có 1000 mẫu, bạn đặt \"Batch size\" = 100. Thuật toán sẽ cần bao nhiêu vòng lặp cập nhật trọng số (iterations/steps) để hoàn thành đúng 1 Epoch?",
+    "options": [
+      "A. 1 vòng lặp.",
+      "B. 10 vòng lặp.",
+      "C. 100 vòng lặp.",
+      "D. 1000 vòng lặp."
+    ],
+    "answer": "B. 10 vòng lặp.",
+    "explanation": "Vì Batch Size là 100, nên mạng sẽ lấy 100 mẫu đẩy vào -> cập nhật 1 lần. Làm điều này 10 lần thì vừa hết 1000 mẫu (Hoàn thành 1 Epoch)."
+  },
+  {
+    "question": "Câu 21: Về các hàm kích hoạt, hàm Sigmoid (Logistic function) có đặc điểm là \"nén\" (squash) mọi giá trị đầu vào Z vào trong khoảng giá trị nào?",
+    "options": [
+      "A. Từ -1 đến 1.",
+      "B. Từ 0 đến vô cực.",
+      "C. Từ 0 đến 1.",
+      "D. Từ -vô cực đến vô cực."
+    ],
+    "answer": "C. Từ 0 đến 1.",
+    "explanation": "Hàm Sigmoid có hình chữ S, giới hạn mọi đầu ra trong khoảng (0, 1). Nó thường được dùng ở output layer cho bài toán phân loại nhị phân."
+  },
+  {
+    "question": "Câu 22: Nhược điểm chí mạng khiến hàm Sigmoid ngày nay rất ÍT được sử dụng ở các lớp ẩn (hidden layers) trong các Mạng nơ-ron SÂU (Deep Neural Networks) là gì?",
+    "options": [
+      "A. Nó tính toán tốn quá nhiều RAM.",
+      "B. Vấn đề Triệt tiêu đạo hàm (Vanishing Gradient Problem) – khi đầu vào quá lớn hoặc quá nhỏ, đường cong phẳng lỳ làm đạo hàm tiến về 0, khiến các nơ-ron ở lớp đầu không thể cập nhật trọng số và ngừng học.",
+      "C. Nó trả về giá trị âm làm hỏng mạng.",
+      "D. Nó gây ra hiện tượng Overfitting ngay lập tức."
+    ],
+    "answer": "B. Vấn đề Triệt tiêu đạo hàm (Vanishing Gradient Problem) – khi đầu vào quá lớn hoặc quá nhỏ, đường cong phẳng lỳ làm đạo hàm tiến về 0, khiến các nơ-ron ở lớp đầu không thể cập nhật trọng số và ngừng học.",
+    "explanation": "Hai đầu của hàm Sigmoid rất phẳng (đạo hàm gần như bằng 0). Khi lùi về các lớp trước qua Chain Rule, các số 0 nhân với nhau làm gradient biến mất hoàn toàn."
+  },
+  {
+    "question": "Câu 23: Khác với Sigmoid, hàm kích hoạt Tanh (Hyperbolic Tangent) nén đầu vào vào khoảng giá trị nào?",
+    "options": [
+      "A. Từ 0 đến 1.",
+      "B. Từ -1 đến 1.",
+      "C. Từ 0 đến vô cực.",
+      "D. Từ -10 đến 10."
+    ],
+    "answer": "B. Từ -1 đến 1.",
+    "explanation": "Tanh cũng có hình chữ S và bị lỗi Vanishing Gradient giống Sigmoid, nhưng nó dời tâm về 0 (zero-centered) với phạm vi từ -1 đến 1, nên thực nghiệm thường chạy tốt hơn Sigmoid ở lớp ẩn."
+  },
+  {
+    "question": "Câu 24: Hàm kích hoạt ReLU (Rectified Linear Unit) - vị vua hiện tại của các lớp ẩn - hoạt động dựa trên công thức toán học vô cùng đơn giản nào?",
+    "options": [
+      "A. f(x) = 1 / (1 + e^-x)",
+      "B. f(x) = max(0, x) (trả về chính x nếu x dương, và trả về 0 nếu x âm).",
+      "C. f(x) = e^x",
+      "D. f(x) = x^2"
+    ],
+    "answer": "B. f(x) = max(0, x) (trả về chính x nếu x dương, và trả về 0 nếu x âm).",
+    "explanation": "Bằng cách gạt bỏ hoàn toàn phần âm thành 0 và giữ nguyên đường thẳng y = x cho phần dương, ReLU cực kỳ nhanh và giải quyết được vấn đề Vanishing Gradient cho phần số dương."
+  },
+  {
+    "question": "Câu 25: Nhược điểm lớn nhất của hàm ReLU cần phải cẩn thận khi sử dụng là gì?",
+    "options": [
+      "A. Vấn đề \"Dying ReLU\" (Nơ-ron chết) - Nếu một nơ-ron có tổng đầu vào < 0, nó sẽ bị kẹt ở giá trị 0. Đạo hàm cũng sẽ bằng 0, khiến nó vĩnh viễn không cập nhật được trọng số và \"chết\" trong quá trình học.",
+      "B. Vấn đề Bùng nổ đạo hàm (Exploding Gradient).",
+      "C. Rất tốn tài nguyên máy tính do công thức phức tạp.",
+      "D. Chỉ xử lý được hình ảnh, không xử lý được chữ."
+    ],
+    "answer": "A. Vấn đề \"Dying ReLU\" (Nơ-ron chết) - Nếu một nơ-ron có tổng đầu vào < 0, nó sẽ bị kẹt ở giá trị 0. Đạo hàm cũng sẽ bằng 0, khiến nó vĩnh viễn không cập nhật được trọng số và \"chết\" trong quá trình học.",
+    "explanation": "Nếu learning rate quá cao khiến trọng số cập nhật mạnh và rơi vào miền âm, nơ-ron dùng ReLU đó sẽ vĩnh viễn không bao giờ kích hoạt lại nữa."
+  },
+  {
+    "question": "Câu 26: Hàm Leaky ReLU ra đời để khắc phục vấn đề \"Dying ReLU\" bằng cơ chế nào?",
+    "options": [
+      "A. Tự động xóa các nơ-ron chết.",
+      "B. Thay vì ép giá trị âm về đúng 0, nó cho phép rò rỉ một độ dốc vô cùng nhỏ (ví dụ f(x) = 0.01x cho phần âm), giúp duy trì gradient khác 0 để nơ-ron vẫn có cơ hội học tiếp và sống lại.",
+      "C. Biến x âm thành x dương tuyệt đối.",
+      "D. Nhảy qua hàm kích hoạt luôn."
+    ],
+    "answer": "B. Thay vì ép giá trị âm về đúng 0, nó cho phép rò rỉ một độ dốc vô cùng nhỏ (ví dụ f(x) = 0.01x cho phần âm), giúp duy trì gradient khác 0 để nơ-ron vẫn có cơ hội học tiếp và sống lại.",
+    "explanation": "Leaky ReLU cho phép một độ dốc rất nhỏ ở trục âm (ví dụ 0.01), điều này đảm bảo gradient không bao giờ triệt tiêu hoàn toàn."
+  },
+  {
+    "question": "Câu 27: Tại lớp đầu ra (Output layer) của bài toán Phân loại đa lớp (Multi-class Classification ví dụ nhận diện ảnh Chó, Mèo, Gà), hàm kích hoạt nào BẮT BUỘC phải được sử dụng?",
+    "options": [
+      "A. ReLU.",
+      "B. Tanh.",
+      "C. Softmax.",
+      "D. Leaky ReLU."
+    ],
+    "answer": "C. Softmax.",
+    "explanation": "Softmax là hàm bắt buộc cho đầu ra đa lớp vì nó xuất ra xác suất rơi vào từng lớp."
+  },
+  {
+    "question": "Câu 28: Hàm Softmax có đặc điểm toán học cực kỳ quan trọng nào khiến nó sinh ra là để dành cho bài toán phân loại đa lớp?",
+    "options": [
+      "A. Nó biến tất cả đầu ra thành 1.",
+      "B. Nó chuyển đổi các giá trị thô (logits) thành một phân phối xác suất hợp lệ, trong đó mỗi giá trị nằm giữa 0 và 1, và TỔNG của tất cả các xác suất bằng đúng 1 (hoặc 100%).",
+      "C. Nó nhân đôi độ lớn của nơ-ron.",
+      "D. Nó chỉ trả về True hoặc False."
+    ],
+    "answer": "B. Nó chuyển đổi các giá trị thô (logits) thành một phân phối xác suất hợp lệ, trong đó mỗi giá trị nằm giữa 0 và 1, và TỔNG của tất cả các xác suất bằng đúng 1 (hoặc 100%).",
+    "explanation": "Ví dụ: Xác suất là ảnh Chó (0.7), Mèo (0.2), Gà (0.1). Tổng luôn bằng 1. Mô hình sẽ chọn lớp có xác suất cao nhất."
+  },
+  {
+    "question": "Câu 29: Hàm kích hoạt Maxout là một hàm mạnh mẽ tổng quát hóa sự hiệu quả của hai hàm kích hoạt nào để tránh nơ-ron bị chết?",
+    "options": [
+      "A. Sigmoid và Tanh.",
+      "B. ReLU và Leaky ReLU.",
+      "C. Softmax và Sigmoid.",
+      "D. Tanh và ReLU."
+    ],
+    "answer": "B. ReLU và Leaky ReLU.",
+    "explanation": "Maxout khái quát hóa ReLU và Leaky ReLU, tuy nhiên nhược điểm là nó làm tăng gấp đôi số lượng tham số cần thiết trong mỗi nơ-ron."
+  },
+  {
+    "question": "Câu 30: Theo quy tắc ngón tay cái (rule of thumb) được tác giả cuốn sách đưa ra ở cuối tài liệu, chiến lược tiêu chuẩn để chọn Hàm kích hoạt cho một Mạng Neural Network phân loại là gì?",
+    "options": [
+      "A. Dùng Sigmoid cho tất cả các lớp.",
+      "B. Tuyệt đối không được trộn lẫn (mix) các loại hàm kích hoạt khác nhau trong cùng một mạng. Thông thường, hãy luôn sử dụng ReLU cho các lớp ẩn (hidden layers) và dùng Softmax cho lớp đầu ra (output layer).",
+      "C. Dùng Softmax cho lớp ẩn và ReLU cho lớp đầu ra.",
+      "D. Chọn ngẫu nhiên bất kỳ hàm nào cho mỗi nơ-ron."
+    ],
+    "answer": "B. Tuyệt đối không được trộn lẫn (mix) các loại hàm kích hoạt khác nhau trong cùng một mạng. Thông thường, hãy luôn sử dụng ReLU cho các lớp ẩn (hidden layers) và dùng Softmax cho lớp đầu ra (output layer).",
+    "explanation": "Đây là tiêu chuẩn thiết kế kiến trúc chuẩn mực và an toàn nhất hiện nay cho đa số các bài toán Deep Learning phân loại."
+  },
+  {
+    "question": "Câu 23: Hàm kích hoạt ReLU (Rectified Linear Unit) được định nghĩa như thế nào?",
+    "options": [
+      "A. f(x) = 1 / (1 + e^-x)",
+      "B. f(x) = tanh(x)",
+      "C. f(x) = max(0, x)",
+      "D. f(x) = x^2"
+    ],
+    "answer": "C. f(x) = max(0, x)",
+    "explanation": "ReLU trả về 0 nếu x < 0 và trả về x nếu x >= 0. Đây là hàm kích hoạt phổ biến nhất hiện nay."
+  },
+  {
+    "question": "Câu 24: Ưu điểm lớn nhất của ReLU so với Sigmoid là gì?",
+    "options": [
+      "A. Luôn cho output từ 0 đến 1",
+      "B. Giảm thiểu vấn đề vanishing gradient và tính toán nhanh hơn",
+      "C. Có đạo hàm phức tạp hơn",
+      "D. Luôn hội tụ nhanh hơn trong mọi trường hợp"
+    ],
+    "answer": "B. Giảm thiểu vấn đề vanishing gradient và tính toán nhanh hơn",
+    "explanation": "ReLU không bị bão hòa như Sigmoid ở vùng dương nên giúp gradient không bị triệt tiêu."
+  },
+  {
+    "question": "Câu 25: Vấn đề 'Dead ReLU' xảy ra khi nào?",
+    "options": [
+      "A. Khi tất cả output đều > 0",
+      "B. Khi neuron luôn trả về giá trị 0 và không cập nhật được nữa",
+      "C. Khi learning rate quá nhỏ",
+      "D. Khi batch size quá lớn"
+    ],
+    "answer": "B. Khi neuron luôn trả về giá trị 0 và không cập nhật được nữa",
+    "explanation": "Nếu input luôn âm, ReLU sẽ luôn trả về 0 → gradient = 0 → neuron 'chết'."
+  },
+  {
+    "question": "Câu 26: Hàm Leaky ReLU được dùng để giải quyết vấn đề gì?",
+    "options": [
+      "A. Overfitting",
+      "B. Dead ReLU",
+      "C. Exploding gradient",
+      "D. Underfitting"
+    ],
+    "answer": "B. Dead ReLU",
+    "explanation": "Leaky ReLU cho phép gradient nhỏ khi x < 0 thay vì bằng 0."
+  },
+  {
+    "question": "Câu 27: Softmax function thường được sử dụng ở đâu?",
+    "options": [
+      "A. Hidden layer",
+      "B. Input layer",
+      "C. Output layer cho bài toán multi-class classification",
+      "D. Chỉ dùng cho regression"
+    ],
+    "answer": "C. Output layer cho bài toán multi-class classification",
+    "explanation": "Softmax chuyển output thành phân phối xác suất tổng bằng 1."
+  },
+  {
+    "question": "Câu 28: Cross-Entropy Loss kết hợp tốt nhất với hàm kích hoạt nào?",
+    "options": [
+      "A. ReLU",
+      "B. Softmax hoặc Sigmoid",
+      "C. Linear",
+      "D. Tanh"
+    ],
+    "answer": "B. Softmax hoặc Sigmoid",
+    "explanation": "Cross-Entropy được thiết kế cho output xác suất."
+  },
+  {
+    "question": "Câu 29: SGD (Stochastic Gradient Descent) khác gì so với Batch Gradient Descent?",
+    "options": [
+      "A. SGD dùng toàn bộ dữ liệu mỗi lần cập nhật",
+      "B. SGD cập nhật từng mẫu hoặc mini-batch nhỏ",
+      "C. SGD không cần loss function",
+      "D. SGD luôn chính xác hơn"
+    ],
+    "answer": "B. SGD cập nhật từng mẫu hoặc mini-batch nhỏ",
+    "explanation": "SGD nhanh hơn nhưng noisy hơn so với batch GD."
+  },
+  {
+    "question": "Câu 30: Optimizer Adam là sự kết hợp của những thuật toán nào?",
+    "options": [
+      "A. SGD + KNN",
+      "B. Momentum + RMSprop",
+      "C. Linear Regression + Logistic Regression",
+      "D. PCA + SVM"
+    ],
+    "answer": "B. Momentum + RMSprop",
+    "explanation": "Adam tận dụng cả momentum và adaptive learning rate."
+  },
+  {
+    "question": "Câu 31: Overfitting là gì?",
+    "options": [
+      "A. Mô hình học quá ít dữ liệu",
+      "B. Mô hình học quá tốt trên train nhưng kém trên test",
+      "C. Mô hình không học được gì",
+      "D. Mô hình luôn dự đoán đúng"
+    ],
+    "answer": "B. Mô hình học quá tốt trên train nhưng kém trên test",
+    "explanation": "Overfitting xảy ra khi mô hình ghi nhớ dữ liệu thay vì học quy luật."
+  },
+  {
+    "question": "Câu 32: Underfitting xảy ra khi nào?",
+    "options": [
+      "A. Model quá phức tạp",
+      "B. Model quá đơn giản, không học được pattern",
+      "C. Dataset quá lớn",
+      "D. Learning rate cao"
+    ],
+    "answer": "B. Model quá đơn giản, không học được pattern",
+    "explanation": "Underfitting khiến cả train và test đều kém."
+  },
+  {
+    "question": "Câu 33: Dropout được sử dụng để làm gì?",
+    "options": [
+      "A. Tăng tốc training",
+      "B. Giảm overfitting bằng cách tắt ngẫu nhiên neuron",
+      "C. Tăng số lượng neuron",
+      "D. Chuẩn hóa dữ liệu"
+    ],
+    "answer": "B. Giảm overfitting bằng cách tắt ngẫu nhiên neuron",
+    "explanation": "Dropout giúp mô hình không phụ thuộc vào neuron cụ thể."
+  },
+  {
+    "question": "Câu 34: L2 Regularization (Ridge) hoạt động như thế nào?",
+    "options": [
+      "A. Thêm penalty |w|",
+      "B. Thêm penalty w^2 vào loss",
+      "C. Xóa weight",
+      "D. Chuẩn hóa input"
+    ],
+    "answer": "B. Thêm penalty w^2 vào loss",
+    "explanation": "L2 giúp weight nhỏ lại nhưng không về 0."
+  },
+  {
+    "question": "Câu 35: L1 Regularization có đặc điểm gì?",
+    "options": [
+      "A. Làm weight về 0 (sparse)",
+      "B. Tăng overfitting",
+      "C. Không ảnh hưởng model",
+      "D. Chỉ dùng cho CNN"
+    ],
+    "answer": "A. Làm weight về 0 (sparse)",
+    "explanation": "L1 tạo sparsity → feature selection."
+  },
+  {
+    "question": "Câu 36: Batch Normalization giúp gì?",
+    "options": [
+      "A. Tăng kích thước dữ liệu",
+      "B. Ổn định và tăng tốc training",
+      "C. Giảm số neuron",
+      "D. Thay thế optimizer"
+    ],
+    "answer": "B. Ổn định và tăng tốc training",
+    "explanation": "BN chuẩn hóa đầu vào mỗi layer → gradient ổn định."
+  },
+  {
+    "question": "Câu 37: Tại sao không nên khởi tạo weight = 0?",
+    "options": [
+      "A. Vì quá lớn",
+      "B. Vì gây symmetry → các neuron học giống nhau",
+      "C. Vì không hội tụ",
+      "D. Vì lỗi syntax"
+    ],
+    "answer": "B. Vì gây symmetry → các neuron học giống nhau",
+    "explanation": "Các neuron sẽ không học được đặc trưng khác nhau."
+  },
+  {
+    "question": "Câu 38: Xavier Initialization dùng cho loại activation nào?",
+    "options": [
+      "A. ReLU",
+      "B. Sigmoid/Tanh",
+      "C. Softmax",
+      "D. Linear"
+    ],
+    "answer": "B. Sigmoid/Tanh",
+    "explanation": "Xavier giữ variance ổn định cho activation dạng sigmoid/tanh."
+  },
+  {
+    "question": "Câu 39: He Initialization phù hợp nhất với activation nào?",
+    "options": [
+      "A. ReLU",
+      "B. Sigmoid",
+      "C. Softmax",
+      "D. Linear"
+    ],
+    "answer": "A. ReLU",
+    "explanation": "He init được thiết kế riêng cho ReLU."
+  },
+  {
+    "question": "Câu 40: Exploding Gradient là gì?",
+    "options": [
+      "A. Gradient = 0",
+      "B. Gradient quá lớn gây mất ổn định",
+      "C. Gradient âm",
+      "D. Gradient không tồn tại"
+    ],
+    "answer": "B. Gradient quá lớn gây mất ổn định",
+    "explanation": "Gradient lớn khiến weight update bị lệch mạnh."
+  },
+  {
+    "question": "Câu 41: Gradient Clipping dùng để làm gì?",
+    "options": [
+      "A. Xóa gradient",
+      "B. Giới hạn gradient để tránh exploding",
+      "C. Tăng gradient",
+      "D. Chuẩn hóa dữ liệu"
+    ],
+    "answer": "B. Giới hạn gradient để tránh exploding",
+    "explanation": "Clip giúp giữ gradient trong phạm vi an toàn."
+  },
+  {
+    "question": "Câu 42: Early stopping được dùng khi nào?",
+    "options": [
+      "A. Khi train loss giảm",
+      "B. Khi validation loss tăng",
+      "C. Khi batch size nhỏ",
+      "D. Khi epoch = 1"
+    ],
+    "answer": "B. Khi validation loss tăng",
+    "explanation": "Dừng sớm để tránh overfitting."
+  },
+  {
+    "question": "Câu 43: Accuracy không phù hợp trong trường hợp nào?",
+    "options": [
+      "A. Dataset cân bằng",
+      "B. Dataset mất cân bằng",
+      "C. Regression",
+      "D. Clustering"
+    ],
+    "answer": "B. Dataset mất cân bằng",
+    "explanation": "Accuracy có thể đánh lừa khi class imbalance."
+  },
+  {
+    "question": "Câu 44: Precision đo lường điều gì?",
+    "options": [
+      "A. TP / (TP + FN)",
+      "B. TP / (TP + FP)",
+      "C. TN / (TN + FP)",
+      "D. FN / (TP + FN)"
+    ],
+    "answer": "B. TP / (TP + FP)",
+    "explanation": "Precision = độ chính xác của dự đoán positive."
+  },
+  {
+    "question": "Câu 45: Recall đo lường điều gì?",
+    "options": [
+      "A. TP / (TP + FN)",
+      "B. TP / (TP + FP)",
+      "C. TN / (TN + FP)",
+      "D. FP / (TP + FP)"
+    ],
+    "answer": "A. TP / (TP + FN)",
+    "explanation": "Recall = khả năng tìm đủ positive."
+  },
+  {
+    "question": "Câu 46: F1-score là gì?",
+    "options": [
+      "A. Trung bình cộng",
+      "B. Trung bình điều hòa của Precision và Recall",
+      "C. Tổng Precision và Recall",
+      "D. Accuracy"
+    ],
+    "answer": "B. Trung bình điều hòa của Precision và Recall",
+    "explanation": "F1 cân bằng giữa precision và recall."
+  },
+  {
+    "question": "Câu 47: Confusion Matrix dùng để làm gì?",
+    "options": [
+      "A. Train model",
+      "B. Đánh giá classification",
+      "C. Giảm loss",
+      "D. Tăng accuracy"
+    ],
+    "answer": "B. Đánh giá classification",
+    "explanation": "Hiển thị TP, FP, TN, FN."
+  }
+]

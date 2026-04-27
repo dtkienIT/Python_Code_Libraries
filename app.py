@@ -45,6 +45,17 @@ st.sidebar.title("🚀 Code Library")
 
 DOC_FOLDER = "projects"
 
+# --- CẤU HÌNH THỨ TỰ FOLDER ---
+# Định nghĩa thứ tự hiển thị bạn mong muốn tại đây.
+# Những folder nào không có tên trong list này sẽ tự động bị đẩy xuống cuối cùng.
+CUSTOM_FOLDER_ORDER = [
+    "Documentations",
+    "Projects",
+    "Streamlit Tutorials",
+    "Machine Learning Tutorials",
+    "Deep Learning Tutorials"
+]
+
 # Khởi tạo session_state
 if 'current_selection' not in st.session_state:
     st.session_state.current_selection = "-- Welcome Page --"
@@ -63,12 +74,23 @@ def get_module_title(file_path):
 
 # --- SIDEBAR MENU ---
 if os.path.exists(DOC_FOLDER):
-    folders = sorted([f for f in os.listdir(DOC_FOLDER) if os.path.isdir(os.path.join(DOC_FOLDER, f))])
+    # 1. Lấy danh sách tất cả các folder thực tế có trong DOC_FOLDER
+    actual_folders = [f for f in os.listdir(DOC_FOLDER) if os.path.isdir(os.path.join(DOC_FOLDER, f))]
+    
+    # 2. Hàm sắp xếp tùy chỉnh
+    def sort_folders(folder_name):
+        if folder_name in CUSTOM_FOLDER_ORDER:
+            return CUSTOM_FOLDER_ORDER.index(folder_name)
+        return len(CUSTOM_FOLDER_ORDER) # Đẩy các folder lạ xuống cuối danh sách
+        
+    # 3. Cập nhật lại list folders theo thứ tự đã định
+    folders = sorted(actual_folders, key=sort_folders)
     
     for folder in folders:
         folder_path = os.path.join(DOC_FOLDER, folder)
         
         with st.sidebar.expander(f"📁 {folder}", expanded=False):
+            # Các file bên trong folder vẫn được sắp xếp theo bảng chữ cái A-Z
             files = sorted([f for f in os.listdir(folder_path) if f.endswith(".py") and f != "__init__.py"])
             
             for f in files:

@@ -1,0 +1,431 @@
+[
+  {
+    "question": "Câu 1: Thuật toán Phân cụm (Clustering) thuộc danh mục học máy nào?",
+    "options": [
+      "A. Học có giám sát (Supervised Learning).",
+      "B. Học không giám sát (Unsupervised Machine Learning).",
+      "C. Học tăng cường (Reinforcement Learning).",
+      "D. Học bán giám sát (Semi-supervised Learning)."
+    ],
+    "answer": "B. Học không giám sát (Unsupervised Machine Learning).",
+    "explanation": "Clustering là một kỹ thuật học máy không giám sát dùng để nhóm các điểm dữ liệu đồng nhất thành các phân vùng gọi là cụm (clusters)."
+  },
+  {
+    "question": "Câu 2: Mục tiêu chính của thuật toán Phân cụm (Clustering) là gì?",
+    "options": [
+      "A. Dự đoán một giá trị số thực trong tương lai.",
+      "B. Phân loại hình ảnh thành chó hoặc mèo.",
+      "C. Gom nhóm các điểm dữ liệu đồng nhất thành các phân vùng (partitions) dựa trên sự tương đồng của chúng.",
+      "D. Tìm ra đường thẳng tốt nhất chia đôi tập dữ liệu."
+    ],
+    "answer": "C. Gom nhóm các điểm dữ liệu đồng nhất thành các phân vùng (partitions) dựa trên sự tương đồng của chúng.",
+    "explanation": "Mục tiêu là tìm ra các nhóm phụ (sub-groups) ẩn bên trong dữ liệu mà không cần biết trước nhãn (labels)."
+  },
+  {
+    "question": "Câu 3: Hai thuật toán phân cụm cốt lõi được sử dụng phổ biến nhất là gì?",
+    "options": [
+      "A. K-Nearest Neighbors và K-Means.",
+      "B. K-Means clustering và Hierarchical clustering.",
+      "C. Decision Trees và Random Forest.",
+      "D. DBSCAN và Mean Shift."
+    ],
+    "answer": "B. K-Means clustering và Hierarchical clustering.",
+    "explanation": "K-Means và Hierarchical là hai thuật toán nền tảng nhất trong bài toán phân cụm."
+  },
+  {
+    "question": "Câu 4: Thuật toán K-Means Clustering được sử dụng phù hợp nhất trong hoàn cảnh nào?",
+    "options": [
+      "A. Khi số lượng cụm (clusters) hoặc các lớp riêng biệt CẦN TÌM đã được biết trước (known in advance).",
+      "B. Khi người dùng hoàn toàn không biết phải chia dữ liệu thành bao nhiêu cụm.",
+      "C. Khi dữ liệu chỉ có duy nhất 1 chiều.",
+      "D. Khi dữ liệu có chứa quá nhiều văn bản."
+    ],
+    "answer": "A. Khi số lượng cụm (clusters) hoặc các lớp riêng biệt CẦN TÌM đã được biết trước (known in advance).",
+    "explanation": "K-means yêu cầu người dùng phải cung cấp số 'K' (số lượng cụm) như một siêu tham số ngay từ đầu."
+  },
+  {
+    "question": "Câu 5: Trong thuật toán K-Means, chữ 'K' đại diện cho điều gì?",
+    "options": [
+      "A. Số lượng vòng lặp tối đa.",
+      "B. Số lượng cụm (clusters) mà tập dữ liệu sẽ được chia thành.",
+      "C. Số lượng điểm dữ liệu trong tập huấn luyện.",
+      "D. Số lượng đặc trưng (features)."
+    ],
+    "answer": "B. Số lượng cụm (clusters) mà tập dữ liệu sẽ được chia thành.",
+    "explanation": "K là tham số xác định số cụm. Ví dụ K=3 nghĩa là chia dữ liệu thành 3 cụm."
+  },
+  {
+    "question": "Câu 6: Tâm của một cụm trong K-Means được gọi là gì?",
+    "options": [
+      "A. Node",
+      "B. Root",
+      "C. Centroid",
+      "D. Core point"
+    ],
+    "answer": "C. Centroid",
+    "explanation": "Centroid (Tâm cụm) là điểm đại diện cho trung tâm của một cụm. Ban đầu chúng được khởi tạo ngẫu nhiên."
+  },
+  {
+    "question": "Câu 7: K-Means đo lường khoảng cách từ các điểm dữ liệu đến các Centroids bằng thước đo nào phổ biến nhất?",
+    "options": [
+      "A. Khoảng cách Manhattan (Manhattan distance).",
+      "B. Khoảng cách Minkowski.",
+      "C. Khoảng cách Cosine.",
+      "D. Khoảng cách Euclidean (Euclidean distance)."
+    ],
+    "answer": "D. Khoảng cách Euclidean (Euclidean distance).",
+    "explanation": "Euclidean distance là thước đo khoảng cách đường thẳng tiêu chuẩn được K-Means sử dụng để tính toán."
+  },
+  {
+    "question": "Câu 8: Vấn đề lớn nhất của việc khởi tạo ngẫu nhiên các tâm cụm (Initialization Problem) trong K-Means là gì?",
+    "options": [
+      "A. Làm cho thuật toán chạy chậm hơn.",
+      "B. Thuật toán dễ bị kẹt ở cực tiểu cục bộ (local optimum), dẫn đến kết quả phân cụm cuối cùng có thể rất khác nhau tùy thuộc vào vị trí chọn centroid ban đầu.",
+      "C. Gây ra lỗi tràn bộ nhớ (Out of Memory).",
+      "D. Tự động làm tăng số lượng K."
+    ],
+    "answer": "B. Thuật toán dễ bị kẹt ở cực tiểu cục bộ (local optimum), dẫn đến kết quả phân cụm cuối cùng có thể rất khác nhau tùy thuộc vào vị trí chọn centroid ban đầu.",
+    "explanation": "Vì K-Means là thuật toán tham lam, nếu điểm bắt đầu quá tệ, nó sẽ hội tụ ở một kết quả cục bộ không tối ưu. Người ta thường phải chạy nhiều lần với các khởi tạo khác nhau."
+  },
+  {
+    "question": "Câu 9: Quy trình lặp (iteration) của thuật toán K-Means diễn ra theo hai bước cốt lõi nào sau khi đã khởi tạo centroid?",
+    "options": [
+      "A. (1) Tính toán ma trận hiệp phương sai; (2) Giảm chiều dữ liệu.",
+      "B. (1) Gán mỗi điểm dữ liệu vào centroid gần nhất; (2) Cập nhật lại vị trí centroid bằng trung bình tọa độ các điểm trong cụm.",
+      "C. (1) Loại bỏ các điểm ngoại lệ; (2) Gộp các cụm nhỏ thành cụm lớn.",
+      "D. (1) Chia đôi dữ liệu; (2) Vẽ biểu đồ Dendrogram."
+    ],
+    "answer": "B. (1) Gán mỗi điểm dữ liệu vào centroid gần nhất; (2) Cập nhật lại vị trí centroid bằng trung bình tọa độ các điểm trong cụm.",
+    "explanation": "Quy trình chuẩn: Assignment step (Gán điểm vào cụm gần nhất) và Update step (Tính lại tâm cụm mới dựa trên các điểm vừa gán). Quá trình này lặp lại liên tục."
+  },
+  {
+    "question": "Câu 10: Điều kiện dừng (Convergence) của thuật toán K-Means là gì?",
+    "options": [
+      "A. Khi thuật toán đã duyệt qua 10,000 vòng lặp.",
+      "B. Khi số lượng điểm dữ liệu trong mỗi cụm bằng nhau.",
+      "C. Khi các centroid không còn thay đổi vị trí nữa (hoặc thay đổi dưới một ngưỡng cực nhỏ), đồng nghĩa với việc không có điểm dữ liệu nào bị gán lại sang cụm khác.",
+      "D. Khi khoảng cách giữa các centroid bằng 0."
+    ],
+    "answer": "C. Khi các centroid không còn thay đổi vị trí nữa (hoặc thay đổi dưới một ngưỡng cực nhỏ), đồng nghĩa với việc không có điểm dữ liệu nào bị gán lại sang cụm khác.",
+    "explanation": "K-Means đạt trạng thái hội tụ (converge) và dừng lại khi vị trí các centroid ổn định."
+  },
+  {
+    "question": "Câu 11: Về bản chất, làm thế nào để biết chắc chắn số lượng cụm K lý tưởng nhất ngay từ đầu trước khi chạy thuật toán K-Means?",
+    "options": [
+      "A. Lấy tổng số dữ liệu chia cho 10.",
+      "B. Dùng một công thức toán học cố định để tính K.",
+      "C. Không có cách nào xác định chính xác K từ đầu; ta luôn phải thử nghiệm nhiều giá trị K khác nhau để đánh giá.",
+      "D. Luôn luôn chọn K = 3."
+    ],
+    "answer": "C. Không có cách nào xác định chính xác K từ đầu; ta luôn phải thử nghiệm nhiều giá trị K khác nhau để đánh giá.",
+    "explanation": "Tìm K là quá trình thử và sai (trial and error), kết hợp với kiến thức chuyên ngành hoặc biểu đồ Elbow."
+  },
+  {
+    "question": "Câu 12: Trong K-Means, Inertia (hoặc WCSS - Within-Cluster Sum of Squares) đo lường điều gì?",
+    "options": [
+      "A. Khoảng cách giữa các cụm với nhau.",
+      "B. Tổng bình phương khoảng cách từ mỗi điểm dữ liệu đến Centroid của chính cụm chứa nó.",
+      "C. Thời gian chạy của thuật toán.",
+      "D. Số lượng điểm dữ liệu bị phân cụm sai."
+    ],
+    "answer": "B. Tổng bình phương khoảng cách từ mỗi điểm dữ liệu đến Centroid của chính cụm chứa nó.",
+    "explanation": "Inertia đo lường mức độ 'chặt chẽ' (compactness) của các cụm. Inertia càng nhỏ, các cụm càng bám sát tâm."
+  },
+  {
+    "question": "Câu 13: Phương pháp Elbow (Khuỷu tay) hoạt động dựa trên nguyên lý nào để tìm ra số cụm K tốt nhất?",
+    "options": [
+      "A. Vẽ đồ thị so sánh thời gian chạy của thuật toán theo K.",
+      "B. Vẽ đồ thị tổng bình phương khoảng cách (WCSS / Inertia) theo các giá trị K. Điểm K tối ưu là điểm 'khuỷu tay' nơi đồ thị bắt đầu uốn cong và tốc độ giảm WCSS chậm lại đột ngột.",
+      "C. Tính trung bình cộng của tất cả các K.",
+      "D. Chọn K sao cho độ chính xác đạt 100%."
+    ],
+    "answer": "B. Vẽ đồ thị tổng bình phương khoảng cách (WCSS / Inertia) theo các giá trị K. Điểm K tối ưu là điểm 'khuỷu tay' nơi đồ thị bắt đầu uốn cong và tốc độ giảm WCSS chậm lại đột ngột.",
+    "explanation": "Điểm 'khuỷu tay' thể hiện sự cân bằng: Việc tăng thêm cụm sau điểm này không còn giúp ích nhiều cho việc giảm độ phân tán của cụm."
+  },
+  {
+    "question": "Câu 14: Để sử dụng K-Means trong Scikit-learn, bạn import từ module nào?",
+    "options": [
+      "A. from sklearn.cluster import KMeans",
+      "B. from sklearn.kmeans import KMeans",
+      "C. from sklearn.models import KMeans",
+      "D. from sklearn.unsupervised import KMeans"
+    ],
+    "answer": "A. from sklearn.cluster import KMeans",
+    "explanation": "Tất cả các thuật toán phân cụm đều nằm trong module `sklearn.cluster`."
+  },
+  {
+    "question": "Câu 15: Sự khác biệt lớn nhất của Hierarchical clustering (Phân cụm phân cấp) so với K-Means là gì?",
+    "options": [
+      "A. Nó chạy nhanh hơn K-Means gấp 10 lần.",
+      "B. Nó yêu cầu biết trước số lượng cụm K.",
+      "C. Nó KHÔNG cần biết trước số lượng cụm chính xác từ đầu, thuật toán sẽ tự động xây dựng cấu trúc nhóm.",
+      "D. Nó chỉ chạy được trên dữ liệu số nguyên."
+    ],
+    "answer": "C. Nó KHÔNG cần biết trước số lượng cụm chính xác từ đầu, thuật toán sẽ tự động xây dựng cấu trúc nhóm.",
+    "explanation": "Hierarchical clustering không bắt buộc truyền số K ban đầu, nó tạo ra một cây phân cấp để người dùng tự quyết định điểm cắt."
+  },
+  {
+    "question": "Câu 16: Trong Hierarchical Clustering, điểm khác biệt cốt lõi giữa phương pháp Agglomerative và Divisive là gì?",
+    "options": [
+      "A. Không có gì khác biệt, chỉ là hai tên gọi khác nhau.",
+      "B. Agglomerative dùng cho số, Divisive dùng cho chữ.",
+      "C. Agglomerative là phương pháp từ dưới lên (Bottom-up: bắt đầu từ các điểm lẻ rồi gộp dần); còn Divisive là từ trên xuống (Top-down: bắt đầu từ 1 cụm lớn rồi chia tách dần).",
+      "D. Divisive chạy nhanh hơn Agglomerative."
+    ],
+    "answer": "C. Agglomerative là phương pháp từ dưới lên (Bottom-up: bắt đầu từ các điểm lẻ rồi gộp dần); còn Divisive là từ trên xuống (Top-down: bắt đầu từ 1 cụm lớn rồi chia tách dần).",
+    "explanation": "Đây là 2 hướng tiếp cận ngược nhau của thuật toán phân cấp."
+  },
+  {
+    "question": "Câu 17: Bước đầu tiên của thuật toán Agglomerative Clustering (Bottom-up) diễn ra như thế nào?",
+    "options": [
+      "A. Chia dữ liệu thành 2 nửa.",
+      "B. Khởi tạo K tâm cụm ngẫu nhiên.",
+      "C. Coi mỗi điểm dữ liệu là một cụm riêng biệt (chiếc lá - leaf), sau đó tìm 2 cụm gần nhau nhất để gộp lại.",
+      "D. Tính giá trị trung bình của toàn bộ dữ liệu."
+    ],
+    "answer": "C. Coi mỗi điểm dữ liệu là một cụm riêng biệt (chiếc lá - leaf), sau đó tìm 2 cụm gần nhau nhất để gộp lại.",
+    "explanation": "Nó bắt đầu từ dưới cùng nơi mỗi n điểm dữ liệu là n cụm. Bước tiếp theo là gộp 2 điểm gần nhất."
+  },
+  {
+    "question": "Câu 18: Trục tung (Y-axis) của biểu đồ Dendrogram trong Hierarchical Clustering biểu diễn đại lượng nào?",
+    "options": [
+      "A. Khoảng cách (Distance/Similarity) giữa các cụm khi chúng được gộp lại với nhau.",
+      "B. Số lượng cụm K.",
+      "C. Thời gian huấn luyện thuật toán.",
+      "D. Kích thước bộ nhớ."
+    ],
+    "answer": "A. Khoảng cách (Distance/Similarity) giữa các cụm khi chúng được gộp lại với nhau.",
+    "explanation": "Chiều cao của điểm gộp nhánh trên trục Y cho biết khoảng cách giữa hai cụm đó lớn đến mức nào khi chúng bị gộp thành một."
+  },
+  {
+    "question": "Câu 19: Làm thế nào để xác định số lượng cụm (clusters) từ biểu đồ Dendrogram?",
+    "options": [
+      "A. Đếm số lượng màu sắc trên biểu đồ.",
+      "B. Vẽ một đường thẳng nằm ngang (horizontal line) cắt qua biểu đồ (thường ở nơi có khoảng cách dài nhất không bị giao cắt). Số lượng nhánh dọc bị đường ngang cắt qua chính là số lượng cụm.",
+      "C. Xem chiều cao tối đa của biểu đồ.",
+      "D. Đếm số điểm dữ liệu ở dưới cùng."
+    ],
+    "answer": "B. Vẽ một đường thẳng nằm ngang (horizontal line) cắt qua biểu đồ (thường ở nơi có khoảng cách dài nhất không bị giao cắt). Số lượng nhánh dọc bị đường ngang cắt qua chính là số lượng cụm.",
+    "explanation": "Cắt dendrogram bằng một đường ngang là cách thủ công và trực quan nhất để chọn K."
+  },
+  {
+    "question": "Câu 20: Trong các tiêu chí Linkage, \"Single Linkage\" tính khoảng cách giữa hai cụm A và B như thế nào?",
+    "options": [
+      "A. Dựa trên khoảng cách giữa 2 điểm XA NHẤT thuộc 2 cụm.",
+      "B. Dựa trên khoảng cách giữa 2 tâm (centroids) của 2 cụm.",
+      "C. Dựa trên khoảng cách giữa 2 điểm GẦN NHẤT thuộc 2 cụm (Minimum distance).",
+      "D. Dựa trên khoảng cách trung bình của tất cả các cặp điểm."
+    ],
+    "answer": "C. Dựa trên khoảng cách giữa 2 điểm GẦN NHẤT thuộc 2 cụm (Minimum distance).",
+    "explanation": "Single linkage lấy khoảng cách nhỏ nhất giữa 2 điểm bất kỳ thuộc 2 cụm khác nhau."
+  },
+  {
+    "question": "Câu 21: Tiêu chí \"Complete Linkage\" tính khoảng cách giữa hai cụm A và B như thế nào?",
+    "options": [
+      "A. Lấy khoảng cách xa nhất (Maximum distance) giữa 2 điểm bất kỳ thuộc 2 cụm.",
+      "B. Lấy khoảng cách ngắn nhất.",
+      "C. Tính trung bình khoảng cách.",
+      "D. Lấy tổng khoảng cách."
+    ],
+    "answer": "A. Lấy khoảng cách xa nhất (Maximum distance) giữa 2 điểm bất kỳ thuộc 2 cụm.",
+    "explanation": "Complete linkage khắc phục điểm yếu của Single linkage bằng cách đánh giá dựa trên hai điểm xa nhất của cụm."
+  },
+  {
+    "question": "Câu 22: Tiêu chí \"Average Linkage\" tính khoảng cách giữa hai cụm A và B như thế nào?",
+    "options": [
+      "A. Tính khoảng cách giữa hai tâm của hai cụm.",
+      "B. Lấy khoảng cách xa nhất.",
+      "C. Tính trung bình cộng khoảng cách của tất cả các cặp điểm có thể có giữa hai cụm.",
+      "D. Lấy khoảng cách gần nhất."
+    ],
+    "answer": "C. Tính trung bình cộng khoảng cách của tất cả các cặp điểm có thể có giữa hai cụm.",
+    "explanation": "Average Linkage trung hòa giữa Single và Complete bằng cách tính trung bình tất cả các điểm."
+  },
+  {
+    "question": "Câu 23: Trong Scikit-learn, tiêu chí Linkage mặc định phổ biến nhất là \"Ward\". Tiêu chí này có đặc điểm gì?",
+    "options": [
+      "A. Lấy khoảng cách gần nhất.",
+      "B. Lấy khoảng cách xa nhất.",
+      "C. Ưu tiên gộp 2 cụm sao cho sự gia tăng của phương sai (WCSS - Within-Cluster Sum of Squares) là nhỏ nhất (variance minimization).",
+      "D. Dựa vào khoảng cách Cosine."
+    ],
+    "answer": "C. Ưu tiên gộp 2 cụm sao cho sự gia tăng của phương sai (WCSS - Within-Cluster Sum of Squares) là nhỏ nhất (variance minimization).",
+    "explanation": "Ward linkage kết hợp hai cụm mang lại mức tăng thấp nhất cho Inertia, giúp các cụm chặt chẽ và tròn trịa hơn."
+  },
+  {
+    "question": "Câu 24: Bên cạnh Euclidean Distance, hai độ đo khoảng cách (Distance metrics) nào khác thường được đề cập trong bài toán Clustering?",
+    "options": [
+      "A. Sigmoid và Softmax.",
+      "B. Manhattan Distance (Khoảng cách khối phố) và Correlation-based Distance (Khoảng cách tương quan).",
+      "C. Gradient và Derivative.",
+      "D. Cross-Entropy và MSE."
+    ],
+    "answer": "B. Manhattan Distance (Khoảng cách khối phố) và Correlation-based Distance (Khoảng cách tương quan).",
+    "explanation": "Manhattan distance (L1 norm) và Correlation distance là các khoảng cách phổ biến thay thế cho Euclidean."
+  },
+  {
+    "question": "Câu 25: Tại sao việc Standardize (Chuẩn hóa) dữ liệu là một bước BẮT BUỘC trước khi thực hiện Clustering?",
+    "options": [
+      "A. Để thuật toán vẽ đồ thị đẹp hơn.",
+      "B. Vì Clustering sử dụng khoảng cách để gom cụm. Nếu không chuẩn hóa, các đặc trưng có giá trị lớn (vd: Lương = 10,000,000) sẽ hoàn toàn lấn át các đặc trưng có giá trị nhỏ (vd: Tuổi = 30).",
+      "C. Để đổi dữ liệu chữ thành số.",
+      "D. Để loại bỏ các giá trị bị thiếu (NaN)."
+    ],
+    "answer": "B. Vì Clustering sử dụng khoảng cách để gom cụm. Nếu không chuẩn hóa, các đặc trưng có giá trị lớn (vd: Lương = 10,000,000) sẽ hoàn toàn lấn át các đặc trưng có giá trị nhỏ (vd: Tuổi = 30).",
+    "explanation": "Tất cả các trục phải có cùng 1 thang đo để đóng góp công bằng vào việc tính toán khoảng cách."
+  },
+  {
+    "question": "Câu 26: Clustering được biết đến là một thuật toán mang tính khám phá (exploratory). Một nhược điểm cực lớn của nó khi đối mặt với dữ liệu thực tế là gì?",
+    "options": [
+      "A. Nó không chạy được trên Python.",
+      "B. Nó rất nhạy cảm với dữ liệu (highly sensitive). Việc thêm hoặc xóa đi một vài điểm dữ liệu có thể làm thay đổi hoàn toàn kết quả phân cụm.",
+      "C. Nó bắt buộc phải có nhãn.",
+      "D. Nó chỉ tìm được tối đa 5 cụm."
+    ],
+    "answer": "B. Nó rất nhạy cảm với dữ liệu (highly sensitive). Việc thêm hoặc xóa đi một vài điểm dữ liệu có thể làm thay đổi hoàn toàn kết quả phân cụm.",
+    "explanation": "Sự nhạy cảm với dữ liệu và nhiễu (outliers) là một đặc tính cần lưu ý khi diễn giải kết quả clustering."
+  },
+  {
+    "question": "Câu 27: Kỹ thuật PCA (Principal Component Analysis - Phân tích thành phần chính) giải quyết vấn đề gì trong Machine Learning?",
+    "options": [
+      "A. Thiếu hụt dữ liệu (Missing data).",
+      "B. Lời nguyền của số chiều (Curse of Dimensionality) bằng cách giảm số lượng đặc trưng mà vẫn giữ lại tối đa lượng thông tin (phương sai).",
+      "C. Dữ liệu bị nhiễu (Noisy data).",
+      "D. Imbalanced data (Dữ liệu mất cân bằng)."
+    ],
+    "answer": "B. Lời nguyền của số chiều (Curse of Dimensionality) bằng cách giảm số lượng đặc trưng mà vẫn giữ lại tối đa lượng thông tin (phương sai).",
+    "explanation": "PCA nén dữ liệu từ không gian nhiều chiều xuống không gian ít chiều hơn."
+  },
+  {
+    "question": "Câu 28: Một nhược điểm của PCA được nhắc đến trong tài liệu là gì?",
+    "options": [
+      "A. Nó không thể xử lý dữ liệu số.",
+      "B. Nó rất dễ bị thay đổi / biến động dữ dội (vary wildly) do những nhiễu loạn hoặc thay đổi rất nhỏ trong tập dữ liệu.",
+      "C. Nó cần quá nhiều RAM để tính toán.",
+      "D. Nó chỉ trích xuất được tối đa 2 thành phần chính."
+    ],
+    "answer": "B. Nó rất dễ bị thay đổi / biến động dữ dội (vary wildly) do những nhiễu loạn hoặc thay đổi rất nhỏ trong tập dữ liệu.",
+    "explanation": "PCA nhạy cảm với các outliers và những thay đổi nhỏ trong dữ liệu."
+  },
+  {
+    "question": "Câu 29: Bước tiền xử lý \"Mean Normalization\" (Zero-mean) trong thuật toán PCA yêu cầu điều gì?",
+    "options": [
+      "A. Biến mọi giá trị thành số 1.",
+      "B. Phải dịch chuyển dữ liệu sao cho giá trị trung bình (mean) của mọi đặc trưng đều bằng 0 (dịch chuyển tâm của dữ liệu về gốc tọa độ).",
+      "C. Xóa các hàng có giá trị trung bình thấp.",
+      "D. Nhân dữ liệu với ma trận đơn vị."
+    ],
+    "answer": "B. Phải dịch chuyển dữ liệu sao cho giá trị trung bình (mean) của mọi đặc trưng đều bằng 0 (dịch chuyển tâm của dữ liệu về gốc tọa độ).",
+    "explanation": "Center data (đưa mean về 0) là bước bắt buộc để tính toán chuẩn xác ma trận hiệp phương sai trong PCA."
+  },
+  {
+    "question": "Câu 30: Về mặt toán học, PCA phân tích ma trận nào của tập dữ liệu để tìm ra các Principal Components?",
+    "options": [
+      "A. Ma trận nhầm lẫn (Confusion Matrix).",
+      "B. Ma trận hiệp phương sai (Covariance Matrix).",
+      "C. Ma trận đơn vị (Identity Matrix).",
+      "D. Ma trận thưa (Sparse Matrix)."
+    ],
+    "answer": "B. Ma trận hiệp phương sai (Covariance Matrix).",
+    "explanation": "PCA tìm các eigenvectors và eigenvalues từ Ma trận hiệp phương sai của tập dữ liệu."
+  },
+  {
+    "question": "Câu 31: Ở hậu trường toán học, PCA sử dụng thuật toán nào để phân rã ma trận nhằm tìm ra các vector riêng (eigenvectors) và giá trị riêng (eigenvalues)?",
+    "options": [
+      "A. K-Nearest Neighbors (KNN).",
+      "B. Random Forest.",
+      "C. Singular Value Decomposition (SVD).",
+      "D. Gradient Descent."
+    ],
+    "answer": "C. Singular Value Decomposition (SVD).",
+    "explanation": "SVD (Phân rã giá trị suy biến) là thuật toán đại số tuyến tính cốt lõi được PCA sử dụng."
+  },
+  {
+    "question": "Câu 32: Trong không gian đặc trưng mới do PCA tạo ra, các Principal Components (Thành phần chính) có mối quan hệ toán học như thế nào với nhau?",
+    "options": [
+      "A. Chúng song song với nhau.",
+      "B. Chúng trùng nhau hoàn toàn.",
+      "C. Chúng trực giao (orthogonal / vuông góc) với nhau, đảm bảo chúng hoàn toàn độc lập và không có sự tương quan (zero correlation).",
+      "D. Chúng tạo thành các góc 45 độ."
+    ],
+    "answer": "C. Chúng trực giao (orthogonal / vuông góc) với nhau, đảm bảo chúng hoàn toàn độc lập và không có sự tương quan (zero correlation).",
+    "explanation": "Việc các PC trực giao với nhau giải quyết hoàn toàn vấn đề đa cộng tuyến của dữ liệu gốc."
+  },
+  {
+    "question": "Câu 33: Thành phần chính đầu tiên (First Principal Component - PC1) có đặc điểm gì nổi bật nhất?",
+    "options": [
+      "A. Nó là thành phần chứa nhiều giá trị NaN nhất.",
+      "B. Nó là hướng nắm giữ nhiều phương sai (variance / thông tin) nhất của tập dữ liệu.",
+      "C. Nó luôn là một đường thẳng song song với trục x.",
+      "D. Nó là thành phần có giá trị nhỏ nhất."
+    ],
+    "answer": "B. Nó là hướng nắm giữ nhiều phương sai (variance / thông tin) nhất của tập dữ liệu.",
+    "explanation": "PC1 luôn được ưu tiên là trục bắt được nhiều sự biến thiên của dữ liệu nhất, các PC sau đó sẽ bắt các phương sai còn sót lại."
+  },
+  {
+    "question": "Câu 34: Sau khi tìm được ma trận các eigenvectors bị rút gọn (ký hiệu là A_reduced), công thức để chiếu tập dữ liệu gốc (X) xuống không gian chiều thấp hơn là gì?",
+    "options": [
+      "A. Dữ liệu mới = X + A_reduced",
+      "B. Dữ liệu mới = X - A_reduced",
+      "C. Dữ liệu mới = X * A_reduced (Nhân ma trận dữ liệu X với ma trận eigenvectors).",
+      "D. Dữ liệu mới = X / A_reduced"
+    ],
+    "answer": "C. Dữ liệu mới = X * A_reduced (Nhân ma trận dữ liệu X với ma trận eigenvectors).",
+    "explanation": "Việc giảm chiều dữ liệu thực chất là phép nhân ma trận (matrix multiplication) để ánh xạ dữ liệu từ không gian cũ sang các trục tọa độ mới."
+  },
+  {
+    "question": "Câu 35: Trong Scikit-learn, để import module PCA, bạn dùng dòng lệnh nào?",
+    "options": [
+      "A. from sklearn.clustering import PCA",
+      "B. from sklearn.decomposition import PCA",
+      "C. from sklearn.reduction import PCA",
+      "D. from sklearn.preprocessing import PCA"
+    ],
+    "answer": "B. from sklearn.decomposition import PCA",
+    "explanation": "PCA thuộc nhóm các phương pháp phân rã ma trận (decomposition)."
+  },
+  {
+    "question": "Câu 36: Dòng lệnh `pca = PCA(n_components=3)` mang ý nghĩa gì?",
+    "options": [
+      "A. Tạo ra 3 mô hình PCA độc lập.",
+      "B. Yêu cầu mô hình chạy vòng lặp 3 lần.",
+      "C. Khởi tạo đối tượng PCA và chỉ định nó trích xuất ra đúng 3 Thành phần chính (Principal Components) quan trọng nhất từ dữ liệu gốc.",
+      "D. Yêu cầu PCA loại bỏ 3 cột dữ liệu đầu tiên."
+    ],
+    "answer": "C. Khởi tạo đối tượng PCA và chỉ định nó trích xuất ra đúng 3 Thành phần chính (Principal Components) quan trọng nhất từ dữ liệu gốc.",
+    "explanation": "Tham số `n_components` xác định số chiều không gian mới mà bạn muốn nén dữ liệu xuống."
+  },
+  {
+    "question": "Câu 37: Sau khi mô hình PCA được huấn luyện (`pca.fit(X)`), thuộc tính nào trả về tỷ lệ phần trăm phương sai (variance) được giải thích bởi từng thành phần chính?",
+    "options": [
+      "A. pca.variance_ratio",
+      "B. pca.explained_variance_ratio_",
+      "C. pca.components_variance_",
+      "D. pca.percent_variance"
+    ],
+    "answer": "B. pca.explained_variance_ratio_",
+    "explanation": "Thuộc tính `explained_variance_ratio_` cho biết mỗi thành phần giữ lại được bao nhiêu % thông tin của dữ liệu gốc."
+  },
+  {
+    "question": "Câu 38: Thuộc tính `pca.components_` chứa thông tin gì?",
+    "options": [
+      "A. Chứa tên của các cột dữ liệu gốc.",
+      "B. Chứa các vector riêng (eigenvectors) đại diện cho các Thành phần chính trong không gian đặc trưng.",
+      "C. Chứa các nhãn (labels) của dữ liệu.",
+      "D. Chứa độ chính xác (accuracy) của mô hình."
+    ],
+    "answer": "B. Chứa các vector riêng (eigenvectors) đại diện cho các Thành phần chính trong không gian đặc trưng.",
+    "explanation": "Các eigenvectors chính là các trục tọa độ mới của không gian đã được giảm chiều."
+  },
+  {
+    "question": "Câu 39: Nếu tổng của mảng `pca.explained_variance_ratio_` đạt 0.95, điều này mang ý nghĩa thực tế gì?",
+    "options": [
+      "A. Mô hình dự đoán sai 95%.",
+      "B. Các thành phần chính được chọn đã giữ lại được 95% thông tin (phương sai) của tập dữ liệu gốc, chỉ mất mát 5% thông tin.",
+      "C. Dữ liệu đã bị giảm đi 95% dung lượng.",
+      "D. Mức độ tự tin của mô hình là 95%."
+    ],
+    "answer": "B. Các thành phần chính được chọn đã giữ lại được 95% thông tin (phương sai) của tập dữ liệu gốc, chỉ mất mát 5% thông tin.",
+    "explanation": "0.95 (hay 95%) là một con số rất tốt, chứng tỏ việc giảm chiều dữ liệu là cực kỳ hiệu quả vì gần như toàn bộ thông tin quan trọng đều được bảo tồn."
+  }
+]

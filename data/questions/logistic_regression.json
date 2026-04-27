@@ -218,5 +218,71 @@
     ],
     "answer": "D. Áp dụng kỹ thuật Điều chuẩn (Applying Regularization).",
     "explanation": "Tài liệu chốt lại: \"Applying regularization (more on this in Chapter 21) is a good technique to prevent overfitting\" trong trường hợp Variance cao."
+  },
+  {
+    "question": "Câu 21: Công thức tổng quát của hàm chi phí (Cost Function) trong Logistic Regression cho toàn bộ tập dữ liệu là gì?",
+    "options": [
+      "A. J(θ) = θ^T x",
+      "B. J(θ) = -1/m Σ [y log(hθ(x)) + (1 - y) log(1 - hθ(x))]",
+      "C. J(θ) = Σ (y - hθ(x))^2",
+      "D. J(θ) = log(θ)"
+    ],
+    "answer": "B. J(θ) = -1/m Σ [y log(hθ(x)) + (1 - y) log(1 - hθ(x))]",
+    "explanation": "Đây là công thức Cross-Entropy (Log Loss) tổng quát cho toàn bộ tập dữ liệu, đảm bảo hàm chi phí là convex."
+  },
+  {
+    "question": "Câu 22: Logistic Regression sử dụng thuật toán nào để tối ưu hóa (tìm giá trị tốt nhất cho θ)?",
+    "options": [
+      "A. K-Means",
+      "B. Gradient Descent",
+      "C. Decision Tree",
+      "D. PCA"
+    ],
+    "answer": "B. Gradient Descent",
+    "explanation": "Logistic Regression sử dụng Gradient Descent để cập nhật tham số θ nhằm tối thiểu hóa hàm chi phí."
+  },
+  {
+    "question": "Câu 23: Kỹ thuật Regularization trong Logistic Regression được sử dụng để làm gì?",
+    "options": [
+      "A. Tăng kích thước dữ liệu",
+      "B. Giảm overfitting bằng cách thêm penalty vào hàm chi phí",
+      "C. Tăng số lượng feature",
+      "D. Xóa dữ liệu nhiễu"
+    ],
+    "answer": "B. Giảm overfitting bằng cách thêm penalty vào hàm chi phí",
+    "explanation": "Regularization giúp kiểm soát độ phức tạp của mô hình bằng cách phạt các trọng số lớn."
+  },
+  {
+    "question": "Câu 24: Điểm khác biệt chính giữa L1 và L2 Regularization là gì?",
+    "options": [
+      "A. L1 làm tăng overfitting, L2 giảm bias",
+      "B. L1 có thể đưa trọng số về 0 (feature selection), L2 chỉ làm nhỏ trọng số",
+      "C. L1 chỉ dùng cho regression",
+      "D. Không có khác biệt"
+    ],
+    "answer": "B. L1 có thể đưa trọng số về 0 (feature selection), L2 chỉ làm nhỏ trọng số",
+    "explanation": "L1 (Lasso) có khả năng đưa một số trọng số về 0, giúp chọn feature; L2 (Ridge) chỉ làm giảm giá trị trọng số."
+  },
+  {
+    "question": "Câu 25: Việc thay đổi ngưỡng (threshold) phân loại từ 0.5 sang giá trị khác sẽ ảnh hưởng như thế nào?",
+    "options": [
+      "A. Không ảnh hưởng gì",
+      "B. Làm thay đổi trade-off giữa Precision và Recall",
+      "C. Chỉ làm tăng accuracy",
+      "D. Làm mô hình không chạy được"
+    ],
+    "answer": "B. Làm thay đổi trade-off giữa Precision và Recall",
+    "explanation": "Threshold ảnh hưởng trực tiếp đến Precision và Recall, cho phép điều chỉnh tùy theo mục tiêu bài toán."
+  },
+  {
+    "question": "Câu 26: Một nhược điểm của Logistic Regression là gì?",
+    "options": [
+      "A. Không thể xử lý dữ liệu số",
+      "B. Không thể dùng cho classification",
+      "C. Khó học được ranh giới phi tuyến nếu không biến đổi đặc trưng",
+      "D. Luôn bị overfitting"
+    ],
+    "answer": "C. Khó học được ranh giới phi tuyến nếu không biến đổi đặc trưng",
+    "explanation": "Logistic Regression là mô hình tuyến tính, nên cần feature engineering hoặc kernel để xử lý dữ liệu phi tuyến."
   }
 ]

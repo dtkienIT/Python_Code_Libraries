@@ -196,5 +196,137 @@
     ],
     "answer": "B. xgboost",
     "explanation": "XGBoost không nằm trong `sklearn` mặc định. Đoạn mã minh họa lệnh `from xgboost import XGBRegressor`."
+  },
+  {
+    "question": "Câu 19: Trong Decision Tree cho bài toán Regression, giá trị dự đoán tại mỗi terminal node được tính như thế nào?",
+    "options": [
+      "A. Giá trị lớn nhất trong vùng",
+      "B. Giá trị trung bình (mean) của các mẫu trong vùng",
+      "C. Giá trị ngẫu nhiên",
+      "D. Giá trị nhỏ nhất trong vùng"
+    ],
+    "answer": "B. Giá trị trung bình (mean) của các mẫu trong vùng",
+    "explanation": "Trong regression tree, giá trị dự đoán tại mỗi vùng là trung bình (mean) của các điểm dữ liệu trong vùng đó."
+  },
+  {
+    "question": "Câu 20: Trong Decision Tree cho bài toán Classification, giá trị dự đoán tại terminal node là gì?",
+    "options": [
+      "A. Trung bình cộng",
+      "B. Giá trị nhỏ nhất",
+      "C. Lớp xuất hiện nhiều nhất (mode)",
+      "D. Tổng giá trị"
+    ],
+    "answer": "C. Lớp xuất hiện nhiều nhất (mode)",
+    "explanation": "Classification tree dự đoán bằng lớp xuất hiện nhiều nhất (mode) trong vùng."
+  },
+  {
+    "question": "Câu 21: Thuật toán nào được sử dụng để chia không gian đặc trưng trong Decision Tree?",
+    "options": [
+      "A. Gradient Descent",
+      "B. Recursive Binary Splitting",
+      "C. K-Means",
+      "D. PCA"
+    ],
+    "answer": "B. Recursive Binary Splitting",
+    "explanation": "Decision Tree sử dụng kỹ thuật chia nhị phân đệ quy (recursive binary splitting) để phân chia dữ liệu."
+  },
+  {
+    "question": "Câu 22: Trong bài toán Classification Tree, tiêu chí nào được dùng để đánh giá việc chia nhánh?",
+    "options": [
+      "A. Mean Squared Error",
+      "B. Accuracy",
+      "C. Misclassification Error (hoặc Gini / Entropy)",
+      "D. RMSE"
+    ],
+    "answer": "C. Misclassification Error (hoặc Gini / Entropy)",
+    "explanation": "Classification tree thường dùng các tiêu chí như misclassification error, Gini index hoặc entropy để đánh giá split."
+  },
+  {
+    "question": "Câu 23: Mục đích chính của kỹ thuật Tree Pruning là gì?",
+    "options": [
+      "A. Tăng độ sâu của cây",
+      "B. Giảm overfitting",
+      "C. Tăng số lượng node",
+      "D. Làm mô hình phức tạp hơn"
+    ],
+    "answer": "B. Giảm overfitting",
+    "explanation": "Tree pruning giúp giảm overfitting bằng cách loại bỏ các nhánh không cần thiết."
+  },
+  {
+    "question": "Câu 24: Kỹ thuật \"Cost Complexity Pruning\" còn được gọi là gì?",
+    "options": [
+      "A. Strongest Link Pruning",
+      "B. Weakest Link Pruning",
+      "C. Random Pruning",
+      "D. Gradient Pruning"
+    ],
+    "answer": "B. Weakest Link Pruning",
+    "explanation": "Cost complexity pruning còn được gọi là weakest link pruning."
+  },
+  {
+    "question": "Câu 25: Điểm khác biệt chính giữa Bagging và Random Forest là gì?",
+    "options": [
+      "A. Bagging dùng neural network",
+      "B. Random Forest không dùng tree",
+      "C. Random Forest chỉ dùng một phần feature khi split",
+      "D. Bagging nhanh hơn GPU"
+    ],
+    "answer": "C. Random Forest chỉ dùng một phần feature khi split",
+    "explanation": "Random Forest chọn ngẫu nhiên một tập con features khi split, trong khi Bagging dùng toàn bộ features."
+  },
+  {
+    "question": "Câu 26: Tại sao Random Forest chọn ngẫu nhiên một tập con features khi split?",
+    "options": [
+      "A. Để giảm tốc độ",
+      "B. Để tăng bias",
+      "C. Để giảm correlation giữa các cây",
+      "D. Để giảm dữ liệu"
+    ],
+    "answer": "C. Để giảm correlation giữa các cây",
+    "explanation": "Việc chọn ngẫu nhiên features giúp các cây ít giống nhau hơn, từ đó cải thiện hiệu suất ensemble."
+  },
+  {
+    "question": "Câu 27: Trong Gradient Boosting, “residuals” đại diện cho điều gì?",
+    "options": [
+      "A. Dữ liệu bị thiếu",
+      "B. Sai số giữa giá trị thực và dự đoán",
+      "C. Giá trị trung bình",
+      "D. Gradient noise"
+    ],
+    "answer": "B. Sai số giữa giá trị thực và dự đoán",
+    "explanation": "Residuals là phần sai số mà mô hình trước đó chưa dự đoán đúng."
+  },
+  {
+    "question": "Câu 28: Nếu số lượng cây trong Gradient Boosting quá lớn, điều gì có thể xảy ra?",
+    "options": [
+      "A. Underfitting",
+      "B. Overfitting",
+      "C. Không ảnh hưởng",
+      "D. Mô hình dừng chạy"
+    ],
+    "answer": "B. Overfitting",
+    "explanation": "Quá nhiều cây có thể khiến mô hình học quá kỹ dữ liệu huấn luyện và dẫn đến overfitting."
+  },
+  {
+    "question": "Câu 29: Một trong những cải tiến quan trọng của XGBoost là gì?",
+    "options": [
+      "A. Không dùng tree",
+      "B. Parallel training",
+      "C. Chỉ chạy trên CPU đơn",
+      "D. Không cần dữ liệu"
+    ],
+    "answer": "B. Parallel training",
+    "explanation": "XGBoost hỗ trợ huấn luyện song song giúp tăng tốc độ đáng kể."
+  },
+  {
+    "question": "Câu 30: XGBoost xử lý dữ liệu lớn không vừa RAM bằng kỹ thuật nào?",
+    "options": [
+      "A. Dropout",
+      "B. Out-of-core computation",
+      "C. Sampling",
+      "D. Normalization"
+    ],
+    "answer": "B. Out-of-core computation",
+    "explanation": "XGBoost hỗ trợ out-of-core computation, cho phép xử lý dữ liệu lớn không cần load toàn bộ vào RAM."
   }
 ]

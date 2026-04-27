@@ -416,5 +416,82 @@
     ],
     "answer": "C. Một Tác nhân (Agent) tương tác với môi trường và cập nhật chiến lược hành động dựa trên Phản hồi (Responses/Rewards) nhận được.",
     "explanation": "Mô hình này giống với cách học của con người: thử nghiệm, nhận hình phạt/phần thưởng, và rút kinh nghiệm cho lần sau."
+  },
+  {
+    "question": "Câu 39: Trong Machine Learning, Imbalanced Dataset (dữ liệu mất cân bằng) là gì?",
+    "options": [
+      "A. Dataset có quá nhiều feature.",
+      "B. Dataset có số lượng mẫu giữa các lớp (classes) chênh lệch lớn.",
+      "C. Dataset không có dữ liệu test.",
+      "D. Dataset chỉ chứa số thực."
+    ],
+    "answer": "B. Dataset có số lượng mẫu giữa các lớp (classes) chênh lệch lớn.",
+    "explanation": "Imbalanced data xảy ra khi một lớp chiếm đa số áp đảo so với lớp còn lại, ví dụ 95% negative và 5% positive."
+  },
+  {
+    "question": "Câu 40: Tại sao Accuracy không phải là metric đáng tin cậy trong bài toán với Imbalanced Dataset?",
+    "options": [
+      "A. Vì Accuracy luôn nhỏ hơn 0.",
+      "B. Vì mô hình có thể đạt Accuracy cao chỉ bằng cách dự đoán lớp chiếm đa số.",
+      "C. Vì Accuracy chỉ dùng cho regression.",
+      "D. Vì Accuracy không có công thức."
+    ],
+    "answer": "B. Vì mô hình có thể đạt Accuracy cao chỉ bằng cách dự đoán lớp chiếm đa số.",
+    "explanation": "Ví dụ nếu 95% dữ liệu là negative, mô hình đoán tất cả là negative vẫn đạt 95% Accuracy nhưng vô dụng."
+  },
+  {
+    "question": "Câu 41: Chỉ số AUC (Area Under the Curve) trong ROC thể hiện điều gì?",
+    "options": [
+      "A. Thời gian chạy của mô hình.",
+      "B. Khả năng phân biệt giữa các lớp (class separability) của mô hình.",
+      "C. Số lượng feature trong dataset.",
+      "D. Số vòng lặp của thuật toán."
+    ],
+    "answer": "B. Khả năng phân biệt giữa các lớp (class separability) của mô hình.",
+    "explanation": "AUC đo khả năng mô hình phân biệt giữa positive và negative; càng gần 1 càng tốt."
+  },
+  {
+    "question": "Câu 42: Giá trị AUC = 0.5 và AUC ≈ 1 mang ý nghĩa gì?",
+    "options": [
+      "A. 0.5 là hoàn hảo, 1 là tệ.",
+      "B. 0.5 là mô hình ngẫu nhiên, 1 là mô hình hoàn hảo.",
+      "C. 0.5 là lỗi, 1 là chưa train.",
+      "D. Không có ý nghĩa gì."
+    ],
+    "answer": "B. 0.5 là mô hình ngẫu nhiên, 1 là mô hình hoàn hảo.",
+    "explanation": "AUC = 0.5 tương đương đoán ngẫu nhiên; AUC càng gần 1 thì mô hình càng tốt."
+  },
+  {
+    "question": "Câu 43: Trong công thức R² = 1 - (RSS/TSS), RSS (Residual Sum of Squares) đại diện cho điều gì?",
+    "options": [
+      "A. Tổng biến thiên của dữ liệu.",
+      "B. Tổng sai số bình phương giữa giá trị thực và giá trị dự đoán của mô hình.",
+      "C. Tổng số feature.",
+      "D. Tổng số mẫu."
+    ],
+    "answer": "B. Tổng sai số bình phương giữa giá trị thực và giá trị dự đoán của mô hình.",
+    "explanation": "RSS đo mức độ sai lệch của mô hình so với dữ liệu thực tế."
+  },
+  {
+    "question": "Câu 44: TSS (Total Sum of Squares) trong công thức R² thể hiện điều gì?",
+    "options": [
+      "A. Tổng sai số của mô hình.",
+      "B. Tổng biến thiên của dữ liệu so với giá trị trung bình.",
+      "C. Số lượng tham số.",
+      "D. Độ chính xác của mô hình."
+    ],
+    "answer": "B. Tổng biến thiên của dữ liệu so với giá trị trung bình.",
+    "explanation": "TSS đo tổng mức độ biến động của dữ liệu, là baseline để so sánh với RSS."
+  },
+  {
+    "question": "Câu 45: Validation Set Approach hoạt động như thế nào?",
+    "options": [
+      "A. Dùng toàn bộ dữ liệu để train.",
+      "B. Chia dataset thành training set và validation set, train trên training và đánh giá trên validation.",
+      "C. Chỉ dùng test set để train.",
+      "D. Chia dữ liệu thành nhiều phần nhỏ như k-fold."
+    ],
+    "answer": "B. Chia dataset thành training set và validation set, train trên training và đánh giá trên validation.",
+    "explanation": "Đây là phương pháp resampling đơn giản nhất: tách một phần dữ liệu ra để kiểm tra hiệu suất mô hình."
   }
 ]

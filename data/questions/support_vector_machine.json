@@ -218,5 +218,93 @@
     ],
     "answer": "A. SVR (Support Vector Regressor)",
     "explanation": "Trong đoạn code phần 'SVM for Regression', tài liệu sử dụng lệnh `from sklearn.svm import SVR`."
+  },
+  {
+    "question": "Câu 21: Trong SVM, phương pháp One-vs-All (OvA) hoạt động như thế nào?",
+    "options": [
+      "A. Xây dựng một mô hình duy nhất cho tất cả các lớp",
+      "B. Xây dựng k mô hình, mỗi mô hình phân biệt 1 lớp với tất cả các lớp còn lại",
+      "C. Xây dựng mô hình cho từng cặp lớp",
+      "D. Chỉ sử dụng dữ liệu của 1 lớp"
+    ],
+    "answer": "B. Xây dựng k mô hình, mỗi mô hình phân biệt 1 lớp với tất cả các lớp còn lại",
+    "explanation": "OvA (One-vs-All) xây dựng k bộ phân loại, mỗi bộ phân loại học cách phân biệt một lớp với tất cả các lớp còn lại."
+  },
+  {
+    "question": "Câu 22: Điểm khác biệt chính giữa One-vs-One (OvO) và One-vs-All (OvA) là gì?",
+    "options": [
+      "A. OvO dùng neural network",
+      "B. OvA xây nhiều mô hình hơn OvO",
+      "C. OvO xây dựng mô hình cho từng cặp lớp, còn OvA phân biệt một lớp với phần còn lại",
+      "D. Hai phương pháp giống nhau"
+    ],
+    "answer": "C. OvO xây dựng mô hình cho từng cặp lớp, còn OvA phân biệt một lớp với phần còn lại",
+    "explanation": "OvO tạo ra nhiều mô hình cho từng cặp lớp, còn OvA tạo một mô hình cho mỗi lớp so với các lớp còn lại."
+  },
+  {
+    "question": "Câu 23: Trong SVM, Linear Kernel tương đương với điều gì?",
+    "options": [
+      "A. Neural Network",
+      "B. Decision Tree",
+      "C. Support Vector Classifier (SVC) tuyến tính",
+      "D. K-Means"
+    ],
+    "answer": "C. Support Vector Classifier (SVC) tuyến tính",
+    "explanation": "Linear Kernel chính là trường hợp SVM hoạt động trong không gian tuyến tính, tương đương với Support Vector Classifier."
+  },
+  {
+    "question": "Câu 24: Polynomial Kernel trong SVM có tác dụng gì?",
+    "options": [
+      "A. Giảm số lượng dữ liệu",
+      "B. Tạo ra các đặc trưng bậc cao để học ranh giới phi tuyến",
+      "C. Xóa nhiễu",
+      "D. Tăng tốc độ tính toán"
+    ],
+    "answer": "B. Tạo ra các đặc trưng bậc cao để học ranh giới phi tuyến",
+    "explanation": "Polynomial Kernel giúp mở rộng không gian đặc trưng bằng các đặc trưng bậc cao để mô hình học được quan hệ phi tuyến."
+  },
+  {
+    "question": "Câu 25: Phương pháp nào thường được sử dụng để tìm giá trị tối ưu cho các hyper-parameters như C và gamma trong SVM?",
+    "options": [
+      "A. Random Guess",
+      "B. Grid Search kết hợp Cross-Validation",
+      "C. Linear Regression",
+      "D. PCA"
+    ],
+    "answer": "B. Grid Search kết hợp Cross-Validation",
+    "explanation": "Grid Search kết hợp với Cross-Validation được sử dụng để thử nhiều giá trị C và gamma nhằm tìm ra mô hình tốt nhất."
+  },
+  {
+    "question": "Câu 26: Một ưu điểm lớn của SVM là gì?",
+    "options": [
+      "A. Chạy nhanh với mọi dataset",
+      "B. Hoạt động tốt với dữ liệu có số chiều cao (high-dimensional data)",
+      "C. Không cần tuning",
+      "D. Không bị overfitting"
+    ],
+    "answer": "B. Hoạt động tốt với dữ liệu có số chiều cao (high-dimensional data)",
+    "explanation": "SVM rất hiệu quả với dữ liệu có số chiều lớn nhờ khả năng tìm hyperplane tối ưu."
+  },
+  {
+    "question": "Câu 27: Nhược điểm của SVM khi áp dụng cho dataset rất lớn là gì?",
+    "options": [
+      "A. Không thể phân loại",
+      "B. Dễ bị underfitting",
+      "C. Chi phí tính toán cao, khó mở rộng",
+      "D. Không dùng được kernel"
+    ],
+    "answer": "C. Chi phí tính toán cao, khó mở rộng",
+    "explanation": "SVM không phù hợp với dataset rất lớn vì chi phí tính toán cao và khó mở rộng."
+  },
+  {
+    "question": "Câu 28: Trong SVM, margin lớn hơn thường thể hiện điều gì?",
+    "options": [
+      "A. Mô hình kém chính xác",
+      "B. Mô hình có độ tin cậy phân loại cao hơn",
+      "C. Dữ liệu bị thiếu",
+      "D. Không có ý nghĩa gì"
+    ],
+    "answer": "B. Mô hình có độ tin cậy phân loại cao hơn",
+    "explanation": "Margin lớn hơn thường tương ứng với khả năng phân loại tốt hơn và độ tin cậy cao hơn của mô hình."
   }
 ]

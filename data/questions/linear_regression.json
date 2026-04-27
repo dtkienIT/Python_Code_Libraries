@@ -218,5 +218,115 @@
     ],
     "answer": "B. Áp dụng các kỹ thuật Điều chuẩn (Regularization).",
     "explanation": "Tài liệu chốt lại: \"A standard practice, in this case, is to apply regularization to the regression model. This can do a good job at preventing overfitting.\""
+  },
+  {
+    "question": "Câu 21: Công thức tổng quát của mô hình Hồi quy tuyến tính đa biến (Multiple Linear Regression) là gì?",
+    "options": [
+      "A. ŷ = x + y",
+      "B. ŷ = θ0 + θ1x1 + θ2x2 + ... + θnxn",
+      "C. ŷ = x^2 + y^2",
+      "D. ŷ = θ / x"
+    ],
+    "answer": "B. ŷ = θ0 + θ1x1 + θ2x2 + ... + θnxn",
+    "explanation": "Mô hình hồi quy tuyến tính tổng quát biểu diễn biến mục tiêu là tổ hợp tuyến tính của các đặc trưng, với θ0 là bias và θi là trọng số."
+  },
+  {
+    "question": "Câu 22: Trong mô hình Linear Regression, θ0 (theta zero) còn được gọi là gì?",
+    "options": [
+      "A. Gradient",
+      "B. Bias (hệ số chệch)",
+      "C. Feature",
+      "D. Learning rate"
+    ],
+    "answer": "B. Bias (hệ số chệch)",
+    "explanation": "θ0 là hệ số tự do (bias), đại diện cho điểm cắt trục tung khi tất cả các đặc trưng bằng 0."
+  },
+  {
+    "question": "Câu 23: Residual (phần dư) trong hồi quy tuyến tính là gì?",
+    "options": [
+      "A. Tổng của tất cả các đặc trưng",
+      "B. Sai số giữa giá trị dự đoán và giá trị thực tế",
+      "C. Giá trị trung bình của dữ liệu",
+      "D. Đạo hàm của hàm chi phí"
+    ],
+    "answer": "B. Sai số giữa giá trị dự đoán và giá trị thực tế",
+    "explanation": "Residual là khoảng cách giữa giá trị thực tế (y) và giá trị dự đoán (ŷ), thể hiện mức độ sai lệch của mô hình."
+  },
+  {
+    "question": "Câu 24: Gradient Descent trong Linear Regression được sử dụng để làm gì?",
+    "options": [
+      "A. Tăng giá trị của hàm chi phí",
+      "B. Tìm giá trị lớn nhất của θ",
+      "C. Tối thiểu hóa hàm chi phí bằng cách cập nhật các tham số θ",
+      "D. Chuẩn hóa dữ liệu"
+    ],
+    "answer": "C. Tối thiểu hóa hàm chi phí bằng cách cập nhật các tham số θ",
+    "explanation": "Gradient Descent là thuật toán tối ưu dùng để tìm bộ tham số θ sao cho hàm chi phí nhỏ nhất."
+  },
+  {
+    "question": "Câu 25: Vai trò của Learning Rate (α) trong Gradient Descent là gì?",
+    "options": [
+      "A. Quyết định kích thước bước nhảy khi cập nhật tham số",
+      "B. Là số lượng feature",
+      "C. Là giá trị của cost function",
+      "D. Là số lượng vòng lặp"
+    ],
+    "answer": "A. Quyết định kích thước bước nhảy khi cập nhật tham số",
+    "explanation": "Learning rate (α) kiểm soát mức độ thay đổi của tham số trong mỗi bước cập nhật. Nếu quá lớn có thể diverge, quá nhỏ thì học chậm."
+  },
+  {
+    "question": "Câu 26: Feature Scaling (chuẩn hóa dữ liệu) có vai trò gì trong Linear Regression?",
+    "options": [
+      "A. Làm tăng số lượng dữ liệu",
+      "B. Giúp Gradient Descent hội tụ nhanh và ổn định hơn",
+      "C. Xóa bỏ outliers",
+      "D. Biến dữ liệu thành dạng phân loại"
+    ],
+    "answer": "B. Giúp Gradient Descent hội tụ nhanh và ổn định hơn",
+    "explanation": "Việc đưa các đặc trưng về cùng thang đo giúp thuật toán tối ưu (như Gradient Descent) hoạt động hiệu quả hơn."
+  },
+  {
+    "question": "Câu 27: Polynomial Regression là gì?",
+    "options": [
+      "A. Một thuật toán phân cụm",
+      "B. Một cách mở rộng Linear Regression bằng cách thêm các đặc trưng bậc cao",
+      "C. Một loại neural network",
+      "D. Một phương pháp giảm dữ liệu"
+    ],
+    "answer": "B. Một cách mở rộng Linear Regression bằng cách thêm các đặc trưng bậc cao",
+    "explanation": "Polynomial Regression thêm các feature như x^2, x^3,... để mô hình có thể học được quan hệ phi tuyến."
+  },
+  {
+    "question": "Câu 28: Khi thêm các đặc trưng bậc cao (polynomial features), rủi ro chính là gì?",
+    "options": [
+      "A. Underfitting",
+      "B. Overfitting",
+      "C. Giảm độ chính xác",
+      "D. Mất dữ liệu"
+    ],
+    "answer": "B. Overfitting",
+    "explanation": "Mô hình trở nên quá phức tạp và có thể học cả nhiễu trong dữ liệu, dẫn đến overfitting."
+  },
+  {
+    "question": "Câu 29: Tại sao cần loại bỏ các đặc trưng có tương quan cao với nhau (multicollinearity)?",
+    "options": [
+      "A. Vì làm tăng tốc độ code",
+      "B. Vì làm giảm kích thước dữ liệu",
+      "C. Vì có thể làm giảm độ chính xác và gây khó khăn cho việc học trọng số",
+      "D. Vì không cần thiết"
+    ],
+    "answer": "C. Vì có thể làm giảm độ chính xác và gây khó khăn cho việc học trọng số",
+    "explanation": "Các feature tương quan mạnh với nhau có thể gây nhiễu và làm mô hình khó xác định trọng số chính xác."
+  },
+  {
+    "question": "Câu 30: Mục tiêu khi đánh giá mô hình Linear Regression trên tập test là gì?",
+    "options": [
+      "A. Đảm bảo mô hình nhớ dữ liệu train",
+      "B. Đảm bảo mô hình có thể tổng quát hóa tốt với dữ liệu mới",
+      "C. Tăng số lượng feature",
+      "D. Giảm kích thước dataset"
+    ],
+    "answer": "B. Đảm bảo mô hình có thể tổng quát hóa tốt với dữ liệu mới",
+    "explanation": "Mục tiêu chính là kiểm tra khả năng generalization của mô hình, tức là dự đoán tốt trên dữ liệu chưa từng thấy."
   }
 ]

@@ -1,0 +1,123 @@
+[
+  {
+    "question": "Câu 1: Deep learning (Học sâu) thuộc lớp thuật toán học máy nào?",
+    "options": [
+      "A. Decision Trees (Cây quyết định).",
+      "B. Support Vector Machines.",
+      "C. Neural networks (Mạng nơ-ron).",
+      "D. K-Means Clustering."
+    ],
+    "answer": "C. Neural networks (Mạng nơ-ron).",
+    "explanation": "Tài liệu mở đầu bằng câu định nghĩa cốt lõi: 'Deep learning is a class of machine learning algorithms called neural networks'."
+  },
+  {
+    "question": "Câu 2: Các thuật toán Mạng nơ-ron (Neural networks) được lấy cảm hứng từ đâu?",
+    "options": [
+      "A. Từ cấu trúc của bộ não (structure of the brain).",
+      "B. Từ các thuật toán thống kê cổ điển.",
+      "C. Từ cấu trúc của DNA.",
+      "D. Từ cấu trúc vi mạch máy tính."
+    ],
+    "answer": "A. Từ cấu trúc của bộ não (structure of the brain).",
+    "explanation": "Neural networks là các mô hình toán học được thiết kế dựa trên nguồn cảm hứng từ chính cấu trúc hoạt động của bộ não con người."
+  },
+  {
+    "question": "Câu 3: Theo tài liệu, Deep Learning đặc biệt xuất sắc trong việc xây dựng mô hình dự đoán cho các bài toán phức tạp (complex problems) nào?",
+    "options": [
+      "A. Dự báo giá nhà và phân tích giỏ hàng.",
+      "B. Computer vision (Thị giác máy tính) và Language modeling (Mô hình ngôn ngữ).",
+      "C. Phân loại email rác và hồi quy tuyến tính.",
+      "D. Tìm đường đi ngắn nhất và sắp xếp dữ liệu."
+    ],
+    "answer": "B. Computer vision (Thị giác máy tính) và Language modeling (Mô hình ngôn ngữ).",
+    "explanation": "Deep learning cho phép các thuật toán neural network hoạt động cực kỳ hiệu quả trong các bài toán phức tạp như computer vision và language modeling."
+  },
+  {
+    "question": "Câu 4: Hai ví dụ điển hình về các công nghệ đột phá ra đời nhờ sự tiến bộ của Deep Learning được nhắc đến trong tài liệu là gì?",
+    "options": [
+      "A. Trình duyệt web và hệ điều hành.",
+      "B. Cơ sở dữ liệu quan hệ và mạng Wi-Fi.",
+      "C. Xe tự lái (Self-driving cars) và Dịch thuật giọng nói tự động (Automatic speech translation).",
+      "D. Máy in 3D và công nghệ thực tế ảo."
+    ],
+    "answer": "C. Xe tự lái (Self-driving cars) và Dịch thuật giọng nói tự động (Automatic speech translation).",
+    "explanation": "Tài liệu liệt kê self-driving cars và automatic speech translation như là những ví dụ tiêu biểu cho các công nghệ bắt nguồn từ kỷ nguyên Deep learning."
+  },
+  {
+    "question": "Câu 5: \"The Representation Challenge\" (Thách thức về Biểu diễn) đề cập đến vấn đề cốt lõi nào?",
+    "options": [
+      "A. Việc học là một nhiệm vụ rất phức tạp (non-trivial) và khả năng học của bộ não người vẫn chưa được cộng đồng khoa học hiểu rõ hoàn toàn.",
+      "B. Máy tính hiện đại không có đủ bộ nhớ RAM để lưu trữ dữ liệu hình ảnh.",
+      "C. Việc thu thập dữ liệu để huấn luyện AI tốn quá nhiều chi phí.",
+      "D. Các ngôn ngữ lập trình hiện tại không đủ mạnh để biểu diễn toán học."
+    ],
+    "answer": "A. Việc học là một nhiệm vụ rất phức tạp (non-trivial) và khả năng học của bộ não người vẫn chưa được cộng đồng khoa học hiểu rõ hoàn toàn.",
+    "explanation": "Việc học (learning) không hề đơn giản. Khả năng học các tác vụ phức tạp của bộ não vẫn còn là một bí ẩn lớn đối với các nhà khoa học thần kinh và tâm lý học."
+  },
+  {
+    "question": "Câu 6: Thách thức lớn nhất đối với nghiên cứu và kỹ thuật AI (Trí tuệ nhân tạo) hiện nay là gì?",
+    "options": [
+      "A. Chế tạo robot có hình dáng và biểu cảm giống hệt con người.",
+      "B. Tự động hóa hoàn toàn các công việc lao động chân tay.",
+      "C. Xây dựng các cỗ máy có khả năng hiểu và phân rã (decompose) các mẫu cấu trúc (structural patterns) tiềm ẩn trong các hệ thống phức tạp.",
+      "D. Tạo ra một phần mềm máy tính chạy nhanh hơn não bộ 1000 lần."
+    ],
+    "answer": "C. Xây dựng các cỗ máy có khả năng hiểu và phân rã (decompose) các mẫu cấu trúc (structural patterns) tiềm ẩn trong các hệ thống phức tạp.",
+    "explanation": "Thách thức của AI là chế tạo ra những cỗ máy có khả năng understand (hiểu) và decompose (phân rã) các cấu trúc mẫu đặc hữu trong dữ liệu phức tạp giống như cách não bộ làm."
+  },
+  {
+    "question": "Câu 7: Theo tài liệu, ba thành phần sinh học thiết yếu nhất của một nơ-ron (neuron) được mô hình Deep Learning quan tâm mô phỏng là gì?",
+    "options": [
+      "A. Nucleus (Nhân), Cell body (Thân tế bào), Membrane (Màng tế bào).",
+      "B. Axon (Sợi trục), Dendrite (Sợi nhánh), Synapse (Khớp thần kinh).",
+      "C. Proton, Neutron, Electron.",
+      "D. Cortex, Cerebellum, Brainstem."
+    ],
+    "answer": "B. Axon (Sợi trục), Dendrite (Sợi nhánh), Synapse (Khớp thần kinh).",
+    "explanation": "Tài liệu liệt kê rõ 3 thành phần trọng tâm cấu tạo nên một nơ-ron sinh học là: The axon, The dendrite, và The synapse."
+  },
+  {
+    "question": "Câu 8: Trong nơ-ron sinh học, Axon (Sợi trục) có chức năng gì?",
+    "options": [
+      "A. Nó là một cái đuôi dài kết nối với nhân, chịu trách nhiệm truyền tín hiệu điện từ nhân đến các tế bào nơ-ron khác thông qua các đầu mút sợi trục (axon terminals).",
+      "B. Nó tiếp nhận thông tin từ các tế bào khác.",
+      "C. Nó là lớp màng bảo vệ tế bào khỏi sự tấn công của virus.",
+      "D. Nó cung cấp năng lượng nuôi sống tế bào não."
+    ],
+    "answer": "A. Nó là một cái đuôi dài kết nối với nhân, chịu trách nhiệm truyền tín hiệu điện từ nhân đến các tế bào nơ-ron khác thông qua các đầu mút sợi trục (axon terminals).",
+    "explanation": "Axon đóng vai trò như một cáp truyền dẫn (transmitter), phát các tín hiệu điện (electrical signals) từ nhân tế bào đi ra ngoài."
+  },
+  {
+    "question": "Câu 9: Ngược lại với Axon, Dendrite (Sợi nhánh) có chức năng gì trong nơ-ron?",
+    "options": [
+      "A. Nó phá hủy các tế bào thần kinh đã chết.",
+      "B. Nó tạo ra các tín hiệu hóa học để điều khiển cơ bắp.",
+      "C. Nó làm giảm tốc độ truyền tín hiệu để bảo vệ não.",
+      "D. Nó tiếp nhận thông tin dưới dạng các xung điện (electrical impulses) từ các tế bào nơ-ron khác thông qua Synapse (khớp thần kinh) để đưa vào nhân tế bào."
+    ],
+    "answer": "D. Nó tiếp nhận thông tin dưới dạng các xung điện (electrical impulses) từ các tế bào nơ-ron khác thông qua Synapse (khớp thần kinh) để đưa vào nhân tế bào.",
+    "explanation": "Dendrite đóng vai trò như một ăng-ten thu sóng (receiver), nhận thông tin từ các tế bào khác đưa vào nhân."
+  },
+  {
+    "question": "Câu 10: Bằng cách mô phỏng 3 thành phần sinh học của nơ-ron (Axon, Dendrite, Synapse), các nhà khoa học đã phát triển ra thiết kế và cấu trúc cốt lõi nào?",
+    "options": [
+      "A. Support Vector Machines (SVM).",
+      "B. Mạng nơ-ron nhân tạo (Artificial Neural Network - ANN) cho phép chúng ta chế tạo máy móc có khả năng học.",
+      "C. Principal Component Analysis (PCA).",
+      "D. Cây quyết định (Decision Tree)."
+    ],
+    "answer": "B. Mạng nơ-ron nhân tạo (Artificial Neural Network - ANN) cho phép chúng ta chế tạo máy móc có khả năng học.",
+    "explanation": "Việc bắt chước các thành phần sinh học này đã dẫn đến sự ra đời của Artificial Neural Network (ANN), nền tảng của mọi hệ thống Deep Learning."
+  },
+  {
+    "question": "Câu 11: Kỳ vọng lớn nhất của khoa học và kỹ thuật khi mô phỏng lại các khả năng của bộ não thông qua Mạng nơ-ron nhân tạo (ANN) là gì?",
+    "options": [
+      "A. Để chế tạo ra máy móc có thể học các đặc trưng phân cấp (hierarchical features) từ các bài toán trong các lĩnh vực cực kỳ phức tạp.",
+      "B. Để thay thế hoàn toàn bác sĩ phẫu thuật não.",
+      "C. Để tạo ra máy móc có cảm xúc, vui buồn như con người.",
+      "D. Để máy tính không bao giờ bị hỏng hóc vật lý."
+    ],
+    "answer": "A. Để chế tạo ra máy móc có thể học các đặc trưng phân cấp (hierarchical features) từ các bài toán trong các lĩnh vực cực kỳ phức tạp.",
+    "explanation": "Hy vọng đặt ra là nếu ta có thể bắt chước cách học của bộ não, ta có thể tạo ra các cỗ máy học được 'hierarchical features' (đặc trưng đa tầng/phân cấp) từ các nguồn dữ liệu phức tạp."
+  }
+]

@@ -1,0 +1,684 @@
+[
+  {
+    "question": "Câu 1: Theo tài liệu, Feature Engineering (Kỹ thuật Đặc trưng) được định nghĩa là quá trình gì?",
+    "options": [
+      "A. Quá trình tạo ra các thuật toán học máy mới.",
+      "B. Quá trình lựa chọn có hệ thống một tập hợp các đặc trưng (features) hữu ích và có liên quan đến bài toán, đồng thời loại bỏ các đặc trưng không liên quan.",
+      "C. Quá trình gia tăng số lượng dữ liệu bằng cách nhân bản.",
+      "D. Việc chuyển đổi dữ liệu hình ảnh thành văn bản."
+    ],
+    "answer": "B. Quá trình lựa chọn có hệ thống một tập hợp các đặc trưng (features) hữu ích và có liên quan đến bài toán, đồng thời loại bỏ các đặc trưng không liên quan.",
+    "explanation": "Feature engineering là quá trình chọn lọc có hệ thống tập hợp các đặc trưng hữu ích cho bài toán học máy, vì các đặc trưng không liên quan sẽ ảnh hưởng tiêu cực đến hiệu suất mô hình."
+  },
+  {
+    "question": "Câu 2: Đâu KHÔNG PHẢI là một kỹ thuật Feature Engineering được triển khai trong thư viện Scikit-learn theo danh sách của tài liệu?",
+    "options": [
+      "A. Lựa chọn k đặc trưng tốt nhất bằng các bài kiểm tra thống kê (SelectKBest).",
+      "B. Loại bỏ đặc trưng đệ quy (Recursive Feature Elimination - RFE).",
+      "C. Tự động sinh ra hình ảnh từ văn bản bằng mạng nơ-ron sâu.",
+      "D. Phân tích thành phần chính (Principal Component Analysis - PCA)."
+    ],
+    "answer": "C. Tự động sinh ra hình ảnh từ văn bản bằng mạng nơ-ron sâu.",
+    "explanation": "Tài liệu liệt kê 4 phương pháp chọn đặc trưng: SelectKBest, Recursive feature elimination (RFE), Principal component analysis (PCA), và Feature importances."
+  },
+  {
+    "question": "Câu 3: Module `SelectKBest` trong Scikit-learn hoạt động dựa trên nguyên lý nào để lựa chọn đặc trưng?",
+    "options": [
+      "A. Dùng mạng nơ-ron để tìm đặc trưng.",
+      "B. Sử dụng các bài kiểm tra thống kê (Statistical tests như chi-squared) để chấm điểm và giữ lại K đặc trưng tốt nhất.",
+      "C. Chọn ngẫu nhiên K đặc trưng bất kỳ.",
+      "D. Chọn các đặc trưng có giá trị trung bình lớn nhất."
+    ],
+    "answer": "B. Sử dụng các bài kiểm tra thống kê (Statistical tests như chi-squared) để chấm điểm và giữ lại K đặc trưng tốt nhất.",
+    "explanation": "Kỹ thuật này sử dụng các bài kiểm tra thống kê (statistical tests) để chọn ra k đặc trưng tốt nhất giúp dự đoán chính xác biến mục tiêu."
+  },
+  {
+    "question": "Câu 4: Kỹ thuật RFE (Recursive Feature Elimination) thực hiện việc chọn lọc đặc trưng như thế nào?",
+    "options": [
+      "A. Thay thế các biến bằng giá trị trung bình.",
+      "B. Thêm dần các biến vào mô hình theo thứ tự bảng chữ cái.",
+      "C. Huấn luyện mô hình lặp đi lặp lại và đệ quy loại bỏ (recursively remove) các đặc trưng ít quan trọng nhất cho đến khi đạt được số lượng mong muốn.",
+      "D. Gom cụm các biến lại với nhau bằng K-Means."
+    ],
+    "answer": "C. Huấn luyện mô hình lặp đi lặp lại và đệ quy loại bỏ (recursively remove) các đặc trưng ít quan trọng nhất cho đến khi đạt được số lượng mong muốn.",
+    "explanation": "RFE (Recursive Feature Elimination) hoạt động bằng cách đệ quy loại bỏ các đặc trưng không liên quan ra khỏi tập dữ liệu."
+  },
+  {
+    "question": "Câu 5: Kỹ thuật Feature Importances (Độ quan trọng của đặc trưng) thường được trích xuất trực tiếp từ loại thuật toán nào?",
+    "options": [
+      "A. K-Nearest Neighbors (KNN).",
+      "B. Logistic Regression.",
+      "C. Các mô hình học kết hợp (Ensemble classifiers) hoặc mô hình dạng cây (Tree classifiers).",
+      "D. Support Vector Machines."
+    ],
+    "answer": "C. Các mô hình học kết hợp (Ensemble classifiers) hoặc mô hình dạng cây (Tree classifiers).",
+    "explanation": "Độ quan trọng của các đặc trưng (Feature importances) thường được xác định thông qua việc sử dụng các bộ phân loại dạng cây (tree classifiers) hoặc học kết hợp (ensembled)."
+  },
+  {
+    "question": "Câu 6: Phương pháp đánh giá mô hình đơn giản nhất (chỉ chia Train/Test split 1 lần duy nhất) có rủi ro gì?",
+    "options": [
+      "A. Dữ liệu sẽ bị xóa hoàn toàn sau khi chạy.",
+      "B. Đánh giá hiệu suất có thể có phương sai cao (high variance), phụ thuộc rất lớn vào việc dữ liệu nào vô tình rơi vào tập train hay test.",
+      "C. Thời gian chạy quá lâu.",
+      "D. Gây lỗi tràn bộ nhớ RAM máy tính."
+    ],
+    "answer": "B. Đánh giá hiệu suất có thể có phương sai cao (high variance), phụ thuộc rất lớn vào việc dữ liệu nào vô tình rơi vào tập train hay test.",
+    "explanation": "Việc chỉ chia tập dữ liệu thành Train/Test một lần có thể dẫn đến việc đánh giá hiệu năng bị thiên lệch. Resampling methods giúp khắc phục điều này."
+  },
+  {
+    "question": "Câu 7: Mục đích chính của nhóm phương pháp Resampling (Lấy mẫu lại / Cross-Validation) là gì?",
+    "options": [
+      "A. Cung cấp một ước tính chính xác và mạnh mẽ hơn (more robust) về hiệu suất của mô hình trên dữ liệu chưa từng thấy, thay vì chỉ chia Train/Test 1 lần.",
+      "B. Làm cho thuật toán học máy chạy nhanh hơn.",
+      "C. Loại bỏ hoàn toàn khả năng mô hình bị Overfitting.",
+      "D. Tự động khôi phục các dữ liệu bị thiếu (Missing values)."
+    ],
+    "answer": "A. Cung cấp một ước tính chính xác và mạnh mẽ hơn (more robust) về hiệu suất của mô hình trên dữ liệu chưa từng thấy, thay vì chỉ chia Train/Test 1 lần.",
+    "explanation": "Các phương pháp lấy mẫu lại (Resampling methods) là kỹ thuật quan trọng để đánh giá mức độ khái quát hóa của mô hình học máy trên dữ liệu mới một cách đáng tin cậy hơn."
+  },
+  {
+    "question": "Câu 8: Phương pháp K-Fold Cross-Validation hoạt động theo cơ chế nào?",
+    "options": [
+      "A. Chia dữ liệu thành K phần, lấy phần đầu tiên làm Test, các phần còn lại bỏ đi.",
+      "B. Lấy K mẫu ngẫu nhiên để test.",
+      "C. Chia tập dữ liệu thành K phần (folds) bằng nhau. Lặp lại K lần, mỗi lần lấy 1 phần làm tập kiểm thử (Test) và K-1 phần còn lại làm tập huấn luyện (Train).",
+      "D. Nhân bản tập dữ liệu gốc lên K lần."
+    ],
+    "answer": "C. Chia tập dữ liệu thành K phần (folds) bằng nhau. Lặp lại K lần, mỗi lần lấy 1 phần làm tập kiểm thử (Test) và K-1 phần còn lại làm tập huấn luyện (Train).",
+    "explanation": "Đó là định nghĩa cơ bản của phương pháp K-Fold, giúp toàn bộ dữ liệu đều được dùng để train và test luân phiên nhau."
+  },
+  {
+    "question": "Câu 9: Trong K-Fold Cross-Validation, hiệu suất (Performance) cuối cùng của mô hình được báo cáo như thế nào?",
+    "options": [
+      "A. Lấy độ chính xác của lần chạy vòng lặp cuối cùng.",
+      "B. Lấy độ chính xác của lần chạy đầu tiên.",
+      "C. Lấy giá trị lớn nhất trong K lần chạy.",
+      "D. Tính trung bình (Mean) và độ lệch chuẩn (Standard Deviation) của tất cả K lần đánh giá."
+    ],
+    "answer": "D. Tính trung bình (Mean) và độ lệch chuẩn (Standard Deviation) của tất cả K lần đánh giá.",
+    "explanation": "Kết quả cuối cùng của K-Fold luôn là trung bình cộng của các lần chạy (folds) để đưa ra ước lượng chính xác nhất về sức mạnh mô hình."
+  },
+  {
+    "question": "Câu 10: Phương pháp \"Leave-One-Out Cross-Validation\" (LOOCV) là một trường hợp đặc biệt của K-Fold khi nào?",
+    "options": [
+      "A. Khi K = 1.",
+      "B. Khi K = Tổng số lượng mẫu (samples) trong tập dữ liệu (tức là mỗi lần test chỉ dùng đúng 1 mẫu).",
+      "C. Khi K = Số lượng đặc trưng (features).",
+      "D. Khi K = 0."
+    ],
+    "answer": "B. Khi K = Tổng số lượng mẫu (samples) trong tập dữ liệu (tức là mỗi lần test chỉ dùng đúng 1 mẫu).",
+    "explanation": "Trong LOOCV, tập test chỉ chứa duy nhất 1 điểm dữ liệu, phần còn lại (N-1) đều được dùng làm tập huấn luyện."
+  },
+  {
+    "question": "Câu 11: Nhược điểm lớn nhất của Leave-One-Out Cross-Validation (LOOCV) là gì?",
+    "options": [
+      "A. Rất không chính xác.",
+      "B. Yêu cầu chi phí tính toán cực kỳ lớn (computationally expensive) đối với dữ liệu lớn vì phải huấn luyện mô hình N lần (N là số lượng dữ liệu).",
+      "C. Nó không được hỗ trợ trong thư viện Scikit-learn.",
+      "D. Nó chỉ có thể dùng cho bài toán Hồi quy tuyến tính."
+    ],
+    "answer": "B. Yêu cầu chi phí tính toán cực kỳ lớn (computationally expensive) đối với dữ liệu lớn vì phải huấn luyện mô hình N lần (N là số lượng dữ liệu).",
+    "explanation": "Do phải lặp lại thuật toán huấn luyện ứng với mỗi điểm dữ liệu, LOOCV trở nên bất khả thi với các tập dữ liệu khổng lồ (humongous datasets)."
+  },
+  {
+    "question": "Câu 12: Kỹ thuật Stratified K-Fold Cross-Validation (Lấy mẫu phân tầng) thường được khuyên dùng trong trường hợp nào?",
+    "options": [
+      "A. Khi tập dữ liệu hoàn toàn là các con số.",
+      "B. Khi bài toán là dự đoán chuỗi thời gian.",
+      "C. Khi làm việc với bộ dữ liệu phân loại bị mất cân bằng (Imbalanced dataset), để đảm bảo tỷ lệ của các lớp (classes) trong mỗi fold luôn giữ được như tỷ lệ gốc.",
+      "D. Khi kích thước dữ liệu quá nhỏ (dưới 10 dòng)."
+    ],
+    "answer": "C. Khi làm việc với bộ dữ liệu phân loại bị mất cân bằng (Imbalanced dataset), để đảm bảo tỷ lệ của các lớp (classes) trong mỗi fold luôn giữ được như tỷ lệ gốc.",
+    "explanation": "Stratified K-Fold giúp tránh trường hợp một fold (nhóm) vô tình chứa toàn bộ dữ liệu của lớp thiểu số hoặc lớp đa số, làm hỏng quá trình huấn luyện."
+  },
+  {
+    "question": "Câu 13: Ma trận nhầm lẫn (Confusion Matrix) dùng để làm gì trong bước Model Evaluation?",
+    "options": [
+      "A. Liệt kê các dòng code bị lỗi trong Python.",
+      "B. Cung cấp một bảng tóm tắt chi tiết về số lượng dự đoán Đúng và Sai, được chia thành 4 nhóm: True Positives, True Negatives, False Positives, False Negatives.",
+      "C. Đo lường tốc độ chạy tính bằng giây của mô hình.",
+      "D. Đánh giá tính phân phối chuẩn của các cột dữ liệu."
+    ],
+    "answer": "B. Cung cấp một bảng tóm tắt chi tiết về số lượng dự đoán Đúng và Sai, được chia thành 4 nhóm: True Positives, True Negatives, False Positives, False Negatives.",
+    "explanation": "Confusion Matrix là công cụ trực quan nhất để xem mô hình phân loại bị \"nhầm lẫn\" ở đâu giữa các lớp."
+  },
+  {
+    "question": "Câu 14: Trong Ma trận nhầm lẫn, \"True Positives\" (TP) có nghĩa là gì?",
+    "options": [
+      "A. Mô hình dự đoán là Âm tính, nhưng thực tế là Dương tính.",
+      "B. Mô hình dự đoán là Dương tính, và thực tế cũng đúng là Dương tính.",
+      "C. Mô hình dự đoán là Dương tính, nhưng thực tế là Âm tính.",
+      "D. Mô hình không thể dự đoán được dữ liệu này."
+    ],
+    "answer": "B. Mô hình dự đoán là Dương tính, và thực tế cũng đúng là Dương tính.",
+    "explanation": "True Positives là số lượng các quan sát dương tính được mô hình dự đoán hoàn toàn chính xác."
+  },
+  {
+    "question": "Câu 15: Trong Ma trận nhầm lẫn, \"False Positives\" (FP - Lỗi loại I) có nghĩa là gì?",
+    "options": [
+      "A. Mô hình dự đoán là Âm tính, và thực tế đúng là Âm tính.",
+      "B. Mô hình dự đoán là Dương tính, nhưng thực tế lại là Âm tính (Báo động giả / Bắt nhầm).",
+      "C. Mô hình dự đoán là Âm tính, nhưng thực tế là Dương tính (Bỏ lọt / Bỏ sót).",
+      "D. Mô hình loại bỏ điểm dữ liệu này."
+    ],
+    "answer": "B. Mô hình dự đoán là Dương tính, nhưng thực tế lại là Âm tính (Báo động giả / Bắt nhầm).",
+    "explanation": "False Positives xảy ra khi mô hình báo có (Positive) nhưng thực chất là không (Negative). Đây được gọi là lỗi loại I (Type I error)."
+  },
+  {
+    "question": "Câu 16: Trong bài toán Phân loại (Classification), thước đo Precision (Độ chuẩn xác) trả lời cho câu hỏi nào?",
+    "options": [
+      "A. Trong số TẤT CẢ các trường hợp thực sự là Dương tính, mô hình đã tìm được bao nhiêu phần trăm?",
+      "B. Trong số TẤT CẢ những trường hợp mô hình DỰ ĐOÁN là Dương tính, có bao nhiêu phần trăm thực sự là đúng? (Công thức: TP / (TP + FP)).",
+      "C. Tỷ lệ dự đoán đúng trên tổng số dữ liệu là bao nhiêu?",
+      "D. Điểm trung bình môn của mô hình là bao nhiêu?"
+    ],
+    "answer": "B. Trong số TẤT CẢ những trường hợp mô hình DỰ ĐOÁN là Dương tính, có bao nhiêu phần trăm thực sự là đúng? (Công thức: TP / (TP + FP)).",
+    "explanation": "Precision đo lường sự chính xác của các dự đoán Positive, giúp hạn chế báo động giả (False Positives)."
+  },
+  {
+    "question": "Câu 17: Thước đo Recall (Độ thu hồi / Sensitivity) trả lời cho câu hỏi nào?",
+    "options": [
+      "A. Trong số TẤT CẢ những trường hợp thực sự là Dương tính trong thực tế, mô hình đã tìm ra / phát hiện được bao nhiêu phần trăm? (Công thức: TP / (TP + FN)).",
+      "B. Trong số những gì mô hình dự đoán, bao nhiêu là đúng?",
+      "C. Sai số tuyệt đối của mô hình là bao nhiêu?",
+      "D. Có bao nhiêu False Positives trong hệ thống?"
+    ],
+    "answer": "A. Trong số TẤT CẢ những trường hợp thực sự là Dương tính trong thực tế, mô hình đã tìm ra / phát hiện được bao nhiêu phần trăm? (Công thức: TP / (TP + FN)).",
+    "explanation": "Recall rất quan trọng trong các bài toán nhạy cảm (như chẩn đoán y tế) khi mục tiêu là không được phép bỏ sót bất kỳ một ca bệnh (Positive) nào."
+  },
+  {
+    "question": "Câu 18: Thước đo F1-Score là gì?",
+    "options": [
+      "A. Là trung bình cộng bình thường của Accuracy và Precision.",
+      "B. Là hệ số xác định dùng trong bài toán Hồi quy.",
+      "C. Là trung bình điều hòa (Harmonic Mean) giữa Precision và Recall, rất hữu ích khi muốn tìm sự cân bằng giữa 2 thước đo này trên các bộ dữ liệu mất cân bằng.",
+      "D. Là bình phương của Recall nhân với Pi."
+    ],
+    "answer": "C. Là trung bình điều hòa (Harmonic Mean) giữa Precision và Recall, rất hữu ích khi muốn tìm sự cân bằng giữa 2 thước đo này trên các bộ dữ liệu mất cân bằng.",
+    "explanation": "F1-Score tổng hợp sức mạnh của cả Precision và Recall vào một con số duy nhất, xử lý tốt các bộ dữ liệu có tỷ lệ chênh lệch lớn."
+  },
+  {
+    "question": "Câu 19: Hàm `classification_report()` trong Scikit-learn xuất ra kết quả gì?",
+    "options": [
+      "A. Một biểu đồ đường thẳng (Line chart).",
+      "B. Một báo cáo văn bản tóm tắt các chỉ số Precision, Recall, F1-score và Support cho TỪNG lớp (class) trong bài toán phân loại.",
+      "C. Ma trận hiệp phương sai của dữ liệu.",
+      "D. Xuất mô hình ra thành một file nén PDF."
+    ],
+    "answer": "B. Một báo cáo văn bản tóm tắt các chỉ số Precision, Recall, F1-score và Support cho TỪNG lớp (class) trong bài toán phân loại.",
+    "explanation": "Hàm này là công cụ toàn diện nhất để đánh giá hiệu suất của Classification Models trong một bảng báo cáo duy nhất."
+  },
+  {
+    "question": "Câu 20: Trong bảng kết quả của `classification_report`, chỉ số \"Support\" mang ý nghĩa gì?",
+    "options": [
+      "A. Mức độ hỗ trợ của thuật toán.",
+      "B. Số lượng siêu tham số được mô hình sử dụng.",
+      "C. Số lượng mẫu (samples) thực tế xuất hiện của từng lớp trong tập dữ liệu kiểm thử.",
+      "D. Số lượng vòng lặp thuật toán đã chạy."
+    ],
+    "answer": "C. Số lượng mẫu (samples) thực tế xuất hiện của từng lớp trong tập dữ liệu kiểm thử.",
+    "explanation": "Support cho biết kích thước thực tế của từng nhóm, giúp phát hiện ra nếu dữ liệu đang bị mất cân bằng nghiêm trọng."
+  },
+  {
+    "question": "Câu 21: Đối với bài toán Hồi quy (Regression), MAE (Mean Absolute Error) được tính như thế nào?",
+    "options": [
+      "A. Lấy tổng các sai số chia cho 0.",
+      "B. Tính trung bình cộng của các giá trị tuyệt đối của sai số (sự chênh lệch giữa giá trị dự đoán và giá trị thực tế).",
+      "C. Bình phương các sai số rồi lấy trung bình.",
+      "D. Lấy sai số lớn nhất."
+    ],
+    "answer": "B. Tính trung bình cộng của các giá trị tuyệt đối của sai số (sự chênh lệch giữa giá trị dự đoán và giá trị thực tế).",
+    "explanation": "MAE cung cấp một cái nhìn tuyến tính về sai số trung bình mà không thổi phồng các lỗi lớn."
+  },
+  {
+    "question": "Câu 22: Sự khác biệt chính giữa MAE (Mean Absolute Error) và MSE (Mean Squared Error) là gì?",
+    "options": [
+      "A. MAE không thể tính cho số âm, MSE thì có.",
+      "B. MSE bình phương các sai số trước khi tính trung bình, do đó nó \"phạt\" (penalizes) các sai số lớn / ngoại lệ (outliers) nặng nề hơn rất nhiều so với MAE.",
+      "C. MSE chạy chậm hơn MAE gấp 10 lần trong Python.",
+      "D. MAE dùng cho thuật toán phân loại, MSE dùng cho thuật toán hồi quy."
+    ],
+    "answer": "B. MSE bình phương các sai số trước khi tính trung bình, do đó nó \"phạt\" (penalizes) các sai số lớn / ngoại lệ (outliers) nặng nề hơn rất nhiều so với MAE.",
+    "explanation": "Bình phương sai số khiến những điểm dữ liệu bị dự đoán sai với khoảng cách xa (outliers) sẽ tạo ra mức penalty khổng lồ cho mô hình trong MSE."
+  },
+  {
+    "question": "Câu 23: Chỉ số R2 Score (R-squared / Hệ số xác định) trong hồi quy biểu thị điều gì?",
+    "options": [
+      "A. Phần trăm số lần mô hình dự đoán chính xác tuyệt đối.",
+      "B. Tỷ lệ phương sai (variance) của biến mục tiêu có thể được giải thích bởi mô hình độc lập. Giá trị lý tưởng nhất là 1.0.",
+      "C. Căn bậc 2 của MSE.",
+      "D. Sai số nhỏ nhất mà mô hình có thể đạt được."
+    ],
+    "answer": "B. Tỷ lệ phương sai (variance) của biến mục tiêu có thể được giải thích bởi mô hình độc lập. Giá trị lý tưởng nhất là 1.0.",
+    "explanation": "R-squared là thang đo tiêu chuẩn từ 0 đến 1, trong đó 1 biểu thị rằng mô hình giải thích được 100% sự biến thiên của biến mục tiêu."
+  },
+  {
+    "question": "Câu 24: Khái niệm \"Pipelines\" (Đường ống) trong Scikit-learn có tác dụng chính là gì?",
+    "options": [
+      "A. Download dữ liệu từ Internet vào DataFrame.",
+      "B. Gói gọn (chaining) chuỗi các bước tiền xử lý (như StandardScaler, PCA) và mô hình (Estimator) lại thành một đối tượng duy nhất để đơn giản hóa luồng công việc (streamlining workflow).",
+      "C. Chia dữ liệu thành Train và Test ngẫu nhiên.",
+      "D. Thiết lập kết nối giữa Python và SQL."
+    ],
+    "answer": "B. Gói gọn (chaining) chuỗi các bước tiền xử lý (như StandardScaler, PCA) và mô hình (Estimator) lại thành một đối tượng duy nhất để đơn giản hóa luồng công việc (streamlining workflow).",
+    "explanation": "Pipelines giúp tự động hóa và đảm bảo tính nhất quán cho quy trình machine learning workflows."
+  },
+  {
+    "question": "Câu 25: Vai trò cực kỳ quan trọng của Pipelines trong việc giải quyết vấn đề \"Data Leakage\" (Rò rỉ dữ liệu) khi dùng Cross-Validation là gì?",
+    "options": [
+      "A. Đảm bảo rằng file dữ liệu gốc không bị người khác copy.",
+      "B. Đảm bảo rằng các bước tiền xử lý (như gọi hàm `.fit()` trên StandardScaler để tìm Mean/Std) CHỈ được thực hiện trên các nếp gấp Huấn luyện (Training folds), mà không bị \"nhìn trộm\" hay rò rỉ dữ liệu từ nếp gấp Kiểm thử (Validation fold).",
+      "C. Đổi tên các biến thành chuỗi mã hóa an toàn.",
+      "D. Bằng cách xóa ngẫu nhiên 10% dữ liệu để tránh học vẹt."
+    ],
+    "answer": "B. Đảm bảo rằng các bước tiền xử lý (như gọi hàm `.fit()` trên StandardScaler để tìm Mean/Std) CHỈ được thực hiện trên các nếp gấp Huấn luyện (Training folds), mà không bị \"nhìn trộm\" hay rò rỉ dữ liệu từ nếp gấp Kiểm thử (Validation fold).",
+    "explanation": "Nếu bạn scale toàn bộ dữ liệu trước khi cắt K-Fold, bạn đã làm lộ thông tin của tập Test vào tập Train. Pipeline tự động giải quyết việc này một cách an toàn."
+  },
+  {
+    "question": "Câu 26: Trong đoạn code khởi tạo Pipeline `Pipeline(steps=[('scaler', StandardScaler()), ('classifier', LogisticRegression())])`, cấu trúc của tham số `steps` là gì?",
+    "options": [
+      "A. Một mảng chứa các số nguyên thứ tự.",
+      "B. Một chuỗi văn bản (String) nối bằng dấu phẩy.",
+      "C. Một danh sách (List) các Tuples, mỗi Tuple chứa 2 phần tử: (Tên_do_bạn_tự_đặt, Đối_tượng_Scikit_Learn).",
+      "D. Một Dictionary lồng nhau phức tạp."
+    ],
+    "answer": "C. Một danh sách (List) các Tuples, mỗi Tuple chứa 2 phần tử: (Tên_do_bạn_tự_đặt, Đối_tượng_Scikit_Learn).",
+    "explanation": "Quy tắc khởi tạo Pipeline là dùng danh sách các tuple `(name, transformer/estimator)` để dễ dàng truy xuất lại thông qua tên."
+  },
+  {
+    "question": "Câu 27: Khái niệm \"Model Tuning\" (Tinh chỉnh mô hình) chủ yếu liên quan đến việc tối ưu hóa loại tham số nào?",
+    "options": [
+      "A. Các tham số mà mô hình tự học và tự tính toán được (Model parameters - ví dụ: trọng số w, b).",
+      "B. Các siêu tham số (Hyper-parameters) - tức là các thông số cấu hình do con người thiết lập cứng trước khi thuật toán bắt đầu học (ví dụ: số lượng cây trong Random Forest, tốc độ học).",
+      "C. Số lượng hàng (rows) trong tập dữ liệu.",
+      "D. Tên của các biến trong dòng code."
+    ],
+    "answer": "B. Các siêu tham số (Hyper-parameters) - tức là các thông số cấu hình do con người thiết lập cứng trước khi thuật toán bắt đầu học (ví dụ: số lượng cây trong Random Forest, tốc độ học).",
+    "explanation": "Tuning parameters hay Hyper-parameter tuning là quá trình điều chỉnh các cấu hình thuật toán để tìm ra phiên bản mô hình mạnh mẽ nhất."
+  },
+  {
+    "question": "Câu 28: Lớp `GridSearchCV` trong Scikit-learn thực hiện tinh chỉnh siêu tham số theo phương pháp tiếp cận nào?",
+    "options": [
+      "A. Thử ngẫu nhiên đúng 5 giá trị.",
+      "B. Vét cạn (Exhaustive search) - Thử nghiệm một cách có hệ thống TẤT CẢ các tổ hợp (combinations) có thể có trong lưới tham số (param_grid) mà người dùng cung cấp.",
+      "C. Dùng đạo hàm bậc 2 để tối ưu hóa tìm kiếm.",
+      "D. Dùng mạng nơ ron sâu để đoán tham số."
+    ],
+    "answer": "B. Vét cạn (Exhaustive search) - Thử nghiệm một cách có hệ thống TẤT CẢ các tổ hợp (combinations) có thể có trong lưới tham số (param_grid) mà người dùng cung cấp.",
+    "explanation": "GridSearch là phương pháp tìm kiếm dạng lưới, nó sẽ chạy vòng lặp qua từng khả năng một cho đến khi thử hết mọi trường hợp."
+  },
+  {
+    "question": "Câu 29: Hạn chế lớn nhất của `GridSearchCV` là gì?",
+    "options": [
+      "A. Không dùng được cho bài toán phân loại.",
+      "B. Không kết hợp được với Cross-Validation (Đánh giá chéo).",
+      "C. Có thể cực kỳ tốn thời gian và sức mạnh điện toán (computationally expensive) khi không gian siêu tham số (parameter space) của bạn lớn.",
+      "D. Độ chính xác luôn luôn thấp hơn chạy mặc định không cần tinh chỉnh."
+    ],
+    "answer": "C. Có thể cực kỳ tốn thời gian và sức mạnh điện toán (computationally expensive) khi không gian siêu tham số (parameter space) của bạn lớn.",
+    "explanation": "Ví dụ nếu có 3 tham số, mỗi tham số 10 giá trị, GridSearchCV sẽ phải chạy 1000 lần mô hình. Nó dẫn đến hiện tượng bùng nổ tổ hợp."
+  },
+  {
+    "question": "Câu 30: Giải pháp thay thế hiệu quả hơn cho không gian tham số khổng lồ là `RandomizedSearchCV`. Nó hoạt động bằng cách nào?",
+    "options": [
+      "A. Bỏ qua các bước kiểm thử Cross-Validation.",
+      "B. Thay vì thử mọi tổ hợp, nó lấy mẫu ngẫu nhiên (random sampling) một số lượng tổ hợp hữu hạn (do tham số `n_iter` quy định) từ một phân phối tham số được chỉ định.",
+      "C. Luôn luôn chọn giá trị nằm chính giữa của dải phân phối lưới tham số.",
+      "D. Dùng thuật toán K-Means để gom tham số thành 1 cục."
+    ],
+    "answer": "B. Thay vì thử mọi tổ hợp, nó lấy mẫu ngẫu nhiên (random sampling) một số lượng tổ hợp hữu hạn (do tham số `n_iter` quy định) từ một phân phối tham số được chỉ định.",
+    "explanation": "Random Search giúp tiết kiệm tài nguyên khổng lồ nhưng vẫn mang lại kết quả cực kỳ cạnh tranh, nhiều lúc tìm ra được bộ tham số tốt như Grid Search."
+  },
+  {
+    "question": "Câu 31: Sau khi chạy xong `GridSearchCV` hoặc `RandomizedSearchCV`, thuộc tính `best_score_` sẽ trả về giá trị gì?",
+    "options": [
+      "A. Điểm số của lần chạy đầu tiên tiên.",
+      "B. Điểm số (Score) trung bình cao nhất đạt được trong quá trình Cross-Validation trên tổ hợp tham số chiến thắng.",
+      "C. Tổng thời gian chạy toàn bộ quá trình tìm kiếm tính bằng giây.",
+      "D. Số thứ tự của vòng lặp chiến thắng."
+    ],
+    "answer": "B. Điểm số (Score) trung bình cao nhất đạt được trong quá trình Cross-Validation trên tổ hợp tham số chiến thắng.",
+    "explanation": "Trong đoạn mã ví dụ, `randomized_search.best_score_` chứa đựng điểm đánh giá xuất sắc nhất."
+  },
+  {
+    "question": "Câu 32: Thuộc tính `best_estimator_` trả về đối tượng gì?",
+    "options": [
+      "A. Tên của máy tính thực hiện lệnh.",
+      "B. Bản thân toàn bộ đối tượng mô hình (estimator object) đã được huấn luyện hoàn chỉnh bằng tổ hợp siêu tham số tốt nhất trên toàn bộ tập dữ liệu gốc.",
+      "C. Một danh sách chứa các sai số bình phương.",
+      "D. Một mảng numpy 1 chiều chứa nhãn dự đoán."
+    ],
+    "answer": "B. Bản thân toàn bộ đối tượng mô hình (estimator object) đã được huấn luyện hoàn chỉnh bằng tổ hợp siêu tham số tốt nhất trên toàn bộ tập dữ liệu gốc.",
+    "explanation": "Từ `best_estimator_`, bạn có thể lấy ra mô hình mạnh nhất và truy cập trực tiếp vào các thông số tốt nhất (ví dụ `best_estimator_.n_estimators`)."
+  },
+  {
+    "question": "Câu 33: Khái niệm Overfitting trong Machine Learning là gì?",
+    "options": [
+      "A. Mô hình học quá đơn giản nên không nắm được dữ liệu.",
+      "B. Mô hình hoạt động tốt trên cả train và test.",
+      "C. Mô hình học quá chi tiết dữ liệu train (bao gồm cả nhiễu), dẫn đến hiệu suất kém trên dữ liệu mới.",
+      "D. Mô hình không học gì cả."
+    ],
+    "answer": "C. Mô hình học quá chi tiết dữ liệu train (bao gồm cả nhiễu), dẫn đến hiệu suất kém trên dữ liệu mới.",
+    "explanation": "Overfitting xảy ra khi mô hình ghi nhớ dữ liệu thay vì học quy luật tổng quát."
+  },
+  {
+    "question": "Câu 34: Underfitting xảy ra khi nào?",
+    "options": [
+      "A. Mô hình quá phức tạp.",
+      "B. Mô hình quá đơn giản và không nắm bắt được cấu trúc dữ liệu.",
+      "C. Mô hình có quá nhiều tham số.",
+      "D. Mô hình bị thiếu dữ liệu test."
+    ],
+    "answer": "B. Mô hình quá đơn giản và không nắm bắt được cấu trúc dữ liệu.",
+    "explanation": "Underfitting dẫn đến hiệu suất kém cả trên train và test."
+  },
+  {
+    "question": "Câu 35: Bias trong Machine Learning đại diện cho điều gì?",
+    "options": [
+      "A. Sai số do dữ liệu nhiễu.",
+      "B. Sai số do mô hình quá phức tạp.",
+      "C. Sai số do giả định đơn giản hóa của mô hình.",
+      "D. Sai số do thiếu RAM."
+    ],
+    "answer": "C. Sai số do giả định đơn giản hóa của mô hình.",
+    "explanation": "Bias cao thường dẫn đến underfitting."
+  },
+  {
+    "question": "Câu 36: Variance trong Machine Learning là gì?",
+    "options": [
+      "A. Khả năng mô hình nhạy cảm với sự thay đổi của dữ liệu huấn luyện.",
+      "B. Khả năng chạy nhanh của mô hình.",
+      "C. Số lượng feature trong dataset.",
+      "D. Độ lớn của dữ liệu."
+    ],
+    "answer": "A. Khả năng mô hình nhạy cảm với sự thay đổi của dữ liệu huấn luyện.",
+    "explanation": "Variance cao thường dẫn đến overfitting."
+  },
+  {
+    "question": "Câu 37: Tradeoff giữa Bias và Variance có ý nghĩa gì?",
+    "options": [
+      "A. Luôn giảm cả hai cùng lúc.",
+      "B. Không có mối quan hệ.",
+      "C. Giảm bias thường làm tăng variance và ngược lại.",
+      "D. Chỉ cần quan tâm variance."
+    ],
+    "answer": "C. Giảm bias thường làm tăng variance và ngược lại.",
+    "explanation": "Đây là tradeoff cốt lõi trong việc chọn mô hình."
+  },
+  {
+    "question": "Câu 38: ROC Curve biểu diễn điều gì?",
+    "options": [
+      "A. Precision vs Recall",
+      "B. Accuracy vs Loss",
+      "C. True Positive Rate vs False Positive Rate",
+      "D. Recall vs Accuracy"
+    ],
+    "answer": "C. True Positive Rate vs False Positive Rate",
+    "explanation": "ROC curve giúp đánh giá mô hình ở nhiều threshold khác nhau."
+  },
+  {
+    "question": "Câu 39: AUC (Area Under Curve) càng gần 1 thì có ý nghĩa gì?",
+    "options": [
+      "A. Mô hình càng tệ",
+      "B. Mô hình random",
+      "C. Mô hình càng tốt",
+      "D. Mô hình không chạy được"
+    ],
+    "answer": "C. Mô hình càng tốt",
+    "explanation": "AUC = 1 là mô hình hoàn hảo."
+  },
+  {
+    "question": "Câu 40: Khi dataset bị mất cân bằng nặng, nên ưu tiên metric nào?",
+    "options": [
+      "A. Accuracy",
+      "B. Precision, Recall, F1-score",
+      "C. Loss",
+      "D. MSE"
+    ],
+    "answer": "B. Precision, Recall, F1-score",
+    "explanation": "Accuracy có thể gây hiểu lầm trong imbalanced dataset."
+  },
+  {
+    "question": "Câu 41: Data Leakage xảy ra khi nào?",
+    "options": [
+      "A. Khi dữ liệu bị mất",
+      "B. Khi thông tin từ test set bị dùng trong quá trình training",
+      "C. Khi dữ liệu quá lớn",
+      "D. Khi thiếu feature"
+    ],
+    "answer": "B. Khi thông tin từ test set bị dùng trong quá trình training",
+    "explanation": "Leakage làm mô hình đánh giá sai hiệu suất thực."
+  },
+  {
+    "question": "Câu 42: Ví dụ nào là Data Leakage?",
+    "options": [
+      "A. Train/test split",
+      "B. Scale toàn bộ dataset trước khi split",
+      "C. Dùng pipeline",
+      "D. Cross-validation"
+    ],
+    "answer": "B. Scale toàn bộ dataset trước khi split",
+    "explanation": "Thông tin test đã bị lộ vào train."
+  },
+  {
+    "question": "Câu 43: StandardScaler thực hiện điều gì?",
+    "options": [
+      "A. Đưa dữ liệu về khoảng [0,1]",
+      "B. Đưa dữ liệu về mean = 0 và std = 1",
+      "C. Xóa dữ liệu",
+      "D. Tăng số chiều dữ liệu"
+    ],
+    "answer": "B. Đưa dữ liệu về mean = 0 và std = 1",
+    "explanation": "Đây là chuẩn hóa Z-score."
+  },
+  {
+    "question": "Câu 44: MinMaxScaler làm gì?",
+    "options": [
+      "A. Đưa dữ liệu về phân phối chuẩn",
+      "B. Đưa dữ liệu về khoảng [0,1]",
+      "C. Giảm chiều dữ liệu",
+      "D. Tăng variance"
+    ],
+    "answer": "B. Đưa dữ liệu về khoảng [0,1]",
+    "explanation": "Scaling tuyến tính theo min-max."
+  },
+  {
+    "question": "Câu 45: Khi nào nên dùng StandardScaler thay vì MinMaxScaler?",
+    "options": [
+      "A. Khi có outliers",
+      "B. Khi dữ liệu phân phối gần chuẩn",
+      "C. Khi dữ liệu nhỏ",
+      "D. Khi dùng SQL"
+    ],
+    "answer": "B. Khi dữ liệu phân phối gần chuẩn",
+    "explanation": "StandardScaler phù hợp với Gaussian distribution."
+  },
+  {
+    "question": "Câu 46: Khi nào nên dùng MinMaxScaler?",
+    "options": [
+      "A. Khi cần giữ nguyên phân phối",
+      "B. Khi dữ liệu cần nằm trong khoảng cố định",
+      "C. Khi dữ liệu có nhiều outliers",
+      "D. Khi dữ liệu text"
+    ],
+    "answer": "B. Khi dữ liệu cần nằm trong khoảng cố định",
+    "explanation": "Ví dụ dùng cho Neural Network."
+  },
+  {
+    "question": "Câu 47: Macro average trong classification là gì?",
+    "options": [
+      "A. Trung bình có trọng số",
+      "B. Trung bình đơn giản của metric trên các class",
+      "C. Chỉ lấy class lớn nhất",
+      "D. Bỏ qua class nhỏ"
+    ],
+    "answer": "B. Trung bình đơn giản của metric trên các class",
+    "explanation": "Macro treat các class như nhau."
+  },
+  {
+    "question": "Câu 48: Weighted average là gì?",
+    "options": [
+      "A. Trung bình không trọng số",
+      "B. Trung bình có trọng số theo số lượng mẫu mỗi class",
+      "C. Chỉ dùng cho regression",
+      "D. Không dùng trong sklearn"
+    ],
+    "answer": "B. Trung bình có trọng số theo số lượng mẫu mỗi class",
+    "explanation": "Giải quyết imbalance."
+  },
+  {
+    "question": "Câu 49: Micro average tính như thế nào?",
+    "options": [
+      "A. Tính trên từng class",
+      "B. Gộp toàn bộ TP, FP, FN rồi tính",
+      "C. Random",
+      "D. Không dùng được"
+    ],
+    "answer": "B. Gộp toàn bộ TP, FP, FN rồi tính",
+    "explanation": "Micro phù hợp imbalance."
+  },
+  {
+    "question": "Câu 50: Khi nào nên dùng ROC-AUC thay vì Accuracy?",
+    "options": [
+      "A. Khi dữ liệu nhỏ",
+      "B. Khi cần đánh giá nhiều threshold",
+      "C. Khi dùng regression",
+      "D. Khi dữ liệu text"
+    ],
+    "answer": "B. Khi cần đánh giá nhiều threshold",
+    "explanation": "ROC-AUC đánh giá tổng thể classifier."
+  },
+  {
+    "question": "Câu 51: Pipeline giúp gì trong production?",
+    "options": [
+      "A. Tăng RAM",
+      "B. Tự động hóa preprocessing và model",
+      "C. Giảm dữ liệu",
+      "D. Xóa lỗi code"
+    ],
+    "answer": "B. Tự động hóa preprocessing và model",
+    "explanation": "Giúp deploy dễ dàng."
+  },
+  {
+    "question": "Câu 52: Một dấu hiệu mô hình bị overfitting là gì?",
+    "options": [
+      "A. Train thấp, test cao",
+      "B. Train cao, test thấp",
+      "C. Cả hai cao",
+      "D. Cả hai thấp"
+    ],
+    "answer": "B. Train cao, test thấp",
+    "explanation": "Mô hình không generalize tốt."
+  },
+  {
+    "question": "Câu 53: Cách giảm overfitting?",
+    "options": [
+      "A. Tăng complexity",
+      "B. Thêm dữ liệu, regularization",
+      "C. Xóa dữ liệu",
+      "D. Không train"
+    ],
+    "answer": "B. Thêm dữ liệu, regularization",
+    "explanation": "Các kỹ thuật phổ biến."
+  },
+  {
+    "question": "Câu 54: Regularization dùng để làm gì?",
+    "options": [
+      "A. Tăng loss",
+      "B. Giảm overfitting",
+      "C. Tăng dữ liệu",
+      "D. Scale dữ liệu"
+    ],
+    "answer": "B. Giảm overfitting",
+    "explanation": "Penalty vào weights."
+  },
+  {
+    "question": "Câu 55: Hyperparameter khác parameter ở điểm nào?",
+    "options": [
+      "A. Không khác",
+      "B. Hyperparameter do người chọn trước training",
+      "C. Parameter do user nhập",
+      "D. Không liên quan"
+    ],
+    "answer": "B. Hyperparameter do người chọn trước training",
+    "explanation": "Parameter được học từ data."
+  },
+  {
+    "question": "Câu 56: Khi nào nên dùng RandomizedSearchCV?",
+    "options": [
+      "A. Khi ít tham số",
+      "B. Khi không gian tham số lớn",
+      "C. Khi không cần tuning",
+      "D. Khi dữ liệu nhỏ"
+    ],
+    "answer": "B. Khi không gian tham số lớn",
+    "explanation": "Tiết kiệm tài nguyên."
+  },
+  {
+    "question": "Câu 57: Cross-validation giúp gì?",
+    "options": [
+      "A. Tăng dữ liệu",
+      "B. Đánh giá model robust hơn",
+      "C. Xóa dữ liệu",
+      "D. Giảm RAM"
+    ],
+    "answer": "B. Đánh giá model robust hơn",
+    "explanation": "Giảm variance."
+  },
+  {
+    "question": "Câu 58: Nếu model accuracy = 99% nhưng dataset imbalance nặng thì?",
+    "options": [
+      "A. Model tốt",
+      "B. Có thể model vô dụng",
+      "C. Không vấn đề",
+      "D. Model perfect"
+    ],
+    "answer": "B. Có thể model vô dụng",
+    "explanation": "Accuracy bị đánh lừa."
+  },
+  {
+    "question": "Câu 59: Feature scaling ảnh hưởng mạnh đến thuật toán nào?",
+    "options": [
+      "A. Tree-based",
+      "B. Distance-based (KNN, KMeans)",
+      "C. Random",
+      "D. SQL"
+    ],
+    "answer": "B. Distance-based (KNN, KMeans)",
+    "explanation": "Khoảng cách bị ảnh hưởng trực tiếp."
+  },
+  {
+    "question": "Câu 60: Tree-based model có cần scaling không?",
+    "options": [
+      "A. Rất cần",
+      "B. Không cần thiết",
+      "C. Bắt buộc",
+      "D. Không chạy được nếu không scale"
+    ],
+    "answer": "B. Không cần thiết",
+    "explanation": "Tree không dựa vào khoảng cách."
+  },
+  {
+    "question": "Câu 61: Nếu dữ liệu có nhiều outliers, nên dùng metric nào?",
+    "options": [
+      "A. MSE",
+      "B. MAE",
+      "C. Accuracy",
+      "D. ROC"
+    ],
+    "answer": "B. MAE",
+    "explanation": "MAE ít nhạy với outliers."
+  },
+  {
+    "question": "Câu 62: Khi nào nên dùng Precision thay vì Recall?",
+    "options": [
+      "A. Khi không quan trọng sai",
+      "B. Khi muốn giảm false positive",
+      "C. Khi muốn giảm false negative",
+      "D. Khi dữ liệu nhỏ"
+    ],
+    "answer": "B. Khi muốn giảm false positive",
+    "explanation": "Precision quan trọng khi false alarm nguy hiểm."
+  }
+]

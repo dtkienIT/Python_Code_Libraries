@@ -603,5 +603,280 @@
     ],
     "answer": "B. Kéo giá trị đóng cửa của 4 ngày tiếp theo (tương lai) ngược về hiện tại.",
     "explanation": "Sử dụng tham số âm trong `.shift(-n)` sẽ kéo dữ liệu từ dưới lên trên (lấy dữ liệu của tương lai kéo về hàng hiện tại). Đây là bước chuẩn bị cực kỳ quan trọng để tạo ra biến mục tiêu (target variable) cho các mô hình dự đoán Machine Learning."
+  },
+  {
+    "question": "Câu 56: Khi thực hiện phép cộng giữa hai DataFrame có index không khớp nhau (df_A + df_B), điều gì xảy ra?",
+    "options": [
+      "A. Báo lỗi ngay lập tức.",
+      "B. Chỉ giữ lại các index giống nhau.",
+      "C. Tự động căn chỉnh theo index và điền NaN vào vị trí không khớp.",
+      "D. Tự động xóa các dòng dư."
+    ],
+    "answer": "C. Tự động căn chỉnh theo index và điền NaN vào vị trí không khớp.",
+    "explanation": "Pandas sử dụng cơ chế data alignment, tự động căn chỉnh theo index và điền NaN cho các vị trí thiếu."
+  },
+  {
+    "question": "Câu 57: Phương thức nào cho phép thực hiện phép toán giữa DataFrame và thay thế giá trị NaN bằng một giá trị mặc định?",
+    "options": [
+      "A. df.add(df2, fill_value=...)",
+      "B. df.sum(df2)",
+      "C. df.combine(df2)",
+      "D. df.merge(df2)"
+    ],
+    "answer": "A. df.add(df2, fill_value=...)",
+    "explanation": "Các phương thức như add(), sub(), mul() hỗ trợ tham số fill_value để thay thế NaN."
+  },
+  {
+    "question": "Câu 58: Hàm nào KHÔNG phải là phương thức toán học hỗ trợ fill_value trong Pandas?",
+    "options": [
+      "A. add()",
+      "B. sub()",
+      "C. mul()",
+      "D. concat()"
+    ],
+    "answer": "D. concat()",
+    "explanation": "concat() dùng để nối dữ liệu, không phải phép toán số học."
+  },
+  {
+    "question": "Câu 59: Khi sử dụng df_A.add(df_B, fill_value=10), giá trị 10 được dùng để làm gì?",
+    "options": [
+      "A. Thay thế toàn bộ dữ liệu.",
+      "B. Điền vào các vị trí không có dữ liệu khi index không khớp.",
+      "C. Nhân với toàn bộ DataFrame.",
+      "D. Làm tròn số."
+    ],
+    "answer": "B. Điền vào các vị trí không có dữ liệu khi index không khớp.",
+    "explanation": "fill_value giúp thay thế NaN trong quá trình thực hiện phép toán."
+  },
+  {
+    "question": "Câu 60: Hàm corr() trong Pandas dùng để làm gì?",
+    "options": [
+      "A. Tính trung bình.",
+      "B. Tính độ lệch chuẩn.",
+      "C. Tính hệ số tương quan giữa các biến.",
+      "D. Sắp xếp dữ liệu."
+    ],
+    "answer": "C. Tính hệ số tương quan giữa các biến.",
+    "explanation": "corr() thường dùng để đánh giá mối quan hệ tuyến tính giữa các biến."
+  },
+  {
+    "question": "Câu 61: Giá trị của hệ số tương quan Pearson nằm trong khoảng nào?",
+    "options": [
+      "A. 0 đến 1",
+      "B. -1 đến 1",
+      "C. -∞ đến +∞",
+      "D. 0 đến 100"
+    ],
+    "answer": "B. -1 đến 1",
+    "explanation": "Correlation nằm trong khoảng [-1, 1]."
+  },
+  {
+    "question": "Câu 62: Giá trị correlation gần 0 biểu thị điều gì?",
+    "options": [
+      "A. Tương quan mạnh",
+      "B. Không có tương quan",
+      "C. Tương quan âm mạnh",
+      "D. Tương quan hoàn hảo"
+    ],
+    "answer": "B. Không có tương quan",
+    "explanation": "Giá trị gần 0 cho thấy hai biến gần như không liên quan."
+  },
+  {
+    "question": "Câu 63: Khi đọc file CSV có cột datetime, tham số nào dùng để chuyển đổi sang dạng datetime?",
+    "options": [
+      "A. datetime=True",
+      "B. convert_date=True",
+      "C. parse_dates",
+      "D. date_format"
+    ],
+    "answer": "C. parse_dates",
+    "explanation": "parse_dates giúp Pandas tự động chuyển đổi cột sang datetime."
+  },
+  {
+    "question": "Câu 64: Tham số index_col trong pd.read_csv() dùng để làm gì?",
+    "options": [
+      "A. Xóa index",
+      "B. Chỉ định cột làm index cho DataFrame",
+      "C. Sắp xếp dữ liệu",
+      "D. Đổi tên cột"
+    ],
+    "answer": "B. Chỉ định cột làm index cho DataFrame",
+    "explanation": "index_col giúp đặt một cột làm chỉ mục (index)."
+  },
+  {
+    "question": "Câu 65: Đối tượng nào đại diện cho index dạng thời gian trong Pandas?",
+    "options": [
+      "A. TimeIndex",
+      "B. DateIndex",
+      "C. DatetimeIndex",
+      "D. ChronoIndex"
+    ],
+    "answer": "C. DatetimeIndex",
+    "explanation": "DatetimeIndex là index chuyên dùng cho dữ liệu thời gian."
+  },
+  {
+    "question": "Câu 66: Cú pháp data['2018-01'] có tác dụng gì?",
+    "options": [
+      "A. Lọc theo ngày",
+      "B. Lọc theo tháng",
+      "C. Lọc theo năm",
+      "D. Báo lỗi"
+    ],
+    "answer": "B. Lọc theo tháng",
+    "explanation": "Cú pháp này dùng để lấy dữ liệu trong tháng 01/2018."
+  },
+  {
+    "question": "Câu 67: Cú pháp data['2018'] có tác dụng gì?",
+    "options": [
+      "A. Lọc theo ngày",
+      "B. Lọc theo tháng",
+      "C. Lọc theo năm",
+      "D. Không hợp lệ"
+    ],
+    "answer": "C. Lọc theo năm",
+    "explanation": "Chọn toàn bộ dữ liệu trong năm 2018."
+  },
+  {
+    "question": "Câu 68: Hàm resample() trong Pandas dùng để làm gì?",
+    "options": [
+      "A. Xóa dữ liệu",
+      "B. Thay đổi tần suất dữ liệu thời gian",
+      "C. Sắp xếp dữ liệu",
+      "D. Lọc dữ liệu"
+    ],
+    "answer": "B. Thay đổi tần suất dữ liệu thời gian",
+    "explanation": "resample() dùng để tổng hợp dữ liệu theo tuần, tháng,..."
+  },
+  {
+    "question": "Câu 69: Cú pháp resample('M') có nghĩa là gì?",
+    "options": [
+      "A. Theo phút",
+      "B. Theo ngày",
+      "C. Theo tháng",
+      "D. Theo năm"
+    ],
+    "answer": "C. Theo tháng",
+    "explanation": "'M' đại diện cho month."
+  },
+  {
+    "question": "Câu 70: Hàm to_datetime() dùng để làm gì?",
+    "options": [
+      "A. Chuyển số thành string",
+      "B. Chuyển string thành datetime",
+      "C. Xóa dữ liệu",
+      "D. Tạo index"
+    ],
+    "answer": "B. Chuyển string thành datetime",
+    "explanation": "to_datetime giúp chuyển đổi dữ liệu sang định dạng thời gian."
+  },
+  {
+    "question": "Câu 71: Tham số dayfirst=True trong to_datetime() có ý nghĩa gì?",
+    "options": [
+      "A. Ngày đứng sau tháng",
+      "B. Ngày đứng trước tháng",
+      "C. Năm đứng trước",
+      "D. Không có tác dụng"
+    ],
+    "answer": "B. Ngày đứng trước tháng",
+    "explanation": "Giúp Pandas hiểu format ngày-tháng-năm."
+  },
+  {
+    "question": "Câu 72: Khi sử dụng shift(1), dữ liệu sẽ được dịch như thế nào?",
+    "options": [
+      "A. Lên trên 1 hàng",
+      "B. Xuống dưới 1 hàng",
+      "C. Không đổi",
+      "D. Xóa dữ liệu"
+    ],
+    "answer": "B. Xuống dưới 1 hàng",
+    "explanation": "shift(1) tạo lag (dịch xuống)."
+  },
+  {
+    "question": "Câu 73: Khi shift(-1), điều gì xảy ra?",
+    "options": [
+      "A. Dịch xuống",
+      "B. Dịch lên",
+      "C. Không đổi",
+      "D. Xóa index"
+    ],
+    "answer": "B. Dịch lên",
+    "explanation": "shift(-1) kéo dữ liệu từ dưới lên."
+  },
+  {
+    "question": "Câu 74: Hàm rolling(window=3) dùng để làm gì?",
+    "options": [
+      "A. Lọc dữ liệu",
+      "B. Tính toán thống kê trượt",
+      "C. Xóa dữ liệu",
+      "D. Nhân dữ liệu"
+    ],
+    "answer": "B. Tính toán thống kê trượt",
+    "explanation": "rolling dùng để tính trung bình trượt, tổng trượt..."
+  },
+  {
+    "question": "Câu 75: Tại sao rolling() tạo ra NaN ở đầu?",
+    "options": [
+      "A. Do lỗi hệ thống",
+      "B. Thiếu dữ liệu đủ window",
+      "C. Do index lỗi",
+      "D. Do dtype sai"
+    ],
+    "answer": "B. Thiếu dữ liệu đủ window",
+    "explanation": "Cần đủ số lượng phần tử theo window để tính toán."
+  },
+  {
+    "question": "Câu 76: Phương thức assign() dùng để làm gì?",
+    "options": [
+      "A. Xóa cột",
+      "B. Thêm cột mới",
+      "C. Lọc dữ liệu",
+      "D. Sắp xếp"
+    ],
+    "answer": "B. Thêm cột mới",
+    "explanation": "assign giúp thêm cột vào DataFrame."
+  },
+  {
+    "question": "Câu 77: Hàm map() thường dùng với mục đích gì?",
+    "options": [
+      "A. Ánh xạ giá trị theo hàm",
+      "B. Xóa dữ liệu",
+      "C. Gộp bảng",
+      "D. Sắp xếp"
+    ],
+    "answer": "A. Ánh xạ giá trị theo hàm",
+    "explanation": "map() áp dụng function lên từng phần tử."
+  },
+  {
+    "question": "Câu 78: dropna(how='all') có tác dụng gì?",
+    "options": [
+      "A. Xóa tất cả dữ liệu",
+      "B. Xóa dòng có ít nhất 1 NaN",
+      "C. Xóa dòng mà toàn bộ giá trị là NaN",
+      "D. Xóa cột"
+    ],
+    "answer": "C. Xóa dòng mà toàn bộ giá trị là NaN",
+    "explanation": "how='all' chỉ xóa khi toàn bộ dòng là NaN."
+  },
+  {
+    "question": "Câu 79: dropna(axis=1) sẽ làm gì?",
+    "options": [
+      "A. Xóa dòng",
+      "B. Xóa cột",
+      "C. Xóa index",
+      "D. Xóa file"
+    ],
+    "answer": "B. Xóa cột",
+    "explanation": "axis=1 nghĩa là thao tác trên cột."
+  },
+  {
+    "question": "Câu 80: Tham số thresh trong dropna() có ý nghĩa gì?",
+    "options": [
+      "A. Số lượng NaN tối đa",
+      "B. Số lượng giá trị không NaN tối thiểu để giữ lại dòng",
+      "C. Số cột",
+      "D. Không có ý nghĩa"
+    ],
+    "answer": "B. Số lượng giá trị không NaN tối thiểu để giữ lại dòng",
+    "explanation": "thresh giúp kiểm soát mức độ dữ liệu hợp lệ cần có."
   }
 ]

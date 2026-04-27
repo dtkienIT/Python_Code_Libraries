@@ -658,5 +658,665 @@
     ],
     "answer": "A. import numpy as np",
     "explanation": "Sử dụng alias `np` là quy chuẩn chung giúp mã nguồn ngắn gọn, đồng nhất và dễ đọc hơn khi gọi các hàm như `np.array`, `np.zeros`."
+  },
+  {
+    "question": "Câu 61: NumPy là viết tắt của cụm từ nào?",
+    "options": [
+      "A. Numerical Python",
+      "B. Number Python",
+      "C. Numeric Processing",
+      "D. Non-linear Python"
+    ],
+    "answer": "A. Numerical Python",
+    "explanation": "NumPy là viết tắt của Numerical Python, một thư viện cốt lõi cho các phép tính toán học và khoa học dữ liệu trong Python."
+  },
+  {
+    "question": "Câu 62: Kiểu dữ liệu cốt lõi (data type) của mọi mảng trong NumPy là gì?",
+    "options": [
+      "A. list",
+      "B. tuple",
+      "C. numpy.ndarray",
+      "D. dictionary"
+    ],
+    "answer": "C. numpy.ndarray",
+    "explanation": "Mọi mảng (array) trong NumPy đều thuộc kiểu dữ liệu `ndarray` (viết tắt của n-dimensional array)."
+  },
+  {
+    "question": "Câu 63: Ưu điểm lớn nhất của NumPy array so với Python List thông thường là gì?",
+    "options": [
+      "A. Chạy chậm hơn nhưng lưu được nhiều kiểu dữ liệu khác nhau.",
+      "B. Tối ưu hóa bằng ngôn ngữ C, giúp tính toán cực kỳ nhanh và tiết kiệm bộ nhớ.",
+      "C. Cú pháp phức tạp hơn nhưng bảo mật tốt hơn.",
+      "D. Có thể tự động thay đổi kích thước vô hạn."
+    ],
+    "answer": "B. Tối ưu hóa bằng ngôn ngữ C, giúp tính toán cực kỳ nhanh và tiết kiệm bộ nhớ.",
+    "explanation": "NumPy lưu trữ dữ liệu dưới dạng mảng đồng nhất (homogeneous) tại các ô nhớ liền kề và tối ưu bằng C, do đó nó nhanh hơn rất nhiều so với vòng lặp của Python."
+  },
+  {
+    "question": "Câu 64: Cú pháp chuẩn nhất để import thư viện NumPy vào dự án là gì?",
+    "options": [
+      "A. import numpy as num",
+      "B. import numpy as np",
+      "C. from numpy import *",
+      "D. import np.numpy"
+    ],
+    "answer": "B. import numpy as np",
+    "explanation": "Sử dụng bí danh (alias) `np` là quy ước tiêu chuẩn toàn cầu của cộng đồng lập trình viên Data Science."
+  },
+  {
+    "question": "Câu 65: Lệnh `type(arr)` đối với một mảng NumPy sẽ trả về kết quả nào?",
+    "options": [
+      "A. <class 'list'>",
+      "B. <class 'numpy.ndarray'>",
+      "C. <class 'numpy.array'>",
+      "D. <class 'matrix'>"
+    ],
+    "answer": "B. <class 'numpy.ndarray'>",
+    "explanation": "Hàm `type()` của Python sẽ chỉ ra rằng đối tượng này thuộc lớp `numpy.ndarray`."
+  },
+  {
+    "question": "Câu 66: Thuộc tính nào sau đây trả về số lượng chiều (dimensions) của một mảng NumPy?",
+    "options": [
+      "A. arr.size",
+      "B. arr.shape",
+      "C. arr.ndim",
+      "D. arr.dtype"
+    ],
+    "answer": "C. arr.ndim",
+    "explanation": "`ndim` (number of dimensions) trả về số chiều của mảng. Mảng 1D có ndim=1, mảng 2D có ndim=2."
+  },
+  {
+    "question": "Câu 67: Thuộc tính `arr.shape` dùng để làm gì?",
+    "options": [
+      "A. Trả về kiểu dữ liệu của mảng.",
+      "B. Trả về một Tuple chứa kích thước (số phần tử) của mỗi chiều trong mảng.",
+      "C. Thay đổi kích thước mảng.",
+      "D. Đếm số lượng số 0 trong mảng."
+    ],
+    "answer": "B. Trả về một Tuple chứa kích thước (số phần tử) của mỗi chiều trong mảng.",
+    "explanation": "Ví dụ: `(3, 4)` nghĩa là mảng 2 chiều có 3 hàng và 4 cột."
+  },
+  {
+    "question": "Câu 68: Nếu lệnh `arr.shape` trả về kết quả là `(5,)`, điều này mang ý nghĩa gì?",
+    "options": [
+      "A. Đây là ma trận 5 hàng, 1 cột.",
+      "B. Đây là một vector 1 chiều có 5 phần tử.",
+      "C. Mảng đang bị lỗi cấu trúc.",
+      "D. Đây là mảng 2 chiều với 5 phần tử."
+    ],
+    "answer": "B. Đây là một vector 1 chiều có 5 phần tử.",
+    "explanation": "Dấu phẩy `(5,)` trong tuple thể hiện đây là mảng 1 chiều (1-D array)."
+  },
+  {
+    "question": "Câu 69: Thuộc tính `arr.size` trả về thông tin gì?",
+    "options": [
+      "A. Dung lượng bộ nhớ (Byte) của mảng.",
+      "B. Tổng số lượng phần tử có trong mảng.",
+      "C. Số chiều của mảng.",
+      "D. Giá trị lớn nhất trong mảng."
+    ],
+    "answer": "B. Tổng số lượng phần tử có trong mảng.",
+    "explanation": "Ví dụ ma trận (3,4) sẽ có thuộc tính `size` trả về 12."
+  },
+  {
+    "question": "Câu 70: Thuộc tính `arr.dtype` có chức năng gì?",
+    "options": [
+      "A. Xóa mảng khỏi bộ nhớ.",
+      "B. Trả về kiểu dữ liệu của các phần tử bên trong mảng (ví dụ: int32, float64).",
+      "C. Chuyển đổi ma trận thành vector.",
+      "D. Tính định thức của ma trận."
+    ],
+    "answer": "B. Trả về kiểu dữ liệu của các phần tử bên trong mảng (ví dụ: int32, float64).",
+    "explanation": "`dtype` (Data Type) mô tả loại dữ liệu mà các phần tử trong mảng đang lưu trữ."
+  },
+  {
+    "question": "Câu 71: Cú pháp nào đúng để tạo một mảng 1 chiều từ Python List?\n\nmy_list = [1, 2, 3]",
+    "options": [
+      "A. np.create(my_list)",
+      "B. np.array(my_list)",
+      "C. np.ndarray(my_list)",
+      "D. np.matrix(my_list)"
+    ],
+    "answer": "B. np.array(my_list)",
+    "explanation": "Hàm `np.array()` là phương thức cơ bản nhất để chuyển đổi list thành ndarray."
+  },
+  {
+    "question": "Câu 72: Lệnh `np.zeros((3, 4))` sẽ tạo ra kết quả gì?",
+    "options": [
+      "A. Một mảng 1 chiều chứa 12 số 0.",
+      "B. Một ma trận 3 hàng, 4 cột, với tất cả phần tử là số 0.",
+      "C. Một ma trận 4 hàng, 3 cột chứa toàn số 0.",
+      "D. Lỗi vì thiếu tham số."
+    ],
+    "answer": "B. Một ma trận 3 hàng, 4 cột, với tất cả phần tử là số 0.",
+    "explanation": "Hàm `zeros(shape)` tạo mảng điền sẵn giá trị 0. Tham số shape là một tuple `(hàng, cột)`."
+  },
+  {
+    "question": "Câu 73: Để tạo một mảng kích thước 2x2 chứa toàn số 1, bạn dùng lệnh nào?",
+    "options": [
+      "A. np.ones((2, 2))",
+      "B. np.one(2, 2)",
+      "C. np.fill(1, (2,2))",
+      "D. np.array(1, 2, 2)"
+    ],
+    "answer": "A. np.ones((2, 2))",
+    "explanation": "Hàm `np.ones(shape)` hoạt động tương tự `np.zeros()`, nhưng điền toàn số 1."
+  },
+  {
+    "question": "Câu 74: Lệnh `np.full((2, 3), 7)` sẽ tạo ra mảng như thế nào?",
+    "options": [
+      "A. Mảng 2x3 chứa các số từ 1 đến 7.",
+      "B. Mảng 2x3 chứa toàn số 7.",
+      "C. Mảng 7x7 chứa các số 2 và 3.",
+      "D. Lỗi cú pháp."
+    ],
+    "answer": "B. Mảng 2x3 chứa toàn số 7.",
+    "explanation": "`np.full(shape, fill_value)` điền một giá trị tự chọn (ở đây là số 7) vào toàn bộ mảng có kích thước được chỉ định."
+  },
+  {
+    "question": "Câu 75: Hàm nào giúp tạo ra Ma trận đơn vị (Identity Matrix) - đường chéo chính chứa số 1, còn lại là 0?",
+    "options": [
+      "A. np.identity_matrix(3)",
+      "B. np.ones((3,3))",
+      "C. np.eye(3)",
+      "D. np.diag([1,1,1])"
+    ],
+    "answer": "C. np.eye(3)",
+    "explanation": "`np.eye(N)` tạo ra ma trận đơn vị vuông kích thước N x N."
+  },
+  {
+    "question": "Câu 76: Sự khác biệt cốt lõi giữa `np.arange()` và `np.linspace()` là gì?",
+    "options": [
+      "A. `arange` tạo mảng số nguyên, `linspace` tạo mảng số thực.",
+      "B. `arange` tạo dãy số dựa trên **bước nhảy (step)**, còn `linspace` tạo dãy số dựa trên **tổng số lượng phần tử (num)** chia đều trong một khoảng.",
+      "C. `linspace` chạy nhanh hơn `arange`.",
+      "D. Cả hai đều làm cùng một chức năng giống nhau."
+    ],
+    "answer": "B. `arange` tạo dãy số dựa trên **bước nhảy (step)**, còn `linspace` tạo dãy số dựa trên **tổng số lượng phần tử (num)** chia đều trong một khoảng.",
+    "explanation": "Ví dụ: `arange(0, 10, 2)` nhảy cách nhau 2 đơn vị. `linspace(0, 10, 5)` tạo đúng 5 phần tử từ 0 đến 10."
+  },
+  {
+    "question": "Câu 77: Để tạo ra một mảng gồm 5 số nguyên ngẫu nhiên trong khoảng từ 1 đến 10, ta dùng lệnh nào?",
+    "options": [
+      "A. np.random.rand(1, 10, 5)",
+      "B. np.random.randint(1, 10, size=5)",
+      "C. np.random.uniform(1, 10, 5)",
+      "D. np.random.random(5)"
+    ],
+    "answer": "B. np.random.randint(1, 10, size=5)",
+    "explanation": "Hàm `np.random.randint(low, high, size)` sinh các số nguyên ngẫu nhiên."
+  },
+  {
+    "question": "Câu 78: Lệnh `np.random.randn(3, 3)` sinh ra dữ liệu có đặc điểm gì?",
+    "options": [
+      "A. Các số nguyên từ -3 đến 3.",
+      "B. Các số thực có phân phối chuẩn (Standard Normal Distribution) với mean = 0, variance = 1.",
+      "C. Các số thực phân phối đều từ 0 đến 1.",
+      "D. Các số ngẫu nhiên không có quy luật."
+    ],
+    "answer": "B. Các số thực có phân phối chuẩn (Standard Normal Distribution) với mean = 0, variance = 1.",
+    "explanation": "Chữ 'n' trong `randn` đại diện cho Normal Distribution (phân phối chuẩn)."
+  },
+  {
+    "question": "Câu 79: Kết quả của `np.random.seed(42)` mang ý nghĩa gì trong Machine Learning?",
+    "options": [
+      "A. Sinh ra đúng 42 số ngẫu nhiên.",
+      "B. Khởi tạo một 'hạt giống', giúp các số ngẫu nhiên sinh ra sau đó luôn giữ nguyên kết quả ở mọi lần chạy (tính tái lập - reproducibility).",
+      "C. Xóa bộ nhớ của hàm random.",
+      "D. Nhân tất cả các số ngẫu nhiên với 42."
+    ],
+    "answer": "B. Khởi tạo một 'hạt giống', giúp các số ngẫu nhiên sinh ra sau đó luôn giữ nguyên kết quả ở mọi lần chạy (tính tái lập - reproducibility).",
+    "explanation": "Set seed là bước quan trọng để kết quả của mô hình có thể được sao chép/tái tạo chính xác bởi người khác."
+  },
+  {
+    "question": "Câu 80: Kết quả của đoạn code Slicing 1D sau là gì?\n\narr = np.array([10, 20, 30, 40, 50])\nprint(arr[1:4])",
+    "options": [
+      "A. [10 20 30]",
+      "B. [20 30 40]",
+      "C. [30 40 50]",
+      "D. [20 30 40 50]"
+    ],
+    "answer": "B. [20 30 40]",
+    "explanation": "Cú pháp Slicing `[start:stop]`. Lấy từ index 1 (là 20) đến index 3 (là 40), không bao gồm index 4."
+  },
+  {
+    "question": "Câu 81: Cú pháp nào đảo ngược (reverse) một mảng 1D trong NumPy?\n\narr = np.array([1, 2, 3, 4, 5])",
+    "options": [
+      "A. arr.reverse()",
+      "B. arr[::-1]",
+      "C. arr.invert()",
+      "D. np.flip(arr, 0)"
+    ],
+    "answer": "B. arr[::-1]",
+    "explanation": "Cú pháp `[::-1]` nghĩa là duyệt mảng từ đầu đến cuối với bước nhảy là -1 (đi lùi)."
+  },
+  {
+    "question": "Câu 82: Đối với một ma trận 2D `mat`, cú pháp nào để lấy ra TOÀN BỘ CỘT THỨ 2 (index = 1)?",
+    "options": [
+      "A. mat[1, :]",
+      "B. mat[:, 1]",
+      "C. mat[1][1]",
+      "D. mat.col(1)"
+    ],
+    "answer": "B. mat[:, 1]",
+    "explanation": "Trong Numpy, dấu `:` ở vị trí hàng nghĩa là 'lấy tất cả các hàng', và `1` ở vị trí cột nghĩa là 'ở cột có index 1'."
+  },
+  {
+    "question": "Câu 83: Đối với một ma trận 2D `mat`, cú pháp nào để lấy ra TOÀN BỘ HÀNG ĐẦU TIÊN (index = 0)?",
+    "options": [
+      "A. mat[0, :]",
+      "B. mat[:, 0]",
+      "C. mat[1, :]",
+      "D. mat[0][0]"
+    ],
+    "answer": "A. mat[0, :]",
+    "explanation": "`mat[0, :]` lấy hàng có index 0, và giữ lại tất cả các cột của hàng đó."
+  },
+  {
+    "question": "Câu 84: Boolean Indexing (Lọc mảng bằng điều kiện) hoạt động như thế nào trong đoạn code sau?\n\narr = np.array([1, 5, 10, 15])\nprint(arr[arr > 5])",
+    "options": [
+      "A. Báo lỗi Type Error.",
+      "B. Trả về [False, False, True, True]",
+      "C. Trả về các giá trị thỏa mãn điều kiện: [10, 15]",
+      "D. Trả về [5, 10, 15]"
+    ],
+    "answer": "C. Trả về các giá trị thỏa mãn điều kiện: [10, 15]",
+    "explanation": "NumPy cho phép truyền một mảng boolean vào dấu ngoặc vuông để trích xuất trực tiếp các phần tử True."
+  },
+  {
+    "question": "Câu 85: Toán tử `~` khi kết hợp với Boolean Indexing có nghĩa là gì?\n\narr[~(arr > 5)]",
+    "options": [
+      "A. Trả về các phần tử xấp xỉ bằng 5.",
+      "B. Phép toán NOT (phủ định), trả về các phần tử nhỏ hơn hoặc bằng 5.",
+      "C. Báo lỗi cú pháp.",
+      "D. Ép kiểu dữ liệu về boolean."
+    ],
+    "answer": "B. Phép toán NOT (phủ định), trả về các phần tử nhỏ hơn hoặc bằng 5.",
+    "explanation": "Trong NumPy, `~` tương đương với `not` (đảo ngược True thành False và ngược lại)."
+  },
+  {
+    "question": "Câu 86: Để kết hợp NHIỀU điều kiện logic trong Boolean Indexing (ví dụ: lớn hơn 2 VÀ nhỏ hơn 10), bạn phải dùng toán tử nào?",
+    "options": [
+      "A. and",
+      "B. &&",
+      "C. & (kết hợp với dấu ngoặc đơn)",
+      "D. +"
+    ],
+    "answer": "C. & (kết hợp với dấu ngoặc đơn)",
+    "explanation": "Cú pháp đúng phải là `arr[(arr > 2) & (arr < 10)]`. Tương tự, dùng `|` cho toán tử OR."
+  },
+  {
+    "question": "Câu 87: Hàm nào được sử dụng để thay đổi hình dáng (số hàng, số cột) của mảng mà không làm thay đổi dữ liệu bên trong?",
+    "options": [
+      "A. arr.resize()",
+      "B. arr.change()",
+      "C. arr.reshape()",
+      "D. arr.swapaxes()"
+    ],
+    "answer": "C. arr.reshape()",
+    "explanation": "Ví dụ bạn có thể biến mảng 1D (12 phần tử) sang mảng 2D bằng lệnh `arr.reshape(3, 4)`."
+  },
+  {
+    "question": "Câu 88: Nếu bạn dùng `arr.reshape(-1, 2)` cho mảng 1D có 10 phần tử, giá trị `-1` mang ý nghĩa gì?",
+    "options": [
+      "A. Xóa phần tử cuối cùng.",
+      "B. Báo lỗi do không thể có số hàng âm.",
+      "C. NumPy sẽ tự động tính toán số hàng cần thiết (ở đây là 5) dựa trên số cột được cung cấp.",
+      "D. Đảo ngược thứ tự mảng."
+    ],
+    "answer": "C. NumPy sẽ tự động tính toán số hàng cần thiết (ở đây là 5) dựa trên số cột được cung cấp.",
+    "explanation": "Tham số `-1` là một 'wildcard' bảo NumPy tự nội suy kích thước chiều đó sao cho phù hợp với tổng số phần tử."
+  },
+  {
+    "question": "Câu 89: Phương thức `arr.flatten()` hoặc `arr.ravel()` có chức năng gì?",
+    "options": [
+      "A. Sắp xếp mảng từ bé đến lớn.",
+      "B. Duỗi thẳng mảng nhiều chiều (n-D) trở thành mảng 1 chiều (1-D).",
+      "C. Đảo ngược thứ tự mảng.",
+      "D. Xóa các số 0."
+    ],
+    "answer": "B. Duỗi thẳng mảng nhiều chiều (n-D) trở thành mảng 1 chiều (1-D).",
+    "explanation": "Thường dùng trước khi đưa dữ liệu vào các thuật toán Machine Learning yêu cầu mảng 1D."
+  },
+  {
+    "question": "Câu 90: Thuộc tính `arr.T` là cách viết tắt của toán tử nào trong toán học ma trận?",
+    "options": [
+      "A. Tổng (Total).",
+      "B. Kiểm thử (Test).",
+      "C. Chuyển vị (Transpose - đổi hàng thành cột và ngược lại).",
+      "D. Vết (Trace)."
+    ],
+    "answer": "C. Chuyển vị (Transpose - đổi hàng thành cột và ngược lại).",
+    "explanation": "`arr.T` thực hiện chuyển vị ma trận một cách nhanh chóng (hàng thành cột, cột thành hàng)."
+  },
+  {
+    "question": "Câu 91: Khái niệm \"Broadcasting\" trong NumPy là gì?",
+    "options": [
+      "A. Gửi dữ liệu mảng qua mạng.",
+      "B. Quy tắc tự động điều chỉnh và mở rộng kích thước của các mảng để chúng có thể thực hiện phép toán với nhau dù không cùng shape.",
+      "C. In toàn bộ mảng ra màn hình.",
+      "D. Cơ chế cảnh báo lỗi."
+    ],
+    "answer": "B. Quy tắc tự động điều chỉnh và mở rộng kích thước của các mảng để chúng có thể thực hiện phép toán với nhau dù không cùng shape.",
+    "explanation": "Broadcasting giúp cộng một số vô hướng vào mảng, hoặc cộng 2 mảng có số chiều khác nhau mà không cần vòng lặp."
+  },
+  {
+    "question": "Câu 92: Lỗi `ValueError: operands could not be broadcast together` xảy ra khi nào?",
+    "options": [
+      "A. Cộng 2 số thực với nhau.",
+      "B. Kích thước (shapes) của hai mảng không thỏa mãn quy tắc Broadcasting (các chiều cuối cùng không bằng nhau hoặc không bằng 1).",
+      "C. Mảng bị rỗng.",
+      "D. Cộng mảng số với chuỗi."
+    ],
+    "answer": "B. Kích thước (shapes) của hai mảng không thỏa mãn quy tắc Broadcasting (các chiều cuối cùng không bằng nhau hoặc không bằng 1).",
+    "explanation": "Nếu mảng A là (4,3) và B là (4,2), chúng không thể cộng với nhau do kích thước chiều cuối (3 và 2) không khớp."
+  },
+  {
+    "question": "Câu 93: Kết quả của phép toán `arr + 5` trên một mảng `arr = np.array([1, 2, 3])` là gì?",
+    "options": [
+      "A. [1, 2, 3, 5]",
+      "B. Báo lỗi.",
+      "C. [6, 7, 8]",
+      "D. [1, 2, 8]"
+    ],
+    "answer": "C. [6, 7, 8]",
+    "explanation": "Số vô hướng 5 sẽ được tự động cộng vào TỪNG phần tử của mảng."
+  },
+  {
+    "question": "Câu 94: Sự khác biệt giữa phép toán `A * B` và `np.dot(A, B)` trên hai ma trận 2D là gì?",
+    "options": [
+      "A. Cả hai đều nhân ma trận đại số tuyến tính.",
+      "B. `A * B` báo lỗi, còn `np.dot()` mới chạy được.",
+      "C. `A * B` là nhân từng phần tử tương ứng (element-wise), còn `np.dot(A, B)` là nhân ma trận (dot product).",
+      "D. `np.dot(A, B)` là phép nhân từng phần tử."
+    ],
+    "answer": "C. `A * B` là nhân từng phần tử tương ứng (element-wise), còn `np.dot(A, B)` là nhân ma trận (dot product).",
+    "explanation": "Trong NumPy, dấu `*` luôn thực hiện theo kiểu element-wise. Nhân ma trận đại số phải dùng `np.dot` hoặc dấu `@`."
+  },
+  {
+    "question": "Câu 95: Tham số `axis=0` trong hàm `np.sum(arr, axis=0)` đối với một ma trận 2D mang ý nghĩa gì?",
+    "options": [
+      "A. Tính tổng toàn bộ ma trận.",
+      "B. Tính tổng theo chiều dọc (cộng dọc theo các hàng để ra kết quả của từng cột).",
+      "C. Tính tổng theo chiều ngang (cộng dọc theo các cột để ra kết quả của từng hàng).",
+      "D. Tính tổng các đường chéo."
+    ],
+    "answer": "B. Tính tổng theo chiều dọc (cộng dọc theo các hàng để ra kết quả của từng cột).",
+    "explanation": "`axis=0` là trục dọc (hàng). NumPy sẽ ép (collapse) trục này lại, trả về tổng của từng cột."
+  },
+  {
+    "question": "Câu 96: Tương tự, hàm `np.sum(arr, axis=1)` sẽ thực hiện điều gì?",
+    "options": [
+      "A. Cộng tất cả phần tử lại bằng 1.",
+      "B. Tính tổng theo chiều ngang (cộng dọc theo các cột để ra kết quả của từng hàng).",
+      "C. Báo lỗi cú pháp.",
+      "D. Tìm giá trị trung bình."
+    ],
+    "answer": "B. Tính tổng theo chiều ngang (cộng dọc theo các cột để ra kết quả của từng hàng).",
+    "explanation": "`axis=1` ép trục cột lại, sinh ra tổng số của từng hàng."
+  },
+  {
+    "question": "Câu 97: Hàm nào dùng để tính giá trị Trung bình (Mean) của một mảng NumPy?",
+    "options": [
+      "A. np.average()",
+      "B. np.mean()",
+      "C. np.median()",
+      "D. np.mid()"
+    ],
+    "answer": "B. np.mean()",
+    "explanation": "`np.mean()` tính trung bình cộng của tất cả các phần tử trong mảng."
+  },
+  {
+    "question": "Câu 98: Sự khác biệt giữa `np.var()` và `np.std()` là gì?",
+    "options": [
+      "A. Không có gì khác biệt.",
+      "B. `np.var()` tính Phương sai, còn `np.std()` tính Độ lệch chuẩn.",
+      "C. `np.var()` dùng cho chữ, `np.std()` dùng cho số.",
+      "D. `np.var()` đếm số phần tử."
+    ],
+    "answer": "B. `np.var()` tính Phương sai, còn `np.std()` tính Độ lệch chuẩn.",
+    "explanation": "Phương sai (Variance) và Độ lệch chuẩn (Standard Deviation) là hai thước đo cốt lõi về độ phân tán dữ liệu."
+  },
+  {
+    "question": "Câu 99: Để tìm ra **CHỈ SỐ (Index)** của phần tử có giá trị lớn nhất trong mảng, bạn dùng hàm nào?",
+    "options": [
+      "A. np.max()",
+      "B. np.argmax()",
+      "C. np.maximum()",
+      "D. np.index_max()"
+    ],
+    "answer": "B. np.argmax()",
+    "explanation": "`np.max()` trả về GIÁ TRỊ lớn nhất, trong khi `np.argmax()` trả về VỊ TRÍ (index) của nó."
+  },
+  {
+    "question": "Câu 100: Tương tự, hàm nào trả về **CHỈ SỐ (Index)** của phần tử có giá trị nhỏ nhất?",
+    "options": [
+      "A. np.argmin()",
+      "B. np.min()",
+      "C. np.minimum()",
+      "D. np.index_min()"
+    ],
+    "answer": "A. np.argmin()",
+    "explanation": "Hàm `np.argmin()` được dùng để định vị phần tử nhỏ nhất."
+  },
+  {
+    "question": "Câu 101: Hàm `np.exp(arr)` thực hiện phép toán toán học nào lên mảng?",
+    "options": [
+      "A. Bình phương các phần tử.",
+      "B. Tính căn bậc hai.",
+      "C. Tính hàm mũ e^x cho từng phần tử.",
+      "D. Lấy phần nguyên."
+    ],
+    "answer": "C. Tính hàm mũ e^x cho từng phần tử.",
+    "explanation": "`np.exp()` là hàm Exponential, tính $e^x$ rất hay dùng trong các thuật toán Machine Learning như Sigmoid."
+  },
+  {
+    "question": "Câu 102: Hàm `np.sqrt(arr)` dùng để làm gì?",
+    "options": [
+      "A. Xóa các phần tử âm.",
+      "B. Bình phương.",
+      "C. Tính căn bậc hai (Square root) cho từng phần tử.",
+      "D. Sắp xếp mảng."
+    ],
+    "answer": "C. Tính căn bậc hai (Square root) cho từng phần tử.",
+    "explanation": "`np.sqrt()` là hàm Square Root, tính căn bậc hai."
+  },
+  {
+    "question": "Câu 103: Hàm `np.where(condition, x, y)` hoạt động như thế nào?",
+    "options": [
+      "A. Tìm kiếm vị trí x và y.",
+      "B. Trả về mảng chứa phần tử từ `x` nếu điều kiện True, ngược lại lấy từ `y` (giống toán tử 3 ngôi).",
+      "C. Trả về x nếu sai, y nếu đúng.",
+      "D. Cắt mảng từ x đến y."
+    ],
+    "answer": "B. Trả về mảng chứa phần tử từ `x` nếu điều kiện True, ngược lại lấy từ `y` (giống toán tử 3 ngôi).",
+    "explanation": "`np.where` là phiên bản vector hóa của câu lệnh `if-else`."
+  },
+  {
+    "question": "Câu 104: Hàm `np.unique(arr)` có tác dụng gì?",
+    "options": [
+      "A. Trả về mảng mới chỉ chứa các giá trị độc nhất (loại bỏ trùng lặp) và được sắp xếp.",
+      "B. Trả về True/False.",
+      "C. Xóa mảng.",
+      "D. Đếm số lần xuất hiện."
+    ],
+    "answer": "A. Trả về mảng mới chỉ chứa các giá trị độc nhất (loại bỏ trùng lặp) và được sắp xếp.",
+    "explanation": "`np.unique()` là công cụ cực kỳ hữu ích để tìm ra các danh mục (classes) duy nhất trong dữ liệu."
+  },
+  {
+    "question": "Câu 105: Lệnh `np.concatenate((arr1, arr2), axis=0)` dùng để làm gì đối với 2 ma trận 2D?",
+    "options": [
+      "A. Nối mảng theo chiều ngang (thêm cột).",
+      "B. Nối (ghép) hai mảng lại với nhau theo chiều dọc (thêm hàng xuống dưới).",
+      "C. Cộng giá trị của 2 mảng.",
+      "D. Nhân 2 mảng."
+    ],
+    "answer": "B. Nối (ghép) hai mảng lại với nhau theo chiều dọc (thêm hàng xuống dưới).",
+    "explanation": "`axis=0` là trục dọc, do đó mảng 2 sẽ được xếp xuống bên dưới mảng 1. Hàm `np.vstack()` cũng làm chức năng tương tự."
+  },
+  {
+    "question": "Câu 106: Tương tự, lệnh `np.concatenate((arr1, arr2), axis=1)` (hoặc `np.hstack`) dùng để làm gì?",
+    "options": [
+      "A. Nối hai mảng lại với nhau theo chiều ngang (thêm cột sang bên phải).",
+      "B. Nối mảng theo chiều dọc.",
+      "C. Trừ 2 mảng.",
+      "D. Tính dot product."
+    ],
+    "answer": "A. Nối hai mảng lại với nhau theo chiều ngang (thêm cột sang bên phải).",
+    "explanation": "`axis=1` là trục ngang, do đó mảng 2 sẽ được dán sang bên phải mảng 1."
+  },
+  {
+    "question": "Câu 107: Lệnh `arr.copy()` có tác dụng gì khi gán mảng cho một biến mới `new_arr = arr.copy()`?",
+    "options": [
+      "A. Không khác gì `new_arr = arr`.",
+      "B. Tạo ra một bản sao hoàn toàn mới trong bộ nhớ. Thay đổi trên `new_arr` KHÔNG ảnh hưởng đến `arr` gốc.",
+      "C. Xóa mảng cũ.",
+      "D. Lưu mảng ra file copy.txt."
+    ],
+    "answer": "B. Tạo ra một bản sao hoàn toàn mới trong bộ nhớ. Thay đổi trên `new_arr` KHÔNG ảnh hưởng đến `arr` gốc.",
+    "explanation": "Dấu `=` thông thường chỉ tạo ra View (tham chiếu chung 1 ô nhớ). Dùng `.copy()` mới đảm bảo an toàn dữ liệu."
+  },
+  {
+    "question": "Câu 108: Điều gì xảy ra nếu bạn tạo một mảng chứa cả số và chữ?\n\narr = np.array([1, 2, 'hello'])",
+    "options": [
+      "A. Báo lỗi TypeError.",
+      "B. NumPy sẽ tự động ép kiểu (upcast) tất cả các phần tử thành chuỗi (string) để đảm bảo tính đồng nhất.",
+      "C. Số 1 và 2 bị xóa.",
+      "D. Chữ 'hello' chuyển thành số 0."
+    ],
+    "answer": "B. NumPy sẽ tự động ép kiểu (upcast) tất cả các phần tử thành chuỗi (string) để đảm bảo tính đồng nhất.",
+    "explanation": "Đặc tính của `ndarray` là các phần tử phải cùng 1 kiểu. Nó sẽ ưu tiên ép kiểu về loại rộng nhất (chuỗi)."
+  },
+  {
+    "question": "Câu 109: Để chủ động thay đổi kiểu dữ liệu của một mảng đang có (ví dụ từ float sang int), bạn dùng hàm nào?",
+    "options": [
+      "A. arr.change_type(int)",
+      "B. arr.astype(int)",
+      "C. arr.type = int",
+      "D. np.to_int(arr)"
+    ],
+    "answer": "B. arr.astype(int)",
+    "explanation": "Hàm `.astype()` tạo ra một bản sao của mảng với kiểu dữ liệu mới được chỉ định."
+  },
+  {
+    "question": "Câu 110: Hàm `np.append(arr, values)` khác với hàm `list.append()` của Python ở điểm cốt lõi nào?",
+    "options": [
+      "A. `np.append` thêm phần tử vào đầu mảng.",
+      "B. `np.append` luôn trả về một BẢN SAO (mảng mới), chứ không sửa đổi trực tiếp vào mảng gốc in-place như list.",
+      "C. Nó không thể thêm chuỗi.",
+      "D. Chạy chậm hơn 100 lần."
+    ],
+    "answer": "B. `np.append` luôn trả về một BẢN SAO (mảng mới), chứ không sửa đổi trực tiếp vào mảng gốc in-place như list.",
+    "explanation": "Vì mảng NumPy có kích thước cố định ở bộ nhớ C, thêm phần tử đòi hỏi phải cấp phát lại vùng nhớ mới."
+  },
+  {
+    "question": "Câu 111: Lệnh in mảng `print(arr)` trong Python sẽ cho kết quả giao diện thế nào đối với NumPy array?",
+    "options": [
+      "A. Các phần tử cách nhau bởi dấu phẩy như List.",
+      "B. Nó hiển thị ở dạng bảng Excel.",
+      "C. Các phần tử cách nhau bởi khoảng trắng (dấu cách) và các chiều được bọc trong các lớp dấu ngoặc vuông [ ].",
+      "D. Chỉ in ra chữ 'ndarray'."
+    ],
+    "answer": "C. Các phần tử cách nhau bởi khoảng trắng (dấu cách) và các chiều được bọc trong các lớp dấu ngoặc vuông [ ].",
+    "explanation": "Đặc điểm nhận diện khi print một `ndarray` là sự xuất hiện của dấu khoảng trắng thay vì dấu phẩy như Python List thông thường."
+  },
+  {
+    "question": "Câu 112: Hàm `np.insert(arr, obj, values)` dùng để làm gì?",
+    "options": [
+      "A. Chèn giá trị (values) vào một vị trí index (obj) cụ thể trong mảng.",
+      "B. Xóa giá trị.",
+      "C. Đảo ngược mảng.",
+      "D. Nối 2 mảng."
+    ],
+    "answer": "A. Chèn giá trị (values) vào một vị trí index (obj) cụ thể trong mảng.",
+    "explanation": "Hàm này cho phép chèn phần tử vào giữa mảng thay vì chỉ thêm ở cuối như append."
+  },
+  {
+    "question": "Câu 113: Hàm `np.delete(arr, obj)` có tác dụng gì?",
+    "options": [
+      "A. Xóa file Numpy.",
+      "B. Xóa biến arr khỏi RAM.",
+      "C. Xóa phần tử (hoặc hàng/cột) tại vị trí chỉ mục obj được chỉ định.",
+      "D. Đổi giá trị thành 0."
+    ],
+    "answer": "C. Xóa phần tử (hoặc hàng/cột) tại vị trí chỉ mục obj được chỉ định.",
+    "explanation": "Dùng để loại bỏ các phần tử thừa dựa trên index."
+  },
+  {
+    "question": "Câu 114: Để làm tròn các số thập phân trong mảng NumPy, bạn sử dụng hàm nào?",
+    "options": [
+      "A. np.round() hoặc np.around()",
+      "B. np.ceil()",
+      "C. np.floor()",
+      "D. Cả A, B, C đều là các hàm làm tròn nhưng với quy tắc khác nhau."
+    ],
+    "answer": "D. Cả A, B, C đều là các hàm làm tròn nhưng với quy tắc khác nhau.",
+    "explanation": "`round()` làm tròn tiêu chuẩn, `ceil()` làm tròn lên trần, `floor()` làm tròn xuống sàn."
+  },
+  {
+    "question": "Câu 115: Lệnh `np.sort(arr)` thực hiện công việc gì?",
+    "options": [
+      "A. Đảo ngược mảng.",
+      "B. Trả về một bản sao của mảng đã được sắp xếp từ bé đến lớn.",
+      "C. Sắp xếp mảng từ lớn đến bé.",
+      "D. Xáo trộn ngẫu nhiên mảng."
+    ],
+    "answer": "B. Trả về một bản sao của mảng đã được sắp xếp từ bé đến lớn.",
+    "explanation": "Hàm sort mặc định sắp xếp mảng theo thứ tự tăng dần."
+  },
+  {
+    "question": "Câu 116: Để xáo trộn ngẫu nhiên (shuffle) vị trí các phần tử trong một mảng, bạn dùng hàm nào?",
+    "options": [
+      "A. np.random.mix()",
+      "B. np.random.shuffle(arr)",
+      "C. np.random.random()",
+      "D. arr.scramble()"
+    ],
+    "answer": "B. np.random.shuffle(arr)",
+    "explanation": "Hàm `shuffle()` sẽ tráo đổi ngẫu nhiên vị trí các phần tử, thay đổi trực tiếp trên mảng gốc (in-place)."
+  },
+  {
+    "question": "Câu 117: Nếu bạn có mảng `arr = [1, 2, 3]`, lệnh `np.repeat(arr, 3)` sẽ trả về kết quả nào?",
+    "options": [
+      "A. [1, 2, 3, 1, 2, 3, 1, 2, 3]",
+      "B. [1, 1, 1, 2, 2, 2, 3, 3, 3]",
+      "C. Báo lỗi.",
+      "D. [3, 6, 9]"
+    ],
+    "answer": "B. [1, 1, 1, 2, 2, 2, 3, 3, 3]",
+    "explanation": "`np.repeat()` lặp lại TỪNG phần tử liền kề nhau số lần được chỉ định."
+  },
+  {
+    "question": "Câu 118: Trong khi đó, lệnh `np.tile(arr, 3)` sẽ trả về kết quả nào cho mảng `arr = [1, 2, 3]`?",
+    "options": [
+      "A. [1, 1, 1, 2, 2, 2, 3, 3, 3]",
+      "B. [1, 2, 3, 1, 2, 3, 1, 2, 3]",
+      "C. [3, 6, 9]",
+      "D. [1, 2, 3]"
+    ],
+    "answer": "B. [1, 2, 3, 1, 2, 3, 1, 2, 3]",
+    "explanation": "`np.tile()` lặp lại TOÀN BỘ mảng như một viên gạch (tile) lát nền xếp nối tiếp nhau."
+  },
+  {
+    "question": "Câu 119: Hàm `np.any(arr)` dùng để làm gì khi truyền vào một mảng Boolean?",
+    "options": [
+      "A. Trả về True nếu TẤT CẢ các phần tử đều là True.",
+      "B. Trả về True nếu CÓ ÍT NHẤT MỘT phần tử là True.",
+      "C. Đếm số lượng phần tử True.",
+      "D. Trả về False."
+    ],
+    "answer": "B. Trả về True nếu CÓ ÍT NHẤT MỘT phần tử là True.",
+    "explanation": "Hàm `any()` hoạt động giống phép toán logic OR trên toàn mảng."
+  },
+  {
+    "question": "Câu 120: Hàm `np.all(arr)` dùng để làm gì khi truyền vào một mảng Boolean?",
+    "options": [
+      "A. Trả về True nếu TẤT CẢ các phần tử trong mảng đều là True.",
+      "B. Trả về True nếu có 1 phần tử True.",
+      "C. Chuyển đổi mọi thứ thành True.",
+      "D. Tính tổng các phần tử."
+    ],
+    "answer": "A. Trả về True nếu TẤT CẢ các phần tử trong mảng đều là True.",
+    "explanation": "Hàm `all()` hoạt động giống phép toán logic AND trên toàn mảng."
   }
 ]
