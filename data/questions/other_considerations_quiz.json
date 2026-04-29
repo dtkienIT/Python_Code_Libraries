@@ -1,0 +1,134 @@
+[
+  {
+    "question": "Câu 1: Mục đích của kỹ thuật Weight Initialization (khởi tạo trọng số) trước khi huấn luyện mạng nơ-ron là gì?",
+    "options": [
+      "A. Để đảm bảo tất cả các nơ-ron có cùng trọng số bằng 0, giúp mạng dễ hội tụ hơn.",
+      "B. Giảm thiểu tác động của hiện tượng vanishing và exploding gradients, đồng thời có thể tăng tốc quá trình huấn luyện.",
+      "C. Thay thế hoàn toàn hàm kích hoạt (activation function) tại mỗi lớp ẩn.",
+      "D. Tự động chuẩn hóa dữ liệu đầu vào (input data) về khoảng [0, 1]."
+    ],
+    "answer": "B. Giảm thiểu tác động của hiện tượng vanishing và exploding gradients, đồng thời có thể tăng tốc quá trình huấn luyện.",
+    "explanation": "Tài liệu nêu: 'Proper weight initialization may mitigate the effects of vanishing and exploding gradients when training the network. It may also speed up the training process.'"
+  },
+  {
+    "question": "Câu 2: Trong TensorFlow 2.0, thuật toán khởi tạo trọng số mặc định cho lớp `tf.keras.layers.Dense()` là gì?",
+    "options": [
+      "A. He uniform initializer.",
+      "B. Zero initializer.",
+      "C. Glorot uniform initializer (hay còn gọi là Xavier uniform initializer).",
+      "D. Random normal initializer."
+    ],
+    "answer": "C. Glorot uniform initializer (hay còn gọi là Xavier uniform initializer).",
+    "explanation": "Tài liệu ghi rõ: 'In TensorFlow 2.0, the dense layer in `tf.keras.layers.Dense()` has the Glorot uniform initializer, also called Xavier uniform initializer as its default kernel initializer.'"
+  },
+  {
+    "question": "Câu 3: Quá trình Batch Normalization (Chuẩn hóa theo batch) thường diễn ra ở vị trí nào bên trong cấu trúc của một nơ-ron?",
+    "options": [
+      "A. Trước phép biến đổi affine (affine transformation) của ma trận đầu vào.",
+      "B. Ngay sau lớp đầu ra cuối cùng của toàn bộ mạng lưới.",
+      "C. Sau phép biến đổi affine nhưng trước khi đưa kết quả vào hàm kích hoạt (activation function).",
+      "D. Sau khi hàm kích hoạt đã tính toán xong để chuẩn bị truyền sang lớp tiếp theo."
+    ],
+    "answer": "C. Sau phép biến đổi affine nhưng trước khi đưa kết quả vào hàm kích hoạt (activation function).",
+    "explanation": "Dựa theo nội dung và Hình 32-2: 'Batch normalization occurs after the affine transformation of the input matrix and their weights, but before passing the transformation into the activation function.'"
+  },
+  {
+    "question": "Câu 4: Batch Normalization duy trì và sử dụng thông tin gì để chuẩn hóa tập dữ liệu kiểm thử (test data) trong giai đoạn đánh giá (evaluation)?",
+    "options": [
+      "A. Tính toán lại giá trị trung bình (mean) và độ lệch chuẩn (standard deviation) mới dựa trên chính tập test data đó.",
+      "B. Sử dụng điểm số của running mean và standard deviation được ghi nhận và duy trì liên tục trong suốt giai đoạn huấn luyện (training phase).",
+      "C. Cố định giá trị mean bằng 0 và phương sai bằng 1 một cách tự động mà không cần tham chiếu đến giai đoạn huấn luyện.",
+      "D. Sử dụng các tham số ngẫu nhiên mới được khởi tạo ở mỗi lần dự đoán."
+    ],
+    "answer": "B. Sử dụng điểm số của running mean và standard deviation được ghi nhận và duy trì liên tục trong suốt giai đoạn huấn luyện (training phase).",
+    "explanation": "Tài liệu cho biết: 'Also at the training phase, the score of the running mean and standard deviation of the data is maintained so that it can be used to normalize the test data before evaluation.'"
+  },
+  {
+    "question": "Câu 5: Nhược điểm nhỏ của việc sử dụng lớp Batch Normalization trong mạng nơ-ron là gì?",
+    "options": [
+      "A. Nó làm cho quá trình khởi tạo trọng số bị sai lệch hoàn toàn.",
+      "B. Nó khiến mạng có thể chạy chậm hơn một chút do phải thêm bước tính toán ở mỗi lớp.",
+      "C. Nó làm tăng khả năng xảy ra vanishing gradient gấp nhiều lần.",
+      "D. Nó bắt buộc người dùng phải vô hiệu hóa mọi optimizer như SGD hay Adam."
+    ],
+    "answer": "B. Nó khiến mạng có thể chạy chậm hơn một chút do phải thêm bước tính toán ở mỗi lớp.",
+    "explanation": "Tài liệu đề cập: 'However, due to the added computational step at each layer, the network may be a bit slower.'"
+  },
+  {
+    "question": "Câu 6: Kỹ thuật Gradient Clipping thường được sử dụng phổ biến nhất để giải quyết vấn đề vanishing/exploding gradients trong loại mạng nơ-ron nào?",
+    "options": [
+      "A. Mạng Perceptron đa lớp (MLP) cơ bản.",
+      "B. Mạng nơ-ron tích chập (CNN) xử lý ảnh.",
+      "C. Mạng nơ-ron hồi quy (Recurrent networks) khi huấn luyện qua nhiều lớp sâu bằng backpropagation.",
+      "D. Mạng Generative Adversarial Networks (GANs) khi tạo sinh hình ảnh."
+    ],
+    "answer": "C. Mạng nơ-ron hồi quy (Recurrent networks) khi huấn luyện qua nhiều lớp sâu bằng backpropagation.",
+    "explanation": "Theo văn bản: 'Gradient clipping is another technique for hemming the problem of vanishing and exploding gradients mostly seen in recurrent networks due to training via backpropagation across a large number of deep recurrent layers.'"
+  },
+  {
+    "question": "Câu 7: Cơ chế hoạt động của Gradient Clipping là gì và nó được áp dụng trong TensorFlow 2.0 như thế nào?",
+    "options": [
+      "A. Cắt gọt (trimming) các gradient đã tính toán để giữ chúng trong một phạm vi cụ thể nhằm tránh bão hòa; được thực hiện bằng cách cấu hình tham số `clipnorm` hoặc `clipvalue` trong các optimizer.",
+      "B. Tự động loại bỏ hoàn toàn các nơ-ron có độ dốc gradient vượt quá giới hạn bằng phương pháp Dropout.",
+      "C. Thay đổi giá trị target/label của bộ dữ liệu để tương thích với gradient; được thiết lập qua hàm `tf.clip_labels()`.",
+      "D. Trực tiếp thay đổi learning rate của mô hình ở mỗi epoch thông qua callback."
+    ],
+    "answer": "A. Cắt gọt (trimming) các gradient đã tính toán để giữ chúng trong một phạm vi cụ thể nhằm tránh bão hòa; được thực hiện bằng cách cấu hình tham số `clipnorm` hoặc `clipvalue` trong các optimizer.",
+    "explanation": "Tài liệu giải thích: 'Gradient clipping involves trimming the computed gradients so that they remain within a specific range... Gradient clipping is implemented in TensorFlow 2.0 by adjusting the `clipnorm` or `clipvalue` parameters of the selected optimizer from the `tf.keras.optimizers` package.'"
+  },
+  {
+    "question": "Câu 8: Ngoài Xavier (Glorot), phương pháp khởi tạo trọng số nào khác được đề cập trong tài liệu?",
+    "options": [
+      "A. Random initialization",
+      "B. He initialization",
+      "C. Zero initialization",
+      "D. Uniform initialization"
+    ],
+    "answer": "B. He initialization",
+    "explanation": "Tài liệu nêu hai phương pháp phổ biến: Xavier và He initialization."
+  },
+  {
+    "question": "Câu 9: Batch Normalization chuẩn hóa dữ liệu trong mỗi batch về dạng nào?",
+    "options": [
+      "A. Mean = 1, variance = 0",
+      "B. Mean = 0, variance = 1",
+      "C. Mean = 0.5, variance = 0.5",
+      "D. Không thay đổi phân phối dữ liệu"
+    ],
+    "answer": "B. Mean = 0, variance = 1",
+    "explanation": "BatchNorm chuẩn hóa dữ liệu về zero mean và unit variance."
+  },
+  {
+    "question": "Câu 10: Ngoài việc chuẩn hóa, Batch Normalization còn học thêm tham số nào?",
+    "options": [
+      "A. Learning rate",
+      "B. Gradient",
+      "C. Scale và shift (gamma và beta)",
+      "D. Epoch"
+    ],
+    "answer": "C. Scale và shift (gamma và beta)",
+    "explanation": "BatchNorm học thêm tham số scale (gamma) và shift (beta) để điều chỉnh dữ liệu."
+  },
+  {
+    "question": "Câu 11: Trong TensorFlow, lớp Batch Normalization được thêm vào model bằng cách nào?",
+    "options": [
+      "A. tf.keras.layers.Normalize()",
+      "B. tf.keras.layers.BatchNormalization()",
+      "C. tf.data.Batch()",
+      "D. tf.keras.optimizers.BatchNorm()"
+    ],
+    "answer": "B. tf.keras.layers.BatchNormalization()",
+    "explanation": "BatchNorm được thêm vào model bằng lớp tf.keras.layers.BatchNormalization()."
+  },
+  {
+    "question": "Câu 12: Sự khác biệt giữa `clipnorm` và `clipvalue` trong gradient clipping là gì?",
+    "options": [
+      "A. clipnorm giới hạn gradient theo norm, clipvalue giới hạn theo giá trị từng phần tử",
+      "B. clipnorm chỉ dùng cho CNN, clipvalue dùng cho RNN",
+      "C. clipnorm tăng gradient, clipvalue giảm gradient",
+      "D. Không có sự khác biệt"
+    ],
+    "answer": "A. clipnorm giới hạn gradient theo norm, clipvalue giới hạn theo giá trị từng phần tử",
+    "explanation": "clipnorm cắt gradient dựa trên norm tổng thể, còn clipvalue cắt từng giá trị riêng lẻ."
+  }
+]

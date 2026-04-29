@@ -1,0 +1,200 @@
+[
+  {
+    "question": "Câu 1: Thuật toán Autoencoder thuộc loại học máy nào?",
+    "options": [
+      "A. Học có giám sát (Supervised learning).",
+      "B. Học bán giám sát (Semi-supervised learning).",
+      "C. Học không giám sát (Unsupervised learning).",
+      "D. Học tăng cường (Reinforcement learning)."
+    ],
+    "answer": "C. Học không giám sát (Unsupervised learning).",
+    "explanation": "Tài liệu mở đầu bằng: 'Autoencoder is an unsupervised learning algorithm that uses neural networks to reconstruct the features of a dataset.'"
+  },
+  {
+    "question": "Câu 2: Autoencoder có thể được sử dụng với các mục đích chính nào?",
+    "options": [
+      "A. Dự đoán chuỗi thời gian dài hạn và lọc văn bản.",
+      "B. Giảm số chiều dữ liệu, trích xuất đặc trưng và sinh ra các mẫu dữ liệu mới sau khi học được biểu diễn nội bộ.",
+      "C. Phân loại hình ảnh đa lớp với độ chính xác cao nhất.",
+      "D. Tối ưu hóa hàm chi phí (cost function) của mạng CNN."
+    ],
+    "answer": "B. Giảm số chiều dữ liệu, trích xuất đặc trưng và sinh ra các mẫu dữ liệu mới sau khi học được biểu diễn nội bộ.",
+    "explanation": "Tài liệu ghi: 'autoencoders can be used to reduce the dimensionality of a dataset and to extract relevant features. Moreso, peculiar to autoencoders is the ability to generate more examples of the dataset...'"
+  },
+  {
+    "question": "Câu 3: Mục đích của việc đặt ràng buộc (constraint) lên mạng Autoencoder bằng cách giảm số chiều của dữ liệu đầu vào trong tập mã hóa (Encoders) là gì?",
+    "options": [
+      "A. Để tăng tốc độ học tập của mạng lên gấp 2 lần.",
+      "B. Để mạng không thể thực hiện việc ghi nhớ (memorization) tầm thường từ dữ liệu đầu vào mà bị buộc phải học được các tập biểu diễn hiệu quả.",
+      "C. Nhằm giúp mô hình tương thích với các kiến trúc CPU đời cũ.",
+      "D. Để tự động chuyển đổi dữ liệu từ dạng hình ảnh sang văn bản."
+    ],
+    "answer": "B. Để mạng không thể thực hiện việc ghi nhớ (memorization) tầm thường từ dữ liệu đầu vào mà bị buộc phải học được các tập biểu diễn hiệu quả.",
+    "explanation": "Tài liệu giải thích: 'The autoencoder cannot merely do a trivial memorization of the inputs, because a constraint is placed on the encoders by reducing the input dimension to force the network to learn an efficient set of representation...'"
+  },
+  {
+    "question": "Câu 4: Mạng Autoencoder được gọi là 'undercomplete' (chưa hoàn chỉnh) khi nào?",
+    "options": [
+      "A. Khi số lượng nơ-ron ở lớp ẩn lớn hơn số lượng nơ-ron ở lớp đầu vào.",
+      "B. Khi mạng có ít hơn 3 lớp ẩn.",
+      "C. Khi các Encoders và Decoders bị giới hạn (restricted) kích thước để ép mạng nén thông tin.",
+      "D. Khi mạng huấn luyện chưa hoàn tất (dừng sớm trước epoch chỉ định)."
+    ],
+    "answer": "C. Khi các Encoders và Decoders bị giới hạn (restricted) kích thước để ép mạng nén thông tin.",
+    "explanation": "Theo tài liệu: 'Autoencoders with restricted Encoders and Decoders are called undercomplete.'"
+  },
+  {
+    "question": "Câu 5: Đặc điểm kiến trúc của lớp ẩn (hidden layers) trong mạng Stacked Autoencoders (Autoencoder xếp chồng) là gì?",
+    "options": [
+      "A. Các lớp ẩn được thêm vào một cách hoàn toàn ngẫu nhiên và có kích thước tăng dần.",
+      "B. Các lớp ẩn được thêm vào đối xứng (symmetrically) ở cả phần Encoder và Decoder của mạng.",
+      "C. Tất cả các lớp ẩn đều có số lượng nơ-ron bằng chính xác với lớp đầu vào.",
+      "D. Lớp ẩn chỉ xuất hiện ở phần Encoder, phần Decoder không có lớp ẩn nào."
+    ],
+    "answer": "B. Các lớp ẩn được thêm vào đối xứng (symmetrically) ở cả phần Encoder và Decoder của mạng.",
+    "explanation": "Tài liệu nêu: 'The hidden layers of a stacked or deep autoencoder are added symmetrically at both the Encoder and Decoder part of the network...'"
+  },
+  {
+    "question": "Câu 6: Kỹ thuật 'tying' (buộc) trọng số trong Stacked Autoencoder có tác dụng gì?",
+    "options": [
+      "A. Chia sẻ trọng số giữa các lớp mạng đối xứng nhằm tối ưu hóa quá trình huấn luyện của một Autoencoder sâu.",
+      "B. Khởi tạo tất cả trọng số ban đầu của mô hình bằng 0.",
+      "C. Loại bỏ tất cả các hàm kích hoạt (activation function) ra khỏi mạng.",
+      "D. Ép buộc mạng học theo cách của học có giám sát bằng cách gắn nhãn thủ công."
+    ],
+    "answer": "A. Chia sẻ trọng số giữa các lớp mạng đối xứng nhằm tối ưu hóa quá trình huấn luyện của một Autoencoder sâu.",
+    "explanation": "Văn bản cho biết: 'To optimize the training of a deep autoencoder, the weights of the symmetrical neural layers are shared in a technique called tying.'"
+  },
+  {
+    "question": "Câu 7: Denoising Autoencoder (Autoencoder khử nhiễu) áp dụng loại ràng buộc nào vào quá trình học?",
+    "options": [
+      "A. Tiêm thêm nhiễu Gaussian vào các dữ liệu đầu vào hoặc vô hiệu hóa (deactivating) một số nơ-ron đầu vào (giống kỹ thuật Dropout).",
+      "B. Bắt buộc lớp đầu ra phải nhỏ hơn lớp ẩn (coding layer).",
+      "C. Cấm hoàn toàn việc sử dụng hàm kích hoạt ReLU.",
+      "D. Chỉ được phép train trên ảnh màu (RGB) kích thước lớn."
+    ],
+    "answer": "A. Tiêm thêm nhiễu Gaussian vào các dữ liệu đầu vào hoặc vô hiệu hóa (deactivating) một số nơ-ron đầu vào (giống kỹ thuật Dropout).",
+    "explanation": "Tài liệu ghi rõ: 'Denoising autoencoders add a different type of constraint to the network by imputing some Gaussian noise into the inputs... Another way a denoising autoencoder constrains the input is by deactivating some input neurons in a similar fashion to the Dropout technique.'"
+  },
+  {
+    "question": "Câu 8: Khác với Autoencoder thông thường, kiến trúc của Denoising Autoencoder thường mang đặc điểm gì ở lớp ẩn (coding layer)?",
+    "options": [
+      "A. Lớp ẩn hoàn toàn không có nơ-ron nào.",
+      "B. Nó dùng kiến trúc overcomplete (số chiều của lớp ẩn không bị hạn chế/lớn hơn số chiều đầu vào).",
+      "C. Nó luôn dùng kiến trúc undercomplete (ép lớp ẩn phải cực kỳ nhỏ).",
+      "D. Kích thước của lớp ẩn bắt buộc phải là số lẻ."
+    ],
+    "answer": "B. Nó dùng kiến trúc overcomplete (số chiều của lớp ẩn không bị hạn chế/lớn hơn số chiều đầu vào).",
+    "explanation": "Theo tài liệu mô tả: 'Denoising autoencoders use an overcomplete network architecture. This means that the dimensions of the hidden Encoder and Decoder layers are not restricted; hence, they are overcomplete.'"
+  },
+   {
+    "question": "Câu 9: Trong Autoencoder, 'reconstruction error' (lỗi tái tạo) được dùng để làm gì?",
+    "options": [
+      "A. Đo tốc độ huấn luyện của mô hình.",
+      "B. Đánh giá mức độ khác biệt giữa đầu vào và đầu ra của mạng.",
+      "C. Tính số lượng tham số của mô hình.",
+      "D. Giảm kích thước dữ liệu."
+    ],
+    "answer": "B. Đánh giá mức độ khác biệt giữa đầu vào và đầu ra của mạng.",
+    "explanation": "Reconstruction error đo mức độ đầu ra khớp với đầu vào, là tiêu chí chính để đánh giá Autoencoder. :contentReference[oaicite:0]{index=0}"
+  },
+  {
+    "question": "Câu 10: Trong Autoencoder, 'coding' (hay coding layer) là gì?",
+    "options": [
+      "A. Lớp đầu vào của mạng.",
+      "B. Lớp đầu ra của mạng.",
+      "C. Biểu diễn nội bộ (internal representation) được học từ dữ liệu sau encoder.",
+      "D. Hàm mất mát của mô hình."
+    ],
+    "answer": "C. Biểu diễn nội bộ (internal representation) được học từ dữ liệu sau encoder.",
+    "explanation": "Coding là vector biểu diễn nén mà encoder học được từ dữ liệu đầu vào. :contentReference[oaicite:1]{index=1}"
+  },
+  {
+    "question": "Câu 11: Tại sao Autoencoder cần sử dụng các hàm kích hoạt phi tuyến trong encoder và decoder?",
+    "options": [
+      "A. Để giảm số lượng nơ-ron.",
+      "B. Để giúp mô hình học được các quan hệ phức tạp trong dữ liệu.",
+      "C. Để tăng tốc độ GPU.",
+      "D. Để loại bỏ hoàn toàn noise."
+    ],
+    "answer": "B. Để giúp mô hình học được các quan hệ phức tạp trong dữ liệu.",
+    "explanation": "Các neuron trong encoder/decoder sử dụng activation phi tuyến để học pattern phức tạp. :contentReference[oaicite:2]{index=2}"
+  },
+  {
+    "question": "Câu 12: Rủi ro chính khi xây dựng Stacked Autoencoder quá sâu là gì?",
+    "options": [
+      "A. Không thể train được.",
+      "B. Mất toàn bộ dữ liệu.",
+      "C. Overfitting – mô hình ghi nhớ dữ liệu nhưng không tổng quát hóa tốt.",
+      "D. Không sử dụng được activation function."
+    ],
+    "answer": "C. Overfitting – mô hình ghi nhớ dữ liệu nhưng không tổng quát hóa tốt.",
+    "explanation": "Tài liệu cảnh báo: nếu quá nhiều layer, autoencoder có thể overfit và không generalize. :contentReference[oaicite:3]{index=3}"
+  },
+  {
+    "question": "Câu 13: Trong ví dụ TensorFlow với MNIST, tại sao dữ liệu ảnh được scale từ [0, 255] về [0, 1]?",
+    "options": [
+      "A. Để giảm số lượng pixel.",
+      "B. Để giúp mô hình học ổn định và hiệu quả hơn.",
+      "C. Để tăng kích thước ảnh.",
+      "D. Để chuyển ảnh sang màu RGB."
+    ],
+    "answer": "B. Để giúp mô hình học ổn định và hiệu quả hơn.",
+    "explanation": "Scaling dữ liệu giúp quá trình training ổn định hơn và cải thiện hiệu suất. :contentReference[oaicite:4]{index=4}"
+  },
+  {
+    "question": "Câu 14: Trong ví dụ MNIST, tại sao ảnh 28x28 được 'flatten' thành vector 784?",
+    "options": [
+      "A. Để giảm độ phân giải ảnh.",
+      "B. Để phù hợp với đầu vào của mạng Dense (fully connected).",
+      "C. Để tăng số lượng dữ liệu.",
+      "D. Để chuyển ảnh sang dạng 3D."
+    ],
+    "answer": "B. Để phù hợp với đầu vào của mạng Dense (fully connected).",
+    "explanation": "Các lớp Dense yêu cầu input dạng vector 1D nên ảnh được flatten thành 784 chiều. :contentReference[oaicite:5]{index=5}"
+  },
+  {
+    "question": "Câu 15: Trong quá trình huấn luyện Autoencoder, dữ liệu đầu vào và đầu ra có mối quan hệ như thế nào?",
+    "options": [
+      "A. Đầu vào và đầu ra hoàn toàn khác nhau.",
+      "B. Đầu ra là nhãn (label) của dữ liệu.",
+      "C. Đầu vào và đầu ra giống nhau (x → x).",
+      "D. Đầu ra luôn là số ngẫu nhiên."
+    ],
+    "answer": "C. Đầu vào và đầu ra giống nhau (x → x).",
+    "explanation": "Autoencoder học cách tái tạo lại chính dữ liệu đầu vào nên input = output. :contentReference[oaicite:6]{index=6}"
+  },
+  {
+    "question": "Câu 16: Trong ví dụ code, hàm mất mát 'binary_crossentropy' được sử dụng với mục đích gì?",
+    "options": [
+      "A. Để đo sai số giữa input và output trong bài toán tái tạo.",
+      "B. Để phân cụm dữ liệu.",
+      "C. Để giảm số chiều dữ liệu.",
+      "D. Để tăng tốc độ huấn luyện."
+    ],
+    "answer": "A. Để đo sai số giữa input và output trong bài toán tái tạo.",
+    "explanation": "Loss function đo sự khác biệt giữa ảnh gốc và ảnh tái tạo. :contentReference[oaicite:7]{index=7}"
+  },
+  {
+    "question": "Câu 17: Trong kiến trúc Stacked Autoencoder ví dụ (784 → ... → 32 → ... → 784), lớp có kích thước nhỏ nhất (32) đóng vai trò gì?",
+    "options": [
+      "A. Lớp output.",
+      "B. Lớp input.",
+      "C. Coding layer (bottleneck) chứa biểu diễn nén quan trọng nhất.",
+      "D. Lớp dropout."
+    ],
+    "answer": "C. Coding layer (bottleneck) chứa biểu diễn nén quan trọng nhất.",
+    "explanation": "Lớp nhỏ nhất là bottleneck, nơi lưu trữ representation quan trọng nhất. :contentReference[oaicite:8]{index=8}"
+  },
+  {
+    "question": "Câu 18: Mục tiêu chính của Denoising Autoencoder khi thêm nhiễu vào input là gì?",
+    "options": [
+      "A. Làm giảm kích thước dữ liệu.",
+      "B. Làm cho mô hình học chậm hơn.",
+      "C. Buộc mô hình học được biểu diễn robust thay vì ghi nhớ dữ liệu gốc.",
+      "D. Tăng số lượng dữ liệu train."
+    ],
+    "answer": "C. Buộc mô hình học được biểu diễn robust thay vì ghi nhớ dữ liệu gốc.",
+    "explanation": "Thêm noise giúp model học representation tốt hơn và không bị memorization. :contentReference[oaicite:9]{index=9}"
+  }
+]

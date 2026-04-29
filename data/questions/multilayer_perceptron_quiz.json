@@ -1,0 +1,222 @@
+[
+  {
+    "question": "Câu 1: Mạng perceptron đa lớp (MLP) còn được biết đến với tên gọi nào khác?",
+    "options": [
+      "A. Convolutional Neural Network (CNN).",
+      "B. Recurrent Neural Network (RNN).",
+      "C. Deep feedforward neural network (DFN).",
+      "D. Generative Adversarial Network (GAN)."
+    ],
+    "answer": "C. Deep feedforward neural network (DFN).",
+    "explanation": "Tài liệu nêu rõ: 'Another name for the MLP is the deep feedforward neural network (DFN).'"
+  },
+  {
+    "question": "Câu 2: Khái niệm biểu diễn phân cấp (hierarchical representation) trong mạng nơ-ron sâu hoạt động như thế nào?",
+    "options": [
+      "A. Lớp đầu ra sẽ tự động phân tách dữ liệu thành các nhóm nhỏ.",
+      "B. Các lớp gần đầu vào học các đặc trưng đơn giản, và các lớp sâu hơn học các đặc trưng ngày càng phức tạp và trừu tượng.",
+      "C. Tất cả các lớp đều học cùng một mức độ phức tạp của dữ liệu để đảm bảo sự đồng đều.",
+      "D. Lớp đầu vào trực tiếp ánh xạ (mapping) dữ liệu thành kết quả cuối cùng mà không qua xử lý."
+    ],
+    "answer": "B. Các lớp gần đầu vào học các đặc trưng đơn giản, và các lớp sâu hơn học các đặc trưng ngày càng phức tạp và trừu tượng.",
+    "explanation": "Tài liệu mô tả: 'Initially, the hidden layers closer to the input layer learn a simple set of features, which then grow to increasingly complex features as information flows to deeper layers...'"
+  },
+  {
+    "question": "Câu 3: Việc tăng số lượng lớp ẩn (hidden layers) một cách tùy tiện có thể gây ra rủi ro gì đối với hiệu suất mạng?",
+    "options": [
+      "A. Làm giảm thời gian huấn luyện xuống mức tối thiểu.",
+      "B. Gây ra hiện tượng overfitting (quá khớp), khiến mô hình không thể tổng quát hóa tốt trên dữ liệu mới.",
+      "C. Tự động loại bỏ các nhiễu trong tập huấn luyện.",
+      "D. Chuyển đổi bài toán từ hồi quy sang phân loại."
+    ],
+    "answer": "B. Gây ra hiện tượng overfitting (quá khớp), khiến mô hình không thể tổng quát hóa tốt trên dữ liệu mới.",
+    "explanation": "Tài liệu ghi: 'arbitrarily increasing the number of hidden layers... can have detrimental effects on the overall network performance with respect to generalizing to unseen observations. This is because the neural network will learn more closely the irreducible errors...'"
+  },
+  {
+    "question": "Câu 4: Các phương pháp nào được đề xuất để giảm thiểu tình trạng overfitting trong mạng nơ-ron?",
+    "options": [
+      "A. Tăng tốc độ học (learning rate) lên mức tối đa.",
+      "B. Tikhonov regularization, Dropout, hoặc early stopping.",
+      "C. Tăng số lượng nơ-ron lên gấp đôi ở tất cả các lớp.",
+      "D. Xóa bỏ hoàn toàn tập dữ liệu kiểm tra (test set)."
+    ],
+    "answer": "B. Tikhonov regularization, Dropout, hoặc early stopping.",
+    "explanation": "Theo tài liệu: 'Regularization techniques for neural networks such as Tikhonov regularization, Dropout, or early stopping are different methods of mitigating overfitting.'"
+  },
+  {
+    "question": "Câu 5: Theo kinh nghiệm thực tế, khi nào nên thiết kế mạng nơ-ron có nhiều hơn 1 lớp ẩn?",
+    "options": [
+      "A. Luôn luôn dùng nhiều lớp ẩn cho mọi bài toán.",
+      "B. Chỉ dùng cho các bài toán học không giám sát.",
+      "C. Khi số lượng lớp đầu ra tăng lên hoặc có mức độ phi tuyến tính cao giữa các đặc trưng dữ liệu.",
+      "D. Khi tập dữ liệu có dung lượng nhỏ hơn 1 MB."
+    ],
+    "answer": "C. Khi số lượng lớp đầu ra tăng lên hoặc có mức độ phi tuyến tính cao giữa các đặc trưng dữ liệu.",
+    "explanation": "Tài liệu cho biết: 'one hidden layer will produce good results for simple learning problems, but if the number of output classes increases or there exists a high degree of non-linearities... then it is recommended to add more layers...'"
+  },
+  {
+    "question": "Câu 6: Cách tiếp cận phổ biến để tìm ra số lượng lớp ẩn và nơ-ron tối ưu cho mô hình là gì?",
+    "options": [
+      "A. Tính toán dựa trên một công thức toán học cố định.",
+      "B. Sử dụng quá trình thử-và-sai (trial-and-error), ví dụ như dùng grid search để tinh chỉnh siêu tham số.",
+      "C. Luôn cố định 3 lớp ẩn cho mọi loại dữ liệu.",
+      "D. Để người dùng cuối tự chọn khi chạy chương trình."
+    ],
+    "answer": "B. Sử dụng quá trình thử-và-sai (trial-and-error), ví dụ như dùng grid search để tinh chỉnh siêu tham số.",
+    "explanation": "Tài liệu giải thích: 'Choosing the number of neurons... is usually a case of a trial-and-error heuristics... Using a grid search for hyper-parameter tuning is a good way to approximate an optimal neural network architecture...'"
+  },
+  {
+    "question": "Câu 7: Trình tự đúng của các bước xây dựng mô hình MLP với Keras là gì?",
+    "options": [
+      "A. Train -> Build/Compile -> Import Data -> Predict -> Evaluate",
+      "B. Predict -> Import Data -> Train -> Build/Compile -> Evaluate",
+      "C. Import Data -> Build/Compile -> Train -> Evaluate -> Predict",
+      "D. Import Data -> Train -> Evaluate -> Build/Compile -> Predict"
+    ],
+    "answer": "C. Import Data -> Build/Compile -> Train -> Evaluate -> Predict",
+    "explanation": "Tài liệu liệt kê các bước: 'Import and transform the dataset -> Build and compile the model -> Train the data using Model.fit() -> Evaluate the model using Model.evaluate() -> Predict on unseen data using Model.predict().'"
+  },
+  {
+    "question": "Câu 8: Trong ví dụ phân loại ảnh Fashion-MNIST, dữ liệu ảnh đầu vào 28x28 pixel được biến đổi như thế nào trước khi đưa vào mô hình?",
+    "options": [
+      "A. Giữ nguyên dưới dạng ma trận 2D 28x28.",
+      "B. Làm phẳng (flatten) thành một vector có độ dài 784 pixel và scale giá trị về khoảng [0, 1].",
+      "C. Cắt bớt (crop) thành ảnh 14x14 pixel.",
+      "D. Chuyển đổi thành ảnh màu RGB (28x28x3)."
+    ],
+    "answer": "B. Làm phẳng (flatten) thành một vector có độ dài 784 pixel và scale giá trị về khoảng [0, 1].",
+    "explanation": "Trong code mẫu có các thao tác: '# flatten the 28*28 pixel images into one long 784 pixel vector... np.reshape(..., (-1, 784))' và '# scale dataset from 0->255 to 0->1... x_train /= 255'."
+  },
+  {
+    "question": "Câu 9: Hàm `tf.keras.Sequential()` có vai trò gì trong quá trình lập trình Keras?",
+    "options": [
+      "A. Để đánh giá độ chính xác của mô hình tuần tự.",
+      "B. Khởi tạo một mô hình Keras tuần tự, từ đó có thể thêm dần các lớp (layers) vào.",
+      "C. Để biên dịch các hàm mất mát (loss function).",
+      "D. Chuyển đổi định dạng dữ liệu text thành số."
+    ],
+    "answer": "B. Khởi tạo một mô hình Keras tuần tự, từ đó có thể thêm dần các lớp (layers) vào.",
+    "explanation": "Tài liệu cho biết: 'A Keras Sequential Model is built by calling the tf.keras.Sequential() method from which layers are then added to the model.'"
+  },
+  {
+    "question": "Câu 10: Sau khi mô hình được huấn luyện bằng `fit()`, phương thức nào được gọi để lấy thước đo đánh giá cuối cùng và điểm mất mát (loss score) trên tập test?",
+    "options": [
+      "A. model.compile()",
+      "B. model.predict()",
+      "C. model.evaluate()",
+      "D. model.summary()"
+    ],
+    "answer": "C. model.evaluate()",
+    "explanation": "Tài liệu nêu: 'The method evaluate() is used to get the final metric estimate and the loss score of the model after training.'"
+  },
+  {
+    "question": "Câu 11: Trong mô hình MLP Fashion-MNIST, lớp đầu tiên sử dụng bao nhiêu neuron và hàm kích hoạt gì?",
+    "options": [
+      "A. 128 neuron, sigmoid",
+      "B. 256 neuron, relu",
+      "C. 64 neuron, tanh",
+      "D. 32 neuron, softmax"
+    ],
+    "answer": "B. 256 neuron, relu",
+    "explanation": "Trong code: model.add(Dense(256, activation='relu', input_dim=784))."
+  },
+  {
+    "question": "Câu 12: Lớp đầu ra (output layer) của mô hình MLP sử dụng hàm kích hoạt nào?",
+    "options": [
+      "A. relu",
+      "B. sigmoid",
+      "C. softmax",
+      "D. tanh"
+    ],
+    "answer": "C. softmax",
+    "explanation": "Output layer có 10 neuron với activation='softmax' để phân loại đa lớp."
+  },
+  {
+    "question": "Câu 13: Trong quá trình compile model, optimizer nào được sử dụng trong ví dụ?",
+    "options": [
+      "A. Adam",
+      "B. RMSprop",
+      "C. SGD",
+      "D. Adagrad"
+    ],
+    "answer": "C. SGD",
+    "explanation": "Model sử dụng tf.keras.optimizers.SGD(0.01)."
+  },
+  {
+    "question": "Câu 14: Learning rate của optimizer trong ví dụ là bao nhiêu?",
+    "options": [
+      "A. 0.1",
+      "B. 0.01",
+      "C. 0.001",
+      "D. 1.0"
+    ],
+    "answer": "B. 0.01",
+    "explanation": "SGD được khởi tạo với learning rate = 0.01."
+  },
+  {
+    "question": "Câu 15: Hàm loss nào được sử dụng trong mô hình MLP Fashion-MNIST?",
+    "options": [
+      "A. mean_squared_error",
+      "B. hinge_loss",
+      "C. categorical_crossentropy",
+      "D. binary_crossentropy"
+    ],
+    "answer": "C. categorical_crossentropy",
+    "explanation": "Dùng cho bài toán phân loại đa lớp với one-hot labels."
+  },
+  {
+    "question": "Câu 16: Metric nào được sử dụng để đánh giá mô hình trong ví dụ?",
+    "options": [
+      "A. precision",
+      "B. recall",
+      "C. accuracy",
+      "D. f1-score"
+    ],
+    "answer": "C. accuracy",
+    "explanation": "Model compile với metrics=['accuracy']."
+  },
+  {
+    "question": "Câu 17: Mục đích của việc sử dụng `tf.keras.utils.to_categorical()` là gì?",
+    "options": [
+      "A. Chuẩn hóa dữ liệu đầu vào",
+      "B. Chuyển label thành dạng one-hot encoding",
+      "C. Tăng số lượng dữ liệu",
+      "D. Giảm số chiều dữ liệu"
+    ],
+    "answer": "B. Chuyển label thành dạng one-hot encoding",
+    "explanation": "Dùng để biến đổi label thành vector one-hot cho classification."
+  },
+  {
+    "question": "Câu 18: Trong pipeline dữ liệu, phương thức `repeat()` có tác dụng gì?",
+    "options": [
+      "A. Lặp lại dataset nhiều lần để tránh hết dữ liệu khi training",
+      "B. Xóa dữ liệu trùng lặp",
+      "C. Shuffle dữ liệu",
+      "D. Batch dữ liệu"
+    ],
+    "answer": "A. Lặp lại dataset nhiều lần để tránh hết dữ liệu khi training",
+    "explanation": "`repeat()` giúp dataset lặp lại vô hạn khi training nhiều epoch."
+  },
+  {
+    "question": "Câu 19: Vai trò của `steps_per_epoch` trong `model.fit()` là gì?",
+    "options": [
+      "A. Số lượng neuron trong mỗi layer",
+      "B. Số batch được xử lý trong mỗi epoch",
+      "C. Số lượng epoch",
+      "D. Learning rate"
+    ],
+    "answer": "B. Số batch được xử lý trong mỗi epoch",
+    "explanation": "`steps_per_epoch` xác định số batch mỗi epoch khi dùng dataset pipeline."
+  },
+  {
+    "question": "Câu 20: Tại sao cần sử dụng `shuffle()` trong pipeline dữ liệu?",
+    "options": [
+      "A. Để tăng kích thước dataset",
+      "B. Để tránh model học theo thứ tự dữ liệu và cải thiện khả năng tổng quát hóa",
+      "C. Để giảm số lượng batch",
+      "D. Để chuẩn hóa dữ liệu"
+    ],
+    "answer": "B. Để tránh model học theo thứ tự dữ liệu và cải thiện khả năng tổng quát hóa",
+    "explanation": "Shuffle giúp dữ liệu được trộn ngẫu nhiên, tránh bias theo thứ tự."
+  }
+]

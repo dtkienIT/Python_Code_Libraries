@@ -1,0 +1,332 @@
+[
+  {
+    "question": "Câu 1: Mạng nơ-ron hồi quy (Recurrent Neural Networks - RNNs) được thiết kế chuyên biệt để giải quyết loại dữ liệu nào?",
+    "options": [
+      "A. Dữ liệu hình ảnh 2D tĩnh (Static Images).",
+      "B. Dữ liệu bảng (Tabular data) độc lập.",
+      "C. Dữ liệu có tính tuần tự (Sequential data) hoặc Chuỗi thời gian (Time-series), nơi thông tin trong quá khứ liên quan trực tiếp đến việc dự đoán tương lai.",
+      "D. Dữ liệu âm thanh siêu âm."
+    ],
+    "answer": "C. Dữ liệu có tính tuần tự (Sequential data) hoặc Chuỗi thời gian (Time-series), nơi thông tin trong quá khứ liên quan trực tiếp đến việc dự đoán tương lai.",
+    "explanation": "Tài liệu mở đầu bằng định nghĩa: RNNs được phát triển để giải quyết các bài toán học máy mà thông tin về quá khứ (past instants/events) được liên kết trực tiếp với các dự đoán trong tương lai, ví dụ như mô hình ngôn ngữ hoặc dự đoán giá cổ phiếu."
+  },
+  {
+    "question": "Câu 2: Sự khác biệt cơ bản về khả năng xử lý cấu trúc dữ liệu giữa RNN và Mạng nơ-ron tích chập (CNN) là gì?",
+    "options": [
+      "A. RNN chạy nhanh hơn CNN 10 lần.",
+      "B. RNN xử lý dữ liệu không giám sát, CNN xử lý dữ liệu có giám sát.",
+      "C. RNN là lựa chọn lý tưởng để xử lý dữ liệu tuần tự 1 chiều (1-D sequential data), khác với CNN chuyên xử lý dữ liệu dạng lưới 2 chiều (grid-like 2-D data) như hình ảnh.",
+      "D. Không có sự khác biệt, hai mạng này có thể hoán đổi cho nhau."
+    ],
+    "answer": "C. RNN là lựa chọn lý tưởng để xử lý dữ liệu tuần tự 1 chiều (1-D sequential data), khác với CNN chuyên xử lý dữ liệu dạng lưới 2 chiều (grid-like 2-D data) như hình ảnh.",
+    "explanation": "Tài liệu ghi rõ: 'RNNs are ideal for processing 1-D sequential data, unlike the grid-like 2-D image data in convolutional neural networks.'"
+  },
+  {
+    "question": "Câu 3: Cơ chế kiến trúc cốt lõi nào giúp RNN có thể \"nhớ\" được thông tin từ các bước thời gian (time steps) trước đó?",
+    "options": [
+      "A. Nó lưu dữ liệu vào ổ cứng.",
+      "B. Có một khung phản hồi (looping / feedback framework) kết nối trực tiếp đầu ra (output) của chuỗi trước đó thành đầu vào (input) của chuỗi tiếp theo.",
+      "C. Nó sử dụng nhiều lớp ẩn hơn các mạng khác.",
+      "D. Nó dùng thuật toán K-Means để gom cụm dữ liệu."
+    ],
+    "answer": "B. Có một khung phản hồi (looping / feedback framework) kết nối trực tiếp đầu ra (output) của chuỗi trước đó thành đầu vào (input) của chuỗi tiếp theo.",
+    "explanation": "Tính 'Hồi quy' (Recurrent) đến từ việc luồng thông tin được đưa vào một vòng lặp, cho phép mạng kết hợp thông tin từ các chuỗi quá khứ vào việc đưa ra dự đoán hiện tại."
+  },
+  {
+    "question": "Câu 4: Khi mạng RNN trải dài theo thời gian (unrolled through time), thuật toán nào được sử dụng để tính toán đạo hàm và cập nhật trọng số?",
+    "options": [
+      "A. Gradient Descent cổ điển.",
+      "B. Backpropagation Through Time (BPTT - Lan truyền ngược qua thời gian).",
+      "C. Random Forest.",
+      "D. Singular Value Decomposition (SVD)."
+    ],
+    "answer": "B. Backpropagation Through Time (BPTT - Lan truyền ngược qua thời gian).",
+    "explanation": "Do tính chất vòng lặp, RNN khi trải phẳng sẽ giống như một mạng nơ-ron cực sâu, và thuật toán dùng để huấn luyện nó được gọi là Backpropagation Through Time (BPTT)."
+  },
+  {
+    "question": "Câu 5: Trong quá trình huấn luyện bằng BPTT, hiện tượng \"Bùng nổ đạo hàm\" (Exploding Gradients) xảy ra với nguyên lý toán học nào?",
+    "options": [
+      "A. Khi tập dữ liệu có quá nhiều hàng.",
+      "B. Do quy tắc chuỗi (Chain Rule), các đạo hàm (gradients) lớn hơn 1 bị nhân dồn liên tục qua nhiều bước thời gian, khiến giá trị bùng nổ theo cấp số nhân và làm mất ổn định mạng.",
+      "C. Khi Learning Rate được đặt quá thấp.",
+      "D. Khi máy tính bị quá tải RAM."
+    ],
+    "answer": "B. Do quy tắc chuỗi (Chain Rule), các đạo hàm (gradients) lớn hơn 1 bị nhân dồn liên tục qua nhiều bước thời gian, khiến giá trị bùng nổ theo cấp số nhân và làm mất ổn định mạng.",
+    "explanation": "Nếu trọng số lặp lại nhiều lần có giá trị > 1, phép nhân liên tiếp qua hàng chục bước thời gian sẽ đẩy gradient lên vô cực (Exploding), phá hỏng hoàn toàn quá trình huấn luyện."
+  },
+  {
+    "question": "Câu 6: Kỹ thuật phổ biến và hiệu quả nhất để khắc phục ngay lập tức hiện tượng \"Bùng nổ đạo hàm\" (Exploding Gradients) là gì?",
+    "options": [
+      "A. Thêm nhiều lớp ẩn hơn.",
+      "B. Thay đổi hàm mất mát.",
+      "C. Gradient Clipping (Cắt xén đạo hàm) - giới hạn giá trị tối đa của đạo hàm ở một ngưỡng nhất định.",
+      "D. Dùng hàm kích hoạt ReLU."
+    ],
+    "answer": "C. Gradient Clipping (Cắt xén đạo hàm) - giới hạn giá trị tối đa của đạo hàm ở một ngưỡng nhất định.",
+    "explanation": "Gradient clipping thiết lập một giới hạn trần. Nếu gradient vượt qua ngưỡng này, nó sẽ bị cắt hoặc thu nhỏ lại để ngăn chặn việc trọng số bị cập nhật những bước quá lớn."
+  },
+  {
+    "question": "Câu 7: Trái ngược với bùng nổ, hiện tượng \"Triệt tiêu đạo hàm\" (Vanishing Gradients) gây ra hậu quả nghiêm trọng gì cho mạng RNN tiêu chuẩn?",
+    "options": [
+      "A. Làm cho mô hình chạy quá nhanh.",
+      "B. Các đạo hàm (< 1) bị nhân dồn liên tục tiến dần về 0. Hậu quả là mạng bị \"mất trí nhớ\" ngắn hạn, không thể học được các mối liên hệ (dependencies) ở các bước thời gian xa trong quá khứ.",
+      "C. Trọng số biến thành số âm.",
+      "D. Mạng tự động xóa dữ liệu."
+    ],
+    "answer": "B. Các đạo hàm (< 1) bị nhân dồn liên tục tiến dần về 0. Hậu quả là mạng bị \"mất trí nhớ\" ngắn hạn, không thể học được các mối liên hệ (dependencies) ở các bước thời gian xa trong quá khứ.",
+    "explanation": "Đây là nhược điểm chí mạng của RNN truyền thống. Nếu chuỗi quá dài (ví dụ một đoạn văn dài), RNN sẽ quên mất từ đầu tiên khi đọc đến từ cuối cùng do gradient truyền về từ cuối bị triệt tiêu bằng 0."
+  },
+  {
+    "question": "Câu 8: Để giảm thiểu bớt chi phí tính toán và đối phó với chuỗi thời gian quá dài, biến thể nào của BPTT thường được áp dụng?",
+    "options": [
+      "A. K-Means BPTT.",
+      "B. Forward BPTT.",
+      "C. Truncated BPTT (Lan truyền ngược qua thời gian bị cắt cụt).",
+      "D. Dropout BPTT."
+    ],
+    "answer": "C. Truncated BPTT (Lan truyền ngược qua thời gian bị cắt cụt).",
+    "explanation": "Thay vì truyền ngược qua toàn bộ chuỗi (ví dụ 1000 bước), Truncated BPTT giới hạn việc lan truyền ngược ở một số lượng bước nhất định (ví dụ 50 bước) để giảm tải tính toán và giảm rủi ro triệt tiêu đạo hàm."
+  },
+  {
+    "question": "Câu 9: Kiến trúc LSTM (Long Short-Term Memory) được phát minh vào năm 1997 nhằm mục đích giải quyết triệt để bài toán nào của RNN truyền thống?",
+    "options": [
+      "A. Xử lý ảnh màu (RGB).",
+      "B. Overfitting.",
+      "C. Vấn đề Triệt tiêu đạo hàm (Vanishing Gradients) khi học các phụ thuộc dài hạn (long-term dependencies).",
+      "D. Tối ưu hóa dung lượng ổ cứng."
+    ],
+    "answer": "C. Vấn đề Triệt tiêu đạo hàm (Vanishing Gradients) khi học các phụ thuộc dài hạn (long-term dependencies).",
+    "explanation": "LSTM được thiết kế đặc biệt với khả năng duy trì dòng thông tin xuyên suốt một chuỗi rất dài mà không bị mất mát, khắc phục hoàn toàn điểm yếu cốt lõi của Standard RNN."
+  },
+  {
+    "question": "Câu 10: Trong cấu trúc giải phẫu của một LSTM cell, thành phần nào đóng vai trò như một \"băng chuyền\" (conveyor belt) chạy thẳng xuyên suốt toàn bộ chuỗi, chỉ tương tác tuyến tính rất ít để thông tin truyền đi không bị biến dạng?",
+    "options": [
+      "A. Trạng thái ẩn (Hidden State).",
+      "B. Trạng thái tế bào (Cell State).",
+      "C. Hàm kích hoạt ReLU.",
+      "D. Lớp đầu ra (Output layer)."
+    ],
+    "answer": "B. Trạng thái tế bào (Cell State).",
+    "explanation": "Cell state ($C_t$) là đường ống dẫn chính chạy xuyên suốt đỉnh của sơ đồ LSTM, giúp thông tin quá khứ chảy thẳng về phía trước một cách mượt mà."
+  },
+  {
+    "question": "Câu 11: Trong kiến trúc LSTM, thành phần nào có nhiệm vụ đóng mở, cho phép chọn lọc việc thêm thông tin vào hoặc xóa thông tin ra khỏi Trạng thái tế bào (Cell State)?",
+    "options": [
+      "A. Các Cổng (Gates).",
+      "B. Hàm Loss.",
+      "C. Learning Rate.",
+      "D. Bộ tối ưu hóa Adam."
+    ],
+    "answer": "A. Các Cổng (Gates).",
+    "explanation": "LSTM kiểm soát cẩn thận sự chảy của thông tin bằng các cấu trúc gọi là Gates (Cổng quên, Cổng vào, Cổng ra)."
+  },
+  {
+    "question": "Câu 12: Cổng quên (Forget Gate) trong LSTM quyết định điều gì?",
+    "options": [
+      "A. Quên đi toàn bộ kiến thức của mô hình.",
+      "B. Xem xét $h_{t-1}$ (đầu ra trước) và $x_t$ (đầu vào hiện tại) để quyết định thông tin nào từ quá khứ (trong Cell State cũ) nên bị vứt bỏ hoặc giữ lại.",
+      "C. Quyết định xem nên cập nhật thông tin mới nào.",
+      "D. Tính toán kết quả dự đoán cuối cùng."
+    ],
+    "answer": "B. Xem xét $h_{t-1}$ (đầu ra trước) và $x_t$ (đầu vào hiện tại) để quyết định thông tin nào từ quá khứ (trong Cell State cũ) nên bị vứt bỏ hoặc giữ lại.",
+    "explanation": "Forget gate là chốt chặn đầu tiên, nó giúp LSTM quên đi những thông tin không còn liên quan (ví dụ: đổi chủ ngữ từ số ít sang số nhiều)."
+  },
+  {
+    "question": "Câu 13: Cổng quên (Forget Gate) và Cổng đầu vào (Input Gate) sử dụng hàm kích hoạt nào để tạo ra các giá trị nằm trong khoảng (0, 1), qua đó đóng vai trò như một van nước (0 = khóa chặt, 1 = mở toang)?",
+    "options": [
+      "A. ReLU.",
+      "B. Tanh.",
+      "C. Sigmoid.",
+      "D. Softmax."
+    ],
+    "answer": "C. Sigmoid.",
+    "explanation": "Hàm Sigmoid ép giá trị vào dải 0 đến 1. Khi nhân giá trị này với Cell state, nếu bằng 0 nghĩa là 'quên hoàn toàn', nếu bằng 1 nghĩa là 'giữ lại hoàn toàn'."
+  },
+  {
+    "question": "Câu 14: Cổng đầu vào (Input Gate) trong LSTM chịu trách nhiệm việc gì?",
+    "options": [
+      "A. Khởi động mạng nơ-ron.",
+      "B. Quyết định xem thông tin MỚI nào ở bước thời gian hiện tại có giá trị và cần được lưu trữ vào trong Trạng thái tế bào (Cell State).",
+      "C. Xóa dữ liệu lỗi.",
+      "D. Tính toán hàm mất mát."
+    ],
+    "answer": "B. Quyết định xem thông tin MỚI nào ở bước thời gian hiện tại có giá trị và cần được lưu trữ vào trong Trạng thái tế bào (Cell State).",
+    "explanation": "Sau khi Forget gate xóa dữ liệu cũ, Input gate sẽ quyết định thêm dữ liệu mới nào vào băng chuyền Cell State."
+  },
+  {
+    "question": "Câu 15: Bên cạnh hàm Sigmoid dùng để đóng/mở cổng, LSTM sử dụng hàm kích hoạt nào để tạo ra các giá trị ứng viên mới (candidate values) nằm trong khoảng [-1, 1] nhằm thêm vào Trạng thái tế bào?",
+    "options": [
+      "A. Sigmoid.",
+      "B. Tanh (Hyperbolic Tangent).",
+      "C. ReLU.",
+      "D. Leaky ReLU."
+    ],
+    "answer": "B. Tanh (Hyperbolic Tangent).",
+    "explanation": "Hàm Tanh tạo ra một vector các giá trị mới ($~C_t$) chứa cả số âm và dương (-1 đến 1), giúp điều chỉnh (thêm hoặc bớt) vào Cell state hiện tại."
+  },
+  {
+    "question": "Câu 16: Cổng đầu ra (Output Gate) trong LSTM có nhiệm vụ gì?",
+    "options": [
+      "A. Tắt hoàn toàn mạng nơ-ron.",
+      "B. In kết quả ra màn hình.",
+      "C. Quyết định xem phần thông tin nào từ Trạng thái tế bào (đã được lọc qua hàm tanh) sẽ được xuất ra để làm Trạng thái ẩn (Hidden State - $h_t$) cho bước tiếp theo.",
+      "D. Ghi dữ liệu vào ổ cứng."
+    ],
+    "answer": "C. Quyết định xem phần thông tin nào từ Trạng thái tế bào (đã được lọc qua hàm tanh) sẽ được xuất ra để làm Trạng thái ẩn (Hidden State - $h_t$) cho bước tiếp theo.",
+    "explanation": "Hidden state chính là phần hiển thị/xuất ra (output) của nơ-ron tại bước hiện tại, nó được rút trích ra từ Cell State thông qua sự kiểm duyệt của Output Gate."
+  },
+  {
+    "question": "Câu 17: Kiến trúc GRU (Gated Recurrent Unit) có đặc điểm gì nổi bật so với LSTM?",
+    "options": [
+      "A. Nó cũ hơn và yếu hơn LSTM rất nhiều.",
+      "B. Nó phức tạp hơn và có nhiều cổng hơn LSTM.",
+      "C. Nó là một biến thể hiện đại và được ĐƠN GIẢN HÓA của LSTM, chạy nhanh hơn, sử dụng ít tham số hơn nhưng thường mang lại sức mạnh tương đương.",
+      "D. Nó chỉ dùng để xử lý hình ảnh."
+    ],
+    "answer": "C. Nó là một biến thể hiện đại và được ĐƠN GIẢN HÓA của LSTM, chạy nhanh hơn, sử dụng ít tham số hơn nhưng thường mang lại sức mạnh tương đương.",
+    "explanation": "GRU được giới thiệu vào năm 2014, loại bỏ một số thành phần của LSTM để tính toán nhẹ nhàng hơn."
+  },
+  {
+    "question": "Câu 18: Sự khác biệt lớn nhất về mặt thiết kế cấu trúc giữa GRU và LSTM là gì?",
+    "options": [
+      "A. GRU bỏ hoàn toàn việc sử dụng hàm Sigmoid.",
+      "B. GRU kết hợp Trạng thái tế bào (Cell State) và Trạng thái ẩn (Hidden State) lại thành một đầu ra duy nhất, và gộp chung Cổng quên + Cổng đầu vào thành một Cổng Cập nhật (Update Gate).",
+      "C. GRU sử dụng thuật toán K-Means bên trong.",
+      "D. GRU chỉ dùng mạng CNN."
+    ],
+    "answer": "B. GRU kết hợp Trạng thái tế bào (Cell State) và Trạng thái ẩn (Hidden State) lại thành một đầu ra duy nhất, và gộp chung Cổng quên + Cổng đầu vào thành một Cổng Cập nhật (Update Gate).",
+    "explanation": "Chính việc gộp các trạng thái và các cổng này lại giúp GRU ít tham số toán học hơn LSTM rất nhiều."
+  },
+  {
+    "question": "Câu 19: Trong thư viện Keras, dữ liệu đầu vào (Input data) cung cấp cho mạng hồi quy (RNN, LSTM, GRU) bắt buộc phải được định dạng theo cấu trúc Tensor 3 chiều (3D Tensor) nào?",
+    "options": [
+      "A. [samples, features, channels]",
+      "B. [samples, width, height]",
+      "C. [samples, time_steps, features] (Số lượng mẫu, Số bước thời gian, Số đặc trưng).",
+      "D. [time_steps, features, labels]"
+    ],
+    "answer": "C. [samples, time_steps, features] (Số lượng mẫu, Số bước thời gian, Số đặc trưng).",
+    "explanation": "Ví dụ bạn dự đoán giá cổ phiếu với 1000 ngày dữ liệu, nhìn lại quá khứ 30 ngày để đoán ngày tiếp theo, mỗi ngày có 1 giá trị (close price), thì shape sẽ là: [1000, 30, 1]."
+  },
+  {
+    "question": "Câu 20: Trong đoạn mã thực hành Keras cuối tài liệu, đối với bài toán dự đoán giá cổ phiếu liên tục (Regression Task), lớp đầu ra (Output layer) sử dụng kiến trúc nào?",
+    "options": [
+      "A. Lớp Dense với 10 nơ-ron và hàm Softmax.",
+      "B. Lớp GRU với 100 nơ-ron.",
+      "C. Lớp Dense (Fully Connected layer) với 1 nơ-ron và hàm kích hoạt tuyến tính (mặc định), đi kèm hàm mất mát Mean Squared Error (MSE).",
+      "D. Lớp Dropout 50%."
+    ],
+    "answer": "C. Lớp Dense (Fully Connected layer) với 1 nơ-ron và hàm kích hoạt tuyến tính (mặc định), đi kèm hàm mất mát Mean Squared Error (MSE).",
+    "explanation": "Theo code: `model.add(Dense(1))` và `model.compile(loss='mean_squared_error')`. Vì chỉ dự đoán 1 giá trị thực duy nhất (giá cổ phiếu), lớp cuối cùng chỉ cần 1 nơ-ron mà không cần hàm kích hoạt phi tuyến nào."
+  },
+  {
+    "question": "Câu 21: Trong mạng RNN, hai kiểu kết nối hồi quy (recurrent connection schemes) chính là gì?",
+    "options": [
+      "A. Input-to-input và output-to-output.",
+      "B. Hidden-to-hidden và output-to-hidden.",
+      "C. CNN-to-RNN và RNN-to-CNN.",
+      "D. Forward và backward only."
+    ],
+    "answer": "B. Hidden-to-hidden và output-to-hidden.",
+    "explanation": "Tài liệu nêu rõ có hai kiểu chính: kết nối giữa các hidden units và kết nối từ output của bước trước về hidden. :contentReference[oaicite:0]{index=0}"
+  },
+  {
+    "question": "Câu 22: Vì sao cấu hình hidden-to-hidden thường được đánh giá tốt hơn output-to-hidden?",
+    "options": [
+      "A. Vì dễ lập trình hơn.",
+      "B. Vì dùng ít bộ nhớ hơn.",
+      "C. Vì nó giữ được thông tin đặc trưng (feature-rich) tốt hơn từ quá khứ.",
+      "D. Vì không cần activation function."
+    ],
+    "answer": "C. Vì nó giữ được thông tin đặc trưng (feature-rich) tốt hơn từ quá khứ.",
+    "explanation": "Hidden-to-hidden giữ được thông tin giàu đặc trưng hơn, giúp học tốt hơn các dependencies. :contentReference[oaicite:1]{index=1}"
+  },
+  {
+    "question": "Câu 23: Ưu điểm chính của cấu hình output-to-hidden so với hidden-to-hidden là gì?",
+    "options": [
+      "A. Chính xác hơn.",
+      "B. Học được long-term dependency tốt hơn.",
+      "C. Ít tốn chi phí tính toán hơn và dễ song song hóa.",
+      "D. Không cần dữ liệu huấn luyện."
+    ],
+    "answer": "C. Ít tốn chi phí tính toán hơn và dễ song song hóa.",
+    "explanation": "Tài liệu nhấn mạnh output-to-hidden rẻ hơn về mặt tính toán và dễ parallelize. :contentReference[oaicite:2]{index=2}"
+  },
+  {
+    "question": "Câu 24: Trong nơ-ron hồi quy, tại sao cần sử dụng hàm kích hoạt phi tuyến như tanh?",
+    "options": [
+      "A. Để giảm kích thước dữ liệu.",
+      "B. Để biến mô hình thành tuyến tính hoàn toàn.",
+      "C. Để giúp mô hình học được các quan hệ phi tuyến phức tạp trong chuỗi.",
+      "D. Để loại bỏ gradient."
+    ],
+    "answer": "C. Để giúp mô hình học được các quan hệ phi tuyến phức tạp trong chuỗi.",
+    "explanation": "Giống các mạng khác, activation (thường tanh) giúp RNN học quan hệ phi tuyến. :contentReference[oaicite:3]{index=3}"
+  },
+  {
+    "question": "Câu 25: Trong RNN cơ bản, sau khi tính toán tại lớp recurrent, đầu ra thường được đưa qua lớp nào để tạo xác suất phân loại?",
+    "options": [
+      "A. Convolutional layer.",
+      "B. Dense (fully connected) layer với softmax.",
+      "C. Pooling layer.",
+      "D. Dropout layer."
+    ],
+    "answer": "B. Dense (fully connected) layer với softmax.",
+    "explanation": "Output của RNN thường đi qua dense + softmax để tạo xác suất. :contentReference[oaicite:4]{index=4}"
+  },
+  {
+    "question": "Câu 26: Trong các dạng sequence mapping, bài toán dịch máy (machine translation) thuộc loại nào?",
+    "options": [
+      "A. One-to-one.",
+      "B. One-to-many.",
+      "C. Many-to-one.",
+      "D. Many-to-many (sequence-to-sequence)."
+    ],
+    "answer": "D. Many-to-many (sequence-to-sequence).",
+    "explanation": "Machine translation là seq2seq: chuỗi input → chuỗi output. :contentReference[oaicite:5]{index=5}"
+  },
+  {
+    "question": "Câu 27: Dạng 'Synced sequence input to output' thường được dùng trong trường hợp nào?",
+    "options": [
+      "A. Dự đoán giá cổ phiếu.",
+      "B. Phân loại văn bản.",
+      "C. Gán nhãn cho từng frame trong video (video classification).",
+      "D. Nén dữ liệu."
+    ],
+    "answer": "C. Gán nhãn cho từng frame trong video (video classification).",
+    "explanation": "Synced sequence dùng khi mỗi input timestep có output tương ứng (ví dụ video frame labeling). :contentReference[oaicite:6]{index=6}"
+  },
+  {
+    "question": "Câu 28: Peephole LSTM cải tiến LSTM bằng cách nào?",
+    "options": [
+      "A. Loại bỏ memory cell.",
+      "B. Thêm kết nối từ cell state (ct-1) vào các gate.",
+      "C. Chỉ dùng một gate duy nhất.",
+      "D. Không dùng hidden state."
+    ],
+    "answer": "B. Thêm kết nối từ cell state (ct-1) vào các gate.",
+    "explanation": "Peephole cho phép gate 'nhìn' vào trạng thái cell trước đó. :contentReference[oaicite:7]{index=7}"
+  },
+  {
+    "question": "Câu 29: Trong kiến trúc Encoder–Decoder LSTM, vai trò của Encoder là gì?",
+    "options": [
+      "A. Sinh output cuối cùng.",
+      "B. Mã hóa chuỗi đầu vào thành vector biểu diễn (context).",
+      "C. Tính loss.",
+      "D. Scale dữ liệu."
+    ],
+    "answer": "B. Mã hóa chuỗi đầu vào thành vector biểu diễn (context).",
+    "explanation": "Encoder nhận input sequence và nén thành representation để Decoder sử dụng. :contentReference[oaicite:8]{index=8}"
+  },
+  {
+    "question": "Câu 30: Điểm mạnh chính của Bidirectional RNN là gì?",
+    "options": [
+      "A. Chỉ học từ quá khứ.",
+      "B. Chỉ học từ tương lai.",
+      "C. Học đồng thời từ cả quá khứ và tương lai của chuỗi.",
+      "D. Không cần dữ liệu huấn luyện."
+    ],
+    "answer": "C. Học đồng thời từ cả quá khứ và tương lai của chuỗi.",
+    "explanation": "Bidirectional RNN gồm forward và backward LSTM để học cả hai hướng thông tin. :contentReference[oaicite:9]{index=9}"
+  }
+]

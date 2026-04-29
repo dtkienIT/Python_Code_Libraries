@@ -1,0 +1,145 @@
+[
+  {
+    "question": "Câu 1: Kỹ thuật Momentum được sử dụng trong quá trình tối ưu hóa Stochastic Gradient Descent (SGD) nhằm mục đích gì?",
+    "options": [
+      "A. Giảm tốc độ học để mô hình không bị quá khớp (overfitting).",
+      "B. Cải thiện tốc độ hội tụ của SGD bằng cách tính trung bình các gradient trước đó (exponentially smoothed averages).",
+      "C. Tự động thay đổi hàm mất mát (loss function) dựa trên dữ liệu đầu vào.",
+      "D. Chuẩn hóa dữ liệu đầu vào trước khi đưa vào mạng nơ-ron."
+    ],
+    "answer": "B. Cải thiện tốc độ hội tụ của SGD bằng cách tính trung bình các gradient trước đó (exponentially smoothed averages).",
+    "explanation": "Tài liệu chỉ ra: 'Momentum is a technique for improving the convergence speed of stochastic gradient descent (SGD) optimization... by calculating the average of previous gradients in a process called exponentially smoothed averages.'"
+  },
+  {
+    "question": "Câu 2: Trong TensorFlow 2.0, để sử dụng Momentum với thuật toán SGD, ta cần thiết lập tham số `momentum` như thế nào?",
+    "options": [
+      "A. Gán `momentum` bằng một số nguyên âm.",
+      "B. Sử dụng `tf.keras.optimizers.SGD(momentum=[float >=0])`, với giá trị là số thực lớn hơn hoặc bằng 0.",
+      "C. Gọi hàm `tf.keras.optimizers.Momentum()` độc lập.",
+      "D. Không cần thiết lập, Momentum luôn được bật mặc định với giá trị 1.0."
+    ],
+    "answer": "B. Sử dụng `tf.keras.optimizers.SGD(momentum=[float >=0])`, với giá trị là số thực lớn hơn hoặc bằng 0.",
+    "explanation": "Theo tài liệu: 'momentum is added to a SGD optimizer by adjusting the ‘momentum’ parameter of the SGD method, ‘tf.keras.optimizers.SGD(momentum=[float >=0])’.'"
+  },
+  {
+    "question": "Câu 3: Điều gì có thể xảy ra nếu tỷ lệ học (learning rate) được thiết lập ở mức quá lớn?",
+    "options": [
+      "A. Thuật toán hội tụ rất chậm và có thể mất vài ngày để hoàn thành.",
+      "B. Mô hình sẽ tự động tự giảm số lượng lớp ẩn để bù đắp.",
+      "C. Thuật toán thực hiện các bước đi lớn hơn, nhanh hơn, nhưng có nguy cơ vượt qua (overshoot) điểm cực tiểu toàn cục và không thể hội tụ.",
+      "D. Lỗi \"Out of Memory\" (tràn bộ nhớ) sẽ ngay lập tức xuất hiện."
+    ],
+    "answer": "C. Thuật toán thực hiện các bước đi lớn hơn, nhanh hơn, nhưng có nguy cơ vượt qua (overshoot) điểm cực tiểu toàn cục và không thể hội tụ.",
+    "explanation": "Tài liệu ghi: 'If the learning rate is large, the algorithm takes larger steps... as is faster. However, the algorithm may overshoot the global minimum and fail to converge.'"
+  },
+  {
+    "question": "Câu 4: Kỹ thuật \"Step decay\" trong việc lập lịch tỷ lệ học (learning rate scheduling) hoạt động dựa trên nguyên tắc nào?",
+    "options": [
+      "A. Giảm tỷ lệ học theo một hằng số tỷ lệ sau một số lượng vòng lặp (iterations) nhất định.",
+      "B. Điều chỉnh tỷ lệ học dựa trên phân phối hàm mũ.",
+      "C. Giảm tỷ lệ học theo tỷ lệ 1/t (trong đó t là thời gian).",
+      "D. Tự động tăng tỷ lệ học lên gấp đôi khi validation loss giảm."
+    ],
+    "answer": "A. Giảm tỷ lệ học theo một hằng số tỷ lệ sau một số lượng vòng lặp (iterations) nhất định.",
+    "explanation": "Định nghĩa trong tài liệu: 'Step decay: This method reduces the learning rate by a constant factor after a certain number of iterations.'"
+  },
+  {
+    "question": "Câu 5: Đặc điểm phân biệt quan trọng nhất của các thuật toán Adaptive Learning Rates (Tỷ lệ học thích ứng) là gì?",
+    "options": [
+      "A. Sử dụng cùng một tỷ lệ học duy nhất cho toàn bộ hệ thống mạng nơ-ron.",
+      "B. Chỉ áp dụng được cho dữ liệu hình ảnh (CNN).",
+      "C. Tái điều chỉnh tỷ lệ học theo dữ liệu huấn luyện, sử dụng một tỷ lệ học khác nhau cho *mỗi tham số* (each parameter) và tự động thích ứng trong quá trình huấn luyện.",
+      "D. Cố định mức tỷ lệ học ngay từ epoch đầu tiên và không bao giờ thay đổi."
+    ],
+    "answer": "C. Tái điều chỉnh tỷ lệ học theo dữ liệu huấn luyện, sử dụng một tỷ lệ học khác nhau cho *mỗi tham số* (each parameter) và tự động thích ứng trong quá trình huấn luyện.",
+    "explanation": "Tài liệu viết: 'Adaptive learning rate... re-adjusts the learning rate in accordance with the training data. It basically uses a different learning rate for each parameter and adapts it during training.'"
+  },
+  {
+    "question": "Câu 6: Những thuật toán nào sau đây thuộc nhóm Adaptive Learning Rates được hỗ trợ trong TensorFlow 2.0?",
+    "options": [
+      "A. Step decay, Exponential decay, Decay proportion.",
+      "B. SGD, Mini-batch Gradient Descent, Batch Gradient Descent.",
+      "C. AdaGrad, AdaDelta, RMSProp, Adam.",
+      "D. Momentum, Nesterov, L-BFGS."
+    ],
+    "answer": "C. AdaGrad, AdaDelta, RMSProp, Adam.",
+    "explanation": "Tài liệu liệt kê các phương thức: 'AdaGrad: tf.keras.optimizers.Adagrad()', 'AdaDelta: tf.keras.optimizers.Adadelta()', 'RMSProp...', 'Adaptive Moments, (Adam)...'"
+  },
+  {
+    "question": "Câu 7: Tại sao thuật toán AdaGrad thường hoạt động kém khi huấn luyện các mô hình deep learning phức tạp?",
+    "options": [
+      "A. Do nó tiêu tốn quá nhiều RAM của hệ thống.",
+      "B. Do tính chất giảm tỷ lệ học đơn điệu (monotonic learning rate) có thể quá mạnh mẽ, khiến quá trình học bị dừng lại quá sớm.",
+      "C. Vì AdaGrad không hỗ trợ backpropagation.",
+      "D. Bởi vì nó yêu cầu dữ liệu đầu vào phải được chuẩn hóa hoàn hảo bằng Batch Normalization."
+    ],
+    "answer": "B. Do tính chất giảm tỷ lệ học đơn điệu (monotonic learning rate) có thể quá mạnh mẽ, khiến quá trình học bị dừng lại quá sớm.",
+    "explanation": "Theo tài liệu: 'AdaGrad performs poorly when used for training deep learning models due to its monotonic learning rate which could be too aggressive, and learning may stop early during training.'"
+  },
+  {
+    "question": "Câu 8: Thuật toán tối ưu hóa (optimization technique) nào được coi là \"tốt nhất\" một cách tuyệt đối cho mọi mô hình deep learning hiện nay?",
+    "options": [
+      "A. Adam (Adaptive Moments).",
+      "B. SGD kết hợp với Momentum.",
+      "C. RMSProp.",
+      "D. Hiện tại không có thuật toán tối ưu hóa nào được chứng minh là tốt nhất trong mọi trường hợp; việc lựa chọn phụ thuộc vào sở thích và đặc thù bài toán."
+    ],
+    "answer": "D. Hiện tại không có thuật toán tối ưu hóa nào được chứng minh là tốt nhất trong mọi trường hợp; việc lựa chọn phụ thuộc vào sở thích và đặc thù bài toán.",
+    "explanation": "Đoạn cuối tài liệu khẳng định: 'As of now, there is no proven best optimization technique, so the choice of the optimization technique is down to the preference of the model designer.'"
+  },
+  {
+    "question": "Câu 9: Điều gì xảy ra nếu learning rate được đặt quá nhỏ?",
+    "options": [
+      "A. Mô hình sẽ không học được gì",
+      "B. Mô hình hội tụ nhanh hơn",
+      "C. Mô hình hội tụ chậm nhưng ổn định hơn",
+      "D. Gradient sẽ bị biến mất hoàn toàn"
+    ],
+    "answer": "C. Mô hình hội tụ chậm nhưng ổn định hơn",
+    "explanation": "Learning rate nhỏ giúp hội tụ ổn định nhưng rất chậm."
+  },
+  {
+    "question": "Câu 10: Kỹ thuật Exponential decay điều chỉnh learning rate như thế nào?",
+    "options": [
+      "A. Giảm theo hàm tuyến tính",
+      "B. Giảm theo hàm mũ",
+      "C. Giữ nguyên",
+      "D. Tăng dần theo thời gian"
+    ],
+    "answer": "B. Giảm theo hàm mũ",
+    "explanation": "Exponential decay giảm learning rate theo phân phối hàm mũ."
+  },
+  {
+    "question": "Câu 11: Decay proportion (time-based decay) giảm learning rate theo công thức nào?",
+    "options": [
+      "A. 1/t",
+      "B. log(t)",
+      "C. t^2",
+      "D. e^t"
+    ],
+    "answer": "A. 1/t",
+    "explanation": "Decay proportion giảm learning rate theo tỷ lệ nghịch với thời gian."
+  },
+  {
+    "question": "Câu 12: Trong TensorFlow, tham số nào dùng để áp dụng learning rate decay?",
+    "options": [
+      "A. momentum",
+      "B. decay",
+      "C. clipnorm",
+      "D. epsilon"
+    ],
+    "answer": "B. decay",
+    "explanation": "Optimizer trong TF có tham số 'decay' để điều chỉnh learning rate theo thời gian."
+  },
+  {
+    "question": "Câu 13: Ngoài việc tăng tốc hội tụ, Momentum còn có lợi ích gì?",
+    "options": [
+      "A. Tăng kích thước dữ liệu",
+      "B. Giảm dao động (oscillation) trong quá trình cập nhật trọng số",
+      "C. Giảm số lượng neuron",
+      "D. Thay đổi loss function"
+    ],
+    "answer": "B. Giảm dao động (oscillation) trong quá trình cập nhật trọng số",
+    "explanation": "Momentum giúp làm mượt hướng đi của gradient và giảm dao động."
+  }
+]

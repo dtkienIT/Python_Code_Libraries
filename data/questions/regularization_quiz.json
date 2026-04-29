@@ -1,0 +1,167 @@
+[
+  {
+    "question": "Câu 1: Trong Deep Learning, mục đích chính của việc áp dụng các kỹ thuật Regularization (Điều chuẩn) là gì?",
+    "options": [
+      "A. Giảm thiểu thời gian chuẩn bị dữ liệu.",
+      "B. Giảm phương sai (variance) trên tập validation, từ đó ngăn ngừa hiện tượng quá khớp (overfitting) và giúp mô hình khái quát hóa tốt hơn trên các dữ liệu mới.",
+      "C. Tự động tăng độ sâu của mạng nơ-ron.",
+      "D. Xóa bỏ các dữ liệu bị thiếu (Missing values) trong tập huấn luyện."
+    ],
+    "answer": "B. Giảm phương sai (variance) trên tập validation, từ đó ngăn ngừa hiện tượng quá khớp (overfitting) và giúp mô hình khái quát hóa tốt hơn trên các dữ liệu mới.",
+    "explanation": "Tài liệu mở đầu bằng định nghĩa: Regularization là kỹ thuật để giảm variance trên tập validation, ngăn mô hình bị overfit trong lúc training, giúp nó khái quát hóa (generalize) tốt hơn với các mẫu mới."
+  },
+  {
+    "question": "Câu 2: Kỹ thuật Dropout hoạt động dựa trên cơ chế nào để ngăn chặn Overfitting?",
+    "options": [
+      "A. Xóa ngẫu nhiên các hàng dữ liệu đầu vào trước khi huấn luyện.",
+      "B. Vô hiệu hóa (discard/drop) ngẫu nhiên một số lượng nơ-ron tại mỗi lớp trong suốt quá trình huấn luyện (training).",
+      "C. Tự động ngắt kết nối mạng khi tải dữ liệu.",
+      "D. Thêm các dữ liệu nhiễu (noise) vào hàm mất mát."
+    ],
+    "answer": "B. Vô hiệu hóa (discard/drop) ngẫu nhiên một số lượng nơ-ron tại mỗi lớp trong suốt quá trình huấn luyện (training).",
+    "explanation": "Dropout ngăn overfitting bằng cách ngẫu nhiên vứt bỏ (randomly discarding) một số lượng nơ-ron ở mỗi lớp trong lúc training."
+  },
+  {
+    "question": "Câu 3: Việc loại bỏ ngẫu nhiên các nơ-ron bằng Dropout mang lại lợi ích cốt lõi gì cho mạng nơ-ron?",
+    "options": [
+      "A. Đảm bảo mạng nơ-ron không bị phụ thuộc (dominated) quá mức vào bất kỳ một đặc trưng (feature) đơn lẻ nào, khiến nó hoạt động tương tự như một mô hình học kết hợp (ensemble) của nhiều mạng nơ-ron nhỏ khác nhau.",
+      "B. Làm cho thuật toán sử dụng ít bộ nhớ RAM hơn 10 lần.",
+      "C. Đảm bảo độ chính xác trên tập training luôn luôn đạt 100%.",
+      "D. Tự động chuẩn hóa (normalize) hình ảnh đầu vào."
+    ],
+    "answer": "A. Đảm bảo mạng nơ-ron không bị phụ thuộc (dominated) quá mức vào bất kỳ một đặc trưng (feature) đơn lẻ nào, khiến nó hoạt động tương tự như một mô hình học kết hợp (ensemble) của nhiều mạng nơ-ron nhỏ khác nhau.",
+    "explanation": "Vì các nơ-ron bị drop ngẫu nhiên, mạng không thể chỉ dựa vào một vài nơ-ron nhất định. Quá trình này tạo ra nhiều kiến trúc mạng con tương tự nhưng khác biệt ở mỗi lớp, giống hệt như tính chất của kỹ thuật Ensemble."
+  },
+  {
+    "question": "Câu 4: Tham số dùng để thiết lập xác suất (probability) mà một nơ-ron sẽ bị vô hiệu hóa trong lớp Dropout được gọi là gì?",
+    "options": [
+      "A. Learning rate.",
+      "B. Loss rate.",
+      "C. Dropout rate.",
+      "D. Decay probability."
+    ],
+    "answer": "C. Dropout rate.",
+    "explanation": "Giá trị xác suất chỉ định việc một nơ-ron bị loại bỏ được gọi là Dropout rate (ví dụ trong code: `Dropout(rate=0.2)` nghĩa là vô hiệu hóa 20% nơ-ron)."
+  },
+  {
+    "question": "Câu 5: Trong kiến trúc của mạng nơ-ron, lớp Dropout thường được đặt ở vị trí nào theo thông lệ tiêu chuẩn?",
+    "options": [
+      "A. Trực tiếp làm lớp đầu vào (Input layer).",
+      "B. Thường được đặt ở lớp ẩn (hidden layer), ngay SAU hàm kích hoạt (ví dụ: ReLU) của lớp trước đó.",
+      "C. Luôn luôn phải là lớp cuối cùng (Output layer).",
+      "D. Đặt trước bước chuẩn hóa dữ liệu."
+    ],
+    "answer": "B. Thường được đặt ở lớp ẩn (hidden layer), ngay SAU hàm kích hoạt (ví dụ: ReLU) của lớp trước đó.",
+    "explanation": "Tài liệu ghi rõ: Dropout thường được áp dụng sau hàm kích hoạt (activation function) của một lớp ẩn (hidden layer), mặc dù về mặt lý thuyết nó cũng có thể đặt ở trước."
+  },
+  {
+    "question": "Câu 6: Kỹ thuật Early Stopping (Dừng sớm) giúp kiểm soát Overfitting bằng chiến lược nào?",
+    "options": [
+      "A. Trì hoãn quá trình huấn luyện để dữ liệu kịp load vào RAM.",
+      "B. Tự động dừng quá trình huấn luyện trước khi mô hình vượt qua điểm mà nó bắt đầu bị overfit (quá khớp) với dữ liệu.",
+      "C. Dừng thuật toán ngay khi vòng lặp đầu tiên hoàn thành.",
+      "D. Chặn không cho mô hình sử dụng dữ liệu Validation."
+    ],
+    "answer": "B. Tự động dừng quá trình huấn luyện trước khi mô hình vượt qua điểm mà nó bắt đầu bị overfit (quá khớp) với dữ liệu.",
+    "explanation": "Đúng như tên gọi, Early stopping là kỹ thuật ngắt training sớm, trước khi thuật toán đi qua ranh giới bắt đầu bị overfit."
+  },
+  {
+    "question": "Câu 7: Dấu hiệu cốt lõi nào cho thấy mô hình bắt đầu bị Overfitting, và Early Stopping sử dụng nó để quyết định dừng thuật toán?",
+    "options": [
+      "A. Khi chỉ số Loss trên tập Training đột ngột giảm mạnh.",
+      "B. Khi hiệu suất trên tập Kiểm định (Validation dataset) bắt đầu suy giảm hoặc ngừng cải thiện (ví dụ: val_loss tăng lên), trong khi mô hình vẫn tiếp tục học tốt trên tập Training.",
+      "C. Khi bộ nhớ GPU báo đầy.",
+      "D. Khi độ chính xác trên tập Test đạt 99%."
+    ],
+    "answer": "B. Khi hiệu suất trên tập Kiểm định (Validation dataset) bắt đầu suy giảm hoặc ngừng cải thiện (ví dụ: val_loss tăng lên), trong khi mô hình vẫn tiếp tục học tốt trên tập Training.",
+    "explanation": "Overfitting bị phát hiện khi hiệu suất trên tập Validation bắt đầu đi xuống (degrade) dù cho mô hình vẫn đang học rất tốt trên tập Training."
+  },
+  {
+    "question": "Câu 8: Ngoài việc ngăn ngừa Overfitting, kỹ thuật Early Stopping còn mang lại lợi ích phụ nào rất quan trọng trong thực tế?",
+    "options": [
+      "A. Giúp giảm dung lượng file model xuống 50%.",
+      "B. Tiết kiệm đáng kể thời gian và tài nguyên điện toán (computation time) vì không phải chạy hết toàn bộ số lượng Epochs vô ích.",
+      "C. Tự động tối ưu hóa số lượng nơ-ron.",
+      "D. Viết code ngắn hơn."
+    ],
+    "answer": "B. Tiết kiệm đáng kể thời gian và tài nguyên điện toán (computation time) vì không phải chạy hết toàn bộ số lượng Epochs vô ích.",
+    "explanation": "Bởi vì nó sẽ ngắt training sớm khi không còn sự cải thiện, Early Stopping giúp tiết kiệm rất nhiều Computation time."
+  },
+  {
+    "question": "Câu 9: Trong TensorFlow/Keras, đoạn code `EarlyStopping(monitor='val_loss', patience=5)` có chứa tham số `patience`. Tham số này đóng vai trò gì?",
+    "options": [
+      "A. Thời gian chờ tối đa là 5 phút.",
+      "B. Số lượng Epochs liên tiếp mà mô hình KHÔNG CÓ SỰ CẢI THIỆN trên chỉ số monitor (val_loss). Quá trình huấn luyện chỉ bị dừng sau khi vượt qua số vòng lặp \"kiên nhẫn\" này.",
+      "C. Mô hình sẽ chờ 5 Epoch đầu tiên rồi mới bắt đầu tính toán hàm mất mát.",
+      "D. Mức phạt (penalty) nhân lên 5 lần nếu mô hình sai."
+    ],
+    "answer": "B. Số lượng Epochs liên tiếp mà mô hình KHÔNG CÓ SỰ CẢI THIỆN trên chỉ số monitor (val_loss). Quá trình huấn luyện chỉ bị dừng sau khi vượt qua số vòng lặp \"kiên nhẫn\" này.",
+    "explanation": "Tham số 'patience' đại diện cho số lượng epochs không có sự cải thiện. Sau thời gian \"kiên nhẫn\" đó, training sẽ chính thức bị ngắt."
+  },
+  {
+    "question": "Câu 10: Theo đoạn code ví dụ, để tích hợp cơ chế Early Stopping vào mô hình Keras trong lúc gọi hàm huấn luyện (`model.fit`), bạn phải truyền đối tượng EarlyStopping thông qua tham số nào?",
+    "options": [
+      "A. metrics=[checkpoint]",
+      "B. optimizer=checkpoint",
+      "C. validation_data=checkpoint",
+      "D. callbacks=[checkpoint]"
+    ],
+    "answer": "D. callbacks=[checkpoint]",
+    "explanation": "Early stopping được Keras xử lý như một callback. Khi gọi `model.fit`, bạn truyền nó vào bằng tham số `callbacks=...` (ví dụ: `callbacks=[checkpoint]`)."
+  },
+  {
+    "question": "Câu 11: L2 Regularization (Weight Decay) hoạt động bằng cách nào?",
+    "options": [
+      "A. Loại bỏ hoàn toàn các trọng số nhỏ",
+      "B. Thêm một term phạt vào hàm loss tỷ lệ với bình phương trọng số",
+      "C. Nhân tất cả trọng số với 0",
+      "D. Tăng learning rate"
+    ],
+    "answer": "B. Thêm một term phạt vào hàm loss tỷ lệ với bình phương trọng số",
+    "explanation": "L2 regularization thêm penalty lambda * w^2 vào loss để hạn chế trọng số lớn."
+  },
+  {
+    "question": "Câu 12: Sự khác biệt chính giữa L1 và L2 Regularization là gì?",
+    "options": [
+      "A. L1 làm trọng số về 0 nhiều hơn, L2 làm nhỏ dần trọng số",
+      "B. L2 làm trọng số về 0, L1 không",
+      "C. Không có sự khác biệt",
+      "D. L1 chỉ dùng cho CNN"
+    ],
+    "answer": "A. L1 làm trọng số về 0 nhiều hơn, L2 làm nhỏ dần trọng số",
+    "explanation": "L1 tạo sparsity (nhiều trọng số = 0), L2 chỉ làm trọng số nhỏ lại."
+  },
+  {
+    "question": "Câu 13: Regularization ảnh hưởng đến bias và variance như thế nào?",
+    "options": [
+      "A. Giảm cả bias và variance",
+      "B. Tăng bias và giảm variance",
+      "C. Giảm bias và tăng variance",
+      "D. Không ảnh hưởng"
+    ],
+    "answer": "B. Tăng bias và giảm variance",
+    "explanation": "Regularization giảm overfitting (variance) nhưng có thể làm tăng bias."
+  },
+  {
+    "question": "Câu 14: Dropout có được sử dụng trong giai đoạn inference (predict) không?",
+    "options": [
+      "A. Có, luôn luôn",
+      "B. Không, chỉ dùng trong training",
+      "C. Chỉ dùng khi test",
+      "D. Chỉ dùng khi validation"
+    ],
+    "answer": "B. Không, chỉ dùng trong training",
+    "explanation": "Dropout chỉ áp dụng trong training, khi inference toàn bộ neuron được sử dụng."
+  },
+  {
+    "question": "Câu 15: Tham số `restore_best_weights=True` trong EarlyStopping có ý nghĩa gì?",
+    "options": [
+      "A. Reset model về epoch đầu",
+      "B. Lưu model cuối cùng",
+      "C. Khôi phục lại weights tốt nhất trên validation",
+      "D. Xóa weights"
+    ],
+    "answer": "C. Khôi phục lại weights tốt nhất trên validation",
+    "explanation": "Tham số này giúp model quay về trạng thái tốt nhất thay vì trạng thái cuối cùng."
+  }
+]

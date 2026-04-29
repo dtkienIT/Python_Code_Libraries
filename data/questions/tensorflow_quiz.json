@@ -1,0 +1,442 @@
+[
+  {
+    "question": "Câu 1: TensorFlow (TF) được mô tả tốt nhất là gì theo nội dung tài liệu?",
+    "options": [
+      "A. Một ngôn ngữ lập trình đa năng dùng để xây dựng website.",
+      "B. Một thư viện tính toán số học chuyên dụng dành cho deep learning.",
+      "C. Một công cụ trực quan hóa dữ liệu đơn giản cho máy tính cá nhân.",
+      "D. Một hệ điều hành dành riêng cho việc huấn luyện mô hình AI."
+    ],
+    "answer": "B. Một thư viện tính toán số học chuyên dụng dành cho deep learning.",
+    "explanation": "Tài liệu mở đầu bằng việc định nghĩa: 'TensorFlow (TF) is a specialized numerical computation library for deep learning.'"
+  },
+  {
+    "question": "Câu 2: Hệ thống phân cấp API của TensorFlow chủ yếu bao gồm mấy cấp độ?",
+    "options": [
+      "A. 2 cấp độ: High-level và Low-level.",
+      "B. 3 cấp độ: High-level, Mid-level và Low-level.",
+      "C. 4 cấp độ: High-level, Mid-level, Low-level và Hardware-level.",
+      "D. Chỉ có 1 cấp độ duy nhất là Keras."
+    ],
+    "answer": "B. 3 cấp độ: High-level, Mid-level và Low-level.",
+    "explanation": "Tài liệu ghi rõ: 'The TF API hierarchy is primarily composed of three API levels, the high-level API, the mid-level API..., and the low-level API.'"
+  },
+  {
+    "question": "Câu 3: Đặc điểm nổi bật của API cấp thấp (Low-Level API) trong TensorFlow là gì?",
+    "options": [
+      "A. Cung cấp các mô hình được xây dựng sẵn để sử dụng ngay lập tức.",
+      "B. Che giấu hoàn toàn các phép toán toán học phức tạp.",
+      "C. Cung cấp tính linh hoạt cao nhất để tinh chỉnh mô hình bằng các phép toán toán học cơ bản.",
+      "D. Chỉ chạy được trên CPU, không hỗ trợ GPU."
+    ],
+    "answer": "C. Cung cấp tính linh hoạt cao nhất để tinh chỉnh mô hình bằng các phép toán toán học cơ bản.",
+    "explanation": "Theo tài liệu, low-level API cho phép xây dựng đồ thị từ đầu bằng các phép toán học và 'affords the greatest level of flexibility to tweak and tune the model as desired.'"
+  },
+  {
+    "question": "Câu 4: Các thành phần nào sau đây thuộc API cấp trung (Mid-Level API)?",
+    "options": [
+      "A. Keras, Estimators.",
+      "B. Python Frontend Wrapper, TensorFlow Kernel.",
+      "C. Layers, Datasets, Metrics, Losses, FeatureColumns.",
+      "D. CPU, GPU, TPU."
+    ],
+    "answer": "C. Layers, Datasets, Metrics, Losses, FeatureColumns.",
+    "explanation": "Tài liệu liệt kê các thành phần của Mid-Level API bao gồm: layers, Datasets, metrics, loss, và FeatureColumns."
+  },
+  {
+    "question": "Câu 5: Trong TensorFlow, gói `tf.keras.layers` dùng để làm gì?",
+    "options": [
+      "A. Cung cấp tập hợp các hàm tiện lợi để đơn giản hóa việc xây dựng các lớp (layers) trong mạng nơ-ron.",
+      "B. Đọc dữ liệu từ file CSV hoặc văn bản.",
+      "C. Chạy vòng lặp huấn luyện (training loop) tự động.",
+      "D. Trực quan hóa dữ liệu trong quá trình huấn luyện."
+    ],
+    "answer": "A. Cung cấp tập hợp các hàm tiện lợi để đơn giản hóa việc xây dựng các lớp (layers) trong mạng nơ-ron.",
+    "explanation": "Tài liệu nêu: 'The layers package (tf.keras.layers) provides a handy set of functions to simplify the construction of layers in a neural network architecture.'"
+  },
+  {
+    "question": "Câu 6: Mục đích chính của gói Dataset (`tf.data`) là gì?",
+    "options": [
+      "A. Trực quan hóa mô hình phân loại.",
+      "B. Cung cấp giao diện nhanh, linh hoạt để lấy dữ liệu, biến đổi dữ liệu trước khi đưa vào mô hình học.",
+      "C. Tạo các mô hình black-box sẵn có như Random Forest.",
+      "D. Định nghĩa các hàm mất mát (loss functions)."
+    ],
+    "answer": "B. Cung cấp giao diện nhanh, linh hoạt để lấy dữ liệu, biến đổi dữ liệu trước khi đưa vào mô hình học.",
+    "explanation": "Mục tiêu của Dataset package là 'have a fast, flexible, and easy-to-use interface for fetching data..., performing data transform operations on them before passing them as inputs...'"
+  },
+  {
+    "question": "Câu 7: Lớp `TFRecordDataset` trong Dataset API được sử dụng với mục đích gì?",
+    "options": [
+      "A. Đọc dữ liệu từng dòng từ file text thông thường.",
+      "B. Đọc các bản ghi có kích thước cố định từ tệp nhị phân.",
+      "C. Đọc các bản ghi từ tệp TFRecord (định dạng lưu trữ nhị phân của TensorFlow).",
+      "D. Ghi dữ liệu kết quả ra file log."
+    ],
+    "answer": "C. Đọc các bản ghi từ tệp TFRecord (định dạng lưu trữ nhị phân của TensorFlow).",
+    "explanation": "Tài liệu ghi: 'TFRecordDataset: This class is responsible for reading records from TFRecord files. A TFRecord file is a TensorFlow binary storage format.'"
+  },
+  {
+    "question": "Câu 8: Tại sao việc sử dụng định dạng TFRecord lại được khuyến khích so với file dữ liệu thô?",
+    "options": [
+      "A. Vì nó tốn ít bộ nhớ RAM hơn nhưng chạy chậm hơn.",
+      "B. Vì nó cho phép người dùng đọc bằng mắt thường dễ dàng hơn file text.",
+      "C. Nhanh hơn, dễ làm việc hơn và hỗ trợ tốt cho các phép biến đổi quan trọng như shuffle và batch.",
+      "D. Vì nó là định dạng duy nhất Keras hỗ trợ."
+    ],
+    "answer": "C. Nhanh hơn, dễ làm việc hơn và hỗ trợ tốt cho các phép biến đổi quan trọng như shuffle và batch.",
+    "explanation": "Tài liệu giải thích: 'It is faster and easier to work with data stored as TFRecord... makes the data input pipeline more easily aligned for applying vital transformations such as shuffling and returning data in batches.'"
+  },
+  {
+    "question": "Câu 9: FeatureColumns (`tf.feature_column`) có chức năng gì trong quá trình chuẩn bị dữ liệu?",
+    "options": [
+      "A. Mô tả đặc trưng của dữ liệu để đưa vào mô hình cấp cao (Keras/Estimator), thực hiện các biến đổi như one-hot encoding.",
+      "B. Tạo đồ thị mạng nơ-ron thay thế cho Keras layers.",
+      "C. Tự tự tính toán hàm loss và cập nhật trọng số.",
+      "D. Chạy dự đoán trên dữ liệu mới (inference)."
+    ],
+    "answer": "A. Mô tả đặc trưng của dữ liệu để đưa vào mô hình cấp cao (Keras/Estimator), thực hiện các biến đổi như one-hot encoding.",
+    "explanation": "FeatureColumns dùng để 'describing the features of the dataset that will be fed into a high-level Keras or Estimator models... carrying out tasks such as the conversion of categorical features... into a one-hot encoded vector.'"
+  },
+  {
+    "question": "Câu 10: Hàm `indicator_column()` trong Feature Column API thực hiện công việc gì?",
+    "options": [
+      "A. Chuyển đổi một cột phân loại (categorical) có nhiều lớp thành dạng số chiều thấp.",
+      "B. Nhận đầu vào là cột phân loại và biến đổi nó thành vector dạng one-hot encoded.",
+      "C. Chia một cột số liên tục thành các khoảng (buckets).",
+      "D. Kết hợp nhiều đặc trưng đầu vào thành một đặc trưng duy nhất."
+    ],
+    "answer": "B. Nhận đầu vào là cột phân loại và biến đổi nó thành vector dạng one-hot encoded.",
+    "explanation": "Bảng 30-1 định nghĩa: 'The indicator column takes as input a categorical column and transforms it into a one-hot encoded vector.'"
+  },
+  {
+    "question": "Câu 11: Để tránh vấn đề vector thưa (sparse vector) do one-hot encoding gây ra khi có quá nhiều hạng mục, ta nên dùng hàm nào?",
+    "options": [
+      "A. numeric_column()",
+      "B. bucketized_column()",
+      "C. crossed_column()",
+      "D. embedding_column()"
+    ],
+    "answer": "D. embedding_column()",
+    "explanation": "Tài liệu cho biết: 'The embedding column function transforms a categorical column... into a lower-dimensional numeric representation... Using embeddings mitigates the problem of a large sparse vector created via one-hot encoding...'"
+  },
+  {
+    "question": "Câu 12: Estimator API trong TensorFlow là gì?",
+    "options": [
+      "A. Một chức năng API cấp cao nhằm giảm độ phức tạp khi xây dựng mô hình ML bằng cách trừu tượng hóa các quá trình phổ biến.",
+      "B. Một công cụ vẽ đồ thị 3D cho các lớp mạng nơ-ron.",
+      "C. Một hàm cấp thấp dùng để tính toán Gradient Descent.",
+      "D. Một thư viện bên thứ ba phải cài đặt riêng biệt khỏi TensorFlow."
+    ],
+    "answer": "A. Một chức năng API cấp cao nhằm giảm độ phức tạp khi xây dựng mô hình ML bằng cách trừu tượng hóa các quá trình phổ biến.",
+    "explanation": "Tài liệu viết: 'The Estimator API is a high-level TensorFlow functionality that is aimed at reducing the complexity involved in building machine learning models...'"
+  },
+  {
+    "question": "Câu 13: Trong Estimator API, sự khác nhau cơ bản giữa Premade Estimators và Custom Estimators là gì?",
+    "options": [
+      "A. Premade dùng cho học máy không giám sát, Custom dùng cho học máy có giám sát.",
+      "B. Premade là các mô hình hộp đen xây sẵn của TensorFlow, Custom yêu cầu người dùng tự viết logic mô hình thông qua `model_fn`.",
+      "C. Premade chỉ chạy trên GPU, Custom chỉ chạy trên CPU.",
+      "D. Không có sự khác biệt, hai khái niệm này là một."
+    ],
+    "answer": "B. Premade là các mô hình hộp đen xây sẵn của TensorFlow, Custom yêu cầu người dùng tự viết logic mô hình thông qua `model_fn`.",
+    "explanation": "Tài liệu phân biệt rõ: Premade Estimators là 'black box models made available by the TensorFlow team', trong khi Creating a custom Estimator đòi hỏi 'put your code in a method called the model_fn'."
+  },
+  {
+    "question": "Câu 14: Phương thức nào của lớp Estimator được dùng để đánh giá hiệu suất của mô hình?",
+    "options": [
+      "A. fit()",
+      "B. evaluate()",
+      "C. predict()",
+      "D. export_savedmodel()"
+    ],
+    "answer": "B. evaluate()",
+    "explanation": "Tài liệu nêu: 'The evaluate() method is called to evaluate the model performance by looping through a set of evaluation operations.'"
+  },
+  {
+    "question": "Câu 15: Sự khác biệt giữa `tf.keras` và gói `keras` mã nguồn mở thông thường là gì?",
+    "options": [
+      "A. `tf.keras` nhanh hơn 10 lần so với `keras`.",
+      "B. `keras` tích hợp sâu với TensorFlow, `tf.keras` có thể chạy trên nhiều backend (như Theano, CNTK).",
+      "C. `tf.keras` là phiên bản độc quyền tích hợp sâu và hỗ trợ toàn bộ tính năng cốt lõi của TensorFlow, trong khi `keras` có thể chạy trên nhiều backend khác nhau.",
+      "D. Không có sự khác biệt, cả hai đều không được hỗ trợ trong TensorFlow 2.0."
+    ],
+    "answer": "C. `tf.keras` là phiên bản độc quyền tích hợp sâu và hỗ trợ toàn bộ tính năng cốt lõi của TensorFlow, trong khi `keras` có thể chạy trên nhiều backend khác nhau.",
+    "explanation": "Tài liệu giải thích: 'working with the `keras` package, the backend can run with either TensorFlow, Microsoft CNTK, or Theano. On the other hand, working with `tf.keras` provides a TensorFlow only version which is tightly integrated...'"
+  },
+  {
+    "question": "Câu 16: Quy trình (anatomy) chuẩn để xây dựng và sử dụng một chương trình Keras diễn ra theo các bước nào?",
+    "options": [
+      "A. Compile -> Create Model -> Evaluate -> Train -> Predict",
+      "B. Create Model -> Compile -> Train -> Evaluate -> Predict",
+      "C. Train -> Evaluate -> Compile -> Create Model -> Predict",
+      "D. Create Model -> Train -> Compile -> Predict -> Evaluate"
+    ],
+    "answer": "B. Create Model -> Compile -> Train -> Evaluate -> Predict",
+    "explanation": "Hình 30-7 (The anatomy of a Keras program) và text thể hiện thứ tự: Create Model -> Compile the Model -> Train the Model -> Evaluate the Model -> Use Model to make predictions."
+  },
+  {
+    "question": "Câu 17: Khi nào nên sử dụng Keras Functional API thay vì Sequential API?",
+    "options": [
+      "A. Khi cần tạo một mô hình xếp chồng tuyến tính đơn giản.",
+      "B. Khi mô hình có kiến trúc đồ thị phức tạp hơn (nhiều đầu vào/ra, kết nối bỏ qua).",
+      "C. Khi cần mô hình huấn luyện nhanh hơn trên CPU.",
+      "D. Khi dữ liệu có kích thước quá lớn."
+    ],
+    "answer": "B. Khi mô hình có kiến trúc đồ thị phức tạp hơn (nhiều đầu vào/ra, kết nối bỏ qua).",
+    "explanation": "Tài liệu ghi: 'The Sequential model is the simplest method for creating a linear stack of neural network layers. The Functional model is used if a more complex graph is desired.'"
+  },
+  {
+    "question": "Câu 18: Công cụ TensorBoard đi kèm với TensorFlow có tác dụng chính là gì?",
+    "options": [
+      "A. Là một IDE giống PyCharm để viết code Python.",
+      "B. Là một thư viện để thu thập dữ liệu web.",
+      "C. Là công cụ trực quan hóa tương tác để hiểu rõ cách đồ thị tính toán được xây dựng và thực thi, giúp gỡ lỗi và tối ưu mô hình.",
+      "D. Là môi trường để cài đặt các package TensorFlow mới."
+    ],
+    "answer": "C. Là công cụ trực quan hóa tương tác để hiểu rõ cách đồ thị tính toán được xây dựng và thực thi, giúp gỡ lỗi và tối ưu mô hình.",
+    "explanation": "Tài liệu định nghĩa: 'TensorBoard is an interactive visualization tool... The goal of TensorBoard is to gain a visual insight into how the computational graph is constructed and executed.'"
+  },
+  {
+    "question": "Câu 19: Trong TensorBoard, 'Scalar dashboard' dùng để theo dõi gì?",
+    "options": [
+      "A. Kiến trúc của mạng nơ-ron.",
+      "B. Dữ liệu phân bố (distribution) của các tensor.",
+      "C. Hình ảnh và âm thanh được lưu lại trong quá trình học.",
+      "D. Các chỉ số thay đổi theo thời gian như loss, accuracy, precision, recall."
+    ],
+    "answer": "D. Các chỉ số thay đổi theo thời gian như loss, accuracy, precision, recall.",
+    "explanation": "Tài liệu mô tả: 'Scalar dashboard: This dashboard captures metrics that change with time, such as the loss of a model or other model evaluation metrics such as accuracy...'"
+  },
+  {
+    "question": "Câu 20: Tính năng 'Eager Execution' trong TensorFlow 2.0 có ý nghĩa gì?",
+    "options": [
+      "A. Yêu cầu xây dựng xong toàn bộ đồ thị tĩnh (static graph) mới bắt đầu chạy trong một Session.",
+      "B. Cho phép đánh giá và thực thi ngay lập tức các phép toán TensorFlow, giúp code mang phong cách Pythonic và dễ gỡ lỗi hơn.",
+      "C. Tự động biên dịch mọi hàm Python sang mã máy C++.",
+      "D. Bắt buộc mô hình phải chạy trên phần cứng phân tán."
+    ],
+    "answer": "B. Cho phép đánh giá và thực thi ngay lập tức các phép toán TensorFlow, giúp code mang phong cách Pythonic và dễ gỡ lỗi hơn.",
+    "explanation": "Tài liệu nói về Eager execution: 'enables instant evaluation of TensorFlow operations. This is opposed to previous versions... where we first construct a computational graph and then execute it in a session.'"
+  },
+  {
+    "question": "Câu 21: Decorator `@tf.function` trong TensorFlow 2.0 được sử dụng nhằm mục đích gì?",
+    "options": [
+      "A. Chuyển đổi một phương thức Python thông thường thành các đồ thị TensorFlow hiệu năng cao (high-performance TensorFlow graphs).",
+      "B. In log ra màn hình console trong quá trình học.",
+      "C. Dừng quá trình huấn luyện (Early stopping).",
+      "D. Khởi tạo giá trị cho các biến trọng số (weights)."
+    ],
+    "answer": "A. Chuyển đổi một phương thức Python thông thường thành các đồ thị TensorFlow hiệu năng cao (high-performance TensorFlow graphs).",
+    "explanation": "Tài liệu liệt kê các tính năng mới: 'Using tf.function to transform a Python method into high-performance TensorFlow graphs.'"
+  },
+  {
+    "question": "Câu 22: Phương thức nào của `tf.data.Dataset` được sử dụng để trộn ngẫu nhiên dữ liệu ở mỗi epoch?",
+    "options": [
+      "A. batch()",
+      "B. from_tensor_slices()",
+      "C. shuffle()",
+      "D. random()"
+    ],
+    "answer": "C. shuffle()",
+    "explanation": "Tài liệu ghi chú rõ: 'The Dataset method `shuffle()` shuffles the Dataset at each epoch.'"
+  },
+  {
+    "question": "Câu 23: Trong TensorFlow 2.0, `tf.GradientTape()` được sử dụng để làm gì?",
+    "options": [
+      "A. Ghi lại các giá trị dữ liệu đầu vào để debug.",
+      "B. Ghi lại các phép toán để tự động tính gradient (automatic differentiation).",
+      "C. Tăng tốc độ xử lý dữ liệu trên GPU.",
+      "D. Lưu mô hình vào file."
+    ],
+    "answer": "B. Ghi lại các phép toán để tự động tính gradient (automatic differentiation).",
+    "explanation": "`tf.GradientTape()` được dùng để record các operations nhằm tính gradient phục vụ cho quá trình backpropagation."
+  },
+  {
+    "question": "Câu 24: Vai trò của `optimizer.apply_gradients()` trong training loop là gì?",
+    "options": [
+      "A. Tính toán loss function.",
+      "B. Áp dụng gradient để cập nhật trọng số của mô hình.",
+      "C. Khởi tạo trọng số ban đầu.",
+      "D. Đánh giá mô hình."
+    ],
+    "answer": "B. Áp dụng gradient để cập nhật trọng số của mô hình.",
+    "explanation": "Sau khi gradient được tính bằng GradientTape, optimizer sẽ dùng apply_gradients() để update weights."
+  },
+  {
+    "question": "Câu 25: Trong bài toán regression, hàm loss nào thường được sử dụng trong tài liệu?",
+    "options": [
+      "A. Binary Crossentropy",
+      "B. Categorical Crossentropy",
+      "C. Mean Squared Error (MSE)",
+      "D. Hinge Loss"
+    ],
+    "answer": "C. Mean Squared Error (MSE)",
+    "explanation": "Tài liệu sử dụng `tf.keras.losses.MeanSquaredError()` cho bài toán linear regression."
+  },
+  {
+    "question": "Câu 26: Hàm `tf.reduce_mean()` trong TensorFlow có chức năng gì?",
+    "options": [
+      "A. Tính tổng của tensor.",
+      "B. Lấy giá trị lớn nhất.",
+      "C. Tính giá trị trung bình của các phần tử trong tensor.",
+      "D. Chuẩn hóa dữ liệu."
+    ],
+    "answer": "C. Tính giá trị trung bình của các phần tử trong tensor.",
+    "explanation": "`tf.reduce_mean()` dùng để tính trung bình, thường dùng trong loss calculation."
+  },
+  {
+    "question": "Câu 27: Trong classification, hàm `tf.nn.softmax_cross_entropy_with_logits` được dùng để làm gì?",
+    "options": [
+      "A. Chuẩn hóa dữ liệu đầu vào.",
+      "B. Tính loss cho bài toán phân loại nhiều lớp.",
+      "C. Tăng tốc training.",
+      "D. Tạo embedding vector."
+    ],
+    "answer": "B. Tính loss cho bài toán phân loại nhiều lớp.",
+    "explanation": "Hàm này kết hợp softmax và cross-entropy để tính loss cho classification."
+  },
+  {
+    "question": "Câu 28: Tại sao cần chuẩn hóa dữ liệu (standardization) trước khi train model?",
+    "options": [
+      "A. Để giảm kích thước file dữ liệu.",
+      "B. Để mô hình học nhanh hơn và ổn định hơn.",
+      "C. Để tránh lỗi cú pháp.",
+      "D. Để tăng số lượng dữ liệu."
+    ],
+    "answer": "B. Để mô hình học nhanh hơn và ổn định hơn.",
+    "explanation": "Chuẩn hóa giúp các feature có cùng scale, cải thiện tốc độ hội tụ."
+  },
+  {
+    "question": "Câu 29: Trong Dataset API, `batch()` có tác dụng gì?",
+    "options": [
+      "A. Trộn dữ liệu.",
+      "B. Chia dữ liệu thành các mini-batch.",
+      "C. Đọc file.",
+      "D. Chuẩn hóa dữ liệu."
+    ],
+    "answer": "B. Chia dữ liệu thành các mini-batch.",
+    "explanation": "`batch()` nhóm dữ liệu thành từng batch để train hiệu quả hơn."
+  },
+  {
+    "question": "Câu 30: Vì sao cần dùng mini-batch thay vì train toàn bộ dataset một lần?",
+    "options": [
+      "A. Để giảm độ chính xác.",
+      "B. Để tiết kiệm bộ nhớ và tăng tốc training.",
+      "C. Để tránh dùng GPU.",
+      "D. Không có lý do."
+    ],
+    "answer": "B. Để tiết kiệm bộ nhớ và tăng tốc training.",
+    "explanation": "Mini-batch giúp tối ưu tài nguyên và cải thiện hiệu năng training."
+  },
+  {
+    "question": "Câu 31: `tf.keras.metrics.RootMeanSquaredError` dùng để đo gì?",
+    "options": [
+      "A. Độ chính xác classification.",
+      "B. Sai số bình phương trung bình có căn bậc hai.",
+      "C. Số lượng tham số.",
+      "D. Gradient."
+    ],
+    "answer": "B. Sai số bình phương trung bình có căn bậc hai.",
+    "explanation": "RMSE là metric phổ biến cho regression."
+  },
+  {
+    "question": "Câu 32: Tại sao cần tách train/test trước khi chuẩn hóa dữ liệu?",
+    "options": [
+      "A. Để tăng tốc training.",
+      "B. Để tránh data leakage.",
+      "C. Để giảm kích thước dữ liệu.",
+      "D. Không cần thiết."
+    ],
+    "answer": "B. Để tránh data leakage.",
+    "explanation": "Nếu chuẩn hóa trước khi split sẽ làm test data bị 'lộ thông tin'."
+  },
+  {
+    "question": "Câu 33: `tf.data.Dataset.from_tensor_slices()` dùng để làm gì?",
+    "options": [
+      "A. Tạo model.",
+      "B. Tạo Dataset từ tensor.",
+      "C. Tính gradient.",
+      "D. Lưu dữ liệu."
+    ],
+    "answer": "B. Tạo Dataset từ tensor.",
+    "explanation": "Hàm này tạo dataset từ numpy array hoặc tensor."
+  },
+  {
+    "question": "Câu 34: Khi dùng `@tf.function`, lợi ích chính là gì?",
+    "options": [
+      "A. Code dễ đọc hơn.",
+      "B. Tăng hiệu năng bằng cách chuyển sang graph execution.",
+      "C. Giảm bộ nhớ.",
+      "D. Tự động debug."
+    ],
+    "answer": "B. Tăng hiệu năng bằng cách chuyển sang graph execution.",
+    "explanation": "`@tf.function` compile Python code thành TensorFlow graph để chạy nhanh hơn."
+  },
+  {
+    "question": "Câu 35: Trong distributed training, `MirroredStrategy()` dùng để làm gì?",
+    "options": [
+      "A. Train trên CPU.",
+      "B. Train trên nhiều GPU cùng lúc.",
+      "C. Train trên cloud.",
+      "D. Debug model."
+    ],
+    "answer": "B. Train trên nhiều GPU cùng lúc.",
+    "explanation": "`MirroredStrategy` cho phép training song song trên nhiều GPU."
+  },
+  {
+    "question": "Câu 36: Trong distributed training, tại sao cần chia global batch size?",
+    "options": [
+      "A. Để tăng loss.",
+      "B. Để chia dữ liệu cho từng GPU.",
+      "C. Để giảm RAM.",
+      "D. Không cần thiết."
+    ],
+    "answer": "B. Để chia dữ liệu cho từng GPU.",
+    "explanation": "Mỗi GPU xử lý một phần dữ liệu nên batch cần được chia."
+  },
+  {
+    "question": "Câu 37: `strategy.scope()` dùng để làm gì?",
+    "options": [
+      "A. Định nghĩa loss.",
+      "B. Đảm bảo các biến và model được phân phối đúng trên các device.",
+      "C. Debug code.",
+      "D. Load dataset."
+    ],
+    "answer": "B. Đảm bảo các biến và model được phân phối đúng trên các device.",
+    "explanation": "Tất cả model/optimizer cần nằm trong scope để hỗ trợ distributed training."
+  },
+  {
+    "question": "Câu 38: Trong Estimator workflow, bước đầu tiên là gì?",
+    "options": [
+      "A. Train model.",
+      "B. Define feature columns.",
+      "C. Viết input_fn.",
+      "D. Evaluate."
+    ],
+    "answer": "C. Viết input_fn.",
+    "explanation": "input_fn định nghĩa cách dữ liệu được đưa vào model."
+  },
+  {
+    "question": "Câu 39: `input_fn` trong Estimator có nhiệm vụ gì?",
+    "options": [
+      "A. Định nghĩa kiến trúc model.",
+      "B. Cung cấp dữ liệu cho model.",
+      "C. Tính loss.",
+      "D. Visualize data."
+    ],
+    "answer": "B. Cung cấp dữ liệu cho model.",
+    "explanation": "input_fn xây dựng data pipeline."
+  },
+  {
+    "question": "Câu 40: Keras callback `ModelCheckpoint` dùng để làm gì?",
+    "options": [
+      "A. Debug model.",
+      "B. Lưu model khi performance cải thiện.",
+      "C. Tăng tốc training.",
+      "D. Load dữ liệu."
+    ],
+    "answer": "B. Lưu model khi performance cải thiện.",
+    "explanation": "Checkpoint giúp lưu lại model tốt nhất."
+  }
+]
