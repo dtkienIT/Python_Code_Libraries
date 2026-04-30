@@ -1,277 +1,277 @@
 [
   {
-    "question": "Câu 1: Đặc điểm cốt lõi nào phân biệt mạng nơ-ron hồi quy (RNN) với các mạng nơ-ron khác như MLP hay CNN?",
+    "question": "Câu 1: Mạng nơ-ron tích chập (CNN) là một loại mạng đặc biệt phù hợp nhất để giải quyết các bài toán trong lĩnh vực nào?",
     "options": [
-      "A. RNN chỉ có thể xử lý dữ liệu hình ảnh 2D.",
-      "B. RNN không sử dụng các hàm kích hoạt phi tuyến tính.",
-      "C. RNN duy trì một 'bộ nhớ' hoặc trạng thái từ các tính toán trong quá khứ thông qua cơ chế vòng lặp (looping/feedback framework).",
-      "D. RNN chỉ được sử dụng cho các bài toán phân loại nhị phân."
+      "A. Xử lý ngôn ngữ tự nhiên (NLP).",
+      "B. Thị giác máy tính (Computer vision) như nhận dạng hình ảnh, nơi dữ liệu được biểu diễn dưới dạng lưới pixel 2D.",
+      "C. Dự đoán chuỗi thời gian.",
+      "D. Phân tích dữ liệu dạng bảng."
     ],
-    "answer": "C. RNN duy trì một 'bộ nhớ' hoặc trạng thái từ các tính toán trong quá khứ thông qua cơ chế vòng lặp (looping/feedback framework).",
-    "explanation": "Tài liệu ghi: 'The key difference here is that the recurrent neuron maintains a memory or a state from past computations. It does this by taking as input the output of the previous instant yt-1...'"
+    "answer": "B. Thị giác máy tính (Computer vision) như nhận dạng hình ảnh, nơi dữ liệu được biểu diễn dưới dạng lưới pixel 2D.",
+    "explanation": "CNN là hệ thống mạng nơ-ron đặc biệt phù hợp cho các bài toán computer vision (như nhận dạng ảnh), nơi tập dữ liệu được biểu diễn dưới dạng lưới pixel 2D.[cite: 12]"
   },
   {
-    "question": "Câu 2: Một nơ-ron hồi quy (recurrent neuron) nhận các thành phần nào làm đầu vào tại một thời điểm t?",
+    "question": "Câu 2: Một bức ảnh màu (Colored image) được máy tính biểu diễn dưới dạng ma trận có cấu trúc (shape) như thế nào?",
     "options": [
-      "A. Chỉ nhận dữ liệu đầu vào hiện tại xt.",
-      "B. Nhận dữ liệu đầu vào hiện tại xt và đầu ra của thời điểm trước đó yt-1.",
-      "C. Nhận dữ liệu của toàn bộ tập huấn luyện cùng một lúc.",
-      "D. Nhận đầu ra của lớp tiếp theo truyền ngược lại."
+      "A. [height x width x 1]",
+      "B. [length x width x height]",
+      "C. [height x width x channel] (với 3 channel là Red, Green, Blue).",
+      "D. Một mảng 1 chiều (1D array)."
     ],
-    "answer": "B. Nhận dữ liệu đầu vào hiện tại xt và đầu ra của thời điểm trước đó yt-1.",
-    "explanation": "Tài liệu nêu rõ: 'the recurrent neuron has two input weights, Wxt and Wyt-1, for the input at time xt and for the input at time instant yt-1.'"
+    "answer": "C. [height x width x channel] (với 3 channel là Red, Green, Blue).",
+    "explanation": "Ảnh màu bao gồm 3 kênh (channels: đỏ, xanh lá, xanh dương) với cường độ pixel từ 0 đến 255, tạo thành một ma trận có dạng [height x width x channel].[cite: 12]"
   },
   {
-    "question": "Câu 3: Thuật ngữ 'đồ thị tính toán mở rộng' (unfolded computational graph) trong RNN dùng để chỉ điều gì?",
+    "question": "Câu 3: Khái niệm cốt lõi của mạng CNN được xây dựng dựa trên sự thấu hiểu về cấu trúc sinh học nào trong bộ não?",
     "options": [
-      "A. Việc nhân bản RNN ra nhiều máy chủ khác nhau để huấn luyện.",
-      "B. Quá trình hiển thị luồng thông tin qua lớp hồi quy tại mỗi thời điểm trong một chuỗi.",
-      "C. Quá trình chuyển đổi ảnh 2D thành vector 1D.",
-      "D. Việc loại bỏ các nơ-ron không hoạt động trong mạng."
+      "A. Trí nhớ ngắn hạn (Short-term memory).",
+      "B. Vùng nhận thức cục bộ (Local receptive fields) tìm thấy trong các nơ-ron của vỏ não thị giác (visual cortex).",
+      "C. Tế bào thần kinh vận động.",
+      "D. Cấu trúc xoắn kép của DNA."
     ],
-    "answer": "B. Quá trình hiển thị luồng thông tin qua lớp hồi quy tại mỗi thời điểm trong một chuỗi.",
-    "explanation": "Tài liệu giải thích: 'An unfolded computational graph shows the flow of information through the recurrent layer at every time instant in the sequence.'"
+    "answer": "B. Vùng nhận thức cục bộ (Local receptive fields) tìm thấy trong các nơ-ron của vỏ não thị giác (visual cortex).",
+    "explanation": "Ý tưởng của CNN bắt nguồn từ các local receptive fields trong vỏ não thị giác, nơi các nơ-ron chỉ phản ứng với một vùng nhỏ giới hạn của toàn bộ hình ảnh.[cite: 12]"
   },
   {
-    "question": "Câu 4: Bài toán phân tích cảm xúc (Sentiment Analysis) sử dụng ánh xạ chuỗi (sequence mapping) dạng nào trong RNN?",
+    "question": "Câu 4: Lợi thế vượt trội của CNN so với Mạng nơ-ron truyền thẳng (MLP - Multilayer Perceptron) khi xử lý hình ảnh là gì?",
     "options": [
-      "A. Input to a sequence of output (Một đầu vào -> Nhiều đầu ra).",
-      "B. Sequence of inputs to an output (Nhiều đầu vào -> Một đầu ra).",
-      "C. Sequence input to sequence output (Nhiều đầu vào -> Nhiều đầu ra).",
-      "D. Synced sequence input to output (Chuỗi đồng bộ)."
+      "A. CNN tự động chuyển ảnh màu thành ảnh đen trắng để chạy nhanh hơn.",
+      "B. CNN làm phẳng (flatten) hình ảnh ngay từ đầu để tiết kiệm dung lượng lưu trữ.",
+      "C. CNN có khả năng học các đặc trưng hình ảnh phức tạp bằng cách BẢO TOÀN mối quan hệ không gian (spatial relationship) giữa các pixel, đồng thời yêu cầu ÍT trọng số (weights) hơn rất nhiều.",
+      "D. CNN yêu cầu nhiều phần cứng hơn nên tính toán chính xác hơn."
     ],
-    "answer": "B. Sequence of inputs to an output (Nhiều đầu vào -> Một đầu ra).",
-    "explanation": "Tài liệu cho ví dụ: 'A sequence of inputs to an output. For example, in sentiment analysis, we need to pass in a sequence of words as input... and the output is a class indicating either a positive or negative review...'"
+    "answer": "C. CNN có khả năng học các đặc trưng hình ảnh phức tạp bằng cách BẢO TOÀN mối quan hệ không gian (spatial relationship) giữa các pixel, đồng thời yêu cầu ÍT trọng số (weights) hơn rất nhiều.",
+    "explanation": "Việc dùng MLP sẽ làm phẳng ảnh (làm mất quan hệ không gian) và tốn quá nhiều trọng số. CNN giải quyết điều này bằng cách xếp chồng các lớp tích chập và tạo ra một mạng lưới thưa thớt (sparse neural network) với ít trọng số hơn.[cite: 12]"
   },
   {
-    "question": "Câu 5: Bài toán chú thích hình ảnh (Image Captioning) thuộc dạng ánh xạ chuỗi nào?",
+    "question": "Câu 5: Kiến trúc của một mạng CNN cơ bản được cấu thành từ 3 loại lớp (layers) nền tảng nào?",
     "options": [
-      "A. An input to a sequence of output.",
-      "B. A sequence of inputs to an output.",
-      "C. Sequence input to sequence output.",
-      "D. Synced sequence input to output."
+      "A. Input layer, Output layer, Hidden layer.",
+      "B. Convolutional layer, Pooling layer, và Fully connected layer.",
+      "C. LSTM layer, GRU layer, và Dense layer.",
+      "D. Encoder layer, Decoder layer, và Attention layer."
     ],
-    "answer": "A. An input to a sequence of output.",
-    "explanation": "Tài liệu mô tả: 'An input to a sequence of output. This configuration is used for image captioning problems when an image is passed as an input... and the output is a sequence of words.'"
+    "answer": "B. Convolutional layer, Pooling layer, và Fully connected layer.",
+    "explanation": "Tài liệu liệt kê rõ 3 loại lớp cơ bản cấu thành nên mạng CNN: Convolutional layer, Pooling layer, và Fully connected layer.[cite: 12]"
   },
   {
-    "question": "Câu 6: RNN được huấn luyện bằng biến thể nào của thuật toán Lan truyền ngược (Backpropagation)?",
+    "question": "Câu 6: Quá trình Tích chập (Convolution) hoạt động theo cơ chế nào?",
     "options": [
-      "A. Lan truyền ngược qua không gian (Backpropagation Through Space).",
-      "B. Lan truyền ngược qua thời gian (Backpropagation Through Time - BPTT).",
-      "C. Khởi tạo trọng số ngẫu nhiên lặp lại.",
-      "D. Gradient Ascent."
+      "A. Nhân đôi kích thước ma trận ảnh gốc.",
+      "B. Trừ tất cả các giá trị pixel cho 255.",
+      "C. Áp dụng một cửa sổ trượt (sliding window) - được gọi là filter hoặc kernel - di chuyển qua ma trận để trích xuất các thông tin cụ thể.",
+      "D. Xóa ngẫu nhiên 50% số pixel trên ảnh."
     ],
-    "answer": "B. Lan truyền ngược qua thời gian (Backpropagation Through Time - BPTT).",
-    "explanation": "Tài liệu chỉ ra: 'However, the backpropagation algorithm is modified into what is called backpropagation through time (BPTT).'"
+    "answer": "C. Áp dụng một cửa sổ trượt (sliding window) - được gọi là filter hoặc kernel - di chuyển qua ma trận để trích xuất các thông tin cụ thể.",
+    "explanation": "Convolution là quá trình trượt một hàm (filter/kernel) qua ma trận ảnh để trích xuất thông tin đặc trưng (features).[cite: 12]"
   },
   {
-    "question": "Câu 7: Vấn đề Gradient biến mất/Bùng nổ (vanishing/exploding gradient problem) trong RNN xảy ra chủ yếu do đâu?",
+    "question": "Câu 7: Kết quả đầu ra (output) sau khi áp dụng một Filter lên hình ảnh được gọi là gì?",
     "options": [
-      "A. Do sử dụng quá nhiều lớp Convolutional.",
-      "B. Do quá trình tính toán gradient dọc theo các phụ thuộc dài hạn (long-term dependencies) khi mở rộng mạng qua nhiều thời điểm.",
-      "C. Do tốc độ học (learning rate) được đặt quá thấp.",
-      "D. Do kích thước batch (batch size) quá nhỏ."
+      "A. Một Bức ảnh mới (New image).",
+      "B. Bản đồ đặc trưng (Feature map).",
+      "C. Ma trận nhiễu (Noise matrix).",
+      "D. Gradient."
     ],
-    "answer": "B. Do quá trình tính toán gradient dọc theo các phụ thuộc dài hạn (long-term dependencies) khi mở rộng mạng qua nhiều thời điểm.",
-    "explanation": "Tài liệu giải thích: 'The exploding and vanishing gradient problem is most prevalent in recurrent neural networks because of the long-term dependencies or time instant of the unrolled recurrent neuron.'"
+    "answer": "B. Bản đồ đặc trưng (Feature map).",
+    "explanation": "Đầu ra của một filter được gọi là một bản đồ đặc trưng (feature map), giúp làm nổi bật các mẫu hình như đường ngang, dọc, hay cạnh.[cite: 12]"
   },
   {
-    "question": "Câu 8: Cấu trúc bộ nhớ LSTM (Long Short-Term Memory) bao gồm những thành phần cổng (gates) nào để kiểm soát thông tin?",
+    "question": "Câu 8: Khái niệm \"Stride\" trong thiết kế lớp Tích chập (Convolutional layer) mang ý nghĩa gì?",
     "options": [
-      "A. Input gate, Hidden gate, Output gate.",
-      "B. Input gate, Forget gate, Output gate.",
-      "C. Update gate, Reset gate.",
-      "D. Forward gate, Backward gate."
+      "A. Số lượng filter được sử dụng trong một lớp.",
+      "B. Kích thước của viền đen xung quanh ảnh.",
+      "C. Số lượng bước pixel (pixel steps) mà filter di chuyển mỗi lần trượt từ vùng này sang vùng khác của ảnh.",
+      "D. Hàm kích hoạt của nơ-ron."
     ],
-    "answer": "B. Input gate, Forget gate, Output gate.",
-    "explanation": "Tài liệu liệt kê các thành phần của LSTM gồm: 'Memory cell, Input gate, Forget gate, Output gate.'"
+    "answer": "C. Số lượng bước pixel (pixel steps) mà filter di chuyển mỗi lần trượt từ vùng này sang vùng khác của ảnh.",
+    "explanation": "Stride của filter quyết định nó sẽ nhảy bao nhiêu pixel khi di chuyển từ vùng kích hoạt (activation) này sang vùng tiếp theo. Thường dùng stride = 1.[cite: 12]"
   },
   {
-    "question": "Câu 9: Trong LSTM, 'Forget gate' có vai trò gì?",
+    "question": "Câu 9: Kỹ thuật \"Zero padding\" (Thêm đệm số 0) được sử dụng để giải quyết vấn đề gì?",
     "options": [
-      "A. Quyết định lượng thông tin mới nào sẽ được thêm vào cell.",
-      "B. Điều chỉnh lượng thông tin xuất ra từ cell tại một thời điểm.",
-      "C. Điều chỉnh mức độ duy trì thông tin trong trạng thái dài hạn (long-term state) qua các thời điểm.",
-      "D. Xóa toàn bộ bộ nhớ của mạng."
+      "A. Giúp filter không bị trượt ra ngoài rìa ảnh và tránh bị mất thông tin pixel ở các cạnh (borders) của hình ảnh.",
+      "B. Giảm kích thước file ảnh.",
+      "C. Loại bỏ nhiễu màu đen trên ảnh.",
+      "D. Xóa các filter không hoạt động."
     ],
-    "answer": "C. Điều chỉnh mức độ duy trì thông tin trong trạng thái dài hạn (long-term state) qua các thời điểm.",
-    "explanation": "Theo tài liệu: 'The forget gate: The role of this gate is to regulate how much of the information in the long-term state is persisted across time instants.'"
+    "answer": "A. Giúp filter không bị trượt ra ngoài rìa ảnh và tránh bị mất thông tin pixel ở các cạnh (borders) của hình ảnh.",
+    "explanation": "Để tránh mất thông tin khi filter không chia hết kích thước ảnh (không trượt quá mép), zero padding đệm thêm các lớp số 0 quanh viền ảnh để filter trượt đều được qua mọi pixel.[cite: 12]"
   },
   {
-    "question": "Câu 10: Sự khác biệt chính giữa Gated Recurrent Unit (GRU) và LSTM là gì?",
+    "question": "Câu 10: Đối với các lớp Tích chập sâu hơn (nằm sâu bên trong mạng), đầu vào (inputs) của các filter là gì?",
     "options": [
-      "A. GRU phức tạp hơn LSTM rất nhiều.",
-      "B. GRU kết hợp cổng forget và cổng input, gộp trạng thái dài hạn và ngắn hạn thành một, đồng thời loại bỏ cổng output.",
-      "C. GRU chỉ có thể được sử dụng cho hình ảnh, không dùng cho văn bản.",
-      "D. GRU không thể giải quyết được vấn đề vanishing gradient."
+      "A. Vẫn là ma trận pixel của hình ảnh gốc.",
+      "B. Các ma trận trọng số ngẫu nhiên.",
+      "C. Các Feature maps (Bản đồ đặc trưng) được tạo ra từ lớp tích chập (convolutional layer) ngay trước đó.",
+      "D. Một mảng 1 chiều chứa các giá trị nhãn (labels)."
     ],
-    "answer": "B. GRU kết hợp cổng forget và cổng input, gộp trạng thái dài hạn và ngắn hạn thành một, đồng thời loại bỏ cổng output.",
-    "explanation": "Tài liệu chỉ rõ: 'GRUs combine the forget and the input gates... Moreover, the GRU combines the cell (i.e., long-term state) and short-term states into a single state vector ht. Also, the GRU removes the output gate...'"
+    "answer": "C. Các Feature maps (Bản đồ đặc trưng) được tạo ra từ lớp tích chập (convolutional layer) ngay trước đó.",
+    "explanation": "Khi tiến sâu vào mạng, đầu vào của một filter không còn là ảnh gốc, mà là các feature maps (bản đồ đặc trưng) của lớp tích chập trước đó.[cite: 12]"
   },
   {
-    "question": "Câu 11: Mạng LRCN (Long-Term Recurrent Convolutional Network) thường được ứng dụng cho loại bài toán nào?",
+    "question": "Câu 11: Mục tiêu chính của Lớp gộp (Pooling Layer) là gì?",
     "options": [
-      "A. Dự đoán giá cổ phiếu dựa trên dữ liệu số.",
-      "B. Phân loại chuỗi DNA.",
-      "C. Mô hình hóa chuỗi thời gian hình ảnh/thị giác (visual time series modeling), như chú thích hình ảnh và video.",
-      "D. Dịch máy (Machine translation) từ văn bản thuần."
+      "A. Phóng to kích thước hình ảnh để nhìn rõ hơn.",
+      "B. Thêm màu sắc vào ảnh đen trắng.",
+      "C. Giảm kích thước (downsample) các feature maps, tóm tắt các đặc trưng, giảm chi phí tính toán và ngăn chặn hiện tượng quá khớp (overfitting).",
+      "D. Tăng số lượng trọng số để mạng học thông minh hơn."
     ],
-    "answer": "C. Mô hình hóa chuỗi thời gian hình ảnh/thị giác (visual time series modeling), như chú thích hình ảnh và video.",
-    "explanation": "Tài liệu đề cập: 'The LRCN is a unique neural network architecture for generating descriptions of images and videos... These problems can be termed as visual time series modeling.'"
+    "answer": "C. Giảm kích thước (downsample) các feature maps, tóm tắt các đặc trưng, giảm chi phí tính toán và ngăn chặn hiện tượng quá khớp (overfitting).",
+    "explanation": "Pooling layer đóng vai trò như một hàm tổng hợp (aggregation function) để thu nhỏ feature map, qua đó giảm chi phí tính toán, bộ nhớ và tránh overfitting.[cite: 12]"
   },
   {
-    "question": "Câu 12: Kiến trúc mạng nào sử dụng một mạng LSTM chạy theo chiều thuận và một mạng LSTM chạy theo chiều ngược để học phụ thuộc cả từ quá khứ và tương lai?",
+    "question": "Câu 12: Đặc điểm nào ĐÚNG khi nói về các filter bên trong Lớp gộp (Pooling Layer)?",
     "options": [
-      "A. Encoder-Decoder LSTM.",
-      "B. Peephole Connection LSTM.",
-      "C. GRU.",
-      "D. Bidirectional RNN (RNN hai chiều)."
+      "A. Chúng có số lượng trọng số (weights) nhiều gấp đôi Convolutional layer.",
+      "B. Chúng hoàn toàn KHÔNG có trọng số (weights) hay độ lệch (biases), chúng chỉ thực hiện các hàm tổng hợp (ví dụ: max, sum, average).",
+      "C. Chúng chỉ được áp dụng trên 1 channel màu duy nhất.",
+      "D. Chúng luôn có kích thước cố định là 5x5."
     ],
-    "answer": "D. Bidirectional RNN (RNN hai chiều).",
-    "explanation": "Tài liệu mô tả: 'Bidirectional RNN is another particular type... where one layer works to learn the long-term dependencies from the past (forward LSTM). For the other layer, the input is reversed... so the network learns long-term dependencies from the future (backward LSTM).'"
+    "answer": "B. Chúng hoàn toàn KHÔNG có trọng số (weights) hay độ lệch (biases), chúng chỉ thực hiện các hàm tổng hợp (ví dụ: max, sum, average).",
+    "explanation": "Khác với lớp tích chập, các filter của lớp pooling (nơ-ron) không có weights hay biases, chúng chỉ dùng các hàm toán học tóm tắt (max, sum, average).[cite: 12]"
   },
   {
-    "question": "Câu 13: Trong một nơ-ron hồi quy, các trọng số Wxt và Wyt-1 lần lượt đại diện cho điều gì?",
+    "question": "Câu 13: Ưu điểm cốt lõi nhất mà Lớp gộp (Pooling Layer) tiêm (inject) vào mạng CNN là gì?",
     "options": [
-      "A. Trọng số của lớp output và lớp hidden.",
-      "B. Trọng số cho đầu vào hiện tại xt và đầu ra từ thời điểm trước yt-1.",
-      "C. Trọng số cho dữ liệu train và test.",
-      "D. Trọng số cho bias và activation."
+      "A. Tính bất biến về vị trí (Location invariance) - nghĩa là mạng vẫn phát hiện được đặc trưng bất kể nó nằm ở vị trí nào trên ảnh.",
+      "B. Tính tự động tạo màu.",
+      "C. Tăng tốc độ load dữ liệu từ ổ cứng.",
+      "D. Khả năng dịch thuật văn bản."
     ],
-    "answer": "B. Trọng số cho đầu vào hiện tại xt và đầu ra từ thời điểm trước yt-1.",
-    "explanation": "Tài liệu nêu rõ nơ-ron hồi quy có hai trọng số: Wxt cho input hiện tại và Wyt-1 cho output trước đó. :contentReference[oaicite:0]{index=0}"
+    "answer": "A. Tính bất biến về vị trí (Location invariance) - nghĩa là mạng vẫn phát hiện được đặc trưng bất kể nó nằm ở vị trí nào trên ảnh.",
+    "explanation": "Ưu điểm thiết yếu của lớp pooling là khả năng tạo ra tính bất biến vị trí (location invariance) cho mạng nơ-ron.[cite: 12]"
   },
   {
-    "question": "Câu 14: Vai trò của hàm kích hoạt (activation function) trong nơ-ron hồi quy là gì?",
+    "question": "Câu 14: Lớp kết nối đầy đủ (Fully Connected Network - FCN) yêu cầu dữ liệu phải trải qua bước tiền xử lý nào trước khi được đưa vào?",
     "options": [
-      "A. Loại bỏ hoàn toàn thông tin đầu vào.",
-      "B. Tạo tuyến tính hoàn toàn cho mô hình.",
-      "C. Đưa phi tuyến tính vào mô hình để học các mối quan hệ phức tạp.",
-      "D. Chỉ dùng để giảm số chiều dữ liệu."
+      "A. Phải chuyển thành ảnh 3D.",
+      "B. Phải được làm phẳng (Flattened) từ ma trận đa chiều thành một vector 1 chiều dài.",
+      "C. Phải nhân bản lên 10 lần.",
+      "D. Phải đi qua lớp Dropout."
     ],
-    "answer": "C. Đưa phi tuyến tính vào mô hình để học các mối quan hệ phức tạp.",
-    "explanation": "Giống các mạng khác, RNN dùng activation (thường là tanh) để đưa phi tuyến vào mô hình. :contentReference[oaicite:1]{index=1}"
+    "answer": "B. Phải được làm phẳng (Flattened) từ ma trận đa chiều thành một vector 1 chiều dài.",
+    "explanation": "Trước khi đưa vào FCN, các ma trận ảnh hoặc feature maps bắt buộc phải được làm phẳng (flattened). Ví dụ: ma trận 28x28x3 bị dàn phẳng thành vector 2352 phần tử.[cite: 12]"
   },
   {
-    "question": "Câu 15: Sau khi qua lớp recurrent, đầu ra thường được đưa vào lớp nào để tạo xác suất phân loại?",
+    "question": "Câu 15: Tại lớp kết nối đầy đủ cuối cùng (final layer) của mạng CNN dùng cho bài toán phân loại đa lớp (multi-class), hàm kích hoạt (activation function) nào thường được sử dụng để tính xác suất?",
     "options": [
-      "A. Convolutional layer.",
-      "B. Pooling layer.",
-      "C. Dense (fully connected) layer với softmax.",
-      "D. Dropout layer."
+      "A. ReLU.",
+      "B. Tanh.",
+      "C. Softmax.",
+      "D. Linear."
     ],
-    "answer": "C. Dense (fully connected) layer với softmax.",
-    "explanation": "Tài liệu mô tả output từ RNN thường đi qua dense layer với softmax để ra xác suất. :contentReference[oaicite:2]{index=2}"
+    "answer": "C. Softmax.",
+    "explanation": "FCN là lớp cuối cùng của CNN, sử dụng hàm kích hoạt softmax để xuất ra các xác suất (probabilities) dự đoán đầu vào thuộc về lớp nào.[cite: 12]"
   },
   {
-    "question": "Câu 16: Hai kiểu kết nối hồi quy chính giữa các lớp là gì?",
+    "question": "Câu 16: Kích thước filter (kernel size) phổ biến nhất trong các mạng CNN hiện đại là gì?",
     "options": [
-      "A. Input-to-input và output-to-output.",
-      "B. Hidden-to-hidden và output-to-hidden.",
-      "C. Dense-to-dense và CNN-to-RNN.",
-      "D. Forward và backward only."
+      "A. 1x1",
+      "B. 2x2",
+      "C. 3x3",
+      "D. 10x10"
     ],
-    "answer": "B. Hidden-to-hidden và output-to-hidden.",
-    "explanation": "Tài liệu nêu 2 dạng chính: hidden-to-hidden và output-to-hidden. :contentReference[oaicite:3]{index=3}"
+    "answer": "C. 3x3",
+    "explanation": "Filter kích thước 3x3 là phổ biến nhất vì nó đủ nhỏ để giảm số tham số nhưng vẫn đủ để trích xuất đặc trưng hiệu quả."
   },
   {
-    "question": "Câu 17: Kiểu kết nối hồi quy nào thường cho hiệu quả tốt hơn trong việc học đặc trưng?",
+    "question": "Câu 17: Vai trò chính của hàm kích hoạt (activation function) như ReLU trong CNN là gì?",
     "options": [
-      "A. Output-to-hidden.",
-      "B. Hidden-to-hidden.",
-      "C. Input-to-output.",
-      "D. Không có khác biệt."
+      "A. Làm giảm kích thước ảnh.",
+      "B. Tăng số lượng filter.",
+      "C. Giới thiệu tính phi tuyến (non-linearity) giúp mạng học được các đặc trưng phức tạp.",
+      "D. Chuẩn hóa dữ liệu đầu vào."
     ],
-    "answer": "B. Hidden-to-hidden.",
-    "explanation": "Hidden-to-hidden tốt hơn vì giữ được thông tin đặc trưng giàu hơn từ quá khứ. :contentReference[oaicite:4]{index=4}"
+    "answer": "C. Giới thiệu tính phi tuyến (non-linearity) giúp mạng học được các đặc trưng phức tạp.",
+    "explanation": "Nếu không có activation function, toàn bộ mạng sẽ chỉ là phép biến đổi tuyến tính và không thể học được các pattern phức tạp."
   },
   {
-    "question": "Câu 18: Truncated Backpropagation Through Time (Truncated BPTT) là gì?",
+    "question": "Câu 18: Hàm kích hoạt nào được sử dụng phổ biến nhất trong các lớp Convolutional layer?",
     "options": [
-      "A. Một thuật toán thay thế hoàn toàn BPTT.",
-      "B. Một kỹ thuật chỉ lan truyền gradient trong một số bước thời gian giới hạn.",
-      "C. Một phương pháp tăng tốc GPU.",
-      "D. Một dạng activation function."
+      "A. Sigmoid",
+      "B. Tanh",
+      "C. ReLU",
+      "D. Softmax"
     ],
-    "answer": "B. Một kỹ thuật chỉ lan truyền gradient trong một số bước thời gian giới hạn.",
-    "explanation": "Truncated BPTT giới hạn số bước backprop để giảm chi phí và vấn đề gradient. :contentReference[oaicite:5]{index=5}"
+    "answer": "C. ReLU",
+    "explanation": "ReLU (Rectified Linear Unit) giúp giảm hiện tượng vanishing gradient và tăng tốc độ hội tụ trong quá trình huấn luyện."
   },
   {
-    "question": "Câu 19: Nhược điểm chính của Truncated BPTT là gì?",
+    "question": "Câu 19: Sự khác biệt chính giữa Max Pooling và Average Pooling là gì?",
     "options": [
-      "A. Làm tăng độ phức tạp mô hình.",
-      "B. Không thể chạy trên GPU.",
-      "C. Làm mất thông tin phụ thuộc dài hạn.",
-      "D. Không hội tụ."
+      "A. Max Pooling lấy giá trị lớn nhất, Average Pooling lấy giá trị trung bình.",
+      "B. Max Pooling làm tăng kích thước ảnh.",
+      "C. Average Pooling chỉ áp dụng cho ảnh màu.",
+      "D. Hai phương pháp này giống hệt nhau."
     ],
-    "answer": "C. Làm mất thông tin phụ thuộc dài hạn.",
-    "explanation": "Do cắt bớt chuỗi nên mô hình có thể mất thông tin long-term dependencies. :contentReference[oaicite:6]{index=6}"
+    "answer": "A. Max Pooling lấy giá trị lớn nhất, Average Pooling lấy giá trị trung bình.",
+    "explanation": "Max Pooling giữ lại đặc trưng nổi bật nhất, trong khi Average Pooling lấy giá trị trung bình để làm mượt thông tin."
   },
   {
-    "question": "Câu 20: Thành phần 'memory cell (ct)' trong LSTM có vai trò gì?",
+    "question": "Câu 20: Kích thước phổ biến của filter trong Pooling layer là gì?",
     "options": [
-      "A. Lưu trữ thông tin dài hạn qua các bước thời gian.",
-      "B. Chỉ lưu thông tin đầu vào hiện tại.",
-      "C. Dùng để tính loss.",
-      "D. Dùng để giảm số chiều dữ liệu."
+      "A. 1x1",
+      "B. 2x2",
+      "C. 4x4",
+      "D. 10x10"
     ],
-    "answer": "A. Lưu trữ thông tin dài hạn qua các bước thời gian.",
-    "explanation": "Memory cell giúp LSTM giữ thông tin dài hạn hiệu quả. :contentReference[oaicite:7]{index=7}"
+    "answer": "B. 2x2",
+    "explanation": "Pooling thường sử dụng filter 2x2 để giảm kích thước feature map một cách hiệu quả mà vẫn giữ lại thông tin quan trọng."
   },
   {
-    "question": "Câu 21: Output gate trong LSTM kiểm soát điều gì?",
+    "question": "Câu 21: Thứ tự phổ biến trong pipeline của một mạng CNN là gì?",
     "options": [
-      "A. Lượng thông tin được thêm vào cell.",
-      "B. Lượng thông tin bị quên.",
-      "C. Lượng thông tin được xuất ra dưới dạng ht và yt.",
-      "D. Lượng dữ liệu đầu vào."
+      "A. Fully Connected → Pooling → Convolution",
+      "B. Convolution → Pooling → Fully Connected",
+      "C. Pooling → Convolution → Fully Connected",
+      "D. Convolution → Fully Connected → Pooling"
     ],
-    "answer": "C. Lượng thông tin được xuất ra dưới dạng ht và yt.",
-    "explanation": "Output gate quyết định giá trị ht và output yt. :contentReference[oaicite:8]{index=8}"
+    "answer": "B. Convolution → Pooling → Fully Connected",
+    "explanation": "CNN thường bắt đầu bằng các lớp convolution để trích xuất đặc trưng, sau đó pooling để giảm kích thước và cuối cùng là fully connected để phân loại."
   },
   {
-    "question": "Câu 22: Peephole LSTM cải tiến điều gì so với LSTM chuẩn?",
+    "question": "Câu 22: Vai trò chính của Dropout trong mạng CNN là gì?",
     "options": [
-      "A. Loại bỏ hoàn toàn memory cell.",
-      "B. Thêm thông tin từ trạng thái cell ct-1 vào các gate.",
-      "C. Chỉ dùng một gate duy nhất.",
-      "D. Không dùng activation function."
+      "A. Tăng số lượng neuron trong mạng.",
+      "B. Giảm overfitting bằng cách ngẫu nhiên tắt một số neuron trong quá trình huấn luyện.",
+      "C. Làm tăng kích thước dữ liệu.",
+      "D. Tăng tốc độ inference."
     ],
-    "answer": "B. Thêm thông tin từ trạng thái cell ct-1 vào các gate.",
-    "explanation": "Peephole cho phép gate 'nhìn' vào memory cell trước đó. :contentReference[oaicite:9]{index=9}"
+    "answer": "B. Giảm overfitting bằng cách ngẫu nhiên tắt một số neuron trong quá trình huấn luyện.",
+    "explanation": "Dropout giúp mạng không phụ thuộc quá nhiều vào một số neuron nhất định, từ đó cải thiện khả năng tổng quát hóa."
   },
   {
-    "question": "Câu 23: Trong tiền xử lý dữ liệu cho RNN time series, việc scale dữ liệu có mục đích gì?",
+    "question": "Câu 23: Trong CNN, các lớp sâu hơn (deeper layers) thường học được điều gì?",
     "options": [
-      "A. Tăng kích thước dữ liệu.",
-      "B. Giảm số lượng feature.",
-      "C. Đưa dữ liệu về cùng khoảng giá trị để mô hình học tốt hơn.",
-      "D. Loại bỏ noise hoàn toàn."
+      "A. Chỉ học màu sắc của pixel.",
+      "B. Các đặc trưng đơn giản như cạnh (edges).",
+      "C. Các đặc trưng phức tạp như hình dạng, đối tượng.",
+      "D. Không học gì thêm."
     ],
-    "answer": "C. Đưa dữ liệu về cùng khoảng giá trị để mô hình học tốt hơn.",
-    "explanation": "Tài liệu nhấn mạnh cần scale dữ liệu (MinMaxScaler) trước khi train. :contentReference[oaicite:10]{index=10}"
+    "answer": "C. Các đặc trưng phức tạp như hình dạng, đối tượng.",
+    "explanation": "CNN học theo dạng phân cấp: lớp đầu học đặc trưng đơn giản, lớp sâu học đặc trưng phức tạp hơn."
   },
   {
-    "question": "Câu 24: Trong TensorFlow/Keras, tham số 'return_sequences=True' trong LSTM có ý nghĩa gì?",
+    "question": "Câu 24: Tại sao CNN được gọi là mạng \"sparse connectivity\" (kết nối thưa)?",
     "options": [
-      "A. Chỉ trả về output cuối cùng.",
-      "B. Trả về toàn bộ chuỗi output theo từng timestep.",
-      "C. Tắt LSTM.",
-      "D. Chỉ dùng cho CNN."
+      "A. Vì tất cả neuron đều kết nối với nhau.",
+      "B. Vì mỗi neuron chỉ kết nối với một vùng nhỏ của input thay vì toàn bộ như MLP.",
+      "C. Vì dữ liệu đầu vào bị thiếu.",
+      "D. Vì số lượng layer ít."
     ],
-    "answer": "B. Trả về toàn bộ chuỗi output theo từng timestep.",
-    "explanation": "return_sequences=True giúp LSTM trả về toàn bộ chuỗi output. :contentReference[oaicite:11]{index=11}"
+    "answer": "B. Vì mỗi neuron chỉ kết nối với một vùng nhỏ của input thay vì toàn bộ như MLP.",
+    "explanation": "CNN chỉ kết nối cục bộ thông qua filter, giúp giảm số lượng tham số đáng kể so với fully connected network."
   },
   {
-    "question": "Câu 25: Kiến trúc Encoder-Decoder LSTM thường được dùng cho loại bài toán nào?",
+    "question": "Câu 25: Điều gì xảy ra nếu CNN không sử dụng pooling layer?",
     "options": [
-      "A. Phân loại ảnh tĩnh.",
-      "B. Regression đơn biến.",
-      "C. Sequence-to-sequence như dịch máy hoặc speech recognition.",
-      "D. Clustering."
+      "A. Mạng sẽ không thể chạy.",
+      "B. Kích thước feature map không giảm, dẫn đến chi phí tính toán cao và dễ overfitting.",
+      "C. Độ chính xác luôn tăng.",
+      "D. Không có sự khác biệt."
     ],
-    "answer": "C. Sequence-to-sequence như dịch máy hoặc speech recognition.",
-    "explanation": "Encoder-Decoder dùng cho bài toán seq2seq với input và output đều là chuỗi. :contentReference[oaicite:12]{index=12}"
+    "answer": "B. Kích thước feature map không giảm, dẫn đến chi phí tính toán cao và dễ overfitting.",
+    "explanation": "Pooling giúp giảm kích thước dữ liệu và tăng khả năng tổng quát hóa, nếu không có sẽ dễ gây quá khớp và tốn tài nguyên."
   }
 ]
